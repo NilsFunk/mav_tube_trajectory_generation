@@ -1,0 +1,13 @@
+/usr/local/lib/libmav_tube_trajectory_generation.so
+/usr/local/include/mav_tube_trajectory_generation/polynomial.h
+/usr/local/include/mav_tube_trajectory_generation/trajectory.h
+/usr/local/include/mav_tube_trajectory_generation/convolution.h
+/usr/local/include/mav_tube_trajectory_generation/test_utils.h
+/usr/local/include/mav_tube_trajectory_generation/rpoly/rpoly_ak1.h
+/usr/local/include/mav_tube_trajectory_generation/timing.h
+/usr/local/include/mav_tube_trajectory_generation/segment.h
+/usr/local/include/mav_tube_trajectory_generation/impl/polynomial_optimization_linear_impl.h
+/usr/local/include/mav_tube_trajectory_generation/vertex.h
+/usr/local/include/mav_tube_trajectory_generation/extremum.h
+/usr/local/include/mav_tube_trajectory_generation/polynomial_optimization_linear.h
+/usr/local/include/mav_tube_trajectory_generation/motion_defines.h
