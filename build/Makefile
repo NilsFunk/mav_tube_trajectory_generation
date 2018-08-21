@@ -169,6 +169,46 @@ mav_tube_trajectory_generation/fast:
 	$(MAKE) -f CMakeFiles/mav_tube_trajectory_generation.dir/build.make CMakeFiles/mav_tube_trajectory_generation.dir/build
 .PHONY : mav_tube_trajectory_generation/fast
 
+#=============================================================================
+# Target rules for targets named mav_main
+
+# Build rule for target.
+mav_main: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 mav_main
+.PHONY : mav_main
+
+# fast build rule for target.
+mav_main/fast:
+	$(MAKE) -f CMakeFiles/mav_main.dir/build.make CMakeFiles/mav_main.dir/build
+.PHONY : mav_main/fast
+
+src/main.o: src/main.cpp.o
+
+.PHONY : src/main.o
+
+# target to build an object file
+src/main.cpp.o:
+	$(MAKE) -f CMakeFiles/mav_main.dir/build.make CMakeFiles/mav_main.dir/src/main.cpp.o
+.PHONY : src/main.cpp.o
+
+src/main.i: src/main.cpp.i
+
+.PHONY : src/main.i
+
+# target to preprocess a source file
+src/main.cpp.i:
+	$(MAKE) -f CMakeFiles/mav_main.dir/build.make CMakeFiles/mav_main.dir/src/main.cpp.i
+.PHONY : src/main.cpp.i
+
+src/main.s: src/main.cpp.s
+
+.PHONY : src/main.s
+
+# target to generate assembly for a file
+src/main.cpp.s:
+	$(MAKE) -f CMakeFiles/mav_main.dir/build.make CMakeFiles/mav_main.dir/src/main.cpp.s
+.PHONY : src/main.cpp.s
+
 src/motion_defines.o: src/motion_defines.cpp.o
 
 .PHONY : src/motion_defines.o
@@ -366,11 +406,15 @@ help:
 	@echo "... depend"
 	@echo "... install/strip"
 	@echo "... install/local"
-	@echo "... mav_tube_trajectory_generation"
 	@echo "... install"
 	@echo "... list_install_components"
+	@echo "... mav_tube_trajectory_generation"
+	@echo "... mav_main"
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
+	@echo "... src/main.o"
+	@echo "... src/main.i"
+	@echo "... src/main.s"
 	@echo "... src/motion_defines.o"
 	@echo "... src/motion_defines.i"
 	@echo "... src/motion_defines.s"

@@ -6,5 +6,5 @@ CXX_FLAGS = -fPIC   -std=c++14 -march=native
 
 CXX_DEFINES = -Dmav_tube_trajectory_generation_EXPORTS
 
-CXX_INCLUDES = -I/usr/local/include/eigen3 -I/usr/local/include -I/home/nilsiism/workspace/prob_trajectory_planning/src/ext/mav_tube_trajectory_generation/mav_tube_trajectory_generation/include -I/home/nilsiism/workspace/prob_trajectory_planning/src/ext/mav_tube_trajectory_generation/mav_tube_trajectory_generation/include/mav_tube_trajectory_generation 
+CXX_INCLUDES = -I/usr/local/include/eigen3 -I/usr/local/include -I/home/nilsiism/workspace/prob_trajectory_planning/src/ext/mav_tube_trajectory_generation/mav_tube_trajectory_generation/include -I/home/nilsiism/workspace/prob_trajectory_planning/src/ext/mav_tube_trajectory_generation/mav_tube_trajectory_generation/include/mav_tube_trajectory_generation -I/home/nilsiism/workspace/prob_trajectory_planning/src/ext/mav_tube_trajectory_generation/mav_tube_trajectory_generation/glog 
 

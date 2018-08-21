@@ -49,4 +49,5 @@ set(CMAKE_MAKEFILE_PRODUCTS
 # Dependency information for all targets:
 set(CMAKE_DEPEND_INFO_FILES
   "CMakeFiles/mav_tube_trajectory_generation.dir/DependInfo.cmake"
+  "CMakeFiles/mav_main.dir/DependInfo.cmake"
   )

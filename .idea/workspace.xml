@@ -1,0 +1,347 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CMakeRunConfigurationManager" shouldGenerate="true" shouldDeleteObsolete="true" buildAllGenerated="true">
+    <generated>
+      <config projectName="mav_tube_trajectory_generation" targetName="mav_main" />
+      <config projectName="mav_tube_trajectory_generation" targetName="mav_tube_trajectory_generation" />
+    </generated>
+  </component>
+  <component name="CMakeSettings">
+    <configurations>
+      <configuration PROFILE_NAME="Debug" CONFIG_NAME="Debug" />
+    </configurations>
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="da1f7cda-3f00-473e-b8ab-5ce4a6f7d109" name="Default" comment="" />
+    <ignored path="$PROJECT_DIR$/cmake-build-debug/" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="TRACKING_ENABLED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ExecutionTargetManager" SELECTED_TARGET="CMakeBuildProfile:Debug" />
+  <component name="FileEditorManager">
+    <leaf>
+      <file leaf-file-name="polynomial_optimization_linear.h" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/include/mav_tube_trajectory_generation/polynomial_optimization_linear.h">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="226">
+              <caret line="265" column="57" selection-start-line="265" selection-start-column="31" selection-end-line="265" selection-end-column="57" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="polynomial_optimization_linear_impl.h" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/include/mav_tube_trajectory_generation/impl/polynomial_optimization_linear_impl.h">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-75">
+              <caret line="222" column="70" selection-start-line="222" selection-start-column="70" selection-end-line="222" selection-end-column="70" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="segment.h" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/include/mav_tube_trajectory_generation/segment.h">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-135" />
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="vertex.h" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/include/mav_tube_trajectory_generation/vertex.h">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-180" />
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="convolution.h" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/include/mav_tube_trajectory_generation/convolution.h">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+      <file leaf-file-name="motion_defines.h" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/include/mav_tube_trajectory_generation/motion_defines.h">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="258">
+              <caret line="28" column="12" selection-start-line="28" selection-start-column="12" selection-end-line="28" selection-end-column="12" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="polynomial.h" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/include/mav_tube_trajectory_generation/polynomial.h">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="358">
+              <caret line="24" column="18" selection-start-line="24" selection-start-column="18" selection-end-line="24" selection-end-column="18" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="polynomial.cpp" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/polynomial.cpp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="632">
+              <caret line="202" selection-start-line="202" selection-end-line="202" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="main.cpp" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main.cpp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="510">
+              <caret line="34" selection-start-line="34" selection-end-line="34" />
+              <folding>
+                <element signature="e#42#61#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>struct</find>
+      <find>cost_matrices</find>
+      <find>cost_matrices_</find>
+      <find>constraint</find>
+      <find>inverse_mapping_matrices</find>
+      <find>solve</find>
+      <find>fixed_constraints_compact</find>
+      <find>fixed_constraints_compact_</find>
+    </findStrings>
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/src/main.cpp" />
+        <option value="$PROJECT_DIR$/src/polynomial.cpp" />
+        <option value="$PROJECT_DIR$/include/mav_tube_trajectory_generation/polynomial.h" />
+        <option value="$PROJECT_DIR$/include/mav_tube_trajectory_generation/impl/polynomial_optimization_linear_impl.h" />
+      </list>
+    </option>
+  </component>
+  <component name="JsBuildToolGruntFileManager" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsBuildToolPackageJson" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsGulpfileManager">
+    <detection-done>true</detection-done>
+    <sorting>DEFINITION_ORDER</sorting>
+  </component>
+  <component name="NodePackageJsonFileManager">
+    <packageJsonPaths />
+  </component>
+  <component name="ProjectFrameBounds" extendedState="4">
+    <option name="x" value="57" />
+    <option name="y" value="24" />
+    <option name="width" value="1692" />
+    <option name="height" value="1416" />
+  </component>
+  <component name="ProjectView">
+    <navigator proportions="" version="1">
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="mav_tube_trajectory_generation" type="b2602c69:ProjectViewProjectNode" />
+              <item name="mav_tube_trajectory_generation" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="mav_tube_trajectory_generation" type="b2602c69:ProjectViewProjectNode" />
+              <item name="mav_tube_trajectory_generation" type="462c0819:PsiDirectoryNode" />
+              <item name="include" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="mav_tube_trajectory_generation" type="b2602c69:ProjectViewProjectNode" />
+              <item name="mav_tube_trajectory_generation" type="462c0819:PsiDirectoryNode" />
+              <item name="include" type="462c0819:PsiDirectoryNode" />
+              <item name="mav_tube_trajectory_generation" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="mav_tube_trajectory_generation" type="b2602c69:ProjectViewProjectNode" />
+              <item name="mav_tube_trajectory_generation" type="462c0819:PsiDirectoryNode" />
+              <item name="include" type="462c0819:PsiDirectoryNode" />
+              <item name="mav_tube_trajectory_generation" type="462c0819:PsiDirectoryNode" />
+              <item name="impl" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="mav_tube_trajectory_generation" type="b2602c69:ProjectViewProjectNode" />
+              <item name="mav_tube_trajectory_generation" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+      <pane id="Scope" />
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
+    <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+    <property name="settings.editor.selected.configurable" value="configurable.group.appearance" />
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="RunManager" selected="Application.mav_main">
+    <configuration name="Build All" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="mav_tube_trajectory_generation" RUN_TARGET_NAME="mav_main" EXPLICIT_BUILD_TARGET_NAME="all" />
+    <configuration name="mav_main" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="mav_tube_trajectory_generation" TARGET_NAME="mav_main" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="mav_tube_trajectory_generation" RUN_TARGET_NAME="mav_main" />
+    <configuration name="mav_tube_trajectory_generation" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="mav_tube_trajectory_generation" TARGET_NAME="mav_tube_trajectory_generation" CONFIG_NAME="Debug" />
+    <list>
+      <item itemvalue="Application.Build All" />
+      <item itemvalue="Application.mav_main" />
+      <item itemvalue="Application.mav_tube_trajectory_generation" />
+    </list>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="da1f7cda-3f00-473e-b8ab-5ce4a6f7d109" name="Default" comment="" />
+      <created>1534781010839</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1534781010839</updated>
+      <workItem from="1534781012091" duration="9547000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="9547000" />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="-3383" y="-4" width="3383" height="1444" extended-state="6" />
+    <editor active="true" />
+    <layout>
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.124107145" />
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="Messages" weight="0.32927758" />
+      <window_info anchor="bottom" id="CMake" />
+      <window_info anchor="bottom" id="Event Log" side_tool="true" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.32927758" />
+      <window_info anchor="bottom" id="Version Control" show_stripe_button="false" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info anchor="bottom" id="Terminal" />
+      <window_info active="true" anchor="bottom" id="Debug" order="3" visible="true" weight="0.4" />
+      <window_info id="Favorites" side_tool="true" />
+      <window_info anchor="bottom" id="Find" order="1" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+    </layout>
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="VcsContentAnnotationSettings">
+    <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
+          <url>file://$PROJECT_DIR$/include/mav_tube_trajectory_generation/impl/polynomial_optimization_linear_impl.h</url>
+          <line>256</line>
+          <option name="timeStamp" value="16" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
+          <url>file://$PROJECT_DIR$/include/mav_tube_trajectory_generation/polynomial.h</url>
+          <line>23</line>
+          <option name="timeStamp" value="21" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
+          <url>file://$PROJECT_DIR$/include/mav_tube_trajectory_generation/impl/polynomial_optimization_linear_impl.h</url>
+          <line>251</line>
+          <option name="timeStamp" value="24" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
+          <url>file://$PROJECT_DIR$/include/mav_tube_trajectory_generation/impl/polynomial_optimization_linear_impl.h</url>
+          <line>372</line>
+          <option name="timeStamp" value="31" />
+        </line-breakpoint>
+      </breakpoints>
+      <option name="time" value="34" />
+    </breakpoint-manager>
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/include/mav_tube_trajectory_generation/convolution.h">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/include/mav_tube_trajectory_generation/motion_defines.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="258">
+          <caret line="28" column="12" selection-start-line="28" selection-start-column="12" selection-end-line="28" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/include/mav_tube_trajectory_generation/segment.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-135" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/include/mav_tube_trajectory_generation/vertex.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-180" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/include/mav_tube_trajectory_generation/polynomial.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="358">
+          <caret line="24" column="18" selection-start-line="24" selection-start-column="18" selection-end-line="24" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/polynomial.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="632">
+          <caret line="202" selection-start-line="202" selection-end-line="202" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/include/mav_tube_trajectory_generation/polynomial_optimization_linear.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="226">
+          <caret line="265" column="57" selection-start-line="265" selection-start-column="31" selection-end-line="265" selection-end-column="57" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="510">
+          <caret line="34" selection-start-line="34" selection-end-line="34" />
+          <folding>
+            <element signature="e#42#61#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/include/mav_tube_trajectory_generation/impl/polynomial_optimization_linear_impl.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-75">
+          <caret line="222" column="70" selection-start-line="222" selection-start-column="70" selection-end-line="222" selection-end-column="70" />
+        </state>
+      </provider>
+    </entry>
+  </component>
+</project>

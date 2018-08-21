@@ -36,7 +36,11 @@ add_library(${MAV_LIBRARY} SHARED
 #target_link_libraries(${PROJECT_NAME} )
 target_include_directories(${MAV_LIBRARY} PRIVATE ${EIGEN3_INCLUDE_DIR} ${GLOG_INCLUDE_DIRS})
 target_include_directories(${MAV_LIBRARY} PUBLIC ${MAV_INCLUDE_PATH}   $<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}/include/${MAV_LIBRARY}>
-        $<INSTALL_INTERFACE:include/${MAV_LIBRARY}>)
+        $<INSTALL_INTERFACE:include/${MAV_LIBRARY}> glog)
+
+add_executable(mav_main src/main.cpp)
+target_include_directories(mav_main PUBLIC  ${MAV_INCLUDE_PATH} ${EIGEN3_INCLUDE_DIR} ${GLOG_INCLUDE_DIRS})
+target_link_libraries(mav_main PUBLIC ${MAV_LIBRARY} glog)
 
 #set_target_properties(${MAV_LIBRARY} PROPERTIES PUBLIC_HEADER ${MAV_INCLUDE_PATH})
 

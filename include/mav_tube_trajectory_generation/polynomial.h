@@ -22,6 +22,7 @@
 #define MAV_TRAJECTORY_GENERATION_POLYNOMIAL_H_
 
 #include <glog/logging.h>
+#include <iostream>
 #include <Eigen/Eigen>
 #include <Eigen/SVD>
 #include <utility>

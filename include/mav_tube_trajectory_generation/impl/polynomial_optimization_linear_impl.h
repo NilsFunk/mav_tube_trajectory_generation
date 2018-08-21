@@ -181,9 +181,11 @@ void PolynomialOptimization<_N>::setupConstraintReorderingMatrix() {
 
   all_constraints.reserve(
       n_vertices_ * N /
-      2);  // Will have exactly this number of elements in the end.
+      2);  // Will have exactly this number of elements in the end. //TODO: Doesn't seem correct. The total number of constrains in the end is (n_vertices-1)*N
 
-  for (size_t vertex_idx = 0; vertex_idx < n_vertices; ++vertex_idx) {
+  n_all_constraints_ = all_constraints.size();
+
+  for (size_t vertex_idx = 0; vertex_idx < n_vertices; ++vertex_idx) { //TODO: To me it seems like the position of every vertex will cause a constraint
     const Vertex& vertex = vertices_[vertex_idx];
 
     // Extract constraints and sort them to fixed and free. For the start and
@@ -229,7 +231,7 @@ void PolynomialOptimization<_N>::setupConstraintReorderingMatrix() {
     for (const Constraint& cf : fixed_constraints) {
       if (ca == cf) {
         reordering_list.emplace_back(Triplet(row, col, 1.0));
-        for (size_t d = 0; d < dimension_; ++d) {
+        for (size_t d = 0; d < dimension_; ++d) {   //TODO: What is the use of this?
           Eigen::VectorXd& df = fixed_constraints_compact_[d];
           const Eigen::VectorXd constraint_all_dimensions = cf.value;
           df[col] = constraint_all_dimensions[d];
@@ -245,8 +247,13 @@ void PolynomialOptimization<_N>::setupConstraintReorderingMatrix() {
     ++row;
   }
 
+  for (int i = 0; i < dimension_; i++)
+    std::cout << fixed_constraints_compact_[i] << "\n" << std::endl;
+
   constraint_reordering_.setFromTriplets(reordering_list.begin(),
                                          reordering_list.end());
+
+  std::cout << constraint_reordering_ << std::endl;
 }
 
 template <int _N>
@@ -358,6 +365,7 @@ bool PolynomialOptimization<_N>::solveLinear() {
 
   // Compute dp_opt for every dimension.
   for (size_t dimension_idx = 0; dimension_idx < dimension_; ++dimension_idx) {
+    std::cout << fixed_constraints_compact_[dimension_idx] << "\n" << std::endl;
     Eigen::VectorXd df =
         -Rpf * fixed_constraints_compact_[dimension_idx];  // Rpf = Rfp^T
     free_constraints_compact_[dimension_idx] =

@@ -1,0 +1,226 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6"/>
+	<Project>
+		<Option title="mav_tube_trajectory_generation"/>
+		<Option makefile_is_custom="1"/>
+		<Option compiler="gcc"/>
+		<Option virtualFolders="CMake Files\;CMake Files\cmake\;CMake Files\..\;CMake Files\..\..\;CMake Files\..\..\..\;CMake Files\..\..\..\..\;CMake Files\..\..\..\..\..\;CMake Files\..\..\..\..\..\..\;CMake Files\..\..\..\..\..\..\..\;CMake Files\..\..\..\..\..\..\..\..\;CMake Files\..\..\..\..\..\..\..\..\usr\;CMake Files\..\..\..\..\..\..\..\..\usr\local\;CMake Files\..\..\..\..\..\..\..\..\usr\local\share\;CMake Files\..\..\..\..\..\..\..\..\usr\local\share\eigen3\;CMake Files\..\..\..\..\..\..\..\..\usr\local\share\eigen3\cmake\;"/>
+		<Build>
+			<Target title="all">
+				<Option working_dir="/home/nilsiism/workspace/prob_trajectory_planning/src/ext/mav_trajectory_generation/mav_tube_trajectory_generation/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/home/nilsiism/workspace/prob_trajectory_planning/src/ext/mav_trajectory_generation/mav_tube_trajectory_generation/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/nilsiism/workspace/prob_trajectory_planning/src/ext/mav_trajectory_generation/mav_tube_trajectory_generation/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/home/nilsiism/workspace/prob_trajectory_planning/src/ext/mav_trajectory_generation/mav_tube_trajectory_generation/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/home/nilsiism/workspace/prob_trajectory_planning/src/ext/mav_trajectory_generation/mav_tube_trajectory_generation/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="install/strip">
+				<Option working_dir="/home/nilsiism/workspace/prob_trajectory_planning/src/ext/mav_trajectory_generation/mav_tube_trajectory_generation/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/home/nilsiism/workspace/prob_trajectory_planning/src/ext/mav_trajectory_generation/mav_tube_trajectory_generation/cmake-build-debug/Makefile&quot;  VERBOSE=1 install/strip"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/nilsiism/workspace/prob_trajectory_planning/src/ext/mav_trajectory_generation/mav_tube_trajectory_generation/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/home/nilsiism/workspace/prob_trajectory_planning/src/ext/mav_trajectory_generation/mav_tube_trajectory_generation/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/home/nilsiism/workspace/prob_trajectory_planning/src/ext/mav_trajectory_generation/mav_tube_trajectory_generation/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="install/local">
+				<Option working_dir="/home/nilsiism/workspace/prob_trajectory_planning/src/ext/mav_trajectory_generation/mav_tube_trajectory_generation/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/home/nilsiism/workspace/prob_trajectory_planning/src/ext/mav_trajectory_generation/mav_tube_trajectory_generation/cmake-build-debug/Makefile&quot;  VERBOSE=1 install/local"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/nilsiism/workspace/prob_trajectory_planning/src/ext/mav_trajectory_generation/mav_tube_trajectory_generation/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/home/nilsiism/workspace/prob_trajectory_planning/src/ext/mav_trajectory_generation/mav_tube_trajectory_generation/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/home/nilsiism/workspace/prob_trajectory_planning/src/ext/mav_trajectory_generation/mav_tube_trajectory_generation/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="install">
+				<Option working_dir="/home/nilsiism/workspace/prob_trajectory_planning/src/ext/mav_trajectory_generation/mav_tube_trajectory_generation/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/home/nilsiism/workspace/prob_trajectory_planning/src/ext/mav_trajectory_generation/mav_tube_trajectory_generation/cmake-build-debug/Makefile&quot;  VERBOSE=1 install"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/nilsiism/workspace/prob_trajectory_planning/src/ext/mav_trajectory_generation/mav_tube_trajectory_generation/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/home/nilsiism/workspace/prob_trajectory_planning/src/ext/mav_trajectory_generation/mav_tube_trajectory_generation/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/home/nilsiism/workspace/prob_trajectory_planning/src/ext/mav_trajectory_generation/mav_tube_trajectory_generation/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="list_install_components">
+				<Option working_dir="/home/nilsiism/workspace/prob_trajectory_planning/src/ext/mav_trajectory_generation/mav_tube_trajectory_generation/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/home/nilsiism/workspace/prob_trajectory_planning/src/ext/mav_trajectory_generation/mav_tube_trajectory_generation/cmake-build-debug/Makefile&quot;  VERBOSE=1 list_install_components"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/nilsiism/workspace/prob_trajectory_planning/src/ext/mav_trajectory_generation/mav_tube_trajectory_generation/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/home/nilsiism/workspace/prob_trajectory_planning/src/ext/mav_trajectory_generation/mav_tube_trajectory_generation/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/home/nilsiism/workspace/prob_trajectory_planning/src/ext/mav_trajectory_generation/mav_tube_trajectory_generation/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="mav_tube_trajectory_generation">
+				<Option output="/home/nilsiism/workspace/prob_trajectory_planning/src/ext/mav_trajectory_generation/mav_tube_trajectory_generation/cmake-build-debug/libmav_tube_trajectory_generation.so" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/nilsiism/workspace/prob_trajectory_planning/src/ext/mav_trajectory_generation/mav_tube_trajectory_generation/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="3"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/usr/local/include/eigen3"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/home/nilsiism/workspace/prob_trajectory_planning/src/ext/mav_trajectory_generation/mav_tube_trajectory_generation/include"/>
+					<Add directory="/home/nilsiism/workspace/prob_trajectory_planning/src/ext/mav_trajectory_generation/mav_tube_trajectory_generation/include/mav_tube_trajectory_generation"/>
+					<Add directory="/home/nilsiism/workspace/prob_trajectory_planning/src/ext/mav_trajectory_generation/mav_tube_trajectory_generation/glog"/>
+					<Add directory="/usr/include/c++/5"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/5"/>
+					<Add directory="/usr/include/c++/5/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include-fixed"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/home/nilsiism/workspace/prob_trajectory_planning/src/ext/mav_trajectory_generation/mav_tube_trajectory_generation/cmake-build-debug/Makefile&quot;  VERBOSE=1 mav_tube_trajectory_generation"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/nilsiism/workspace/prob_trajectory_planning/src/ext/mav_trajectory_generation/mav_tube_trajectory_generation/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/home/nilsiism/workspace/prob_trajectory_planning/src/ext/mav_trajectory_generation/mav_tube_trajectory_generation/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/home/nilsiism/workspace/prob_trajectory_planning/src/ext/mav_trajectory_generation/mav_tube_trajectory_generation/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="mav_tube_trajectory_generation/fast">
+				<Option output="/home/nilsiism/workspace/prob_trajectory_planning/src/ext/mav_trajectory_generation/mav_tube_trajectory_generation/cmake-build-debug/libmav_tube_trajectory_generation.so" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/nilsiism/workspace/prob_trajectory_planning/src/ext/mav_trajectory_generation/mav_tube_trajectory_generation/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="3"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/usr/local/include/eigen3"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/home/nilsiism/workspace/prob_trajectory_planning/src/ext/mav_trajectory_generation/mav_tube_trajectory_generation/include"/>
+					<Add directory="/home/nilsiism/workspace/prob_trajectory_planning/src/ext/mav_trajectory_generation/mav_tube_trajectory_generation/include/mav_tube_trajectory_generation"/>
+					<Add directory="/home/nilsiism/workspace/prob_trajectory_planning/src/ext/mav_trajectory_generation/mav_tube_trajectory_generation/glog"/>
+					<Add directory="/usr/include/c++/5"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/5"/>
+					<Add directory="/usr/include/c++/5/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include-fixed"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/home/nilsiism/workspace/prob_trajectory_planning/src/ext/mav_trajectory_generation/mav_tube_trajectory_generation/cmake-build-debug/Makefile&quot;  VERBOSE=1 mav_tube_trajectory_generation/fast"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/nilsiism/workspace/prob_trajectory_planning/src/ext/mav_trajectory_generation/mav_tube_trajectory_generation/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/home/nilsiism/workspace/prob_trajectory_planning/src/ext/mav_trajectory_generation/mav_tube_trajectory_generation/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/home/nilsiism/workspace/prob_trajectory_planning/src/ext/mav_trajectory_generation/mav_tube_trajectory_generation/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="mav_main">
+				<Option output="/home/nilsiism/workspace/prob_trajectory_planning/src/ext/mav_trajectory_generation/mav_tube_trajectory_generation/cmake-build-debug/mav_main" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/nilsiism/workspace/prob_trajectory_planning/src/ext/mav_trajectory_generation/mav_tube_trajectory_generation/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/home/nilsiism/workspace/prob_trajectory_planning/src/ext/mav_trajectory_generation/mav_tube_trajectory_generation/include"/>
+					<Add directory="/usr/local/include/eigen3"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/home/nilsiism/workspace/prob_trajectory_planning/src/ext/mav_trajectory_generation/mav_tube_trajectory_generation/include/mav_tube_trajectory_generation"/>
+					<Add directory="/home/nilsiism/workspace/prob_trajectory_planning/src/ext/mav_trajectory_generation/mav_tube_trajectory_generation/glog"/>
+					<Add directory="/usr/include/c++/5"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/5"/>
+					<Add directory="/usr/include/c++/5/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include-fixed"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/home/nilsiism/workspace/prob_trajectory_planning/src/ext/mav_trajectory_generation/mav_tube_trajectory_generation/cmake-build-debug/Makefile&quot;  VERBOSE=1 mav_main"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/nilsiism/workspace/prob_trajectory_planning/src/ext/mav_trajectory_generation/mav_tube_trajectory_generation/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/home/nilsiism/workspace/prob_trajectory_planning/src/ext/mav_trajectory_generation/mav_tube_trajectory_generation/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/home/nilsiism/workspace/prob_trajectory_planning/src/ext/mav_trajectory_generation/mav_tube_trajectory_generation/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="mav_main/fast">
+				<Option output="/home/nilsiism/workspace/prob_trajectory_planning/src/ext/mav_trajectory_generation/mav_tube_trajectory_generation/cmake-build-debug/mav_main" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/nilsiism/workspace/prob_trajectory_planning/src/ext/mav_trajectory_generation/mav_tube_trajectory_generation/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/home/nilsiism/workspace/prob_trajectory_planning/src/ext/mav_trajectory_generation/mav_tube_trajectory_generation/include"/>
+					<Add directory="/usr/local/include/eigen3"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/home/nilsiism/workspace/prob_trajectory_planning/src/ext/mav_trajectory_generation/mav_tube_trajectory_generation/include/mav_tube_trajectory_generation"/>
+					<Add directory="/home/nilsiism/workspace/prob_trajectory_planning/src/ext/mav_trajectory_generation/mav_tube_trajectory_generation/glog"/>
+					<Add directory="/usr/include/c++/5"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/5"/>
+					<Add directory="/usr/include/c++/5/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include-fixed"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/home/nilsiism/workspace/prob_trajectory_planning/src/ext/mav_trajectory_generation/mav_tube_trajectory_generation/cmake-build-debug/Makefile&quot;  VERBOSE=1 mav_main/fast"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/nilsiism/workspace/prob_trajectory_planning/src/ext/mav_trajectory_generation/mav_tube_trajectory_generation/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/home/nilsiism/workspace/prob_trajectory_planning/src/ext/mav_trajectory_generation/mav_tube_trajectory_generation/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/home/nilsiism/workspace/prob_trajectory_planning/src/ext/mav_trajectory_generation/mav_tube_trajectory_generation/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="edit_cache">
+				<Option working_dir="/home/nilsiism/workspace/prob_trajectory_planning/src/ext/mav_trajectory_generation/mav_tube_trajectory_generation/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/home/nilsiism/workspace/prob_trajectory_planning/src/ext/mav_trajectory_generation/mav_tube_trajectory_generation/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/nilsiism/workspace/prob_trajectory_planning/src/ext/mav_trajectory_generation/mav_tube_trajectory_generation/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/home/nilsiism/workspace/prob_trajectory_planning/src/ext/mav_trajectory_generation/mav_tube_trajectory_generation/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/home/nilsiism/workspace/prob_trajectory_planning/src/ext/mav_trajectory_generation/mav_tube_trajectory_generation/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="rebuild_cache">
+				<Option working_dir="/home/nilsiism/workspace/prob_trajectory_planning/src/ext/mav_trajectory_generation/mav_tube_trajectory_generation/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/home/nilsiism/workspace/prob_trajectory_planning/src/ext/mav_trajectory_generation/mav_tube_trajectory_generation/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/nilsiism/workspace/prob_trajectory_planning/src/ext/mav_trajectory_generation/mav_tube_trajectory_generation/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/home/nilsiism/workspace/prob_trajectory_planning/src/ext/mav_trajectory_generation/mav_tube_trajectory_generation/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/home/nilsiism/workspace/prob_trajectory_planning/src/ext/mav_trajectory_generation/mav_tube_trajectory_generation/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+		</Build>
+		<Unit filename="/home/nilsiism/workspace/prob_trajectory_planning/src/ext/mav_trajectory_generation/mav_tube_trajectory_generation/src/main.cpp">
+			<Option target="mav_main"/>
+		</Unit>
+		<Unit filename="/home/nilsiism/workspace/prob_trajectory_planning/src/ext/mav_trajectory_generation/mav_tube_trajectory_generation/src/motion_defines.cpp">
+			<Option target="mav_tube_trajectory_generation"/>
+		</Unit>
+		<Unit filename="/home/nilsiism/workspace/prob_trajectory_planning/src/ext/mav_trajectory_generation/mav_tube_trajectory_generation/src/polynomial.cpp">
+			<Option target="mav_tube_trajectory_generation"/>
+		</Unit>
+		<Unit filename="/home/nilsiism/workspace/prob_trajectory_planning/src/ext/mav_trajectory_generation/mav_tube_trajectory_generation/src/rpoly/rpoly_ak1.cpp">
+			<Option target="mav_tube_trajectory_generation"/>
+		</Unit>
+		<Unit filename="/home/nilsiism/workspace/prob_trajectory_planning/src/ext/mav_trajectory_generation/mav_tube_trajectory_generation/src/segment.cpp">
+			<Option target="mav_tube_trajectory_generation"/>
+		</Unit>
+		<Unit filename="/home/nilsiism/workspace/prob_trajectory_planning/src/ext/mav_trajectory_generation/mav_tube_trajectory_generation/src/timing.cpp">
+			<Option target="mav_tube_trajectory_generation"/>
+		</Unit>
+		<Unit filename="/home/nilsiism/workspace/prob_trajectory_planning/src/ext/mav_trajectory_generation/mav_tube_trajectory_generation/src/trajectory.cpp">
+			<Option target="mav_tube_trajectory_generation"/>
+		</Unit>
+		<Unit filename="/home/nilsiism/workspace/prob_trajectory_planning/src/ext/mav_trajectory_generation/mav_tube_trajectory_generation/src/vertex.cpp">
+			<Option target="mav_tube_trajectory_generation"/>
+		</Unit>
+		<Unit filename="/home/nilsiism/workspace/prob_trajectory_planning/src/ext/mav_trajectory_generation/mav_tube_trajectory_generation/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\"/>
+		</Unit>
+		<Unit filename="/home/nilsiism/workspace/prob_trajectory_planning/src/ext/mav_trajectory_generation/mav_tube_trajectory_generation/cmake/FindEigen3.cmake">
+			<Option virtualFolder="CMake Files\cmake\"/>
+		</Unit>
+		<Unit filename="/home/nilsiism/workspace/prob_trajectory_planning/src/ext/mav_trajectory_generation/mav_tube_trajectory_generation/cmake/FindGlog.cmake">
+			<Option virtualFolder="CMake Files\cmake\"/>
+		</Unit>
+		<Unit filename="/home/nilsiism/workspace/prob_trajectory_planning/src/ext/mav_trajectory_generation/mav_tube_trajectory_generation/../../../../../../../../usr/local/share/eigen3/cmake/Eigen3ConfigVersion.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\..\..\..\usr\local\share\eigen3\cmake\"/>
+		</Unit>
+	</Project>
+</CodeBlocks_project_file>

@@ -20,6 +20,7 @@ set(CMAKE_CXX_TARGET_INCLUDE_PATH
   "/usr/local/include"
   "../include"
   "../include/mav_tube_trajectory_generation"
+  "../glog"
   )
 
 # Targets to which this target links.
