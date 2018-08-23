@@ -257,6 +257,72 @@ void PolynomialOptimization<_N>::setupConstraintReorderingMatrix() {
 }
 
 template <int _N>
+void PolynomialOptimization<_N>::setupConstraintReorderingMatrixNEW() {
+  typedef Eigen::Triplet<double> Triplet;
+  std::vector<Triplet> reordering_list;
+
+  n_fixed_constraints_ = N*dimension_;
+  n_free_constraints_ =  (n_segments_-1)*N/2*dimension_;
+  n_all_constraints_ =n_fixed_constraints_ + 2*n_free_constraints_;
+
+  reordering_list.reserve(n_all_constraints_);
+  constraint_reordering_ = Eigen::SparseMatrix<double>(
+          n_all_constraints_, n_fixed_constraints_ + n_free_constraints_);
+
+  fixed_constraints_compact_NEW_.resize(n_fixed_constraints_, Eigen::NoChange);
+  free_constraints_compact_NEW_.resize(n_free_constraints_, Eigen::NoChange);
+
+  for (size_t ending = 0; ending < 2; ending++) {
+    size_t vertex_idx = ending*n_segments_;
+    const Vertex& vertex = vertices_[vertex_idx];
+    for (size_t constraint_idx = 0; constraint_idx < N / 2;
+         ++constraint_idx) {
+      Constraint constraint;
+      constraint.vertex_idx = vertex_idx;
+      constraint.constraint_idx = constraint_idx;
+      vertex.getConstraint(constraint_idx, &(constraint.value));
+      for (size_t d = 0; d < dimension_; d++) {
+        const Eigen::VectorXd constraint_value = constraint.value;
+        size_t fixed_constraint_idx = ending*N/2+d*N+constraint_idx;
+        fixed_constraints_compact_NEW_[fixed_constraint_idx] = constraint_value[d];
+      }
+    }
+  }
+
+  std::cout << fixed_constraints_compact_NEW_ << std::endl;
+
+  for (size_t d = 0; d<dimension_; d++){
+    for (size_t k = 0; k < 2; k++) {
+      size_t row = d*(2*N/2+(n_segments_-1)*N) + k*(N/2+(n_segments_-1)*N);
+      size_t col = d*2*N/2 + k*N/2;
+      for (size_t i = 0; i<N/2; i++) {
+        reordering_list.emplace_back(Triplet(row, col, 1.0));
+        row++;
+        col++;
+      }
+    }
+  }
+
+  for (size_t d = 0; d<dimension_; d++) {
+    for (size_t k = 0; k < n_segments_ - 1; k++) {
+      size_t row = d*(2*N/2+(n_segments_-1)*N) + k*N + N/2;
+      size_t col = dimension_*2*N/2 + d*(n_segments_-1)*N/2 + k*N/2;
+      for (size_t i = 0; i<N/2; i++) {
+        reordering_list.emplace_back(Triplet(row, col, 1.0));
+        reordering_list.emplace_back(Triplet(row+N/2, col, 1.0));
+        row++;
+        col++;
+      }
+    }
+  }
+
+  constraint_reordering_.setFromTriplets(reordering_list.begin(),
+                                         reordering_list.end());
+
+  std::cout << constraint_reordering_ << std::endl;
+}
+
+template <int _N>
 void PolynomialOptimization<_N>::updateSegmentsFromCompactConstraints() {
   const size_t n_all_constraints = n_fixed_constraints_ + n_free_constraints_;
 
@@ -317,7 +383,7 @@ void PolynomialOptimization<_N>::constructR(
     for (int row = 0; row < N; ++row) {
       for (int col = 0; col < N; ++col) {
         cost_unconstrained_triplets.emplace_back(
-            Triplet(start_pos + row, start_pos + col, H(row, col)));
+                Triplet(start_pos + row, start_pos + col, H(row, col)));
       }
     }
   }
@@ -330,6 +396,44 @@ void PolynomialOptimization<_N>::constructR(
   // assembled from the block-H above.
   *R = constraint_reordering_.transpose() * cost_unconstrained *
        constraint_reordering_;
+}
+
+template <int _N>
+void PolynomialOptimization<_N>::constructRNEW(
+        Eigen::SparseMatrix<double>* R) const {
+
+  CHECK_NOTNULL(R);
+  typedef Eigen::Triplet<double> Triplet;
+  std::vector<Triplet> cost_unconstrained_triplets;
+  cost_unconstrained_triplets.reserve(dimension_* N * N * n_segments_);
+
+  for (size_t i = 0; i < n_segments_; ++i) {
+    const SquareMatrix& Ai = inverse_mapping_matrices_[i];
+    const SquareMatrix& Q = cost_matrices_[i];
+    const SquareMatrix H = Ai.transpose() * Q * Ai;
+    for (size_t d = 0; d < dimension_; d++){
+      const int start_pos = i * N + d * N * n_segments_;
+      for (int row = 0; row < N; ++row) {
+        for (int col = 0; col < N; ++col) {
+          cost_unconstrained_triplets.emplace_back(
+                  Triplet(start_pos + row, start_pos + col, H(row, col)));
+        }
+      }
+    }
+  }
+  Eigen::SparseMatrix<double> cost_unconstrained(N * n_segments_ * dimension_,
+          N * n_segments_ * dimension_);
+  cost_unconstrained.setFromTriplets(cost_unconstrained_triplets.begin(),
+                                     cost_unconstrained_triplets.end());
+
+  std::cout << cost_unconstrained << std::endl;
+
+  // [1]: R = C^T * H * C. C: constraint_reodering_ ; H: cost_unconstrained,
+  // assembled from the block-H above.
+  *R = constraint_reordering_.transpose() * cost_unconstrained *
+       constraint_reordering_;
+
+  std::cout << *R << std::endl;
 }
 
 template <int _N>
@@ -373,6 +477,49 @@ bool PolynomialOptimization<_N>::solveLinear() {
   }
 
   updateSegmentsFromCompactConstraints();
+  return true;
+}
+
+template <int _N>
+bool PolynomialOptimization<_N>::solveLinearNEW() {
+  CHECK(derivative_to_optimize_ >= 0 &&
+        derivative_to_optimize_ <= kHighestDerivativeToOptimize);
+  // Catch the fully constrained case:
+  if (n_free_constraints_ == 0) {
+    LOG(WARNING)
+            << "No free constraints set in the vertices. Polynomial can "
+               "not be optimized. Outputting fully constrained polynomial.";
+    updateSegmentsFromCompactConstraints();
+    return true;
+  }
+
+  // TODO(acmarkus): figure out if sparse becomes less efficient for small
+  // problems, and switch back to dense in case.
+
+  // Compute cost matrix for the unconstrained optimization problem.
+  // Block-wise H = A^{-T}QA^{-1} according to [1]
+  Eigen::SparseMatrix<double> R;
+  constructRNEW(&R);
+
+  // Extract block matrices and prepare solver.
+  Eigen::SparseMatrix<double> Rpf = R.block(
+          n_fixed_constraints_, 0, n_free_constraints_, n_fixed_constraints_);
+  Eigen::SparseMatrix<double> Rpp =
+          R.block(n_fixed_constraints_, n_fixed_constraints_, n_free_constraints_,
+                  n_free_constraints_);
+  Eigen::SparseQR<Eigen::SparseMatrix<double>, Eigen::COLAMDOrdering<int>>
+          solver;
+  solver.compute(Rpp);
+
+  // Compute dp_opt for every dimension.
+  Eigen::VectorXd df =
+          -Rpf * fixed_constraints_compact_NEW_;  // Rpf = Rfp^T
+  free_constraints_compact_NEW_ =
+          solver.solve(df);  // dp = -Rpp^-1 * Rpf * df
+
+  std::cout << free_constraints_compact_NEW_ << std::endl;
+
+  //updateSegmentsFromCompactConstraints();
   return true;
 }
 

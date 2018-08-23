@@ -15,6 +15,7 @@ set (MAV_INCLUDE_PATH  "${MAV_MODULE_PATH}/include")
 # Build se_denseslam lib
 find_package(Eigen3 REQUIRED)
 find_package(Glog REQUIRED QUIET)
+find_package(Mosek REQUIRED)
 
 
 #find_package(NLOPT REQUIRED QUIET)
@@ -35,8 +36,9 @@ add_library(${MAV_LIBRARY} SHARED
 
 #target_link_libraries(${PROJECT_NAME} )
 target_include_directories(${MAV_LIBRARY} PRIVATE ${EIGEN3_INCLUDE_DIR} ${GLOG_INCLUDE_DIRS})
-target_include_directories(${MAV_LIBRARY} PUBLIC ${MAV_INCLUDE_PATH}   $<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}/include/${MAV_LIBRARY}>
+target_include_directories(${MAV_LIBRARY} PUBLIC ${MAV_INCLUDE_PATH} ${MOSEK_INCLUDE_DIR} $<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}/include/${MAV_LIBRARY}>
         $<INSTALL_INTERFACE:include/${MAV_LIBRARY}> glog)
+target_link_libraries(${MAV_LIBRARY} ${MOSEK_LIBRARY})
 
 add_executable(mav_main src/main.cpp)
 target_include_directories(mav_main PUBLIC  ${MAV_INCLUDE_PATH} ${EIGEN3_INCLUDE_DIR} ${GLOG_INCLUDE_DIRS})

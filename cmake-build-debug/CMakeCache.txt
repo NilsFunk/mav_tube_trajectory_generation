@@ -194,6 +194,12 @@ EIGEN3_INCLUDE_DIR:PATH=/usr/local/include/eigen3
 //The directory containing a CMake configuration file for Eigen3.
 Eigen3_DIR:PATH=Eigen3_DIR-NOTFOUND
 
+//Path to a file.
+MOSEK_INCLUDE_DIR:PATH=/opt/mosek/8/tools/platform/linux64x86
+
+//Path to a library.
+MOSEK_LIBRARY:FILEPATH=/opt/mosek/8/tools/platform/linux64x86/bin/libmosek64.so
+
 //pkg-config executable
 PKG_CONFIG_EXECUTABLE:FILEPATH=/usr/bin/pkg-config
 
@@ -206,8 +212,8 @@ ProcessorCount_cmd_sysctl:FILEPATH=/sbin/sysctl
 //Value Computed by CMake
 mav_tube_trajectory_generation_BINARY_DIR:STATIC=/home/nilsiism/workspace/prob_trajectory_planning/src/ext/mav_trajectory_generation/mav_tube_trajectory_generation/cmake-build-debug
 
-//Dependencies for target
-mav_tube_trajectory_generation_LIB_DEPENDS:STATIC=
+//Dependencies for the target
+mav_tube_trajectory_generation_LIB_DEPENDS:STATIC=general;/opt/mosek/8/tools/platform/linux64x86/bin/libmosek64.so;
 
 //Value Computed by CMake
 mav_tube_trajectory_generation_SOURCE_DIR:STATIC=/home/nilsiism/workspace/prob_trajectory_planning/src/ext/mav_trajectory_generation/mav_tube_trajectory_generation

@@ -91,6 +91,7 @@ mav_main_EXTERNAL_OBJECTS =
 mav_main: CMakeFiles/mav_main.dir/src/main.cpp.o
 mav_main: CMakeFiles/mav_main.dir/build.make
 mav_main: libmav_tube_trajectory_generation.so
+mav_main: /opt/mosek/8/tools/platform/linux64x86/bin/libmosek64.so
 mav_main: CMakeFiles/mav_main.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/nilsiism/workspace/prob_trajectory_planning/src/ext/mav_trajectory_generation/mav_tube_trajectory_generation/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable mav_main"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/mav_main.dir/link.txt --verbose=$(VERBOSE)

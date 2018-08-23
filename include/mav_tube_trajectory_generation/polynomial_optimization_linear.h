@@ -64,11 +64,15 @@ class PolynomialOptimization {
   // Thus, its size is size(vertices) - 1.
   // Input: derivative_to_optimize = Specifies the derivative of which the
   // cost is optimized.
-  bool setupFromVertices(
+  virtual bool setupFromVertices(
       const Vertex::Vector& vertices, const std::vector<double>& segment_times,
       int derivative_to_optimize = kHighestDerivativeToOptimize);
 
-  // Sets up the optimization problem from a vector of positions and a
+  bool setupFromVerticesNEW(
+      const Vertex::Vector& vertices, const std::vector<double>& segment_times, const std::vector<double>& radii,
+      int derivative_to_optimize = kHighestDerivativeToOptimize);
+
+    // Sets up the optimization problem from a vector of positions and a
   // vector of times between the via points.
   // The optimized derivative is set to the maximum possible based on the given
   // N (N/2-1).
@@ -106,6 +110,7 @@ class PolynomialOptimization {
   //  - each dimension has the same type/set of constraints. Their values can of
   //    course differ.
   bool solveLinear();
+  bool solveLinearNEW();
 
   // Returns the trajectory created by the optimization.
   // Only valid after solveLinear() is called. This is the preferred external
@@ -230,15 +235,18 @@ class PolynomialOptimization {
 
   void printReorderingMatrix(std::ostream& stream) const;
 
- private:
+ protected:
   // Constructs the sparse R (cost) matrix.
   void constructR(Eigen::SparseMatrix<double>* R) const;
+
+  void constructRNEW(Eigen::SparseMatrix<double>* R) const;
 
   // Sets up the matrix (C in [1]) that reorders constraints for the
   // optimization problem.
   // This matrix is the same for each dimension, i.e. each dimension must have
   // the same fixed and free parameters.
   void setupConstraintReorderingMatrix();
+  void setupConstraintReorderingMatrixNEW();
 
   // Updates the segments stored internally from the set of compact fixed
   // and free constraints.
@@ -264,12 +272,15 @@ class PolynomialOptimization {
   // Contains the compact form of fixed constraints for each dimension
   // (d_f in [1]).
   std::vector<Eigen::VectorXd> fixed_constraints_compact_;
+  Eigen::VectorXd fixed_constraints_compact_NEW_;
 
   // Contains the compact form of free constraints to optimize for each
   // dimension (d_p in [1]).
   std::vector<Eigen::VectorXd> free_constraints_compact_;
+  Eigen::VectorXd free_constraints_compact_NEW_;
 
   std::vector<double> segment_times_;
+  std::vector<double> segment_radii_;
 
   // Number of polynomials, e.g 3 for a 3D path.
   size_t dimension_;

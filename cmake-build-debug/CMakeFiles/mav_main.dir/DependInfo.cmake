@@ -13,6 +13,7 @@ set(CMAKE_CXX_TARGET_INCLUDE_PATH
   "../include"
   "/usr/local/include/eigen3"
   "/usr/local/include"
+  "/opt/mosek/8/tools/platform/linux64x86"
   "../include/mav_tube_trajectory_generation"
   "../glog"
   )

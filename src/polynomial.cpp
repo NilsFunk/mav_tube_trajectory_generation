@@ -156,7 +156,7 @@ Eigen::MatrixXd computeBaseCoefficients(int N) {
     }
     order--;
   }
-  std::cout << base_coefficients << std::endl;
+  //std::cout << base_coefficients << std::endl;
   return base_coefficients;
 }
 

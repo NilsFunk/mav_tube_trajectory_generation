@@ -5,7 +5,7 @@
 		<Option title="mav_tube_trajectory_generation"/>
 		<Option makefile_is_custom="1"/>
 		<Option compiler="gcc"/>
-		<Option virtualFolders="CMake Files\;CMake Files\cmake\;CMake Files\..\;CMake Files\..\..\;CMake Files\..\..\..\;CMake Files\..\..\..\..\;CMake Files\..\..\..\..\..\;CMake Files\..\..\..\..\..\..\;CMake Files\..\..\..\..\..\..\..\;CMake Files\..\..\..\..\..\..\..\..\;CMake Files\..\..\..\..\..\..\..\..\usr\;CMake Files\..\..\..\..\..\..\..\..\usr\local\;CMake Files\..\..\..\..\..\..\..\..\usr\local\share\;CMake Files\..\..\..\..\..\..\..\..\usr\local\share\eigen3\;CMake Files\..\..\..\..\..\..\..\..\usr\local\share\eigen3\cmake\;"/>
+		<Option virtualFolders="CMake Files\;CMake Files\cmake\;"/>
 		<Build>
 			<Target title="all">
 				<Option working_dir="/home/nilsiism/workspace/prob_trajectory_planning/src/ext/mav_trajectory_generation/mav_tube_trajectory_generation/cmake-build-debug"/>
@@ -67,6 +67,7 @@
 					<Add directory="/usr/local/include/eigen3"/>
 					<Add directory="/usr/local/include"/>
 					<Add directory="/home/nilsiism/workspace/prob_trajectory_planning/src/ext/mav_trajectory_generation/mav_tube_trajectory_generation/include"/>
+					<Add directory="/opt/mosek/8/tools/platform/linux64x86"/>
 					<Add directory="/home/nilsiism/workspace/prob_trajectory_planning/src/ext/mav_trajectory_generation/mav_tube_trajectory_generation/include/mav_tube_trajectory_generation"/>
 					<Add directory="/home/nilsiism/workspace/prob_trajectory_planning/src/ext/mav_trajectory_generation/mav_tube_trajectory_generation/glog"/>
 					<Add directory="/usr/include/c++/5"/>
@@ -94,6 +95,7 @@
 					<Add directory="/usr/local/include/eigen3"/>
 					<Add directory="/usr/local/include"/>
 					<Add directory="/home/nilsiism/workspace/prob_trajectory_planning/src/ext/mav_trajectory_generation/mav_tube_trajectory_generation/include"/>
+					<Add directory="/opt/mosek/8/tools/platform/linux64x86"/>
 					<Add directory="/home/nilsiism/workspace/prob_trajectory_planning/src/ext/mav_trajectory_generation/mav_tube_trajectory_generation/include/mav_tube_trajectory_generation"/>
 					<Add directory="/home/nilsiism/workspace/prob_trajectory_planning/src/ext/mav_trajectory_generation/mav_tube_trajectory_generation/glog"/>
 					<Add directory="/usr/include/c++/5"/>
@@ -121,6 +123,7 @@
 					<Add directory="/home/nilsiism/workspace/prob_trajectory_planning/src/ext/mav_trajectory_generation/mav_tube_trajectory_generation/include"/>
 					<Add directory="/usr/local/include/eigen3"/>
 					<Add directory="/usr/local/include"/>
+					<Add directory="/opt/mosek/8/tools/platform/linux64x86"/>
 					<Add directory="/home/nilsiism/workspace/prob_trajectory_planning/src/ext/mav_trajectory_generation/mav_tube_trajectory_generation/include/mav_tube_trajectory_generation"/>
 					<Add directory="/home/nilsiism/workspace/prob_trajectory_planning/src/ext/mav_trajectory_generation/mav_tube_trajectory_generation/glog"/>
 					<Add directory="/usr/include/c++/5"/>
@@ -148,6 +151,7 @@
 					<Add directory="/home/nilsiism/workspace/prob_trajectory_planning/src/ext/mav_trajectory_generation/mav_tube_trajectory_generation/include"/>
 					<Add directory="/usr/local/include/eigen3"/>
 					<Add directory="/usr/local/include"/>
+					<Add directory="/opt/mosek/8/tools/platform/linux64x86"/>
 					<Add directory="/home/nilsiism/workspace/prob_trajectory_planning/src/ext/mav_trajectory_generation/mav_tube_trajectory_generation/include/mav_tube_trajectory_generation"/>
 					<Add directory="/home/nilsiism/workspace/prob_trajectory_planning/src/ext/mav_trajectory_generation/mav_tube_trajectory_generation/glog"/>
 					<Add directory="/usr/include/c++/5"/>
@@ -219,8 +223,8 @@
 		<Unit filename="/home/nilsiism/workspace/prob_trajectory_planning/src/ext/mav_trajectory_generation/mav_tube_trajectory_generation/cmake/FindGlog.cmake">
 			<Option virtualFolder="CMake Files\cmake\"/>
 		</Unit>
-		<Unit filename="/home/nilsiism/workspace/prob_trajectory_planning/src/ext/mav_trajectory_generation/mav_tube_trajectory_generation/../../../../../../../../usr/local/share/eigen3/cmake/Eigen3ConfigVersion.cmake">
-			<Option virtualFolder="CMake Files\..\..\..\..\..\..\..\..\usr\local\share\eigen3\cmake\"/>
+		<Unit filename="/home/nilsiism/workspace/prob_trajectory_planning/src/ext/mav_trajectory_generation/mav_tube_trajectory_generation/cmake/FindMosek.cmake">
+			<Option virtualFolder="CMake Files\cmake\"/>
 		</Unit>
 	</Project>
 </CodeBlocks_project_file>
