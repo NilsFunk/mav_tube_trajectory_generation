@@ -10,7 +10,7 @@ The output was:
 
 Compilation of the C compiler identification source "CMakeCCompilerId.c" produced "a.out"
 
-The C compiler identification is GNU, found in "/home/nilsiism/workspace/prob_trajectory_planning/src/ext/mav_trajectory_generation/mav_trajectory_generation/build/CMakeFiles/3.12.0-rc2/CompilerIdC/a.out"
+The C compiler identification is GNU, found in "/home/nilsiism/workspace/prob_trajectory_planning/src/ext/mav_trajectory_generation/mav_tube_trajectory_generation/build/CMakeFiles/3.12.0-rc2/CompilerIdC/a.out"
 
 Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" succeeded.
 Compiler: /usr/bin/c++ 
@@ -23,33 +23,33 @@ The output was:
 
 Compilation of the CXX compiler identification source "CMakeCXXCompilerId.cpp" produced "a.out"
 
-The CXX compiler identification is GNU, found in "/home/nilsiism/workspace/prob_trajectory_planning/src/ext/mav_trajectory_generation/mav_trajectory_generation/build/CMakeFiles/3.12.0-rc2/CompilerIdCXX/a.out"
+The CXX compiler identification is GNU, found in "/home/nilsiism/workspace/prob_trajectory_planning/src/ext/mav_trajectory_generation/mav_tube_trajectory_generation/build/CMakeFiles/3.12.0-rc2/CompilerIdCXX/a.out"
 
 Determining if the C compiler works passed with the following output:
-Change Dir: /home/nilsiism/workspace/prob_trajectory_planning/src/ext/mav_trajectory_generation/mav_trajectory_generation/build/CMakeFiles/CMakeTmp
+Change Dir: /home/nilsiism/workspace/prob_trajectory_planning/src/ext/mav_trajectory_generation/mav_tube_trajectory_generation/build/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/make" "cmTC_3a505/fast"
-/usr/bin/make -f CMakeFiles/cmTC_3a505.dir/build.make CMakeFiles/cmTC_3a505.dir/build
-make[1]: Entering directory '/home/nilsiism/workspace/prob_trajectory_planning/src/ext/mav_trajectory_generation/mav_trajectory_generation/build/CMakeFiles/CMakeTmp'
-Building C object CMakeFiles/cmTC_3a505.dir/testCCompiler.c.o
-/usr/bin/cc    -o CMakeFiles/cmTC_3a505.dir/testCCompiler.c.o   -c /home/nilsiism/workspace/prob_trajectory_planning/src/ext/mav_trajectory_generation/mav_trajectory_generation/build/CMakeFiles/CMakeTmp/testCCompiler.c
-Linking C executable cmTC_3a505
-/usr/local/bin/cmake -E cmake_link_script CMakeFiles/cmTC_3a505.dir/link.txt --verbose=1
-/usr/bin/cc      -rdynamic CMakeFiles/cmTC_3a505.dir/testCCompiler.c.o  -o cmTC_3a505 
-make[1]: Leaving directory '/home/nilsiism/workspace/prob_trajectory_planning/src/ext/mav_trajectory_generation/mav_trajectory_generation/build/CMakeFiles/CMakeTmp'
+Run Build Command:"/usr/bin/make" "cmTC_ccc2d/fast"
+/usr/bin/make -f CMakeFiles/cmTC_ccc2d.dir/build.make CMakeFiles/cmTC_ccc2d.dir/build
+make[1]: Entering directory '/home/nilsiism/workspace/prob_trajectory_planning/src/ext/mav_trajectory_generation/mav_tube_trajectory_generation/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_ccc2d.dir/testCCompiler.c.o
+/usr/bin/cc    -o CMakeFiles/cmTC_ccc2d.dir/testCCompiler.c.o   -c /home/nilsiism/workspace/prob_trajectory_planning/src/ext/mav_trajectory_generation/mav_tube_trajectory_generation/build/CMakeFiles/CMakeTmp/testCCompiler.c
+Linking C executable cmTC_ccc2d
+/usr/local/bin/cmake -E cmake_link_script CMakeFiles/cmTC_ccc2d.dir/link.txt --verbose=1
+/usr/bin/cc      -rdynamic CMakeFiles/cmTC_ccc2d.dir/testCCompiler.c.o  -o cmTC_ccc2d 
+make[1]: Leaving directory '/home/nilsiism/workspace/prob_trajectory_planning/src/ext/mav_trajectory_generation/mav_tube_trajectory_generation/build/CMakeFiles/CMakeTmp'
 
 
 Detecting C compiler ABI info compiled with the following output:
-Change Dir: /home/nilsiism/workspace/prob_trajectory_planning/src/ext/mav_trajectory_generation/mav_trajectory_generation/build/CMakeFiles/CMakeTmp
+Change Dir: /home/nilsiism/workspace/prob_trajectory_planning/src/ext/mav_trajectory_generation/mav_tube_trajectory_generation/build/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/make" "cmTC_234e2/fast"
-/usr/bin/make -f CMakeFiles/cmTC_234e2.dir/build.make CMakeFiles/cmTC_234e2.dir/build
-make[1]: Entering directory '/home/nilsiism/workspace/prob_trajectory_planning/src/ext/mav_trajectory_generation/mav_trajectory_generation/build/CMakeFiles/CMakeTmp'
-Building C object CMakeFiles/cmTC_234e2.dir/CMakeCCompilerABI.c.o
-/usr/bin/cc    -o CMakeFiles/cmTC_234e2.dir/CMakeCCompilerABI.c.o   -c /usr/local/share/cmake-3.12/Modules/CMakeCCompilerABI.c
-Linking C executable cmTC_234e2
-/usr/local/bin/cmake -E cmake_link_script CMakeFiles/cmTC_234e2.dir/link.txt --verbose=1
-/usr/bin/cc     -v -rdynamic CMakeFiles/cmTC_234e2.dir/CMakeCCompilerABI.c.o  -o cmTC_234e2 
+Run Build Command:"/usr/bin/make" "cmTC_c267a/fast"
+/usr/bin/make -f CMakeFiles/cmTC_c267a.dir/build.make CMakeFiles/cmTC_c267a.dir/build
+make[1]: Entering directory '/home/nilsiism/workspace/prob_trajectory_planning/src/ext/mav_trajectory_generation/mav_tube_trajectory_generation/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_c267a.dir/CMakeCCompilerABI.c.o
+/usr/bin/cc    -o CMakeFiles/cmTC_c267a.dir/CMakeCCompilerABI.c.o   -c /usr/local/share/cmake-3.12/Modules/CMakeCCompilerABI.c
+Linking C executable cmTC_c267a
+/usr/local/bin/cmake -E cmake_link_script CMakeFiles/cmTC_c267a.dir/link.txt --verbose=1
+/usr/bin/cc     -v -rdynamic CMakeFiles/cmTC_c267a.dir/CMakeCCompilerABI.c.o  -o cmTC_c267a 
 Using built-in specs.
 COLLECT_GCC=/usr/bin/cc
 COLLECT_LTO_WRAPPER=/usr/lib/gcc/x86_64-linux-gnu/5/lto-wrapper
@@ -59,23 +59,23 @@ Thread model: posix
 gcc version 5.4.0 20160609 (Ubuntu 5.4.0-6ubuntu1~16.04.10) 
 COMPILER_PATH=/usr/lib/gcc/x86_64-linux-gnu/5/:/usr/lib/gcc/x86_64-linux-gnu/5/:/usr/lib/gcc/x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/5/:/usr/lib/gcc/x86_64-linux-gnu/
 LIBRARY_PATH=/usr/lib/gcc/x86_64-linux-gnu/5/:/usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/5/../../../../lib/:/lib/x86_64-linux-gnu/:/lib/../lib/:/usr/lib/x86_64-linux-gnu/:/usr/lib/../lib/:/usr/lib/gcc/x86_64-linux-gnu/5/../../../:/lib/:/usr/lib/
-COLLECT_GCC_OPTIONS='-v' '-rdynamic' '-o' 'cmTC_234e2' '-mtune=generic' '-march=x86-64'
- /usr/lib/gcc/x86_64-linux-gnu/5/collect2 -plugin /usr/lib/gcc/x86_64-linux-gnu/5/liblto_plugin.so -plugin-opt=/usr/lib/gcc/x86_64-linux-gnu/5/lto-wrapper -plugin-opt=-fresolution=/tmp/ccrtwDvd.res -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s --sysroot=/ --build-id --eh-frame-hdr -m elf_x86_64 --hash-style=gnu --as-needed -export-dynamic -dynamic-linker /lib64/ld-linux-x86-64.so.2 -z relro -o cmTC_234e2 /usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu/crt1.o /usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu/crti.o /usr/lib/gcc/x86_64-linux-gnu/5/crtbegin.o -L/usr/lib/gcc/x86_64-linux-gnu/5 -L/usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu -L/usr/lib/gcc/x86_64-linux-gnu/5/../../../../lib -L/lib/x86_64-linux-gnu -L/lib/../lib -L/usr/lib/x86_64-linux-gnu -L/usr/lib/../lib -L/usr/lib/gcc/x86_64-linux-gnu/5/../../.. CMakeFiles/cmTC_234e2.dir/CMakeCCompilerABI.c.o -lgcc --as-needed -lgcc_s --no-as-needed -lc -lgcc --as-needed -lgcc_s --no-as-needed /usr/lib/gcc/x86_64-linux-gnu/5/crtend.o /usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu/crtn.o
-make[1]: Leaving directory '/home/nilsiism/workspace/prob_trajectory_planning/src/ext/mav_trajectory_generation/mav_trajectory_generation/build/CMakeFiles/CMakeTmp'
+COLLECT_GCC_OPTIONS='-v' '-rdynamic' '-o' 'cmTC_c267a' '-mtune=generic' '-march=x86-64'
+ /usr/lib/gcc/x86_64-linux-gnu/5/collect2 -plugin /usr/lib/gcc/x86_64-linux-gnu/5/liblto_plugin.so -plugin-opt=/usr/lib/gcc/x86_64-linux-gnu/5/lto-wrapper -plugin-opt=-fresolution=/tmp/cctSajnV.res -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s --sysroot=/ --build-id --eh-frame-hdr -m elf_x86_64 --hash-style=gnu --as-needed -export-dynamic -dynamic-linker /lib64/ld-linux-x86-64.so.2 -z relro -o cmTC_c267a /usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu/crt1.o /usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu/crti.o /usr/lib/gcc/x86_64-linux-gnu/5/crtbegin.o -L/usr/lib/gcc/x86_64-linux-gnu/5 -L/usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu -L/usr/lib/gcc/x86_64-linux-gnu/5/../../../../lib -L/lib/x86_64-linux-gnu -L/lib/../lib -L/usr/lib/x86_64-linux-gnu -L/usr/lib/../lib -L/usr/lib/gcc/x86_64-linux-gnu/5/../../.. CMakeFiles/cmTC_c267a.dir/CMakeCCompilerABI.c.o -lgcc --as-needed -lgcc_s --no-as-needed -lc -lgcc --as-needed -lgcc_s --no-as-needed /usr/lib/gcc/x86_64-linux-gnu/5/crtend.o /usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu/crtn.o
+make[1]: Leaving directory '/home/nilsiism/workspace/prob_trajectory_planning/src/ext/mav_trajectory_generation/mav_tube_trajectory_generation/build/CMakeFiles/CMakeTmp'
 
 
 Parsed C implicit link information from above output:
   link line regex: [^( *|.*[/\])(ld|CMAKE_LINK_STARTFILE-NOTFOUND|([^/\]+-)?ld|collect2)[^/\]*( |$)]
-  ignore line: [Change Dir: /home/nilsiism/workspace/prob_trajectory_planning/src/ext/mav_trajectory_generation/mav_trajectory_generation/build/CMakeFiles/CMakeTmp]
+  ignore line: [Change Dir: /home/nilsiism/workspace/prob_trajectory_planning/src/ext/mav_trajectory_generation/mav_tube_trajectory_generation/build/CMakeFiles/CMakeTmp]
   ignore line: []
-  ignore line: [Run Build Command:"/usr/bin/make" "cmTC_234e2/fast"]
-  ignore line: [/usr/bin/make -f CMakeFiles/cmTC_234e2.dir/build.make CMakeFiles/cmTC_234e2.dir/build]
-  ignore line: [make[1]: Entering directory '/home/nilsiism/workspace/prob_trajectory_planning/src/ext/mav_trajectory_generation/mav_trajectory_generation/build/CMakeFiles/CMakeTmp']
-  ignore line: [Building C object CMakeFiles/cmTC_234e2.dir/CMakeCCompilerABI.c.o]
-  ignore line: [/usr/bin/cc    -o CMakeFiles/cmTC_234e2.dir/CMakeCCompilerABI.c.o   -c /usr/local/share/cmake-3.12/Modules/CMakeCCompilerABI.c]
-  ignore line: [Linking C executable cmTC_234e2]
-  ignore line: [/usr/local/bin/cmake -E cmake_link_script CMakeFiles/cmTC_234e2.dir/link.txt --verbose=1]
-  ignore line: [/usr/bin/cc     -v -rdynamic CMakeFiles/cmTC_234e2.dir/CMakeCCompilerABI.c.o  -o cmTC_234e2 ]
+  ignore line: [Run Build Command:"/usr/bin/make" "cmTC_c267a/fast"]
+  ignore line: [/usr/bin/make -f CMakeFiles/cmTC_c267a.dir/build.make CMakeFiles/cmTC_c267a.dir/build]
+  ignore line: [make[1]: Entering directory '/home/nilsiism/workspace/prob_trajectory_planning/src/ext/mav_trajectory_generation/mav_tube_trajectory_generation/build/CMakeFiles/CMakeTmp']
+  ignore line: [Building C object CMakeFiles/cmTC_c267a.dir/CMakeCCompilerABI.c.o]
+  ignore line: [/usr/bin/cc    -o CMakeFiles/cmTC_c267a.dir/CMakeCCompilerABI.c.o   -c /usr/local/share/cmake-3.12/Modules/CMakeCCompilerABI.c]
+  ignore line: [Linking C executable cmTC_c267a]
+  ignore line: [/usr/local/bin/cmake -E cmake_link_script CMakeFiles/cmTC_c267a.dir/link.txt --verbose=1]
+  ignore line: [/usr/bin/cc     -v -rdynamic CMakeFiles/cmTC_c267a.dir/CMakeCCompilerABI.c.o  -o cmTC_c267a ]
   ignore line: [Using built-in specs.]
   ignore line: [COLLECT_GCC=/usr/bin/cc]
   ignore line: [COLLECT_LTO_WRAPPER=/usr/lib/gcc/x86_64-linux-gnu/5/lto-wrapper]
@@ -85,13 +85,13 @@ Parsed C implicit link information from above output:
   ignore line: [gcc version 5.4.0 20160609 (Ubuntu 5.4.0-6ubuntu1~16.04.10) ]
   ignore line: [COMPILER_PATH=/usr/lib/gcc/x86_64-linux-gnu/5/:/usr/lib/gcc/x86_64-linux-gnu/5/:/usr/lib/gcc/x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/5/:/usr/lib/gcc/x86_64-linux-gnu/]
   ignore line: [LIBRARY_PATH=/usr/lib/gcc/x86_64-linux-gnu/5/:/usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/5/../../../../lib/:/lib/x86_64-linux-gnu/:/lib/../lib/:/usr/lib/x86_64-linux-gnu/:/usr/lib/../lib/:/usr/lib/gcc/x86_64-linux-gnu/5/../../../:/lib/:/usr/lib/]
-  ignore line: [COLLECT_GCC_OPTIONS='-v' '-rdynamic' '-o' 'cmTC_234e2' '-mtune=generic' '-march=x86-64']
-  link line: [ /usr/lib/gcc/x86_64-linux-gnu/5/collect2 -plugin /usr/lib/gcc/x86_64-linux-gnu/5/liblto_plugin.so -plugin-opt=/usr/lib/gcc/x86_64-linux-gnu/5/lto-wrapper -plugin-opt=-fresolution=/tmp/ccrtwDvd.res -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s --sysroot=/ --build-id --eh-frame-hdr -m elf_x86_64 --hash-style=gnu --as-needed -export-dynamic -dynamic-linker /lib64/ld-linux-x86-64.so.2 -z relro -o cmTC_234e2 /usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu/crt1.o /usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu/crti.o /usr/lib/gcc/x86_64-linux-gnu/5/crtbegin.o -L/usr/lib/gcc/x86_64-linux-gnu/5 -L/usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu -L/usr/lib/gcc/x86_64-linux-gnu/5/../../../../lib -L/lib/x86_64-linux-gnu -L/lib/../lib -L/usr/lib/x86_64-linux-gnu -L/usr/lib/../lib -L/usr/lib/gcc/x86_64-linux-gnu/5/../../.. CMakeFiles/cmTC_234e2.dir/CMakeCCompilerABI.c.o -lgcc --as-needed -lgcc_s --no-as-needed -lc -lgcc --as-needed -lgcc_s --no-as-needed /usr/lib/gcc/x86_64-linux-gnu/5/crtend.o /usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu/crtn.o]
+  ignore line: [COLLECT_GCC_OPTIONS='-v' '-rdynamic' '-o' 'cmTC_c267a' '-mtune=generic' '-march=x86-64']
+  link line: [ /usr/lib/gcc/x86_64-linux-gnu/5/collect2 -plugin /usr/lib/gcc/x86_64-linux-gnu/5/liblto_plugin.so -plugin-opt=/usr/lib/gcc/x86_64-linux-gnu/5/lto-wrapper -plugin-opt=-fresolution=/tmp/cctSajnV.res -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s --sysroot=/ --build-id --eh-frame-hdr -m elf_x86_64 --hash-style=gnu --as-needed -export-dynamic -dynamic-linker /lib64/ld-linux-x86-64.so.2 -z relro -o cmTC_c267a /usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu/crt1.o /usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu/crti.o /usr/lib/gcc/x86_64-linux-gnu/5/crtbegin.o -L/usr/lib/gcc/x86_64-linux-gnu/5 -L/usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu -L/usr/lib/gcc/x86_64-linux-gnu/5/../../../../lib -L/lib/x86_64-linux-gnu -L/lib/../lib -L/usr/lib/x86_64-linux-gnu -L/usr/lib/../lib -L/usr/lib/gcc/x86_64-linux-gnu/5/../../.. CMakeFiles/cmTC_c267a.dir/CMakeCCompilerABI.c.o -lgcc --as-needed -lgcc_s --no-as-needed -lc -lgcc --as-needed -lgcc_s --no-as-needed /usr/lib/gcc/x86_64-linux-gnu/5/crtend.o /usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu/crtn.o]
     arg [/usr/lib/gcc/x86_64-linux-gnu/5/collect2] ==> ignore
     arg [-plugin] ==> ignore
     arg [/usr/lib/gcc/x86_64-linux-gnu/5/liblto_plugin.so] ==> ignore
     arg [-plugin-opt=/usr/lib/gcc/x86_64-linux-gnu/5/lto-wrapper] ==> ignore
-    arg [-plugin-opt=-fresolution=/tmp/ccrtwDvd.res] ==> ignore
+    arg [-plugin-opt=-fresolution=/tmp/cctSajnV.res] ==> ignore
     arg [-plugin-opt=-pass-through=-lgcc] ==> ignore
     arg [-plugin-opt=-pass-through=-lgcc_s] ==> ignore
     arg [-plugin-opt=-pass-through=-lc] ==> ignore
@@ -109,7 +109,7 @@ Parsed C implicit link information from above output:
     arg [/lib64/ld-linux-x86-64.so.2] ==> ignore
     arg [-zrelro] ==> ignore
     arg [-o] ==> ignore
-    arg [cmTC_234e2] ==> ignore
+    arg [cmTC_c267a] ==> ignore
     arg [/usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu/crt1.o] ==> ignore
     arg [/usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu/crti.o] ==> ignore
     arg [/usr/lib/gcc/x86_64-linux-gnu/5/crtbegin.o] ==> ignore
@@ -121,7 +121,7 @@ Parsed C implicit link information from above output:
     arg [-L/usr/lib/x86_64-linux-gnu] ==> dir [/usr/lib/x86_64-linux-gnu]
     arg [-L/usr/lib/../lib] ==> dir [/usr/lib/../lib]
     arg [-L/usr/lib/gcc/x86_64-linux-gnu/5/../../..] ==> dir [/usr/lib/gcc/x86_64-linux-gnu/5/../../..]
-    arg [CMakeFiles/cmTC_234e2.dir/CMakeCCompilerABI.c.o] ==> ignore
+    arg [CMakeFiles/cmTC_c267a.dir/CMakeCCompilerABI.c.o] ==> ignore
     arg [-lgcc] ==> lib [gcc]
     arg [--as-needed] ==> ignore
     arg [-lgcc_s] ==> lib [gcc_s]
@@ -149,17 +149,17 @@ Parsed C implicit link information from above output:
 
 
 Detecting C [-std=c11] compiler features compiled with the following output:
-Change Dir: /home/nilsiism/workspace/prob_trajectory_planning/src/ext/mav_trajectory_generation/mav_trajectory_generation/build/CMakeFiles/CMakeTmp
+Change Dir: /home/nilsiism/workspace/prob_trajectory_planning/src/ext/mav_trajectory_generation/mav_tube_trajectory_generation/build/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/make" "cmTC_79524/fast"
-/usr/bin/make -f CMakeFiles/cmTC_79524.dir/build.make CMakeFiles/cmTC_79524.dir/build
-make[1]: Entering directory '/home/nilsiism/workspace/prob_trajectory_planning/src/ext/mav_trajectory_generation/mav_trajectory_generation/build/CMakeFiles/CMakeTmp'
-Building C object CMakeFiles/cmTC_79524.dir/feature_tests.c.o
-/usr/bin/cc   -std=c11 -o CMakeFiles/cmTC_79524.dir/feature_tests.c.o   -c /home/nilsiism/workspace/prob_trajectory_planning/src/ext/mav_trajectory_generation/mav_trajectory_generation/build/CMakeFiles/feature_tests.c
-Linking C executable cmTC_79524
-/usr/local/bin/cmake -E cmake_link_script CMakeFiles/cmTC_79524.dir/link.txt --verbose=1
-/usr/bin/cc      -rdynamic CMakeFiles/cmTC_79524.dir/feature_tests.c.o  -o cmTC_79524 
-make[1]: Leaving directory '/home/nilsiism/workspace/prob_trajectory_planning/src/ext/mav_trajectory_generation/mav_trajectory_generation/build/CMakeFiles/CMakeTmp'
+Run Build Command:"/usr/bin/make" "cmTC_c3c3b/fast"
+/usr/bin/make -f CMakeFiles/cmTC_c3c3b.dir/build.make CMakeFiles/cmTC_c3c3b.dir/build
+make[1]: Entering directory '/home/nilsiism/workspace/prob_trajectory_planning/src/ext/mav_trajectory_generation/mav_tube_trajectory_generation/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_c3c3b.dir/feature_tests.c.o
+/usr/bin/cc   -std=c11 -o CMakeFiles/cmTC_c3c3b.dir/feature_tests.c.o   -c /home/nilsiism/workspace/prob_trajectory_planning/src/ext/mav_trajectory_generation/mav_tube_trajectory_generation/build/CMakeFiles/feature_tests.c
+Linking C executable cmTC_c3c3b
+/usr/local/bin/cmake -E cmake_link_script CMakeFiles/cmTC_c3c3b.dir/link.txt --verbose=1
+/usr/bin/cc      -rdynamic CMakeFiles/cmTC_c3c3b.dir/feature_tests.c.o  -o cmTC_c3c3b 
+make[1]: Leaving directory '/home/nilsiism/workspace/prob_trajectory_planning/src/ext/mav_trajectory_generation/mav_tube_trajectory_generation/build/CMakeFiles/CMakeTmp'
 
 
     Feature record: C_FEATURE:1c_function_prototypes
@@ -169,17 +169,17 @@ make[1]: Leaving directory '/home/nilsiism/workspace/prob_trajectory_planning/sr
 
 
 Detecting C [-std=c99] compiler features compiled with the following output:
-Change Dir: /home/nilsiism/workspace/prob_trajectory_planning/src/ext/mav_trajectory_generation/mav_trajectory_generation/build/CMakeFiles/CMakeTmp
+Change Dir: /home/nilsiism/workspace/prob_trajectory_planning/src/ext/mav_trajectory_generation/mav_tube_trajectory_generation/build/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/make" "cmTC_54ee0/fast"
-/usr/bin/make -f CMakeFiles/cmTC_54ee0.dir/build.make CMakeFiles/cmTC_54ee0.dir/build
-make[1]: Entering directory '/home/nilsiism/workspace/prob_trajectory_planning/src/ext/mav_trajectory_generation/mav_trajectory_generation/build/CMakeFiles/CMakeTmp'
-Building C object CMakeFiles/cmTC_54ee0.dir/feature_tests.c.o
-/usr/bin/cc   -std=c99 -o CMakeFiles/cmTC_54ee0.dir/feature_tests.c.o   -c /home/nilsiism/workspace/prob_trajectory_planning/src/ext/mav_trajectory_generation/mav_trajectory_generation/build/CMakeFiles/feature_tests.c
-Linking C executable cmTC_54ee0
-/usr/local/bin/cmake -E cmake_link_script CMakeFiles/cmTC_54ee0.dir/link.txt --verbose=1
-/usr/bin/cc      -rdynamic CMakeFiles/cmTC_54ee0.dir/feature_tests.c.o  -o cmTC_54ee0 
-make[1]: Leaving directory '/home/nilsiism/workspace/prob_trajectory_planning/src/ext/mav_trajectory_generation/mav_trajectory_generation/build/CMakeFiles/CMakeTmp'
+Run Build Command:"/usr/bin/make" "cmTC_d9890/fast"
+/usr/bin/make -f CMakeFiles/cmTC_d9890.dir/build.make CMakeFiles/cmTC_d9890.dir/build
+make[1]: Entering directory '/home/nilsiism/workspace/prob_trajectory_planning/src/ext/mav_trajectory_generation/mav_tube_trajectory_generation/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_d9890.dir/feature_tests.c.o
+/usr/bin/cc   -std=c99 -o CMakeFiles/cmTC_d9890.dir/feature_tests.c.o   -c /home/nilsiism/workspace/prob_trajectory_planning/src/ext/mav_trajectory_generation/mav_tube_trajectory_generation/build/CMakeFiles/feature_tests.c
+Linking C executable cmTC_d9890
+/usr/local/bin/cmake -E cmake_link_script CMakeFiles/cmTC_d9890.dir/link.txt --verbose=1
+/usr/bin/cc      -rdynamic CMakeFiles/cmTC_d9890.dir/feature_tests.c.o  -o cmTC_d9890 
+make[1]: Leaving directory '/home/nilsiism/workspace/prob_trajectory_planning/src/ext/mav_trajectory_generation/mav_tube_trajectory_generation/build/CMakeFiles/CMakeTmp'
 
 
     Feature record: C_FEATURE:1c_function_prototypes
@@ -189,17 +189,17 @@ make[1]: Leaving directory '/home/nilsiism/workspace/prob_trajectory_planning/sr
 
 
 Detecting C [-std=c90] compiler features compiled with the following output:
-Change Dir: /home/nilsiism/workspace/prob_trajectory_planning/src/ext/mav_trajectory_generation/mav_trajectory_generation/build/CMakeFiles/CMakeTmp
+Change Dir: /home/nilsiism/workspace/prob_trajectory_planning/src/ext/mav_trajectory_generation/mav_tube_trajectory_generation/build/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/make" "cmTC_8164a/fast"
-/usr/bin/make -f CMakeFiles/cmTC_8164a.dir/build.make CMakeFiles/cmTC_8164a.dir/build
-make[1]: Entering directory '/home/nilsiism/workspace/prob_trajectory_planning/src/ext/mav_trajectory_generation/mav_trajectory_generation/build/CMakeFiles/CMakeTmp'
-Building C object CMakeFiles/cmTC_8164a.dir/feature_tests.c.o
-/usr/bin/cc   -std=c90 -o CMakeFiles/cmTC_8164a.dir/feature_tests.c.o   -c /home/nilsiism/workspace/prob_trajectory_planning/src/ext/mav_trajectory_generation/mav_trajectory_generation/build/CMakeFiles/feature_tests.c
-Linking C executable cmTC_8164a
-/usr/local/bin/cmake -E cmake_link_script CMakeFiles/cmTC_8164a.dir/link.txt --verbose=1
-/usr/bin/cc      -rdynamic CMakeFiles/cmTC_8164a.dir/feature_tests.c.o  -o cmTC_8164a 
-make[1]: Leaving directory '/home/nilsiism/workspace/prob_trajectory_planning/src/ext/mav_trajectory_generation/mav_trajectory_generation/build/CMakeFiles/CMakeTmp'
+Run Build Command:"/usr/bin/make" "cmTC_e4b0f/fast"
+/usr/bin/make -f CMakeFiles/cmTC_e4b0f.dir/build.make CMakeFiles/cmTC_e4b0f.dir/build
+make[1]: Entering directory '/home/nilsiism/workspace/prob_trajectory_planning/src/ext/mav_trajectory_generation/mav_tube_trajectory_generation/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_e4b0f.dir/feature_tests.c.o
+/usr/bin/cc   -std=c90 -o CMakeFiles/cmTC_e4b0f.dir/feature_tests.c.o   -c /home/nilsiism/workspace/prob_trajectory_planning/src/ext/mav_trajectory_generation/mav_tube_trajectory_generation/build/CMakeFiles/feature_tests.c
+Linking C executable cmTC_e4b0f
+/usr/local/bin/cmake -E cmake_link_script CMakeFiles/cmTC_e4b0f.dir/link.txt --verbose=1
+/usr/bin/cc      -rdynamic CMakeFiles/cmTC_e4b0f.dir/feature_tests.c.o  -o cmTC_e4b0f 
+make[1]: Leaving directory '/home/nilsiism/workspace/prob_trajectory_planning/src/ext/mav_trajectory_generation/mav_tube_trajectory_generation/build/CMakeFiles/CMakeTmp'
 
 
     Feature record: C_FEATURE:1c_function_prototypes
@@ -207,30 +207,30 @@ make[1]: Leaving directory '/home/nilsiism/workspace/prob_trajectory_planning/sr
     Feature record: C_FEATURE:0c_static_assert
     Feature record: C_FEATURE:0c_variadic_macros
 Determining if the CXX compiler works passed with the following output:
-Change Dir: /home/nilsiism/workspace/prob_trajectory_planning/src/ext/mav_trajectory_generation/mav_trajectory_generation/build/CMakeFiles/CMakeTmp
+Change Dir: /home/nilsiism/workspace/prob_trajectory_planning/src/ext/mav_trajectory_generation/mav_tube_trajectory_generation/build/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/make" "cmTC_a8c2b/fast"
-/usr/bin/make -f CMakeFiles/cmTC_a8c2b.dir/build.make CMakeFiles/cmTC_a8c2b.dir/build
-make[1]: Entering directory '/home/nilsiism/workspace/prob_trajectory_planning/src/ext/mav_trajectory_generation/mav_trajectory_generation/build/CMakeFiles/CMakeTmp'
-Building CXX object CMakeFiles/cmTC_a8c2b.dir/testCXXCompiler.cxx.o
-/usr/bin/c++     -o CMakeFiles/cmTC_a8c2b.dir/testCXXCompiler.cxx.o -c /home/nilsiism/workspace/prob_trajectory_planning/src/ext/mav_trajectory_generation/mav_trajectory_generation/build/CMakeFiles/CMakeTmp/testCXXCompiler.cxx
-Linking CXX executable cmTC_a8c2b
-/usr/local/bin/cmake -E cmake_link_script CMakeFiles/cmTC_a8c2b.dir/link.txt --verbose=1
-/usr/bin/c++       -rdynamic CMakeFiles/cmTC_a8c2b.dir/testCXXCompiler.cxx.o  -o cmTC_a8c2b 
-make[1]: Leaving directory '/home/nilsiism/workspace/prob_trajectory_planning/src/ext/mav_trajectory_generation/mav_trajectory_generation/build/CMakeFiles/CMakeTmp'
+Run Build Command:"/usr/bin/make" "cmTC_73d76/fast"
+/usr/bin/make -f CMakeFiles/cmTC_73d76.dir/build.make CMakeFiles/cmTC_73d76.dir/build
+make[1]: Entering directory '/home/nilsiism/workspace/prob_trajectory_planning/src/ext/mav_trajectory_generation/mav_tube_trajectory_generation/build/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_73d76.dir/testCXXCompiler.cxx.o
+/usr/bin/c++     -o CMakeFiles/cmTC_73d76.dir/testCXXCompiler.cxx.o -c /home/nilsiism/workspace/prob_trajectory_planning/src/ext/mav_trajectory_generation/mav_tube_trajectory_generation/build/CMakeFiles/CMakeTmp/testCXXCompiler.cxx
+Linking CXX executable cmTC_73d76
+/usr/local/bin/cmake -E cmake_link_script CMakeFiles/cmTC_73d76.dir/link.txt --verbose=1
+/usr/bin/c++       -rdynamic CMakeFiles/cmTC_73d76.dir/testCXXCompiler.cxx.o  -o cmTC_73d76 
+make[1]: Leaving directory '/home/nilsiism/workspace/prob_trajectory_planning/src/ext/mav_trajectory_generation/mav_tube_trajectory_generation/build/CMakeFiles/CMakeTmp'
 
 
 Detecting CXX compiler ABI info compiled with the following output:
-Change Dir: /home/nilsiism/workspace/prob_trajectory_planning/src/ext/mav_trajectory_generation/mav_trajectory_generation/build/CMakeFiles/CMakeTmp
+Change Dir: /home/nilsiism/workspace/prob_trajectory_planning/src/ext/mav_trajectory_generation/mav_tube_trajectory_generation/build/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/make" "cmTC_c29d1/fast"
-/usr/bin/make -f CMakeFiles/cmTC_c29d1.dir/build.make CMakeFiles/cmTC_c29d1.dir/build
-make[1]: Entering directory '/home/nilsiism/workspace/prob_trajectory_planning/src/ext/mav_trajectory_generation/mav_trajectory_generation/build/CMakeFiles/CMakeTmp'
-Building CXX object CMakeFiles/cmTC_c29d1.dir/CMakeCXXCompilerABI.cpp.o
-/usr/bin/c++     -o CMakeFiles/cmTC_c29d1.dir/CMakeCXXCompilerABI.cpp.o -c /usr/local/share/cmake-3.12/Modules/CMakeCXXCompilerABI.cpp
-Linking CXX executable cmTC_c29d1
-/usr/local/bin/cmake -E cmake_link_script CMakeFiles/cmTC_c29d1.dir/link.txt --verbose=1
-/usr/bin/c++      -v -rdynamic CMakeFiles/cmTC_c29d1.dir/CMakeCXXCompilerABI.cpp.o  -o cmTC_c29d1 
+Run Build Command:"/usr/bin/make" "cmTC_64fe4/fast"
+/usr/bin/make -f CMakeFiles/cmTC_64fe4.dir/build.make CMakeFiles/cmTC_64fe4.dir/build
+make[1]: Entering directory '/home/nilsiism/workspace/prob_trajectory_planning/src/ext/mav_trajectory_generation/mav_tube_trajectory_generation/build/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_64fe4.dir/CMakeCXXCompilerABI.cpp.o
+/usr/bin/c++     -o CMakeFiles/cmTC_64fe4.dir/CMakeCXXCompilerABI.cpp.o -c /usr/local/share/cmake-3.12/Modules/CMakeCXXCompilerABI.cpp
+Linking CXX executable cmTC_64fe4
+/usr/local/bin/cmake -E cmake_link_script CMakeFiles/cmTC_64fe4.dir/link.txt --verbose=1
+/usr/bin/c++      -v -rdynamic CMakeFiles/cmTC_64fe4.dir/CMakeCXXCompilerABI.cpp.o  -o cmTC_64fe4 
 Using built-in specs.
 COLLECT_GCC=/usr/bin/c++
 COLLECT_LTO_WRAPPER=/usr/lib/gcc/x86_64-linux-gnu/5/lto-wrapper
@@ -240,23 +240,23 @@ Thread model: posix
 gcc version 5.4.0 20160609 (Ubuntu 5.4.0-6ubuntu1~16.04.10) 
 COMPILER_PATH=/usr/lib/gcc/x86_64-linux-gnu/5/:/usr/lib/gcc/x86_64-linux-gnu/5/:/usr/lib/gcc/x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/5/:/usr/lib/gcc/x86_64-linux-gnu/
 LIBRARY_PATH=/usr/lib/gcc/x86_64-linux-gnu/5/:/usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/5/../../../../lib/:/lib/x86_64-linux-gnu/:/lib/../lib/:/usr/lib/x86_64-linux-gnu/:/usr/lib/../lib/:/usr/lib/gcc/x86_64-linux-gnu/5/../../../:/lib/:/usr/lib/
-COLLECT_GCC_OPTIONS='-v' '-rdynamic' '-o' 'cmTC_c29d1' '-shared-libgcc' '-mtune=generic' '-march=x86-64'
- /usr/lib/gcc/x86_64-linux-gnu/5/collect2 -plugin /usr/lib/gcc/x86_64-linux-gnu/5/liblto_plugin.so -plugin-opt=/usr/lib/gcc/x86_64-linux-gnu/5/lto-wrapper -plugin-opt=-fresolution=/tmp/ccvHLMrJ.res -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc --sysroot=/ --build-id --eh-frame-hdr -m elf_x86_64 --hash-style=gnu --as-needed -export-dynamic -dynamic-linker /lib64/ld-linux-x86-64.so.2 -z relro -o cmTC_c29d1 /usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu/crt1.o /usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu/crti.o /usr/lib/gcc/x86_64-linux-gnu/5/crtbegin.o -L/usr/lib/gcc/x86_64-linux-gnu/5 -L/usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu -L/usr/lib/gcc/x86_64-linux-gnu/5/../../../../lib -L/lib/x86_64-linux-gnu -L/lib/../lib -L/usr/lib/x86_64-linux-gnu -L/usr/lib/../lib -L/usr/lib/gcc/x86_64-linux-gnu/5/../../.. CMakeFiles/cmTC_c29d1.dir/CMakeCXXCompilerABI.cpp.o -lstdc++ -lm -lgcc_s -lgcc -lc -lgcc_s -lgcc /usr/lib/gcc/x86_64-linux-gnu/5/crtend.o /usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu/crtn.o
-make[1]: Leaving directory '/home/nilsiism/workspace/prob_trajectory_planning/src/ext/mav_trajectory_generation/mav_trajectory_generation/build/CMakeFiles/CMakeTmp'
+COLLECT_GCC_OPTIONS='-v' '-rdynamic' '-o' 'cmTC_64fe4' '-shared-libgcc' '-mtune=generic' '-march=x86-64'
+ /usr/lib/gcc/x86_64-linux-gnu/5/collect2 -plugin /usr/lib/gcc/x86_64-linux-gnu/5/liblto_plugin.so -plugin-opt=/usr/lib/gcc/x86_64-linux-gnu/5/lto-wrapper -plugin-opt=-fresolution=/tmp/ccWmkrAn.res -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc --sysroot=/ --build-id --eh-frame-hdr -m elf_x86_64 --hash-style=gnu --as-needed -export-dynamic -dynamic-linker /lib64/ld-linux-x86-64.so.2 -z relro -o cmTC_64fe4 /usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu/crt1.o /usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu/crti.o /usr/lib/gcc/x86_64-linux-gnu/5/crtbegin.o -L/usr/lib/gcc/x86_64-linux-gnu/5 -L/usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu -L/usr/lib/gcc/x86_64-linux-gnu/5/../../../../lib -L/lib/x86_64-linux-gnu -L/lib/../lib -L/usr/lib/x86_64-linux-gnu -L/usr/lib/../lib -L/usr/lib/gcc/x86_64-linux-gnu/5/../../.. CMakeFiles/cmTC_64fe4.dir/CMakeCXXCompilerABI.cpp.o -lstdc++ -lm -lgcc_s -lgcc -lc -lgcc_s -lgcc /usr/lib/gcc/x86_64-linux-gnu/5/crtend.o /usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu/crtn.o
+make[1]: Leaving directory '/home/nilsiism/workspace/prob_trajectory_planning/src/ext/mav_trajectory_generation/mav_tube_trajectory_generation/build/CMakeFiles/CMakeTmp'
 
 
 Parsed CXX implicit link information from above output:
   link line regex: [^( *|.*[/\])(ld|CMAKE_LINK_STARTFILE-NOTFOUND|([^/\]+-)?ld|collect2)[^/\]*( |$)]
-  ignore line: [Change Dir: /home/nilsiism/workspace/prob_trajectory_planning/src/ext/mav_trajectory_generation/mav_trajectory_generation/build/CMakeFiles/CMakeTmp]
+  ignore line: [Change Dir: /home/nilsiism/workspace/prob_trajectory_planning/src/ext/mav_trajectory_generation/mav_tube_trajectory_generation/build/CMakeFiles/CMakeTmp]
   ignore line: []
-  ignore line: [Run Build Command:"/usr/bin/make" "cmTC_c29d1/fast"]
-  ignore line: [/usr/bin/make -f CMakeFiles/cmTC_c29d1.dir/build.make CMakeFiles/cmTC_c29d1.dir/build]
-  ignore line: [make[1]: Entering directory '/home/nilsiism/workspace/prob_trajectory_planning/src/ext/mav_trajectory_generation/mav_trajectory_generation/build/CMakeFiles/CMakeTmp']
-  ignore line: [Building CXX object CMakeFiles/cmTC_c29d1.dir/CMakeCXXCompilerABI.cpp.o]
-  ignore line: [/usr/bin/c++     -o CMakeFiles/cmTC_c29d1.dir/CMakeCXXCompilerABI.cpp.o -c /usr/local/share/cmake-3.12/Modules/CMakeCXXCompilerABI.cpp]
-  ignore line: [Linking CXX executable cmTC_c29d1]
-  ignore line: [/usr/local/bin/cmake -E cmake_link_script CMakeFiles/cmTC_c29d1.dir/link.txt --verbose=1]
-  ignore line: [/usr/bin/c++      -v -rdynamic CMakeFiles/cmTC_c29d1.dir/CMakeCXXCompilerABI.cpp.o  -o cmTC_c29d1 ]
+  ignore line: [Run Build Command:"/usr/bin/make" "cmTC_64fe4/fast"]
+  ignore line: [/usr/bin/make -f CMakeFiles/cmTC_64fe4.dir/build.make CMakeFiles/cmTC_64fe4.dir/build]
+  ignore line: [make[1]: Entering directory '/home/nilsiism/workspace/prob_trajectory_planning/src/ext/mav_trajectory_generation/mav_tube_trajectory_generation/build/CMakeFiles/CMakeTmp']
+  ignore line: [Building CXX object CMakeFiles/cmTC_64fe4.dir/CMakeCXXCompilerABI.cpp.o]
+  ignore line: [/usr/bin/c++     -o CMakeFiles/cmTC_64fe4.dir/CMakeCXXCompilerABI.cpp.o -c /usr/local/share/cmake-3.12/Modules/CMakeCXXCompilerABI.cpp]
+  ignore line: [Linking CXX executable cmTC_64fe4]
+  ignore line: [/usr/local/bin/cmake -E cmake_link_script CMakeFiles/cmTC_64fe4.dir/link.txt --verbose=1]
+  ignore line: [/usr/bin/c++      -v -rdynamic CMakeFiles/cmTC_64fe4.dir/CMakeCXXCompilerABI.cpp.o  -o cmTC_64fe4 ]
   ignore line: [Using built-in specs.]
   ignore line: [COLLECT_GCC=/usr/bin/c++]
   ignore line: [COLLECT_LTO_WRAPPER=/usr/lib/gcc/x86_64-linux-gnu/5/lto-wrapper]
@@ -266,13 +266,13 @@ Parsed CXX implicit link information from above output:
   ignore line: [gcc version 5.4.0 20160609 (Ubuntu 5.4.0-6ubuntu1~16.04.10) ]
   ignore line: [COMPILER_PATH=/usr/lib/gcc/x86_64-linux-gnu/5/:/usr/lib/gcc/x86_64-linux-gnu/5/:/usr/lib/gcc/x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/5/:/usr/lib/gcc/x86_64-linux-gnu/]
   ignore line: [LIBRARY_PATH=/usr/lib/gcc/x86_64-linux-gnu/5/:/usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/5/../../../../lib/:/lib/x86_64-linux-gnu/:/lib/../lib/:/usr/lib/x86_64-linux-gnu/:/usr/lib/../lib/:/usr/lib/gcc/x86_64-linux-gnu/5/../../../:/lib/:/usr/lib/]
-  ignore line: [COLLECT_GCC_OPTIONS='-v' '-rdynamic' '-o' 'cmTC_c29d1' '-shared-libgcc' '-mtune=generic' '-march=x86-64']
-  link line: [ /usr/lib/gcc/x86_64-linux-gnu/5/collect2 -plugin /usr/lib/gcc/x86_64-linux-gnu/5/liblto_plugin.so -plugin-opt=/usr/lib/gcc/x86_64-linux-gnu/5/lto-wrapper -plugin-opt=-fresolution=/tmp/ccvHLMrJ.res -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc --sysroot=/ --build-id --eh-frame-hdr -m elf_x86_64 --hash-style=gnu --as-needed -export-dynamic -dynamic-linker /lib64/ld-linux-x86-64.so.2 -z relro -o cmTC_c29d1 /usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu/crt1.o /usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu/crti.o /usr/lib/gcc/x86_64-linux-gnu/5/crtbegin.o -L/usr/lib/gcc/x86_64-linux-gnu/5 -L/usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu -L/usr/lib/gcc/x86_64-linux-gnu/5/../../../../lib -L/lib/x86_64-linux-gnu -L/lib/../lib -L/usr/lib/x86_64-linux-gnu -L/usr/lib/../lib -L/usr/lib/gcc/x86_64-linux-gnu/5/../../.. CMakeFiles/cmTC_c29d1.dir/CMakeCXXCompilerABI.cpp.o -lstdc++ -lm -lgcc_s -lgcc -lc -lgcc_s -lgcc /usr/lib/gcc/x86_64-linux-gnu/5/crtend.o /usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu/crtn.o]
+  ignore line: [COLLECT_GCC_OPTIONS='-v' '-rdynamic' '-o' 'cmTC_64fe4' '-shared-libgcc' '-mtune=generic' '-march=x86-64']
+  link line: [ /usr/lib/gcc/x86_64-linux-gnu/5/collect2 -plugin /usr/lib/gcc/x86_64-linux-gnu/5/liblto_plugin.so -plugin-opt=/usr/lib/gcc/x86_64-linux-gnu/5/lto-wrapper -plugin-opt=-fresolution=/tmp/ccWmkrAn.res -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc --sysroot=/ --build-id --eh-frame-hdr -m elf_x86_64 --hash-style=gnu --as-needed -export-dynamic -dynamic-linker /lib64/ld-linux-x86-64.so.2 -z relro -o cmTC_64fe4 /usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu/crt1.o /usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu/crti.o /usr/lib/gcc/x86_64-linux-gnu/5/crtbegin.o -L/usr/lib/gcc/x86_64-linux-gnu/5 -L/usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu -L/usr/lib/gcc/x86_64-linux-gnu/5/../../../../lib -L/lib/x86_64-linux-gnu -L/lib/../lib -L/usr/lib/x86_64-linux-gnu -L/usr/lib/../lib -L/usr/lib/gcc/x86_64-linux-gnu/5/../../.. CMakeFiles/cmTC_64fe4.dir/CMakeCXXCompilerABI.cpp.o -lstdc++ -lm -lgcc_s -lgcc -lc -lgcc_s -lgcc /usr/lib/gcc/x86_64-linux-gnu/5/crtend.o /usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu/crtn.o]
     arg [/usr/lib/gcc/x86_64-linux-gnu/5/collect2] ==> ignore
     arg [-plugin] ==> ignore
     arg [/usr/lib/gcc/x86_64-linux-gnu/5/liblto_plugin.so] ==> ignore
     arg [-plugin-opt=/usr/lib/gcc/x86_64-linux-gnu/5/lto-wrapper] ==> ignore
-    arg [-plugin-opt=-fresolution=/tmp/ccvHLMrJ.res] ==> ignore
+    arg [-plugin-opt=-fresolution=/tmp/ccWmkrAn.res] ==> ignore
     arg [-plugin-opt=-pass-through=-lgcc_s] ==> ignore
     arg [-plugin-opt=-pass-through=-lgcc] ==> ignore
     arg [-plugin-opt=-pass-through=-lc] ==> ignore
@@ -290,7 +290,7 @@ Parsed CXX implicit link information from above output:
     arg [/lib64/ld-linux-x86-64.so.2] ==> ignore
     arg [-zrelro] ==> ignore
     arg [-o] ==> ignore
-    arg [cmTC_c29d1] ==> ignore
+    arg [cmTC_64fe4] ==> ignore
     arg [/usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu/crt1.o] ==> ignore
     arg [/usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu/crti.o] ==> ignore
     arg [/usr/lib/gcc/x86_64-linux-gnu/5/crtbegin.o] ==> ignore
@@ -302,7 +302,7 @@ Parsed CXX implicit link information from above output:
     arg [-L/usr/lib/x86_64-linux-gnu] ==> dir [/usr/lib/x86_64-linux-gnu]
     arg [-L/usr/lib/../lib] ==> dir [/usr/lib/../lib]
     arg [-L/usr/lib/gcc/x86_64-linux-gnu/5/../../..] ==> dir [/usr/lib/gcc/x86_64-linux-gnu/5/../../..]
-    arg [CMakeFiles/cmTC_c29d1.dir/CMakeCXXCompilerABI.cpp.o] ==> ignore
+    arg [CMakeFiles/cmTC_64fe4.dir/CMakeCXXCompilerABI.cpp.o] ==> ignore
     arg [-lstdc++] ==> lib [stdc++]
     arg [-lm] ==> lib [m]
     arg [-lgcc_s] ==> lib [gcc_s]
@@ -328,17 +328,17 @@ Parsed CXX implicit link information from above output:
 
 
 Detecting CXX [-std=c++1z] compiler features compiled with the following output:
-Change Dir: /home/nilsiism/workspace/prob_trajectory_planning/src/ext/mav_trajectory_generation/mav_trajectory_generation/build/CMakeFiles/CMakeTmp
+Change Dir: /home/nilsiism/workspace/prob_trajectory_planning/src/ext/mav_trajectory_generation/mav_tube_trajectory_generation/build/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/make" "cmTC_f9111/fast"
-/usr/bin/make -f CMakeFiles/cmTC_f9111.dir/build.make CMakeFiles/cmTC_f9111.dir/build
-make[1]: Entering directory '/home/nilsiism/workspace/prob_trajectory_planning/src/ext/mav_trajectory_generation/mav_trajectory_generation/build/CMakeFiles/CMakeTmp'
-Building CXX object CMakeFiles/cmTC_f9111.dir/feature_tests.cxx.o
-/usr/bin/c++    -std=c++1z -o CMakeFiles/cmTC_f9111.dir/feature_tests.cxx.o -c /home/nilsiism/workspace/prob_trajectory_planning/src/ext/mav_trajectory_generation/mav_trajectory_generation/build/CMakeFiles/feature_tests.cxx
-Linking CXX executable cmTC_f9111
-/usr/local/bin/cmake -E cmake_link_script CMakeFiles/cmTC_f9111.dir/link.txt --verbose=1
-/usr/bin/c++       -rdynamic CMakeFiles/cmTC_f9111.dir/feature_tests.cxx.o  -o cmTC_f9111 
-make[1]: Leaving directory '/home/nilsiism/workspace/prob_trajectory_planning/src/ext/mav_trajectory_generation/mav_trajectory_generation/build/CMakeFiles/CMakeTmp'
+Run Build Command:"/usr/bin/make" "cmTC_2e0b9/fast"
+/usr/bin/make -f CMakeFiles/cmTC_2e0b9.dir/build.make CMakeFiles/cmTC_2e0b9.dir/build
+make[1]: Entering directory '/home/nilsiism/workspace/prob_trajectory_planning/src/ext/mav_trajectory_generation/mav_tube_trajectory_generation/build/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_2e0b9.dir/feature_tests.cxx.o
+/usr/bin/c++    -std=c++1z -o CMakeFiles/cmTC_2e0b9.dir/feature_tests.cxx.o -c /home/nilsiism/workspace/prob_trajectory_planning/src/ext/mav_trajectory_generation/mav_tube_trajectory_generation/build/CMakeFiles/feature_tests.cxx
+Linking CXX executable cmTC_2e0b9
+/usr/local/bin/cmake -E cmake_link_script CMakeFiles/cmTC_2e0b9.dir/link.txt --verbose=1
+/usr/bin/c++       -rdynamic CMakeFiles/cmTC_2e0b9.dir/feature_tests.cxx.o  -o cmTC_2e0b9 
+make[1]: Leaving directory '/home/nilsiism/workspace/prob_trajectory_planning/src/ext/mav_trajectory_generation/mav_tube_trajectory_generation/build/CMakeFiles/CMakeTmp'
 
 
     Feature record: CXX_FEATURE:1cxx_aggregate_default_initializers
@@ -401,17 +401,17 @@ make[1]: Leaving directory '/home/nilsiism/workspace/prob_trajectory_planning/sr
 
 
 Detecting CXX [-std=c++14] compiler features compiled with the following output:
-Change Dir: /home/nilsiism/workspace/prob_trajectory_planning/src/ext/mav_trajectory_generation/mav_trajectory_generation/build/CMakeFiles/CMakeTmp
+Change Dir: /home/nilsiism/workspace/prob_trajectory_planning/src/ext/mav_trajectory_generation/mav_tube_trajectory_generation/build/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/make" "cmTC_5cc12/fast"
-/usr/bin/make -f CMakeFiles/cmTC_5cc12.dir/build.make CMakeFiles/cmTC_5cc12.dir/build
-make[1]: Entering directory '/home/nilsiism/workspace/prob_trajectory_planning/src/ext/mav_trajectory_generation/mav_trajectory_generation/build/CMakeFiles/CMakeTmp'
-Building CXX object CMakeFiles/cmTC_5cc12.dir/feature_tests.cxx.o
-/usr/bin/c++    -std=c++14 -o CMakeFiles/cmTC_5cc12.dir/feature_tests.cxx.o -c /home/nilsiism/workspace/prob_trajectory_planning/src/ext/mav_trajectory_generation/mav_trajectory_generation/build/CMakeFiles/feature_tests.cxx
-Linking CXX executable cmTC_5cc12
-/usr/local/bin/cmake -E cmake_link_script CMakeFiles/cmTC_5cc12.dir/link.txt --verbose=1
-/usr/bin/c++       -rdynamic CMakeFiles/cmTC_5cc12.dir/feature_tests.cxx.o  -o cmTC_5cc12 
-make[1]: Leaving directory '/home/nilsiism/workspace/prob_trajectory_planning/src/ext/mav_trajectory_generation/mav_trajectory_generation/build/CMakeFiles/CMakeTmp'
+Run Build Command:"/usr/bin/make" "cmTC_7a19e/fast"
+/usr/bin/make -f CMakeFiles/cmTC_7a19e.dir/build.make CMakeFiles/cmTC_7a19e.dir/build
+make[1]: Entering directory '/home/nilsiism/workspace/prob_trajectory_planning/src/ext/mav_trajectory_generation/mav_tube_trajectory_generation/build/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_7a19e.dir/feature_tests.cxx.o
+/usr/bin/c++    -std=c++14 -o CMakeFiles/cmTC_7a19e.dir/feature_tests.cxx.o -c /home/nilsiism/workspace/prob_trajectory_planning/src/ext/mav_trajectory_generation/mav_tube_trajectory_generation/build/CMakeFiles/feature_tests.cxx
+Linking CXX executable cmTC_7a19e
+/usr/local/bin/cmake -E cmake_link_script CMakeFiles/cmTC_7a19e.dir/link.txt --verbose=1
+/usr/bin/c++       -rdynamic CMakeFiles/cmTC_7a19e.dir/feature_tests.cxx.o  -o cmTC_7a19e 
+make[1]: Leaving directory '/home/nilsiism/workspace/prob_trajectory_planning/src/ext/mav_trajectory_generation/mav_tube_trajectory_generation/build/CMakeFiles/CMakeTmp'
 
 
     Feature record: CXX_FEATURE:1cxx_aggregate_default_initializers
@@ -474,17 +474,17 @@ make[1]: Leaving directory '/home/nilsiism/workspace/prob_trajectory_planning/sr
 
 
 Detecting CXX [-std=c++11] compiler features compiled with the following output:
-Change Dir: /home/nilsiism/workspace/prob_trajectory_planning/src/ext/mav_trajectory_generation/mav_trajectory_generation/build/CMakeFiles/CMakeTmp
+Change Dir: /home/nilsiism/workspace/prob_trajectory_planning/src/ext/mav_trajectory_generation/mav_tube_trajectory_generation/build/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/make" "cmTC_a4352/fast"
-/usr/bin/make -f CMakeFiles/cmTC_a4352.dir/build.make CMakeFiles/cmTC_a4352.dir/build
-make[1]: Entering directory '/home/nilsiism/workspace/prob_trajectory_planning/src/ext/mav_trajectory_generation/mav_trajectory_generation/build/CMakeFiles/CMakeTmp'
-Building CXX object CMakeFiles/cmTC_a4352.dir/feature_tests.cxx.o
-/usr/bin/c++    -std=c++11 -o CMakeFiles/cmTC_a4352.dir/feature_tests.cxx.o -c /home/nilsiism/workspace/prob_trajectory_planning/src/ext/mav_trajectory_generation/mav_trajectory_generation/build/CMakeFiles/feature_tests.cxx
-Linking CXX executable cmTC_a4352
-/usr/local/bin/cmake -E cmake_link_script CMakeFiles/cmTC_a4352.dir/link.txt --verbose=1
-/usr/bin/c++       -rdynamic CMakeFiles/cmTC_a4352.dir/feature_tests.cxx.o  -o cmTC_a4352 
-make[1]: Leaving directory '/home/nilsiism/workspace/prob_trajectory_planning/src/ext/mav_trajectory_generation/mav_trajectory_generation/build/CMakeFiles/CMakeTmp'
+Run Build Command:"/usr/bin/make" "cmTC_8ce3b/fast"
+/usr/bin/make -f CMakeFiles/cmTC_8ce3b.dir/build.make CMakeFiles/cmTC_8ce3b.dir/build
+make[1]: Entering directory '/home/nilsiism/workspace/prob_trajectory_planning/src/ext/mav_trajectory_generation/mav_tube_trajectory_generation/build/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_8ce3b.dir/feature_tests.cxx.o
+/usr/bin/c++    -std=c++11 -o CMakeFiles/cmTC_8ce3b.dir/feature_tests.cxx.o -c /home/nilsiism/workspace/prob_trajectory_planning/src/ext/mav_trajectory_generation/mav_tube_trajectory_generation/build/CMakeFiles/feature_tests.cxx
+Linking CXX executable cmTC_8ce3b
+/usr/local/bin/cmake -E cmake_link_script CMakeFiles/cmTC_8ce3b.dir/link.txt --verbose=1
+/usr/bin/c++       -rdynamic CMakeFiles/cmTC_8ce3b.dir/feature_tests.cxx.o  -o cmTC_8ce3b 
+make[1]: Leaving directory '/home/nilsiism/workspace/prob_trajectory_planning/src/ext/mav_trajectory_generation/mav_tube_trajectory_generation/build/CMakeFiles/CMakeTmp'
 
 
     Feature record: CXX_FEATURE:0cxx_aggregate_default_initializers
@@ -547,17 +547,17 @@ make[1]: Leaving directory '/home/nilsiism/workspace/prob_trajectory_planning/sr
 
 
 Detecting CXX [-std=c++98] compiler features compiled with the following output:
-Change Dir: /home/nilsiism/workspace/prob_trajectory_planning/src/ext/mav_trajectory_generation/mav_trajectory_generation/build/CMakeFiles/CMakeTmp
+Change Dir: /home/nilsiism/workspace/prob_trajectory_planning/src/ext/mav_trajectory_generation/mav_tube_trajectory_generation/build/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/make" "cmTC_2848b/fast"
-/usr/bin/make -f CMakeFiles/cmTC_2848b.dir/build.make CMakeFiles/cmTC_2848b.dir/build
-make[1]: Entering directory '/home/nilsiism/workspace/prob_trajectory_planning/src/ext/mav_trajectory_generation/mav_trajectory_generation/build/CMakeFiles/CMakeTmp'
-Building CXX object CMakeFiles/cmTC_2848b.dir/feature_tests.cxx.o
-/usr/bin/c++    -std=c++98 -o CMakeFiles/cmTC_2848b.dir/feature_tests.cxx.o -c /home/nilsiism/workspace/prob_trajectory_planning/src/ext/mav_trajectory_generation/mav_trajectory_generation/build/CMakeFiles/feature_tests.cxx
-Linking CXX executable cmTC_2848b
-/usr/local/bin/cmake -E cmake_link_script CMakeFiles/cmTC_2848b.dir/link.txt --verbose=1
-/usr/bin/c++       -rdynamic CMakeFiles/cmTC_2848b.dir/feature_tests.cxx.o  -o cmTC_2848b 
-make[1]: Leaving directory '/home/nilsiism/workspace/prob_trajectory_planning/src/ext/mav_trajectory_generation/mav_trajectory_generation/build/CMakeFiles/CMakeTmp'
+Run Build Command:"/usr/bin/make" "cmTC_95db5/fast"
+/usr/bin/make -f CMakeFiles/cmTC_95db5.dir/build.make CMakeFiles/cmTC_95db5.dir/build
+make[1]: Entering directory '/home/nilsiism/workspace/prob_trajectory_planning/src/ext/mav_trajectory_generation/mav_tube_trajectory_generation/build/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_95db5.dir/feature_tests.cxx.o
+/usr/bin/c++    -std=c++98 -o CMakeFiles/cmTC_95db5.dir/feature_tests.cxx.o -c /home/nilsiism/workspace/prob_trajectory_planning/src/ext/mav_trajectory_generation/mav_tube_trajectory_generation/build/CMakeFiles/feature_tests.cxx
+Linking CXX executable cmTC_95db5
+/usr/local/bin/cmake -E cmake_link_script CMakeFiles/cmTC_95db5.dir/link.txt --verbose=1
+/usr/bin/c++       -rdynamic CMakeFiles/cmTC_95db5.dir/feature_tests.cxx.o  -o cmTC_95db5 
+make[1]: Leaving directory '/home/nilsiism/workspace/prob_trajectory_planning/src/ext/mav_trajectory_generation/mav_tube_trajectory_generation/build/CMakeFiles/CMakeTmp'
 
 
     Feature record: CXX_FEATURE:0cxx_aggregate_default_initializers

@@ -14,6 +14,8 @@ set(CMAKE_MAKEFILE_DEPENDS
   "../cmake/FindEigen3.cmake"
   "../cmake/FindGlog.cmake"
   "../cmake/FindMosek.cmake"
+  "../cmake/FindNLOPT.cmake"
+  "../cmake/FindSophus.cmake"
   "/opt/clion-2018.1.3/bin/cmake/share/cmake-3.10/Modules/CMakeCInformation.cmake"
   "/opt/clion-2018.1.3/bin/cmake/share/cmake-3.10/Modules/CMakeCXXInformation.cmake"
   "/opt/clion-2018.1.3/bin/cmake/share/cmake-3.10/Modules/CMakeCommonLanguageInclude.cmake"

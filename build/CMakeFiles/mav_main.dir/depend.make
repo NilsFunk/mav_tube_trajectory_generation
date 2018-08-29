@@ -7,10 +7,13 @@ CMakeFiles/mav_main.dir/src/main.cpp.o: ../include/mav_tube_trajectory_generatio
 CMakeFiles/mav_main.dir/src/main.cpp.o: ../include/mav_tube_trajectory_generation/motion_defines.h
 CMakeFiles/mav_main.dir/src/main.cpp.o: ../include/mav_tube_trajectory_generation/polynomial.h
 CMakeFiles/mav_main.dir/src/main.cpp.o: ../include/mav_tube_trajectory_generation/polynomial_optimization_linear.h
+CMakeFiles/mav_main.dir/src/main.cpp.o: ../include/mav_tube_trajectory_generation/polynomial_optimization_linear_constrained.h
+CMakeFiles/mav_main.dir/src/main.cpp.o: ../include/mav_tube_trajectory_generation/polynomial_optimization_nonlinear.h
 CMakeFiles/mav_main.dir/src/main.cpp.o: ../include/mav_tube_trajectory_generation/segment.h
 CMakeFiles/mav_main.dir/src/main.cpp.o: ../include/mav_tube_trajectory_generation/trajectory.h
 CMakeFiles/mav_main.dir/src/main.cpp.o: ../include/mav_tube_trajectory_generation/vertex.h
 CMakeFiles/mav_main.dir/src/main.cpp.o: ../src/main.cpp
+CMakeFiles/mav_main.dir/src/main.cpp.o: /opt/mosek/8/tools/platform/linux64x86/h/mosek.h
 CMakeFiles/mav_main.dir/src/main.cpp.o: /usr/local/include/eigen3/Eigen/Cholesky
 CMakeFiles/mav_main.dir/src/main.cpp.o: /usr/local/include/eigen3/Eigen/Core
 CMakeFiles/mav_main.dir/src/main.cpp.o: /usr/local/include/eigen3/Eigen/Dense
@@ -278,4 +281,6 @@ CMakeFiles/mav_main.dir/src/main.cpp.o: /usr/local/include/eigen3/Eigen/src/plug
 CMakeFiles/mav_main.dir/src/main.cpp.o: /usr/local/include/glog/log_severity.h
 CMakeFiles/mav_main.dir/src/main.cpp.o: /usr/local/include/glog/logging.h
 CMakeFiles/mav_main.dir/src/main.cpp.o: /usr/local/include/glog/vlog_is_on.h
+CMakeFiles/mav_main.dir/src/main.cpp.o: /usr/local/include/nlopt.h
+CMakeFiles/mav_main.dir/src/main.cpp.o: /usr/local/include/nlopt.hpp
 

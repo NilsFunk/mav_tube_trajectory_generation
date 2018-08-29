@@ -37,6 +37,7 @@ static constexpr int ANGULAR_VELOCITY = 1;
 static constexpr int ANGULAR_ACCELERATION = 2;
 
 static constexpr int INVALID = -1;
+static constexpr int kINVALID = -1;
 }
 
 std::string positionDerivativeToString(int derivative);

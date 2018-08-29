@@ -247,6 +247,7 @@ libmav_tube_trajectory_generation.so: CMakeFiles/mav_tube_trajectory_generation.
 libmav_tube_trajectory_generation.so: CMakeFiles/mav_tube_trajectory_generation.dir/src/rpoly/rpoly_ak1.cpp.o
 libmav_tube_trajectory_generation.so: CMakeFiles/mav_tube_trajectory_generation.dir/build.make
 libmav_tube_trajectory_generation.so: /opt/mosek/8/tools/platform/linux64x86/bin/libmosek64.so
+libmav_tube_trajectory_generation.so: /usr/local/lib/libnlopt.so
 libmav_tube_trajectory_generation.so: CMakeFiles/mav_tube_trajectory_generation.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/nilsiism/workspace/prob_trajectory_planning/src/ext/mav_trajectory_generation/mav_tube_trajectory_generation/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Linking CXX shared library libmav_tube_trajectory_generation.so"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/mav_tube_trajectory_generation.dir/link.txt --verbose=$(VERBOSE)

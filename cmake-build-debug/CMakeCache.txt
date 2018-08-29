@@ -200,6 +200,12 @@ MOSEK_INCLUDE_DIR:PATH=/opt/mosek/8/tools/platform/linux64x86
 //Path to a library.
 MOSEK_LIBRARY:FILEPATH=/opt/mosek/8/tools/platform/linux64x86/bin/libmosek64.so
 
+//Path to a file.
+NLOPT_INCLUDE_DIRS:PATH=/usr/local/include
+
+//Path to a library.
+NLOPT_LIBRARIES:FILEPATH=/usr/local/lib/libnlopt.so
+
 //pkg-config executable
 PKG_CONFIG_EXECUTABLE:FILEPATH=/usr/bin/pkg-config
 
@@ -209,11 +215,23 @@ ProcessorCount_cmd_getconf:FILEPATH=/usr/bin/getconf
 //Path to a program.
 ProcessorCount_cmd_sysctl:FILEPATH=/sbin/sysctl
 
+//Path to a file.
+SOPHUS_INCLUDE_DIR:PATH=/usr/include/Sophus
+
+//Path to a file.
+SOPHUS_INCLUDE_PATH:PATH=/usr/include/Sophus
+
+//The include paths needed to use SOPHUS
+SOPHUS_INCLUDE_PATHS:STRING=/usr/include/Sophus
+
+//The directory containing a CMake configuration file for Sophus.
+Sophus_DIR:PATH=Sophus_DIR-NOTFOUND
+
 //Value Computed by CMake
 mav_tube_trajectory_generation_BINARY_DIR:STATIC=/home/nilsiism/workspace/prob_trajectory_planning/src/ext/mav_trajectory_generation/mav_tube_trajectory_generation/cmake-build-debug
 
 //Dependencies for the target
-mav_tube_trajectory_generation_LIB_DEPENDS:STATIC=general;/opt/mosek/8/tools/platform/linux64x86/bin/libmosek64.so;
+mav_tube_trajectory_generation_LIB_DEPENDS:STATIC=general;/opt/mosek/8/tools/platform/linux64x86/bin/libmosek64.so;general;/usr/local/lib/libnlopt.so;
 
 //Value Computed by CMake
 mav_tube_trajectory_generation_SOURCE_DIR:STATIC=/home/nilsiism/workspace/prob_trajectory_planning/src/ext/mav_trajectory_generation/mav_tube_trajectory_generation
@@ -370,8 +388,12 @@ CMAKE_VERBOSE_MAKEFILE-ADVANCED:INTERNAL=1
 EIGEN3_INCLUDE_DIR-ADVANCED:INTERNAL=1
 //Details about finding Eigen3
 FIND_PACKAGE_MESSAGE_DETAILS_Eigen3:INTERNAL=[/usr/local/include/eigen3][TRUE][v(2.91.0)]
+//Details about finding NLOPT
+FIND_PACKAGE_MESSAGE_DETAILS_NLOPT:INTERNAL=[/usr/local/include][/usr/local/lib/libnlopt.so][v2.5.0()]
 //Details about finding PkgConfig
 FIND_PACKAGE_MESSAGE_DETAILS_PkgConfig:INTERNAL=[/usr/bin/pkg-config][v0.29.1()]
+//Details about finding SOPHUS
+FIND_PACKAGE_MESSAGE_DETAILS_SOPHUS:INTERNAL=[/usr/include/Sophus][v()]
 PC_GLOG_CFLAGS:INTERNAL=-I/usr/local/include
 PC_GLOG_CFLAGS_I:INTERNAL=
 PC_GLOG_CFLAGS_OTHER:INTERNAL=
@@ -406,13 +428,53 @@ PC_GLOG_libglog_INCLUDEDIR:INTERNAL=
 PC_GLOG_libglog_LIBDIR:INTERNAL=
 PC_GLOG_libglog_PREFIX:INTERNAL=
 PC_GLOG_libglog_VERSION:INTERNAL=
+PC_NLOPT_CFLAGS:INTERNAL=-I/usr/local/include
+PC_NLOPT_CFLAGS_I:INTERNAL=
+PC_NLOPT_CFLAGS_OTHER:INTERNAL=
+PC_NLOPT_FOUND:INTERNAL=1
+PC_NLOPT_INCLUDEDIR:INTERNAL=/usr/local/include
+PC_NLOPT_INCLUDE_DIRS:INTERNAL=/usr/local/include
+PC_NLOPT_LDFLAGS:INTERNAL=-L/usr/local/lib;-lnlopt;-lm
+PC_NLOPT_LDFLAGS_OTHER:INTERNAL=
+PC_NLOPT_LIBDIR:INTERNAL=/usr/local/lib
+PC_NLOPT_LIBRARIES:INTERNAL=nlopt;m
+PC_NLOPT_LIBRARY_DIRS:INTERNAL=/usr/local/lib
+PC_NLOPT_LIBS:INTERNAL=
+PC_NLOPT_LIBS_L:INTERNAL=
+PC_NLOPT_LIBS_OTHER:INTERNAL=
+PC_NLOPT_LIBS_PATHS:INTERNAL=
+PC_NLOPT_PREFIX:INTERNAL=/usr/local
+PC_NLOPT_STATIC_CFLAGS:INTERNAL=-I/usr/local/include
+PC_NLOPT_STATIC_CFLAGS_I:INTERNAL=
+PC_NLOPT_STATIC_CFLAGS_OTHER:INTERNAL=
+PC_NLOPT_STATIC_INCLUDE_DIRS:INTERNAL=/usr/local/include
+PC_NLOPT_STATIC_LDFLAGS:INTERNAL=-L/usr/local/lib;-lnlopt;-lm
+PC_NLOPT_STATIC_LDFLAGS_OTHER:INTERNAL=
+PC_NLOPT_STATIC_LIBDIR:INTERNAL=
+PC_NLOPT_STATIC_LIBRARIES:INTERNAL=nlopt;m
+PC_NLOPT_STATIC_LIBRARY_DIRS:INTERNAL=/usr/local/lib
+PC_NLOPT_STATIC_LIBS:INTERNAL=
+PC_NLOPT_STATIC_LIBS_L:INTERNAL=
+PC_NLOPT_STATIC_LIBS_OTHER:INTERNAL=
+PC_NLOPT_STATIC_LIBS_PATHS:INTERNAL=
+PC_NLOPT_VERSION:INTERNAL=2.5.0
+PC_NLOPT_nlopt_INCLUDEDIR:INTERNAL=
+PC_NLOPT_nlopt_LIBDIR:INTERNAL=
+PC_NLOPT_nlopt_PREFIX:INTERNAL=
+PC_NLOPT_nlopt_VERSION:INTERNAL=
 //ADVANCED property for variable: PKG_CONFIG_EXECUTABLE
 PKG_CONFIG_EXECUTABLE-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: ProcessorCount_cmd_getconf
 ProcessorCount_cmd_getconf-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: ProcessorCount_cmd_sysctl
 ProcessorCount_cmd_sysctl-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: SOPHUS_INCLUDE_DIR
+SOPHUS_INCLUDE_DIR-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: SOPHUS_INCLUDE_PATHS
+SOPHUS_INCLUDE_PATHS-ADVANCED:INTERNAL=1
 __pkg_config_arguments_PC_GLOG:INTERNAL=REQUIRED;libglog
+__pkg_config_arguments_PC_NLOPT:INTERNAL=nlopt;QUIET
 __pkg_config_checked_PC_GLOG:INTERNAL=1
+__pkg_config_checked_PC_NLOPT:INTERNAL=1
 prefix_result:INTERNAL=/usr/local/lib
 

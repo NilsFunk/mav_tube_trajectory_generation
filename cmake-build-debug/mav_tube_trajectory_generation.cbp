@@ -66,6 +66,11 @@
 				<Compiler>
 					<Add directory="/usr/local/include/eigen3"/>
 					<Add directory="/usr/local/include"/>
+					<Add directory="/home/nilsiism/workspace/prob_trajectory_planning/src/ext/mav_trajectory_generation/mav_tube_trajectory_generation/../../supereight/se_core/include"/>
+					<Add directory="/home/nilsiism/workspace/prob_trajectory_planning/src/ext/mav_trajectory_generation/mav_tube_trajectory_generation/../../supereight/se_core/include/se"/>
+					<Add directory="/home/nilsiism/workspace/prob_trajectory_planning/src/ext/mav_trajectory_generation/mav_tube_trajectory_generation/../../supereight/se_denseslam/include"/>
+					<Add directory="/home/nilsiism/workspace/prob_trajectory_planning/src/ext/mav_trajectory_generation/mav_tube_trajectory_generation/../../supereight/se_denseslam/include/se"/>
+					<Add directory="/usr/include/Sophus"/>
 					<Add directory="/home/nilsiism/workspace/prob_trajectory_planning/src/ext/mav_trajectory_generation/mav_tube_trajectory_generation/include"/>
 					<Add directory="/opt/mosek/8/tools/platform/linux64x86"/>
 					<Add directory="/home/nilsiism/workspace/prob_trajectory_planning/src/ext/mav_trajectory_generation/mav_tube_trajectory_generation/include/mav_tube_trajectory_generation"/>
@@ -94,6 +99,11 @@
 				<Compiler>
 					<Add directory="/usr/local/include/eigen3"/>
 					<Add directory="/usr/local/include"/>
+					<Add directory="/home/nilsiism/workspace/prob_trajectory_planning/src/ext/mav_trajectory_generation/mav_tube_trajectory_generation/../../supereight/se_core/include"/>
+					<Add directory="/home/nilsiism/workspace/prob_trajectory_planning/src/ext/mav_trajectory_generation/mav_tube_trajectory_generation/../../supereight/se_core/include/se"/>
+					<Add directory="/home/nilsiism/workspace/prob_trajectory_planning/src/ext/mav_trajectory_generation/mav_tube_trajectory_generation/../../supereight/se_denseslam/include"/>
+					<Add directory="/home/nilsiism/workspace/prob_trajectory_planning/src/ext/mav_trajectory_generation/mav_tube_trajectory_generation/../../supereight/se_denseslam/include/se"/>
+					<Add directory="/usr/include/Sophus"/>
 					<Add directory="/home/nilsiism/workspace/prob_trajectory_planning/src/ext/mav_trajectory_generation/mav_tube_trajectory_generation/include"/>
 					<Add directory="/opt/mosek/8/tools/platform/linux64x86"/>
 					<Add directory="/home/nilsiism/workspace/prob_trajectory_planning/src/ext/mav_trajectory_generation/mav_tube_trajectory_generation/include/mav_tube_trajectory_generation"/>
@@ -123,6 +133,11 @@
 					<Add directory="/home/nilsiism/workspace/prob_trajectory_planning/src/ext/mav_trajectory_generation/mav_tube_trajectory_generation/include"/>
 					<Add directory="/usr/local/include/eigen3"/>
 					<Add directory="/usr/local/include"/>
+					<Add directory="/home/nilsiism/workspace/prob_trajectory_planning/src/ext/mav_trajectory_generation/mav_tube_trajectory_generation/../../supereight/se_core/include"/>
+					<Add directory="/home/nilsiism/workspace/prob_trajectory_planning/src/ext/mav_trajectory_generation/mav_tube_trajectory_generation/../../supereight/se_core/include/se"/>
+					<Add directory="/home/nilsiism/workspace/prob_trajectory_planning/src/ext/mav_trajectory_generation/mav_tube_trajectory_generation/../../supereight/se_denseslam/include"/>
+					<Add directory="/home/nilsiism/workspace/prob_trajectory_planning/src/ext/mav_trajectory_generation/mav_tube_trajectory_generation/../../supereight/se_denseslam/include/se"/>
+					<Add directory="/usr/include/Sophus"/>
 					<Add directory="/opt/mosek/8/tools/platform/linux64x86"/>
 					<Add directory="/home/nilsiism/workspace/prob_trajectory_planning/src/ext/mav_trajectory_generation/mav_tube_trajectory_generation/include/mav_tube_trajectory_generation"/>
 					<Add directory="/home/nilsiism/workspace/prob_trajectory_planning/src/ext/mav_trajectory_generation/mav_tube_trajectory_generation/glog"/>
@@ -151,6 +166,11 @@
 					<Add directory="/home/nilsiism/workspace/prob_trajectory_planning/src/ext/mav_trajectory_generation/mav_tube_trajectory_generation/include"/>
 					<Add directory="/usr/local/include/eigen3"/>
 					<Add directory="/usr/local/include"/>
+					<Add directory="/home/nilsiism/workspace/prob_trajectory_planning/src/ext/mav_trajectory_generation/mav_tube_trajectory_generation/../../supereight/se_core/include"/>
+					<Add directory="/home/nilsiism/workspace/prob_trajectory_planning/src/ext/mav_trajectory_generation/mav_tube_trajectory_generation/../../supereight/se_core/include/se"/>
+					<Add directory="/home/nilsiism/workspace/prob_trajectory_planning/src/ext/mav_trajectory_generation/mav_tube_trajectory_generation/../../supereight/se_denseslam/include"/>
+					<Add directory="/home/nilsiism/workspace/prob_trajectory_planning/src/ext/mav_trajectory_generation/mav_tube_trajectory_generation/../../supereight/se_denseslam/include/se"/>
+					<Add directory="/usr/include/Sophus"/>
 					<Add directory="/opt/mosek/8/tools/platform/linux64x86"/>
 					<Add directory="/home/nilsiism/workspace/prob_trajectory_planning/src/ext/mav_trajectory_generation/mav_tube_trajectory_generation/include/mav_tube_trajectory_generation"/>
 					<Add directory="/home/nilsiism/workspace/prob_trajectory_planning/src/ext/mav_trajectory_generation/mav_tube_trajectory_generation/glog"/>
@@ -224,6 +244,12 @@
 			<Option virtualFolder="CMake Files\cmake\"/>
 		</Unit>
 		<Unit filename="/home/nilsiism/workspace/prob_trajectory_planning/src/ext/mav_trajectory_generation/mav_tube_trajectory_generation/cmake/FindMosek.cmake">
+			<Option virtualFolder="CMake Files\cmake\"/>
+		</Unit>
+		<Unit filename="/home/nilsiism/workspace/prob_trajectory_planning/src/ext/mav_trajectory_generation/mav_tube_trajectory_generation/cmake/FindNLOPT.cmake">
+			<Option virtualFolder="CMake Files\cmake\"/>
+		</Unit>
+		<Unit filename="/home/nilsiism/workspace/prob_trajectory_planning/src/ext/mav_trajectory_generation/mav_tube_trajectory_generation/cmake/FindSophus.cmake">
 			<Option virtualFolder="CMake Files\cmake\"/>
 		</Unit>
 	</Project>

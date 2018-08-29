@@ -18,6 +18,11 @@ set(CMAKE_CXX_COMPILER_ID "GNU")
 set(CMAKE_CXX_TARGET_INCLUDE_PATH
   "/usr/local/include/eigen3"
   "/usr/local/include"
+  "../../../supereight/se_core/include"
+  "../../../supereight/se_core/include/se"
+  "../../../supereight/se_denseslam/include"
+  "../../../supereight/se_denseslam/include/se"
+  "/usr/include/Sophus"
   "../include"
   "/opt/mosek/8/tools/platform/linux64x86"
   "../include/mav_tube_trajectory_generation"
