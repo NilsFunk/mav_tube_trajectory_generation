@@ -24,7 +24,7 @@ find_package(Sophus REQUIRED)
 #include_directories(${NLOPT_INCLUDE_DIRS})
 
 # supereight
-set (SE_MODULE_PATH "${PROJECT_SOURCE_DIR}/../../supereight")
+set (SE_MODULE_PATH "${PROJECT_SOURCE_DIR}/../supereight")
 message(${SE_MODULE_PATH})
 
 # configure supereight core directoriy
