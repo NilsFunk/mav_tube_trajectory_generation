@@ -32,3 +32,5 @@
 *.app
 
 # Folder 
+build/
+cmake-build-debug/
