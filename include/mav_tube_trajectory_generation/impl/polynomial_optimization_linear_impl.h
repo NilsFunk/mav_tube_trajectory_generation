@@ -247,13 +247,8 @@ void PolynomialOptimization<_N>::setupConstraintReorderingMatrix() {
     ++row;
   }
 
-  for (int i = 0; i < dimension_; i++)
-    std::cout << fixed_constraints_compact_[i] << "\n" << std::endl;
-
   constraint_reordering_.setFromTriplets(reordering_list.begin(),
                                          reordering_list.end());
-
-  std::cout << constraint_reordering_ << std::endl;
 }
 
 template <int _N>
