@@ -14,9 +14,9 @@
 
 int main () {
 
-  std::string read_filename = "/home/nilsiism/workspace/prob_trajectory_planning/data/writen_data/fr_078_tidyup_supereight.bt";
+  std::string read_filename = "/home/nilsiism/workspace/prob_trajectory_planning/data/writen_data/fr_078_tidyup_supereight_with_multilevel.bt";
   se::Octree<OFusion>* octree_ = new se::Octree<OFusion>;
-  octree_->load(read_filename);
+  octree_->loadMultilevel(read_filename);
 
   mav_trajectory_generation::Vertex::Vector vertices;
   const int dimension = 3;
@@ -67,7 +67,7 @@ int main () {
   parameters.solve_with_position_constraint = true;
   parameters.objective = mav_trajectory_generation::NonlinearOptimizationParameters::OptimizationObjective::kOptimizeFreeConstraintsAndCollision;
   parameters.print_debug_info = false;
-  parameters.max_iterations = 200;
+  parameters.max_iterations = 2;
   parameters.max_time = -1.0;
   parameters.f_rel = 0.000001;
   parameters.x_rel = 0.01;
@@ -82,7 +82,7 @@ int main () {
   parameters.weights.w_sc = 1.0;
   parameters.use_numeric_grad = false;
   parameters.use_continous_distance = false;
-  parameters.increment_time = 0.00001;
+  parameters.increment_time = 0.000001;
   parameters.epsilon = 0.3;
   parameters.coll_pot_multiplier = 20.0;
   parameters.is_collision_safe = true;

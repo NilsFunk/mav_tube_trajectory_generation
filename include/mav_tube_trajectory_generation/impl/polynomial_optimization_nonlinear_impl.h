@@ -20,6 +20,7 @@
 
 #include <chrono>
 
+#include <time.h>
 #include "mav_tube_trajectory_generation/polynomial_optimization_linear.h"
 #include "mav_tube_trajectory_generation/timing.h"
 
@@ -1329,43 +1330,6 @@ double PolynomialOptimizationNonLinear<_N
     }
   }
 
-/*
-  // Numerical gradients for collision cost
-  if (!gradient.empty()) {
-    if (optimization_data->optimization_parameters_.use_numeric_grad) {
-      std::vector<Eigen::VectorXd> grad_c_numeric(dim, Eigen::VectorXd::Zero
-              (n_free_constraints));
-
-      optimization_data->getNumericalGradientsCollision(&grad_c_numeric,
-                                                        optimization_data);
-
-      std::cout << "grad_c | grad_c_numeric | diff | grad_sc: "
-                << std::endl;
-      for (int k = 0; k < dim; ++k) {
-        for (int n = 0; n < n_free_constraints; ++n) {
-          std::cout << k << " " << n << ": " << grad_c[k][n] << " | "
-                    << grad_c_numeric[k][n] << " | "
-                    << grad_c[k][n] - grad_c_numeric[k][n] << " | "
-                    << grad_sc[k][n] << std::endl;
-        }
-        std::cout << std::endl;
-      }
-      std::cout << std::endl;
-
-      std::cout << "grad_t: " << std::endl;
-      for (int i = 0; i < n_segments; ++i) {
-        std::cout << grad_t[i] << " | ";
-      }
-      std::cout << std::endl << std::endl;
-
-      for (int k = 0; k < dim; ++k) {
-        grad_c[k] = grad_c_numeric[k];
-      }
-    }
-
-  }
-*/
-
   // Weighting terms for different costs
   const double w_d = optimization_data->optimization_parameters_.weights.w_d;
   const double w_c = optimization_data->optimization_parameters_.weights.w_c;
@@ -1384,7 +1348,7 @@ double PolynomialOptimizationNonLinear<_N
 
   if (optimization_data->optimization_parameters_.is_collision_safe) {
     if (optimization_data->optimization_parameters_.is_coll_raise_first_iter) {
-      if (is_collision && (total_cost < optimization_data->total_cost_iter0_)) {
+      if (is_collision) {
         cost_collision = optimization_data->total_cost_iter0_ -
                 (total_cost - cost_collision) +
                 optimization_data->optimization_parameters_.add_coll_raise;
@@ -1396,7 +1360,7 @@ double PolynomialOptimizationNonLinear<_N
               optimization_data->optimization_info_.cost_collision +
               optimization_data->optimization_info_.cost_time +
               optimization_data->optimization_info_.cost_soft_constraints;
-      if (is_collision && (total_cost < total_cost_last_iter)) {
+      if (is_collision) {
         cost_collision = total_cost_last_iter - (total_cost - cost_collision) +
                 optimization_data->optimization_parameters_.add_coll_raise;
 //        LOG(INFO) << "COLLISION: Raise total cost to initial total cost.";
@@ -1562,6 +1526,8 @@ template <int _N>
 double PolynomialOptimizationNonLinear<_N>::getCostAndGradientCollision(
         std::vector<Eigen::VectorXd>* gradients, void* opt_data,
         bool* is_collision) {
+
+
   CHECK_NOTNULL(opt_data);
 
   PolynomialOptimizationNonLinear<N>* data =
@@ -1612,9 +1578,13 @@ double PolynomialOptimizationNonLinear<_N>::getCostAndGradientCollision(
   double time_sum = -1;
   double dist_sum = 0.0;
   double t = 0.0;
+  int pos_checks = 0;
+  clock_t tt;
+  tt = clock();
   for (int i = 0; i < n_segments; ++i) {
     for (t = 0.0; t < segment_times[i]; t += dt) {
 
+      //std::cout << "n segment: " << i << std::endl;
       // 2) Calculate the T vector (see paper equation (8)) for each segment
       Eigen::VectorXd T; // Is supposed to be a column-vector
       T.resize(N);
@@ -1654,7 +1624,7 @@ double PolynomialOptimizationNonLinear<_N>::getCostAndGradientCollision(
       prev_pos = pos;
 
       if (dist_sum < dist_sum_limit) { continue; }
-
+      pos_checks++;
       // Cost and gradient of potential map from esdf
       bool is_pos_collision;
       Eigen::VectorXd grad_c_d_f(dim); // dc/dd_f
@@ -1734,7 +1704,9 @@ double PolynomialOptimizationNonLinear<_N>::getCostAndGradientCollision(
     // Make sure the dt is correct for the next segment:
     time_sum += -dt + (segment_times[i] - t);
   }
-
+  tt = clock()-tt;
+  printf ("It took (%f seconds) to run gCAGPO", ((float)tt)/CLOCKS_PER_SEC);
+  std::cout << std::endl;
   if (gradients != NULL) {
     gradients->clear();
     gradients->resize(dim);
@@ -1756,6 +1728,10 @@ template <int _N>
 double PolynomialOptimizationNonLinear<_N>::getCostAndGradientPotentialOctree(
         const Eigen::VectorXd& position, Eigen::VectorXd* gradient,
         void* opt_data, bool* is_collision) {
+
+  clock_t t_gCAGPO_s, t_gCAGPO, t_fOV_s, t_fOV, t_gDO1_s, t_gDO1, t_gDO2_s, t_gDO2, t_gCP1_s, t_gCP1, t_gCP2_s, t_gCP2;
+  t_gCAGPO_s = clock();
+
 
   PolynomialOptimizationNonLinear<N>* data =
           static_cast<PolynomialOptimizationNonLinear<N>*>(opt_data);
@@ -1782,9 +1758,13 @@ double PolynomialOptimizationNonLinear<_N>::getCostAndGradientPotentialOctree(
   std::vector<Eigen::Vector3i> free_voxels;
 
   const Eigen::Vector3i position_voxel = (position / 0.05).cast<int>();
+  //std::cout << "position voxel: " << "\n" << position_voxel << "\n" << std::endl;
+  //std::cout << "position: " << "\n" << position << "\n" << std::endl;
   //std::cout << "position [voxel] to check gradient: " << "\n" << position_voxel << "\n" << std::endl;
 
+  t_fOV_s = clock();
   data->findOccupiedVoxels(data->getOctree(), side, position_voxel, occupied_voxels, free_voxels);
+  t_fOV = t_fOV_s - clock();
 
   //std::cout << "occupied positions [voxel]: " << occupied_voxels.size() << std::endl;
   //for (Eigen::Vector3i occupied_voxel : occupied_voxels)
@@ -1796,10 +1776,15 @@ double PolynomialOptimizationNonLinear<_N>::getCostAndGradientPotentialOctree(
 
   // Get distance from collision at current position
   double distance = 0.0;
-  if (is_valid_state)
+  if (is_valid_state) {
+    t_gDO1_s = clock();
     distance = data->getDistanceOctree(position_voxel, occupied_voxels, free_voxels);
-  // Get potential cost from distance to collision
+    t_gDO1 = t_gDO1_s - clock();
+    // Get potential cost from distance to collision
+    t_gCP1_s = clock();
+  }
   const double J_c_esdf = data->getCostPotential(distance, is_collision);
+  t_gCP1 = t_gCP1_s - clock();
 
   if (gradient != NULL) {
     // Numerical gradients
@@ -1814,16 +1799,20 @@ double PolynomialOptimizationNonLinear<_N>::getCostAndGradientPotentialOctree(
       // Get distance and potential cost from collision at current position
       double left_dist, right_dist;
       if (is_valid_state) {
+        t_gDO2_s = clock();
         left_dist = data->getDistanceOctree(position_voxel-increment, occupied_voxels, free_voxels);
         right_dist = data->getDistanceOctree(position_voxel+increment, occupied_voxels, free_voxels);
+        t_gDO2 = t_gDO2_s - clock();
       }
 
       bool is_collision_left, is_collision_right;
 
+      t_gCP2_s = clock();
       const double left_cost = data->getCostPotential(left_dist,
                                                       &is_collision_left);
       const double right_cost = data->getCostPotential(right_dist,
                                                        &is_collision_right);
+      t_gCP2 = t_gCP2_s - clock();
 
       grad_c_potential[k] = (right_cost - left_cost) / (2.0 * increment_dist);
     }
@@ -1849,6 +1838,21 @@ double PolynomialOptimizationNonLinear<_N>::getCostAndGradientPotentialOctree(
     }
   }
 
+  t_gCAGPO = clock() - t_gCAGPO_s;
+  /*
+  printf ("It took (%f seconds) to run gCAGPO", ((float)t_gCAGPO)/CLOCKS_PER_SEC);
+  std::cout << std::endl;
+  printf ("It took (%f seconds) to run fOV", ((float)t_fOV)/CLOCKS_PER_SEC);
+  std::cout << std::endl;
+  printf ("It took (%f seconds) to run gDO center", ((float)t_gDO1)/CLOCKS_PER_SEC);
+  std::cout << std::endl;
+  printf ("It took (%f seconds) to run gDO left + right", ((float)t_gDO2)/CLOCKS_PER_SEC);
+  std::cout << std::endl;
+  printf ("It took (%f seconds) to run gCP center", ((float)t_gCP1)/CLOCKS_PER_SEC);
+  std::cout << std::endl;
+  printf ("It took (%f seconds) to run gCP left + right", ((float)t_gCP2)/CLOCKS_PER_SEC);
+  std::cout << "\n" << std::endl;
+  */
   return J_c_esdf;
 
 }

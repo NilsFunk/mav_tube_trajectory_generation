@@ -2,8 +2,8 @@
 <project version="4">
   <component name="CMakeRunConfigurationManager" shouldGenerate="true" shouldDeleteObsolete="true" buildAllGenerated="true">
     <generated>
-      <config projectName="mav_tube_trajectory_generation" targetName="mav_main" />
       <config projectName="mav_tube_trajectory_generation" targetName="mav_tube_trajectory_generation" />
+      <config projectName="mav_tube_trajectory_generation" targetName="mav_main" />
     </generated>
   </component>
   <component name="CMakeSettings">
@@ -12,7 +12,14 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="da1f7cda-3f00-473e-b8ab-5ce4a6f7d109" name="Default" comment="" />
+    <list default="true" id="da1f7cda-3f00-473e-b8ab-5ce4a6f7d109" name="Default" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/include/mav_tube_trajectory_generation/impl/polynomial_optimization_nonlinear_impl.h" beforeDir="false" afterPath="$PROJECT_DIR$/include/mav_tube_trajectory_generation/impl/polynomial_optimization_nonlinear_impl.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/include/mav_tube_trajectory_generation/impl/polynomial_optimization_qcqp_impl.h" beforeDir="false" afterPath="$PROJECT_DIR$/include/mav_tube_trajectory_generation/impl/polynomial_optimization_qcqp_impl.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/include/mav_tube_trajectory_generation/polynomial_optimization_qcqp.h" beforeDir="false" afterPath="$PROJECT_DIR$/include/mav_tube_trajectory_generation/polynomial_optimization_qcqp.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mav_tube_trajectory_generation/.idea/workspace.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main.cpp" afterDir="false" />
+    </list>
     <ignored path="$PROJECT_DIR$/cmake-build-debug/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -24,35 +31,20 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="CMakeBuildProfile:Debug" />
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="polynomial_optimization_linear.h" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/include/mav_tube_trajectory_generation/polynomial_optimization_linear.h">
+      <file leaf-file-name="octree.hpp" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/../supereight/se_core/include/se/octree.hpp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2775">
-              <caret line="185" column="12" selection-start-line="185" selection-start-column="5" selection-end-line="185" selection-end-column="12" />
-              <folding>
-                <element signature="e#1040#1065#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="564">
+              <caret line="1023" selection-start-line="1023" selection-end-line="1023" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="polynomial_optimization_qcqp.h" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/include/mav_tube_trajectory_generation/polynomial_optimization_qcqp.h">
+      <file leaf-file-name="se_serialise.hpp" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/../supereight/se_core/include/se/io/se_serialise.hpp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="6105">
-              <caret line="407" column="55" selection-start-line="407" selection-start-column="48" selection-end-line="407" selection-end-column="55" />
-              <folding>
-                <element signature="e#212#286#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="CMakeLists.txt" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/CMakeLists.txt">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="315">
-              <caret line="21" selection-start-line="21" selection-end-line="21" />
+            <state relative-caret-position="878">
+              <caret line="106" column="86" selection-start-line="106" selection-start-column="86" selection-end-line="106" selection-end-column="86" />
             </state>
           </provider>
         </entry>
@@ -60,20 +52,41 @@
       <file leaf-file-name="polynomial_optimization_nonlinear.h" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/include/mav_tube_trajectory_generation/polynomial_optimization_nonlinear.h">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="5685">
+            <state relative-caret-position="849">
               <caret line="379" column="60" selection-start-line="379" selection-start-column="7" selection-end-line="379" selection-end-column="60" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="polynomial_optimization_nonlinear_impl.h" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/include/mav_tube_trajectory_generation/impl/polynomial_optimization_nonlinear_impl.h">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="711">
+              <caret line="1362" column="22" selection-start-line="1362" selection-start-column="22" selection-end-line="1362" selection-end-column="22" />
               <folding>
-                <element signature="e#1224#1242#0" expanded="true" />
+                <element signature="e#858#875#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="polynomial_optimization_nonlinear_impl.h" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/include/mav_tube_trajectory_generation/impl/polynomial_optimization_nonlinear_impl.h">
+      <file leaf-file-name="polynomial_optimization_linear_impl.h" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/include/mav_tube_trajectory_generation/impl/polynomial_optimization_linear_impl.h">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="3660">
-              <caret line="244" column="46" selection-start-line="244" selection-start-column="46" selection-end-line="244" selection-end-column="46" />
+            <state relative-caret-position="898">
+              <caret line="457" column="43" selection-start-line="457" selection-start-column="43" selection-end-line="457" selection-end-column="43" />
+              <folding>
+                <element signature="e#1060#1085#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="node.hpp" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/../supereight/se_core/include/se/node.hpp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="207">
+              <caret line="145" selection-start-line="145" selection-end-line="145" />
             </state>
           </provider>
         </entry>
@@ -81,8 +94,11 @@
       <file leaf-file-name="main.cpp" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main.cpp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="308">
-              <caret line="74" column="44" selection-start-line="74" selection-start-column="44" selection-end-line="74" selection-end-column="44" />
+            <state relative-caret-position="165">
+              <caret line="20" selection-start-line="20" selection-end-line="20" />
+              <folding>
+                <element signature="e#42#61#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -91,21 +107,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>getOctree</find>
-      <find>findOccupiedVoxels</find>
-      <find>octree</find>
-      <find>getCostAndGradientCollision</find>
-      <find>optimization_data</find>
-      <find>segment_radii_</find>
-      <find>getSegmentTimes</find>
-      <find>grad_c</find>
-      <find>find</find>
-      <find>matlab</find>
-      <find>optimizeFreeConstraintsAndCollisionAndTime()</find>
-      <find>objectiveFunctionFreeConstraintsAndCollisionAndTime</find>
-      <find>getTrajectory</find>
-      <find>initial_solution</find>
-      <find>getTrajec</find>
       <find>optimize</find>
       <find>optimize()</find>
       <find>init</find>
@@ -121,6 +122,21 @@
       <find>inverseSegmentControl</find>
       <find>Segment</find>
       <find>inverse</find>
+      <find>cout</find>
+      <find>collision</find>
+      <find>AndCollision</find>
+      <find>pos</find>
+      <find>position</find>
+      <find>clock()</find>
+      <find>getCostAndGradientPotentialOctree</find>
+      <find>clock</find>
+      <find>Collision</find>
+      <find>getCostandGradient</find>
+      <find>getCostandGradientCollision</find>
+      <find>load</find>
+      <find>multi</find>
+      <find>is_collision</find>
+      <find>getCostAndGradientCollision</find>
     </findStrings>
     <replaceStrings>
       <replace>n_fixed_constraints_kDim</replace>
@@ -133,7 +149,7 @@
     </replaceStrings>
   </component>
   <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../../.." />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
@@ -143,14 +159,17 @@
         <option value="$PROJECT_DIR$/include/mav_tube_trajectory_generation/control_points.h" />
         <option value="$PROJECT_DIR$/src/polynomial.cpp" />
         <option value="$PROJECT_DIR$/include/mav_tube_trajectory_generation/motion_defines.h" />
-        <option value="$PROJECT_DIR$/include/mav_tube_trajectory_generation/impl/polynomial_optimization_linear_impl.h" />
         <option value="$PROJECT_DIR$/include/mav_tube_trajectory_generation/polynomial_optimization_linear.h" />
         <option value="$PROJECT_DIR$/include/mav_tube_trajectory_generation/polynomial_optimization_linear_constrained.h" />
-        <option value="$PROJECT_DIR$/include/mav_tube_trajectory_generation/impl/polynomial_optimization_nonlinear_impl.h" />
-        <option value="$PROJECT_DIR$/src/main.cpp" />
         <option value="$PROJECT_DIR$/include/mav_tube_trajectory_generation/polynomial_optimization_nonlinear.h" />
-        <option value="$PROJECT_DIR$/include/mav_tube_trajectory_generation/polynomial_optimization_qcqp.h" />
         <option value="$PROJECT_DIR$/CMakeLists.txt" />
+        <option value="$PROJECT_DIR$/include/mav_tube_trajectory_generation/impl/polynomial_optimization_qcqp_impl.h" />
+        <option value="$PROJECT_DIR$/include/mav_tube_trajectory_generation/polynomial_optimization_qcqp.h" />
+        <option value="$PROJECT_DIR$/include/mav_tube_trajectory_generation/impl/polynomial_optimization_linear_impl.h" />
+        <option value="$PROJECT_DIR$/../supereight/se_core/include/se/io/se_serialise.hpp" />
+        <option value="$PROJECT_DIR$/src/main.cpp" />
+        <option value="$PROJECT_DIR$/../supereight/se_core/include/se/octree.hpp" />
+        <option value="$PROJECT_DIR$/include/mav_tube_trajectory_generation/impl/polynomial_optimization_nonlinear_impl.h" />
       </list>
     </option>
   </component>
@@ -164,7 +183,7 @@
     <packageJsonPaths />
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="6937" />
+    <option name="x" value="57" />
     <option name="y" value="-4" />
     <option name="width" value="3383" />
     <option name="height" value="1444" />
@@ -174,18 +193,84 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
             <path>
               <item name="mav_tube_trajectory_generation" type="b2602c69:ProjectViewProjectNode" />
-              <item name="mav_tube_trajectory_generation" type="462c0819:PsiDirectoryNode" />
+              <item name="mav_trajectory_generation" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="mav_tube_trajectory_generation" type="b2602c69:ProjectViewProjectNode" />
+              <item name="mav_trajectory_generation" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="mav_tube_trajectory_generation" type="b2602c69:ProjectViewProjectNode" />
+              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
+            </path>
+            <path>
+              <item name="mav_tube_trajectory_generation" type="b2602c69:ProjectViewProjectNode" />
+              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
+              <item name="Header Search Paths" type="70bed36:NamedLibraryElementNode" />
+            </path>
+            <path>
+              <item name="mav_tube_trajectory_generation" type="b2602c69:ProjectViewProjectNode" />
+              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
+              <item name="Header Search Paths" type="70bed36:NamedLibraryElementNode" />
+              <item name="include" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="mav_tube_trajectory_generation" type="b2602c69:ProjectViewProjectNode" />
+              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
+              <item name="Header Search Paths" type="70bed36:NamedLibraryElementNode" />
+              <item name="include" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="mav_tube_trajectory_generation" type="b2602c69:ProjectViewProjectNode" />
+              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
+              <item name="Header Search Paths" type="70bed36:NamedLibraryElementNode" />
+              <item name="include" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="mav_tube_trajectory_generation" type="b2602c69:ProjectViewProjectNode" />
+              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
+              <item name="Header Search Paths" type="70bed36:NamedLibraryElementNode" />
+              <item name="include" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="mav_tube_trajectory_generation" type="b2602c69:ProjectViewProjectNode" />
+              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
+              <item name="Header Search Paths" type="70bed36:NamedLibraryElementNode" />
+              <item name="include" type="462c0819:PsiDirectoryNode" />
+              <item name="se" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="mav_tube_trajectory_generation" type="b2602c69:ProjectViewProjectNode" />
+              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
+              <item name="Header Search Paths" type="70bed36:NamedLibraryElementNode" />
+              <item name="include" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="mav_tube_trajectory_generation" type="b2602c69:ProjectViewProjectNode" />
+              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
+              <item name="Header Search Paths" type="70bed36:NamedLibraryElementNode" />
+              <item name="include" type="462c0819:PsiDirectoryNode" />
+              <item name="se" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="mav_tube_trajectory_generation" type="b2602c69:ProjectViewProjectNode" />
+              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
+              <item name="Header Search Paths" type="70bed36:NamedLibraryElementNode" />
+              <item name="include" type="462c0819:PsiDirectoryNode" />
+              <item name="se" type="462c0819:PsiDirectoryNode" />
+              <item name="io" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -247,26 +332,34 @@
       <workItem from="1535457715233" duration="24851000" />
       <workItem from="1535532746659" duration="9686000" />
       <workItem from="1535545646642" duration="561000" />
+      <workItem from="1535546523404" duration="935000" />
+      <workItem from="1535552346519" duration="2200000" />
+      <workItem from="1535559858379" duration="4626000" />
+      <workItem from="1535626346247" duration="410000" />
+      <workItem from="1535628082732" duration="750000" />
+      <workItem from="1535629163113" duration="317000" />
+      <workItem from="1535629628958" duration="4245000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="134620000" />
+    <option name="totallyTimeSpent" value="148103000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="6937" y="-4" width="3383" height="1444" extended-state="6" />
+    <frame x="57" y="-4" width="3383" height="1444" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.124107145" />
       <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info active="true" anchor="bottom" id="Messages" order="7" visible="true" weight="0.1820259" />
+      <window_info anchor="bottom" id="Messages" order="7" weight="0.26884997" />
       <window_info anchor="bottom" id="CMake" order="7" weight="0.32867134" />
       <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" />
       <window_info anchor="bottom" id="Version Control" order="7" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.3285171" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.29649806" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info anchor="bottom" id="Terminal" order="7" weight="0.25627378" />
+      <window_info anchor="bottom" id="Terminal" order="7" weight="0.2559025" />
       <window_info id="Favorites" order="2" side_tool="true" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.17870723" />
+      <window_info active="true" anchor="bottom" id="Debug" order="3" visible="true" weight="0.18050267" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
@@ -297,16 +390,31 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
           <url>file://$PROJECT_DIR$/include/mav_tube_trajectory_generation/impl/polynomial_optimization_nonlinear_impl.h</url>
-          <line>1199</line>
+          <line>1200</line>
           <option name="timeStamp" value="147" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
           <url>file://$PROJECT_DIR$/include/mav_tube_trajectory_generation/impl/polynomial_optimization_nonlinear_impl.h</url>
-          <line>250</line>
+          <line>251</line>
           <option name="timeStamp" value="174" />
         </line-breakpoint>
+        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
+          <url>file://$PROJECT_DIR$/include/mav_tube_trajectory_generation/impl/polynomial_optimization_nonlinear_impl.h</url>
+          <line>1709</line>
+          <option name="timeStamp" value="178" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
+          <url>file://$PROJECT_DIR$/src/main.cpp</url>
+          <line>19</line>
+          <option name="timeStamp" value="179" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
+          <url>file://$PROJECT_DIR$/../supereight/se_core/include/se/octree.hpp</url>
+          <line>930</line>
+          <option name="timeStamp" value="181" />
+        </line-breakpoint>
       </breakpoints>
-      <option name="time" value="176" />
+      <option name="time" value="189" />
     </breakpoint-manager>
     <watches-manager>
       <configuration name="CMakeRunConfiguration">
@@ -316,23 +424,6 @@
     </watches-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/include/mav_tube_trajectory_generation/control_points.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="780">
-          <caret line="52" selection-start-line="52" selection-end-line="52" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/include/mav_tube_trajectory_generation/convolution.h">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file:///usr/local/include/glog/logging.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="9045">
-          <caret line="603" selection-start-line="603" selection-end-line="603" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/include/mav_tube_trajectory_generation/polynomial_optimization_linear.h">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="3465">
@@ -457,13 +548,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/include/mav_tube_trajectory_generation/impl/polynomial_optimization_linear_constrained_impl.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="6" selection-start-line="6" selection-end-line="6" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/include/mav_tube_trajectory_generation/convolution.h">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -574,13 +658,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/include/mav_tube_trajectory_generation/impl/polynomial_optimization_linear_impl.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="319">
-          <caret line="505" column="37" selection-start-line="505" selection-start-column="33" selection-end-line="505" selection-end-column="37" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file:///usr/local/include/nlopt.hpp">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="219">
@@ -595,20 +672,24 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/include/mav_tube_trajectory_generation/polynomial_optimization_nonlinear.h">
+    <entry file="file://$PROJECT_DIR$/CMakeLists.txt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="5685">
-          <caret line="379" column="60" selection-start-line="379" selection-start-column="7" selection-end-line="379" selection-end-column="60" />
-          <folding>
-            <element signature="e#1224#1242#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="315">
+          <caret line="21" selection-start-line="21" selection-end-line="21" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/include/mav_tube_trajectory_generation/impl/polynomial_optimization_nonlinear_impl.h">
+    <entry file="file://$PROJECT_DIR$/include/mav_tube_trajectory_generation/impl/polynomial_optimization_qcqp_impl.h">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3660">
-          <caret line="244" column="46" selection-start-line="244" selection-start-column="46" selection-end-line="244" selection-end-column="46" />
+        <state relative-caret-position="135">
+          <caret line="9" selection-start-line="9" selection-end-line="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/include/mav_tube_trajectory_generation/polynomial_optimization_qcqp.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1067">
+          <caret line="73" column="48" selection-start-line="73" selection-start-column="48" selection-end-line="73" selection-end-column="48" />
         </state>
       </provider>
     </entry>
@@ -616,33 +697,64 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="2775">
           <caret line="185" column="12" selection-start-line="185" selection-start-column="5" selection-end-line="185" selection-end-column="12" />
-          <folding>
-            <element signature="e#1040#1065#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/include/mav_tube_trajectory_generation/polynomial_optimization_qcqp.h">
+    <entry file="file://$PROJECT_DIR$/include/mav_tube_trajectory_generation/polynomial_optimization_nonlinear.h">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="6105">
-          <caret line="407" column="55" selection-start-line="407" selection-start-column="48" selection-end-line="407" selection-end-column="55" />
-          <folding>
-            <element signature="e#212#286#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="849">
+          <caret line="379" column="60" selection-start-line="379" selection-start-column="7" selection-end-line="379" selection-end-column="60" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../supereight/se_core/include/se/io/se_serialise.hpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="878">
+          <caret line="106" column="86" selection-start-line="106" selection-start-column="86" selection-end-line="106" selection-end-column="86" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../supereight/se_core/include/se/octree.hpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="564">
+          <caret line="1023" selection-start-line="1023" selection-end-line="1023" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main.cpp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="308">
-          <caret line="74" column="44" selection-start-line="74" selection-start-column="44" selection-end-line="74" selection-end-column="44" />
+        <state relative-caret-position="165">
+          <caret line="20" selection-start-line="20" selection-end-line="20" />
+          <folding>
+            <element signature="e#42#61#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/CMakeLists.txt">
+    <entry file="file://$PROJECT_DIR$/../supereight/se_core/include/se/node.hpp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="315">
-          <caret line="21" selection-start-line="21" selection-end-line="21" />
+        <state relative-caret-position="207">
+          <caret line="145" selection-start-line="145" selection-end-line="145" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/include/mav_tube_trajectory_generation/impl/polynomial_optimization_linear_impl.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="898">
+          <caret line="457" column="43" selection-start-line="457" selection-start-column="43" selection-end-line="457" selection-end-column="43" />
+          <folding>
+            <element signature="e#1060#1085#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/include/mav_tube_trajectory_generation/impl/polynomial_optimization_nonlinear_impl.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="711">
+          <caret line="1362" column="22" selection-start-line="1362" selection-start-column="22" selection-end-line="1362" selection-end-column="22" />
+          <folding>
+            <element signature="e#858#875#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
