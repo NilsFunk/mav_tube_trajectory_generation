@@ -1269,63 +1269,67 @@ double PolynomialOptimizationNonLinear<_N
   double J_t = 0.0;
   double J_sc = 0.0;
   if (!gradient.empty()) {
-    timing::Timer opti_deriv_timer("opti/deriv");
-    J_d = optimization_data->getCostAndGradientDerivative(
-            &grad_d, optimization_data);
-    opti_deriv_timer.Stop();
     timing::Timer opti_coll_timer("opti/coll");
     J_c = optimization_data->getCostAndGradientCollision(
             &grad_c, optimization_data, &is_collision);
     opti_coll_timer.Stop();
+    if (!is_collision) {
+      timing::Timer opti_deriv_timer("opti/deriv");
+      J_d = optimization_data->getCostAndGradientDerivative(
+              &grad_d, optimization_data);
+      opti_deriv_timer.Stop();
 
-    if (optimization_data->optimization_parameters_.use_soft_constraints) {
-      if (optimization_data->optimization_parameters_.is_simple_numgrad_constraints) {
-        timing::Timer opti_constraints_simple_timer("opti/constraints_simple");
-        J_sc = optimization_data->getCostAndGradientSoftConstraintsSimple(
-                &grad_sc, optimization_data);
-        opti_constraints_simple_timer.Stop();
+      if (optimization_data->optimization_parameters_.use_soft_constraints) {
+        if (optimization_data->optimization_parameters_.is_simple_numgrad_constraints) {
+          timing::Timer opti_constraints_simple_timer("opti/constraints_simple");
+          J_sc = optimization_data->getCostAndGradientSoftConstraintsSimple(
+                  &grad_sc, optimization_data);
+          opti_constraints_simple_timer.Stop();
+        } else {
+          timing::Timer opti_constraints_timer("opti/constraints");
+          J_sc = optimization_data->getCostAndGradientSoftConstraints(
+                  &grad_sc, optimization_data);
+          opti_constraints_timer.Stop();
+        }
+      }
+
+      if (optimization_data->optimization_parameters_.is_simple_numgrad_time) {
+        timing::Timer opti_time_simple_timer("opti/time_simple");
+        J_t = optimization_data->getCostAndGradientTimeSimple(
+                &grad_t, optimization_data, J_d, J_c, J_sc);
+        opti_time_simple_timer.Stop();
       } else {
-        timing::Timer opti_constraints_timer("opti/constraints");
-        J_sc = optimization_data->getCostAndGradientSoftConstraints(
-                &grad_sc, optimization_data);
-        opti_constraints_timer.Stop();
+        timing::Timer opti_time_timer("opti/time");
+        J_t = optimization_data->getCostAndGradientTime(&grad_t,
+                                                        optimization_data);
+        opti_time_timer.Stop();
       }
     }
-
-    if (optimization_data->optimization_parameters_.is_simple_numgrad_time) {
-      timing::Timer opti_time_simple_timer("opti/time_simple");
-      J_t = optimization_data->getCostAndGradientTimeSimple(
-              &grad_t, optimization_data, J_d, J_c, J_sc);
-      opti_time_simple_timer.Stop();
-    } else {
-      timing::Timer opti_time_timer("opti/time");
-      J_t = optimization_data->getCostAndGradientTime(&grad_t,
-                                                      optimization_data);
-      opti_time_timer.Stop();
-    }
   } else {
-    timing::Timer opti_deriv_timer("opti_gradfree/deriv");
-    J_d = optimization_data->getCostAndGradientDerivative(
-            NULL, optimization_data);
-    opti_deriv_timer.Stop();
     timing::Timer opti_coll_timer("opti_gradfree/coll");
     J_c = optimization_data->getCostAndGradientCollision(
             NULL, optimization_data, &is_collision);
     opti_coll_timer.Stop();
-    timing::Timer opti_time_timer("opti_gradfree/time");
-    J_t = optimization_data->getCostAndGradientTime(NULL, optimization_data);
-    opti_time_timer.Stop();
-    if (optimization_data->optimization_parameters_.use_soft_constraints) {
-      if (optimization_data->optimization_parameters_.is_simple_numgrad_constraints) {
-        timing::Timer opti_constraints_simple_timer("opti/constraints_simple");
-        J_sc = optimization_data->getCostAndGradientSoftConstraintsSimple(
-                NULL, optimization_data);
-        opti_constraints_simple_timer.Stop();
-      } else {
-        timing::Timer opti_constraints_timer("opti_gradfree/constraints");
-        J_sc = optimization_data->getCostAndGradientSoftConstraints(
-                NULL, optimization_data);
-        opti_constraints_timer.Stop();
+    if (!is_collision) {
+      timing::Timer opti_deriv_timer("opti_gradfree/deriv");
+      J_d = optimization_data->getCostAndGradientDerivative(
+              NULL, optimization_data);
+      opti_deriv_timer.Stop();
+      timing::Timer opti_time_timer("opti_gradfree/time");
+      J_t = optimization_data->getCostAndGradientTime(NULL, optimization_data);
+      opti_time_timer.Stop();
+      if (optimization_data->optimization_parameters_.use_soft_constraints) {
+        if (optimization_data->optimization_parameters_.is_simple_numgrad_constraints) {
+          timing::Timer opti_constraints_simple_timer("opti/constraints_simple");
+          J_sc = optimization_data->getCostAndGradientSoftConstraintsSimple(
+                  NULL, optimization_data);
+          opti_constraints_simple_timer.Stop();
+        } else {
+          timing::Timer opti_constraints_timer("opti_gradfree/constraints");
+          J_sc = optimization_data->getCostAndGradientSoftConstraints(
+                  NULL, optimization_data);
+          opti_constraints_timer.Stop();
+        }
       }
     }
   }
@@ -1630,53 +1634,21 @@ double PolynomialOptimizationNonLinear<_N>::getCostAndGradientCollision(
       Eigen::VectorXd grad_c_d_f(dim); // dc/dd_f
       double c = 0.0;
       if (gradients != NULL) {
-/*        c = getCostAndGradientPotentialESDF(pos, &grad_c_d_f, data,
-                                            &is_pos_collision);
-*/
         c = getCostAndGradientPotentialOctree(pos, &grad_c_d_f, data,
                                             &is_pos_collision);
       } else {
         c = getCostAndGradientPotentialOctree(pos, NULL, data, &is_pos_collision);
       }
 
-      if (is_pos_collision) { *is_collision = true; }
+      if (is_pos_collision) {
+        *is_collision = true;
+        continue;
+      }
 
       // Cost per segment and time sample
       const double J_c_i_t = c * vel.norm() * time_sum;
       J_c += J_c_i_t;
 
-/*
-      // TODO: Only DEBUG
-      // Numerical gradients
-      if (data->optimization_parameters_.use_numeric_grad) {
-        const double increment_dist =
-                data->optimization_parameters_.map_resolution;
-        Eigen::VectorXd increment(dim);
-        Eigen::VectorXd grad_c_k_num(dim);
-        grad_c_k_num.setZero();
-        for (int k = 0; k < dim; ++k) {
-          increment.setZero();
-          increment[k] = increment_dist;
-
-          bool is_collision_left, is_collision_right;
-          const double cost_left = getCostAndGradientPotentialESDF(
-                  pos - increment, NULL, data, &is_collision_left);
-          const double cost_right = getCostAndGradientPotentialESDF(
-                  pos + increment, NULL, data, &is_collision_right);
-          grad_c_k_num[k] += (cost_right - cost_left) / (2.0 * increment_dist);
-        }
-
-        if (gradients != NULL) {
-          if (data->optimization_parameters_.print_debug_info) {
-            const Eigen::VectorXd diff = grad_c_d_f - grad_c_k_num;
-            if ((diff.array() != 0.0).any()) {
-              std::cout << "diff grad num coll potential: " << diff[0] << " | "
-                        << diff[1] << " | " << diff[2] << std::endl;
-            }
-          }
-        }
-      }
-*/
       if (gradients != NULL) {
         // Norm has to be non-zero
         if (vel.norm() > 1e-6) {
@@ -1700,13 +1672,16 @@ double PolynomialOptimizationNonLinear<_N>::getCostAndGradientCollision(
       time_sum = 0.0;
       prev_pos = pos;
     }
-
+    if (*is_collision == true)
+      continue;
     // Make sure the dt is correct for the next segment:
     time_sum += -dt + (segment_times[i] - t);
+
   }
   tt = clock()-tt;
   printf ("It took (%f seconds) to run gCAGPO", ((float)tt)/CLOCKS_PER_SEC);
   std::cout << std::endl;
+
   if (gradients != NULL) {
     gradients->clear();
     gradients->resize(dim);
@@ -1716,10 +1691,10 @@ double PolynomialOptimizationNonLinear<_N>::getCostAndGradientCollision(
     }
   }
 
-  //std::cout << "Cost: " << J_c << std::endl;
-
-  //for (Eigen::VectorXd grad_d : grad_c)
-   // std::cout << "Gradients: " << "\n" << grad_d << "\n" << std::endl;
+  if (*is_collision == true) {
+    J_c = 0;
+    *gradients.setZero();
+  }
 
   return J_c;
 }
