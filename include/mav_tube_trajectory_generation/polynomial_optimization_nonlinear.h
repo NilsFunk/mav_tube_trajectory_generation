@@ -54,7 +54,7 @@ struct NonlinearOptimizationParameters {
         initial_stepsize_rel(0.1),
         equality_constraint_tolerance(1.0e-3),
         inequality_constraint_tolerance(0.1),
-        max_iterations(3000),
+        max_iterations(5),
         max_time(-1),
         time_penalty(500.0),
         algorithm(nlopt::LN_SBPLX),
@@ -494,18 +494,15 @@ class PolynomialOptimizationNonLinear {
           void* opt_data, bool* is_collision);
 
   bool findOccupiedVoxels(se::Octree<OFusion>* octree, const Eigen::Vector3i& side, const Eigen::Vector3i& position,
-          std::vector<Eigen::Vector3i>& occupied_voxels, std::vector<Eigen::Vector3i>& free_voxels);
+          std::vector<Eigen::Vector3i>& occupied_voxels);
 
   void findOccupiedVoxels(const se::VoxelBlock<OFusion>* block,
           const Eigen::Vector3i bbox, const Eigen::Vector3i side,
-          std::vector<Eigen::Vector3i>& occupied_voxels, std::vector<Eigen::Vector3i>& Free_voxels);
+          std::vector<Eigen::Vector3i>& occupied_voxels);
 
   bool checkIfOccupied(const Eigen::Vector3i& position);
 
-  double getDistanceOctree(const Eigen::Vector3i& position, std::vector<Eigen::Vector3i>& occupied_voxels,
-          std::vector<Eigen::Vector3i>& free_voxels);
-
-  double computeMinimumDistance(const Eigen::Vector3i& position, std::vector<Eigen::Vector3i>& voxels);
+  double getDistanceOctree(const Eigen::Vector3i& position, std::vector<Eigen::Vector3i>& occupied_voxels);
 
           // Calculate the numerical gradients of the collision potential.
   static void getNumericalGradientsCollision(

@@ -26,17 +26,17 @@ int main () {
   start.makeStartOrEnd(Eigen::Vector3d(9.8, 11.8, 12.45), derivative_to_optimize);
   vertices.push_back(start);
 
-  middle1.addConstraint(mav_trajectory_generation::derivative_order::POSITION, Eigen::Vector3d(10.4474, 14.05, 12.7796));
+  middle1.addConstraint(mav_trajectory_generation::derivative_order::POSITION, Eigen::Vector3d(11.297, 11.849, 13.1572));
   vertices.push_back(middle1);
 
-  middle2.addConstraint(mav_trajectory_generation::derivative_order::POSITION, Eigen::Vector3d(13.0126, 14.7041, 12.3976));
+  middle2.addConstraint(mav_trajectory_generation::derivative_order::POSITION, Eigen::Vector3d(14.9102, 12.5495, 12.5262));
   vertices.push_back(middle2);
 
-  middle3.addConstraint(mav_trajectory_generation::derivative_order::POSITION, Eigen::Vector3d(13.6771, 15.358, 12.8908));
-  vertices.push_back(middle3);
+  //middle3.addConstraint(mav_trajectory_generation::derivative_order::POSITION, Eigen::Vector3d(13.6771, 15.358, 12.8908));
+  //vertices.push_back(middle3);
 
-  middle4.addConstraint(mav_trajectory_generation::derivative_order::POSITION, Eigen::Vector3d(15.2574, 16.6208, 12.2477));
-  vertices.push_back(middle4);
+  //middle4.addConstraint(mav_trajectory_generation::derivative_order::POSITION, Eigen::Vector3d(15.2574, 16.6208, 12.2477));
+  //vertices.push_back(middle4);
 
   end.makeStartOrEnd(Eigen::Vector3d(16.6, 16.6, 12.45), derivative_to_optimize);
   vertices.push_back(end);
@@ -47,16 +47,16 @@ int main () {
   segment_times = estimateSegmentTimes(vertices, v_max, a_max);
 
   std::vector<std::pair<double, double>> segment_radii;
-  std::pair<double, double> r1(0.8, 0.3);
-  std::pair<double, double> r2(0.3, 0.3);
-  std::pair<double, double> r3(0.3, 0.3);
-  std::pair<double, double> r4(0.3, 0.3);
-  std::pair<double, double> r5(0.3, 0.3);
+  std::pair<double, double> r1(0.1, 0.1);
+  std::pair<double, double> r2(0.1, 0.1);
+  std::pair<double, double> r3(0.1, 0.1);
+  //std::pair<double, double> r4(0.1, 0.1);
+  //std::pair<double, double> r5(0.1, 0.1);
   segment_radii.push_back(r1);
   segment_radii.push_back(r2);
   segment_radii.push_back(r3);
-  segment_radii.push_back(r4);
-  segment_radii.push_back(r5);
+  //segment_radii.push_back(r4);
+  //segment_radii.push_back(r5);
 
   clock_t t;
   t = clock();
@@ -65,10 +65,10 @@ int main () {
 
   mav_trajectory_generation::NonlinearOptimizationParameters parameters;
   parameters.solve_with_position_constraint = true;
-  parameters.objective = mav_trajectory_generation::NonlinearOptimizationParameters::OptimizationObjective::kOptimizeFreeConstraintsAndCollision;
+  parameters.objective = mav_trajectory_generation::NonlinearOptimizationParameters::OptimizationObjective::kOptimizeFreeConstraintsAndCollisionAndTime;
   parameters.print_debug_info = false;
-  parameters.max_iterations = 2;
-  parameters.max_time = -1.0;
+  parameters.max_iterations = 25;
+  parameters.max_time = -1;
   parameters.f_rel = 0.000001;
   parameters.x_rel = 0.01;
   parameters.use_soft_constraints = false;
@@ -76,9 +76,9 @@ int main () {
   parameters.time_penalty = 500.0;
   parameters.initial_stepsize_rel = 0.1;
   parameters.inequality_constraint_tolerance = 0.1;
-  parameters.weights.w_d = 0.1;
+  parameters.weights.w_d = 50;
   parameters.weights.w_c = 50;
-  parameters.weights.w_t = 50;
+  parameters.weights.w_t = 0.1;
   parameters.weights.w_sc = 1.0;
   parameters.use_numeric_grad = false;
   parameters.use_continous_distance = false;
@@ -90,6 +90,7 @@ int main () {
   parameters.is_simple_numgrad_constraints = true;
   parameters.coll_check_time_increment = 0.1;
   parameters.is_coll_raise_first_iter = true;
+  parameters.robot_radius = 0;
   parameters.add_coll_raise = 0.0000001;
   parameters.algorithm =
           static_cast<nlopt::algorithm>(11);

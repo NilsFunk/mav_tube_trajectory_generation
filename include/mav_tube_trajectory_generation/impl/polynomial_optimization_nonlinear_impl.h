@@ -375,7 +375,7 @@ int PolynomialOptimizationNonLinear<_N>::optimizeFreeConstraints() {
   for (double x : initial_solution) {
     const double abs_x = std::abs(x);
     if (abs_x > 5)
-      initial_step.push_back(0);
+      initial_step.push_back(0.2);
     else
       initial_step.push_back(optimization_parameters_.initial_stepsize_rel *
                            abs_x);
@@ -485,7 +485,10 @@ int PolynomialOptimizationNonLinear<_N>::optimizeFreeConstraintsAndCollision() {
   initial_step.reserve(n_optmization_variables);
   for (double x : initial_solution) {
     const double abs_x = std::abs(x);
-    initial_step.push_back(optimization_parameters_.initial_stepsize_rel *
+    if (abs_x > 5)
+      initial_step.push_back(0.05);
+    else
+      initial_step.push_back(optimization_parameters_.initial_stepsize_rel *
                                    abs_x);
   }
 
@@ -1089,53 +1092,30 @@ objectiveFunctionFreeConstraintsAndCollision(
   double J_c = 0.0;
   double J_sc = 0.0;
   if (!gradient.empty()) {
-    J_d = optimization_data->getCostAndGradientDerivative(
-            &grad_d, optimization_data);
     J_c = optimization_data->getCostAndGradientCollision(
             &grad_c, optimization_data, &is_collision);
-    if (optimization_data->optimization_parameters_.use_soft_constraints) {
-      J_sc = optimization_data->getCostAndGradientSoftConstraints(
-              &grad_sc, optimization_data);
+    if (!is_collision) {
+      J_d = optimization_data->getCostAndGradientDerivative(
+              &grad_d, optimization_data);
+      if (optimization_data->optimization_parameters_.use_soft_constraints) {
+        J_sc = optimization_data->getCostAndGradientSoftConstraints(
+                &grad_sc, optimization_data);
+      }
     }
+
   } else {
-    J_d = optimization_data->getCostAndGradientDerivative(
-            NULL, optimization_data);
     J_c = optimization_data->getCostAndGradientCollision(
             NULL, optimization_data, &is_collision);
-    if (optimization_data->optimization_parameters_.use_soft_constraints) {
-      J_sc = optimization_data->getCostAndGradientSoftConstraints(
+    if (!is_collision) {
+      J_d = optimization_data->getCostAndGradientDerivative(
               NULL, optimization_data);
-    }
-  }
 
-/*
-  // Numerical gradients for collision cost
-  if (!gradient.empty()) {
-    if (optimization_data->optimization_parameters_.use_numeric_grad) {
-      std::vector<Eigen::VectorXd> grad_c_numeric(dim, Eigen::VectorXd::Zero
-              (n_free_constraints));
-
-      optimization_data->getNumericalGradientsCollision(&grad_c_numeric,
-                                                        optimization_data);
-
-      std::cout << "grad_c | grad_c_numeric | diff | grad_sc: " << std::endl;
-      for (int k = 0; k < dim; ++k) {
-        for (int n = 0; n < n_free_constraints; ++n) {
-          std::cout << k << " " << n << ": " << grad_c[k][n] << " | "
-                    << grad_c_numeric[k][n] << " | "
-                    << grad_c[k][n] - grad_c_numeric[k][n] << " | "
-                    << grad_sc[k][n] << std::endl;
-        }
-        std::cout << std::endl;
-      }
-      std::cout << std::endl;
-
-      for (int k = 0; k < dim; ++k) {
-        grad_c[k] = grad_c_numeric[k];
+      if (optimization_data->optimization_parameters_.use_soft_constraints) {
+        J_sc = optimization_data->getCostAndGradientSoftConstraints(
+                NULL, optimization_data);
       }
     }
   }
-*/
   // Weighting terms for different costs
   const double w_d = optimization_data->optimization_parameters_.weights.w_d;
   const double w_c = optimization_data->optimization_parameters_.weights.w_c;
@@ -1143,8 +1123,33 @@ objectiveFunctionFreeConstraintsAndCollision(
 
   // Get the weighted cost
   const double cost_trajectory = w_d * J_d;
-  const double cost_collision = w_c * J_c;
+  double cost_collision = w_c * J_c;
   const double cost_constraints = w_sc * J_sc;
+
+  // If in collision and total cost is smaller than initial total cost
+  const double total_cost =
+          cost_trajectory + cost_collision + cost_constraints;
+
+  if (optimization_data->optimization_parameters_.is_collision_safe) {
+    if (optimization_data->optimization_parameters_.is_coll_raise_first_iter) {
+      if (is_collision) {
+        cost_collision = optimization_data->total_cost_iter0_ -
+                         (total_cost - cost_collision) +
+                         optimization_data->optimization_parameters_.add_coll_raise;
+//        LOG(INFO) << "COLLISION: Raise total cost to inital total cost.";
+      }
+    } else {
+      const double total_cost_last_iter =
+              optimization_data->optimization_info_.cost_trajectory +
+              optimization_data->optimization_info_.cost_collision +
+              optimization_data->optimization_info_.cost_soft_constraints;
+      if (is_collision) {
+        cost_collision = total_cost_last_iter - (total_cost - cost_collision) +
+                         optimization_data->optimization_parameters_.add_coll_raise;
+//        LOG(INFO) << "COLLISION: Raise total cost to initial total cost.";
+      }
+    }
+  }
 
   if (optimization_data->optimization_parameters_.print_debug_info) {
     std::cout << "---- cost at iteration "
@@ -1552,6 +1557,9 @@ double PolynomialOptimizationNonLinear<_N>::getCostAndGradientCollision(
   data->poly_opt_.getFreeConstraints(&d_p_vec);
   data->poly_opt_.getFixedConstraints(&d_f_vec);
 
+  for (Eigen::VectorXd d_f : d_p_vec)
+    std::cout << "Free Constraints: " << d_f << std::endl;
+
   // 1) Get coefficients
   std::vector<Eigen::VectorXd> p_all_segments(dim, Eigen::VectorXd(N * n_segments));
   for (int k = 0; k < dim; ++k) {
@@ -1693,7 +1701,8 @@ double PolynomialOptimizationNonLinear<_N>::getCostAndGradientCollision(
 
   if (*is_collision == true) {
     J_c = 0;
-    *gradients.setZero();
+    for (Eigen::VectorXd gradients_k : *gradients)
+      gradients_k.setZero();
   }
 
   return J_c;
@@ -1730,7 +1739,6 @@ double PolynomialOptimizationNonLinear<_N>::getCostAndGradientPotentialOctree(
   }
 
   std::vector<Eigen::Vector3i> occupied_voxels;
-  std::vector<Eigen::Vector3i> free_voxels;
 
   const Eigen::Vector3i position_voxel = (position / 0.05).cast<int>();
   //std::cout << "position voxel: " << "\n" << position_voxel << "\n" << std::endl;
@@ -1738,7 +1746,7 @@ double PolynomialOptimizationNonLinear<_N>::getCostAndGradientPotentialOctree(
   //std::cout << "position [voxel] to check gradient: " << "\n" << position_voxel << "\n" << std::endl;
 
   t_fOV_s = clock();
-  data->findOccupiedVoxels(data->getOctree(), side, position_voxel, occupied_voxels, free_voxels);
+  data->findOccupiedVoxels(data->getOctree(), side, position_voxel, occupied_voxels);
   t_fOV = t_fOV_s - clock();
 
   //std::cout << "occupied positions [voxel]: " << occupied_voxels.size() << std::endl;
@@ -1753,7 +1761,7 @@ double PolynomialOptimizationNonLinear<_N>::getCostAndGradientPotentialOctree(
   double distance = 0.0;
   if (is_valid_state) {
     t_gDO1_s = clock();
-    distance = data->getDistanceOctree(position_voxel, occupied_voxels, free_voxels);
+    distance = data->getDistanceOctree(position_voxel, occupied_voxels);
     t_gDO1 = t_gDO1_s - clock();
     // Get potential cost from distance to collision
     t_gCP1_s = clock();
@@ -1775,8 +1783,8 @@ double PolynomialOptimizationNonLinear<_N>::getCostAndGradientPotentialOctree(
       double left_dist, right_dist;
       if (is_valid_state) {
         t_gDO2_s = clock();
-        left_dist = data->getDistanceOctree(position_voxel-increment, occupied_voxels, free_voxels);
-        right_dist = data->getDistanceOctree(position_voxel+increment, occupied_voxels, free_voxels);
+        left_dist = data->getDistanceOctree(position_voxel-increment, occupied_voxels);
+        right_dist = data->getDistanceOctree(position_voxel+increment, occupied_voxels);
         t_gDO2 = t_gDO2_s - clock();
       }
 
@@ -1835,7 +1843,7 @@ double PolynomialOptimizationNonLinear<_N>::getCostAndGradientPotentialOctree(
 
 template <int _N>
 bool PolynomialOptimizationNonLinear<_N>::findOccupiedVoxels(se::Octree<OFusion>* octree, const Eigen::Vector3i& side, const Eigen::Vector3i& position,
-           std::vector<Eigen::Vector3i>& occupied_voxels, std::vector<Eigen::Vector3i>& free_voxels) {
+           std::vector<Eigen::Vector3i>& occupied_voxels) {
 
   Eigen::Vector3i bbox = position - side / 2;
 
@@ -1865,8 +1873,12 @@ bool PolynomialOptimizationNonLinear<_N>::findOccupiedVoxels(se::Octree<OFusion>
     node = current.node_ptr;
 
     if (node->isLeaf()) {
+      if (node->value_[0].x < 0) {
+        current = stack[--stack_idx];
+        continue;
+      }
       findOccupiedVoxels(static_cast<se::VoxelBlock<OFusion> *>(node),
-                         bbox, side, occupied_voxels, free_voxels);
+                         bbox, side, occupied_voxels);
     }
 
     if (node->children_mask_ == 0) {
@@ -1906,7 +1918,7 @@ bool PolynomialOptimizationNonLinear<_N>::findOccupiedVoxels(se::Octree<OFusion>
 template <int _N>
 void PolynomialOptimizationNonLinear<_N>::findOccupiedVoxels(const se::VoxelBlock<OFusion>* block,
       const Eigen::Vector3i bbox, const Eigen::Vector3i side,
-      std::vector<Eigen::Vector3i>& occupied_voxels, std::vector<Eigen::Vector3i>& free_voxels) {
+      std::vector<Eigen::Vector3i>& occupied_voxels) {
   const Eigen::Vector3i blockCoord = block->coordinates();
   int x, y, z, blockSide;
   blockSide = (int) se::VoxelBlock<OFusion>::side;
@@ -1924,8 +1936,6 @@ void PolynomialOptimizationNonLinear<_N>::findOccupiedVoxels(const se::VoxelBloc
         value = block->data(Eigen::Vector3i(x, y, z));
         if (value.x >= 0)
           occupied_voxels.push_back(vox);
-        else
-          free_voxels.push_back(vox);
       }
     }
   }
@@ -1943,21 +1953,9 @@ bool PolynomialOptimizationNonLinear<_N>::checkIfOccupied(const Eigen::Vector3i&
 
 
 template <int _N>
-double PolynomialOptimizationNonLinear<_N>::getDistanceOctree(const Eigen::Vector3i& position, std::vector<Eigen::Vector3i>& occupied_voxels, std::vector<Eigen::Vector3i>& free_voxels) {
-  double distance = 0;
-  if (!checkIfOccupied(position))
-    distance = computeMinimumDistance(position, occupied_voxels) * 0.05;
-  else
-    distance = -computeMinimumDistance(position, free_voxels) * 0.05;
-  return distance;
-}
-
-
-
-template <int _N>
-double PolynomialOptimizationNonLinear<_N>::computeMinimumDistance(const Eigen::Vector3i& position, std::vector<Eigen::Vector3i>& voxels) {
-  Eigen::Vector3i *voxel_array = &voxels[0];
-  int size = voxels.size();
+double PolynomialOptimizationNonLinear<_N>::getDistanceOctree(const Eigen::Vector3i& position, std::vector<Eigen::Vector3i>& occupied_voxels) {
+  Eigen::Vector3i *voxel_array = &occupied_voxels[0];
+  int size = occupied_voxels.size();
   double min_dist = std::numeric_limits<double>::max();
   for (; size != 0; size--, voxel_array++) {
     double local_dist = (*voxel_array - position).cast<double>().norm();
@@ -1965,9 +1963,8 @@ double PolynomialOptimizationNonLinear<_N>::computeMinimumDistance(const Eigen::
       min_dist = local_dist;
     }
   }
-  return min_dist;
+  return min_dist * 0.05;
 }
-
 
 /*
 template <int _N>
