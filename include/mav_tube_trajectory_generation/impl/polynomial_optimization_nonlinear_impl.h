@@ -119,9 +119,86 @@ bool PolynomialOptimizationNonLinear<_N>::solveLinear() {
   return poly_opt_.solveLinear();
 }
 
+/*
 template <int _N>
 bool PolynomialOptimizationNonLinear<_N
 >::computeInitialSolutionWithoutPositionConstraints() {
+  // compute initial solution
+  poly_opt_.solveQCQP();
+
+  // Save the trajectory from the initial guess/solution
+  trajectory_initial_.clear();
+  getTrajectory(&trajectory_initial_);
+
+  // Get dimension
+  const size_t dim = poly_opt_.getDimension();
+
+  // 2) Get the coefficients from the segments
+  mav_trajectory_generation::Segment::Vector segments;
+  poly_opt_.getSegments(&segments);
+  std::vector<Eigen::VectorXd> p(dim, Eigen::VectorXd(N * segments.size()));
+
+  for (int i = 0; i < dim; ++i) {
+    for (size_t j = 0; j < segments.size(); ++j) {
+      p[i].segment<N>(j * N) = segments[j][i].getCoefficients(0);
+    }
+  }
+
+  // 3) Remove all position constraints apart from start and goal
+  Vertex::Vector vertices = vertices_;
+  for (int k = 1; k < vertices.size() - 1 ; ++k) {
+    vertices_[k].removeConstraint(
+            mav_trajectory_generation::derivative_order::POSITION);
+  }
+
+  if (optimization_parameters_.print_debug_info) {
+    std::cout << "vertices_: " << vertices_ << std::endl;
+  }
+
+  // 4) Setup poly_opt_ again with new set of constraints
+  std::vector<double> segment_times;
+  std::vector<std::pair<double, double>> segment_radii;
+  poly_opt_.getSegmentTimes(&segment_times);
+  poly_opt_.getSegmentRadii(&segment_radii);
+  setupFromVertices(vertices_, segment_times, segment_radii, derivative_to_optimize_);
+
+  // Save initial segment time
+  trajectory_time_initial_ = computeTotalTrajectoryTime(segment_times);
+
+  // Parameters after removing constraints
+  const size_t n_free_constraints = poly_opt_.getNumberFreeConstraints();
+  const size_t n_fixed_constraints = poly_opt_.getNumberFixedConstraints();
+
+  // TODO: move to linear solver. add method setFreeConstraintsFromCoefficients
+  // 5) Get your new mapping matrix L (p = L*[d_f d_P]^T = A^(-1)*M*[d_f d_P]^T)
+  // Fixed constraints are the same except plus the position constraints we
+  // removed. Add those removed position constraints to free derivatives.
+  Eigen::MatrixXd M_pinv, A, A_inv;
+  poly_opt_.getA(&A);
+  poly_opt_.getMpinv(&M_pinv);
+
+  // 6) Calculate your reordered endpoint-derivatives. d_all = L^(-1) * p_k
+  // where p_k are the old coefficients from the original linear solution and
+  // L the new remapping matrix
+  // d_all has the same size before and after removing constraints
+  Eigen::VectorXd d_all(n_fixed_constraints + n_free_constraints);
+  std::vector<Eigen::VectorXd> d_p(dim, Eigen::VectorXd(n_free_constraints));
+  for (int i = 0; i < dim; ++i) {
+    d_all = M_pinv * A * p[i]; // Old coeff p, but new ordering M_pinv * A
+    d_p[i] = d_all.tail(n_free_constraints);
+  }
+
+  // 7) Set free constraints of problem according to initial solution and
+  // removed constraints
+  poly_opt_.setFreeConstraints(d_p);
+
+  return true;
+}
+*/
+
+template <int _N>
+bool PolynomialOptimizationNonLinear<_N
+>::computeInitialSolutionWithPositionConstraints() {
   // compute initial solution
   poly_opt_.solveQCQP();
 
@@ -326,13 +403,13 @@ int PolynomialOptimizationNonLinear<_N>::optimizeFreeConstraints() {
 
   // compute initial solution
   if (optimization_parameters_.solve_with_position_constraint) {
-    poly_opt_.solveQCQP();
+    poly_opt_.solveQCQP(); //
     // TODO: find better way of doing this
     // Save the trajectory from the initial guess/solution
     trajectory_initial_.clear();
     getTrajectory(&trajectory_initial_);
   } else {
-    computeInitialSolutionWithoutPositionConstraints();
+    computeInitialSolutionWithPositionConstraints();
   }
 
   // Save the trajectory from the initial guess/solution
@@ -375,7 +452,7 @@ int PolynomialOptimizationNonLinear<_N>::optimizeFreeConstraints() {
   for (double x : initial_solution) {
     const double abs_x = std::abs(x);
     if (abs_x > 5)
-      initial_step.push_back(0.2);
+      initial_step.push_back(optimization_parameters_.initial_stepsize_position);
     else
       initial_step.push_back(optimization_parameters_.initial_stepsize_rel *
                            abs_x);
@@ -419,13 +496,13 @@ template <int _N>
 int PolynomialOptimizationNonLinear<_N>::optimizeFreeConstraintsAndCollision() {
   // compute initial solution
   if (optimization_parameters_.solve_with_position_constraint) {
-    poly_opt_.solveQCQP();
+    poly_opt_.solveQCQP(); //
     // TODO: find better way of doing this
     // Save the trajectory from the initial guess/solution
     trajectory_initial_.clear();
     getTrajectory(&trajectory_initial_);
   } else {
-    computeInitialSolutionWithoutPositionConstraints();
+    computeInitialSolutionWithPositionConstraints();
   }
 
   // Save the trajectory from the initial guess/solution
@@ -435,9 +512,6 @@ int PolynomialOptimizationNonLinear<_N>::optimizeFreeConstraintsAndCollision() {
   // Get and check free constraints and get number of optimization variables
   std::vector<Eigen::VectorXd> free_constraints;
   poly_opt_.getFreeConstraints(&free_constraints);
-
-  for (Eigen::VectorXd dp : free_constraints)
-    std::cout << "free constraints: " << "\n" << dp << std::endl;
 
   CHECK(free_constraints.size() > 0);
   CHECK(free_constraints.front().size() > 0);
@@ -486,7 +560,7 @@ int PolynomialOptimizationNonLinear<_N>::optimizeFreeConstraintsAndCollision() {
   for (double x : initial_solution) {
     const double abs_x = std::abs(x);
     if (abs_x > 5)
-      initial_step.push_back(0.05);
+      initial_step.push_back(optimization_parameters_.initial_stepsize_position);
     else
       initial_step.push_back(optimization_parameters_.initial_stepsize_rel *
                                    abs_x);
@@ -639,13 +713,13 @@ int PolynomialOptimizationNonLinear<_N
 
   // compute initial solution
   if (optimization_parameters_.solve_with_position_constraint) {
-    poly_opt_.solveQCQP();
+    poly_opt_.solveQCQP(); //
     // TODO: find better way of doing this
     // Save the trajectory from the initial guess/solution
     trajectory_initial_.clear();
     getTrajectory(&trajectory_initial_);
   } else {
-    computeInitialSolutionWithoutPositionConstraints();
+    computeInitialSolutionWithPositionConstraints();
   }
 
   // Save the trajectory from the initial guess/solution
@@ -1557,9 +1631,6 @@ double PolynomialOptimizationNonLinear<_N>::getCostAndGradientCollision(
   data->poly_opt_.getFreeConstraints(&d_p_vec);
   data->poly_opt_.getFixedConstraints(&d_f_vec);
 
-  for (Eigen::VectorXd d_f : d_p_vec)
-    std::cout << "Free Constraints: " << d_f << std::endl;
-
   // 1) Get coefficients
   std::vector<Eigen::VectorXd> p_all_segments(dim, Eigen::VectorXd(N * n_segments));
   for (int k = 0; k < dim; ++k) {
@@ -1650,7 +1721,7 @@ double PolynomialOptimizationNonLinear<_N>::getCostAndGradientCollision(
 
       if (is_pos_collision) {
         *is_collision = true;
-        continue;
+        break;
       }
 
       // Cost per segment and time sample
@@ -1681,7 +1752,7 @@ double PolynomialOptimizationNonLinear<_N>::getCostAndGradientCollision(
       prev_pos = pos;
     }
     if (*is_collision == true)
-      continue;
+      break;
     // Make sure the dt is correct for the next segment:
     time_sum += -dt + (segment_times[i] - t);
 
@@ -1724,7 +1795,7 @@ double PolynomialOptimizationNonLinear<_N>::getCostAndGradientPotentialOctree(
 
   const Eigen::Vector3d min_bound = data->optimization_parameters_.min_bound; //TODO: set this bounds - in general set all optimization_parameters!
   const Eigen::Vector3d max_bound = data->optimization_parameters_.max_bound;
-  const Eigen::Vector3i side = Eigen::Vector3i(20, 20, 10);
+  const Eigen::Vector3i side = Eigen::Vector3i(20, 20, 20);
 
   // TODO: How to make sure trajectory stays within bounds?
   bool is_valid_state = true;
@@ -1767,56 +1838,60 @@ double PolynomialOptimizationNonLinear<_N>::getCostAndGradientPotentialOctree(
     t_gCP1_s = clock();
   }
   const double J_c_esdf = data->getCostPotential(distance, is_collision);
+  if (*is_collision)
+    std::cout << "Trajectory is in collision" << std::endl;
   t_gCP1 = t_gCP1_s - clock();
 
-  if (gradient != NULL) {
-    // Numerical gradients
-    Eigen::VectorXd grad_c_potential(data->dimension_);
-    grad_c_potential.setZero();
-    Eigen::VectorXi increment(data->dimension_);
-    for (int k = 0; k < data->dimension_; ++k) {
-      increment.setZero();
+  if (!(*is_collision)) {
+    if (gradient != NULL) {
+      // Numerical gradients
+      Eigen::VectorXd grad_c_potential(data->dimension_);
+      grad_c_potential.setZero();
+      Eigen::VectorXi increment(data->dimension_);
+      for (int k = 0; k < data->dimension_; ++k) {
+        increment.setZero();
 //      increment[k] = increment_dist;
-      increment[k] = 1;
+        increment[k] = 1;
 
-      // Get distance and potential cost from collision at current position
-      double left_dist, right_dist;
-      if (is_valid_state) {
-        t_gDO2_s = clock();
-        left_dist = data->getDistanceOctree(position_voxel-increment, occupied_voxels);
-        right_dist = data->getDistanceOctree(position_voxel+increment, occupied_voxels);
-        t_gDO2 = t_gDO2_s - clock();
+        // Get distance and potential cost from collision at current position
+        double left_dist, right_dist;
+        if (is_valid_state) {
+          t_gDO2_s = clock();
+          left_dist = data->getDistanceOctree(position_voxel - increment, occupied_voxels);
+          right_dist = data->getDistanceOctree(position_voxel + increment, occupied_voxels);
+          t_gDO2 = t_gDO2_s - clock();
+        }
+
+        bool is_collision_left, is_collision_right;
+
+        t_gCP2_s = clock();
+        const double left_cost = data->getCostPotential(left_dist,
+                                                        &is_collision_left);
+        const double right_cost = data->getCostPotential(right_dist,
+                                                         &is_collision_right);
+        t_gCP2 = t_gCP2_s - clock();
+
+        grad_c_potential[k] = (right_cost - left_cost) / (2.0 * increment_dist);
       }
 
-      bool is_collision_left, is_collision_right;
+      //std::cout << "grad_c_potential: " << "\n" << grad_c_potential << std::endl;
 
-      t_gCP2_s = clock();
-      const double left_cost = data->getCostPotential(left_dist,
-                                                      &is_collision_left);
-      const double right_cost = data->getCostPotential(right_dist,
-                                                       &is_collision_right);
-      t_gCP2 = t_gCP2_s - clock();
+      (*gradient) = grad_c_potential;
 
-      grad_c_potential[k] = (right_cost - left_cost) / (2.0 * increment_dist);
-    }
+      // TODO: ONLY DEBUG
+      if (data->optimization_parameters_.print_debug_info) {
+        if (!is_valid_state) {
+          std::cout << "position: " << position[0] << " | "
+                    << position[1] << " | " << position[2]
+                    << " || distance: " << distance
+                    << " | J_c_esdf: " << J_c_esdf << std::endl;
 
-    //std::cout << "grad_c_potential: " << "\n" << grad_c_potential << std::endl;
-
-    (*gradient) = grad_c_potential;
-
-    // TODO: ONLY DEBUG
-    if (data->optimization_parameters_.print_debug_info) {
-      if (!is_valid_state) {
-        std::cout << "position: " << position[0] << " | "
-                  << position[1] << " | " << position[2]
-                  << " || distance: " << distance
-                  << " | J_c_esdf: " << J_c_esdf << std::endl;
-
-        std::cout << "grad_c_potential: ";
-        for (int i = 0; i < grad_c_potential.size(); ++i) {
-          std::cout << grad_c_potential[i] << " | ";
+          std::cout << "grad_c_potential: ";
+          for (int i = 0; i < grad_c_potential.size(); ++i) {
+            std::cout << grad_c_potential[i] << " | ";
+          }
+          std::cout << std::endl;
         }
-        std::cout << std::endl;
       }
     }
   }

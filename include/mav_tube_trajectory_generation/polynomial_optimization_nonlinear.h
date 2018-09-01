@@ -51,6 +51,7 @@ struct NonlinearOptimizationParameters {
         f_rel(0.05),
         x_rel(-1),
         x_abs(-1),
+        initial_stepsize_position(0.05),
         initial_stepsize_rel(0.1),
         equality_constraint_tolerance(1.0e-3),
         inequality_constraint_tolerance(0.1),
@@ -97,6 +98,8 @@ struct NonlinearOptimizationParameters {
   // Stopping criteria, if state changes less than absolute value.
   // Disabled if negative.
   double x_abs;
+
+  double initial_stepsize_position;
 
   // Determines a fraction of the initial guess as initial step size.
   // Heuristic value if negative.
@@ -374,6 +377,8 @@ class PolynomialOptimizationNonLinear {
   // L the new remapping matrix
   // 7) Set the new free endpoint-derivatives d_p back in the linear solver.
   bool computeInitialSolutionWithoutPositionConstraints();
+
+  bool computeInitialSolutionWithPositionConstraints();
 
   // Print the trajectory in
   // format [t, x, y, z, vx, vy, vz, jx, jy, jz, sx, sy, sz] to a file
