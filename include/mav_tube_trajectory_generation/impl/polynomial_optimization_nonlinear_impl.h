@@ -1799,7 +1799,8 @@ double PolynomialOptimizationNonLinear<_N>::getCostAndGradientPotentialOctree(
 
   // TODO: How to make sure trajectory stays within bounds?
   bool is_valid_state = true;
-  const double increment_dist = data->optimization_parameters_.map_resolution; // TODO: set increment distance
+  double res = data->optimization_parameters_.map_resolution;
+  const double increment_dist = res; // TODO: set increment distance
   if (position[0] < min_bound[0]+increment_dist ||
       position[0] > max_bound[0]-increment_dist ||
       position[1] < min_bound[1]+increment_dist ||
@@ -1811,7 +1812,7 @@ double PolynomialOptimizationNonLinear<_N>::getCostAndGradientPotentialOctree(
 
   std::vector<Eigen::Vector3i> occupied_voxels;
 
-  const Eigen::Vector3i position_voxel = (position / 0.05).cast<int>();
+  const Eigen::Vector3i position_voxel = (position / res).cast<int>();
   //std::cout << "position voxel: " << "\n" << position_voxel << "\n" << std::endl;
   //std::cout << "position: " << "\n" << position << "\n" << std::endl;
   //std::cout << "position [voxel] to check gradient: " << "\n" << position_voxel << "\n" << std::endl;
@@ -2038,7 +2039,7 @@ double PolynomialOptimizationNonLinear<_N>::getDistanceOctree(const Eigen::Vecto
       min_dist = local_dist;
     }
   }
-  return min_dist * 0.05;
+  return min_dist * optimization_parameters_.map_resolution;
 }
 
 /*

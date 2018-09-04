@@ -14,7 +14,7 @@
 
 int main () {
 
-  std::string read_filename = "/home/nilsiism/workspace/prob_trajectory_planning/data/writen_data/fr_078_tidyup_supereight_with_multilevel.bt";
+  std::string read_filename = "/home/nilsiism/workspace/prob_trajectory_planning/data/writen_data/forest1_supereight_multilevel_distance.bt";
   se::Octree<OFusion>* octree_ = new se::Octree<OFusion>;
   octree_->loadMultilevel(read_filename);
 
@@ -23,7 +23,7 @@ int main () {
   const int derivative_to_optimize = mav_trajectory_generation::derivative_order::SNAP;
   mav_trajectory_generation::Vertex start(dimension), middle1(dimension), middle2(dimension), middle3(dimension), middle4(dimension), end(dimension);
 
-  start.makeStartOrEnd(Eigen::Vector3d(9.8, 11.8, 12.45), derivative_to_optimize);
+  start.makeStartOrEnd(Eigen::Vector3d(2.7, 9.5, 4.8), derivative_to_optimize);
   vertices.push_back(start);
 
   //middle1.addConstraint(mav_trajectory_generation::derivative_order::POSITION, Eigen::Vector3d(11.297, 11.849, 13.1572));
@@ -31,16 +31,20 @@ int main () {
   //vertices.push_back(middle1);
 
   //middle2.addConstraint(mav_trajectory_generation::derivative_order::POSITION, Eigen::Vector3d(14.9102, 12.5495, 12.5262));
-  middle1.addConstraint(mav_trajectory_generation::derivative_order::POSITION, Eigen::Vector3d(12.0416, 10.4332, 13.6855));
+
+
+
+
+  middle1.addConstraint(mav_trajectory_generation::derivative_order::POSITION, Eigen::Vector3d(3.50796, 4.34802, 4.56653));
   vertices.push_back(middle1);
 
-  middle2.addConstraint(mav_trajectory_generation::derivative_order::POSITION, Eigen::Vector3d(14.7071, 10.3208, 12.7004));
+  middle2.addConstraint(mav_trajectory_generation::derivative_order::POSITION, Eigen::Vector3d(3.95552, 3.23008, 4.75131));
   vertices.push_back(middle2);
 
-  middle3.addConstraint(mav_trajectory_generation::derivative_order::POSITION, Eigen::Vector3d(15.436, 11.0031, 12.8418));
+  middle3.addConstraint(mav_trajectory_generation::derivative_order::POSITION, Eigen::Vector3d(5.06673, 2.31032, 4.79433));
   vertices.push_back(middle3);
 
-  end.makeStartOrEnd(Eigen::Vector3d(16.6, 16.6, 12.45), derivative_to_optimize);
+  end.makeStartOrEnd(Eigen::Vector3d(7, 2.2, 4.8), derivative_to_optimize);
   vertices.push_back(end);
 
   std::vector<double> segment_times;
@@ -49,13 +53,13 @@ int main () {
   segment_times = mav_trajectory_generation::estimateSegmentTimesNfabian(vertices, v_max, a_max, 6.5);
 
   std::vector<std::pair<double, double>> segment_radii;
-  std::pair<double, double> r1(0.45, 0.15);
+  std::pair<double, double> r1(0.15, 0.15);
   //std::pair<double, double> r1(0.1, 0.1);
   std::pair<double, double> r2(0.15, 0.15);
   //std::pair<double, double> r2(0.1, 0.1);
-  std::pair<double, double> r3(0.25, 0.15);
+  std::pair<double, double> r3(0.15, 0.15);
   //std::pair<double, double> r3(0.1, 0.1);
-  std::pair<double, double> r4(0.45, 0.45);
+  std::pair<double, double> r4(0.15, 0.15);
   //std::pair<double, double> r5(0.1, 0.1);
   segment_radii.push_back(r1);
   segment_radii.push_back(r2);
@@ -70,7 +74,7 @@ int main () {
 
   mav_trajectory_generation::NonlinearOptimizationParameters parameters;
   parameters.solve_with_position_constraint = true;
-  parameters.objective = mav_trajectory_generation::NonlinearOptimizationParameters::OptimizationObjective::kOptimizeFreeConstraintsAndCollisionAndTime;
+  parameters.objective = mav_trajectory_generation::NonlinearOptimizationParameters::OptimizationObjective::kOptimizeFreeConstraintsAndCollision;
   parameters.print_debug_info = false;
   parameters.max_iterations = 25;
   parameters.max_time = -1;
@@ -100,9 +104,9 @@ int main () {
   parameters.algorithm =
           static_cast<nlopt::algorithm>(11);
   parameters.random_seed = 12345678;
-  parameters.map_resolution = 0.05;
-  parameters.min_bound = Eigen::Vector3d(6.4, 5.8, 10.45) ;
-  parameters.max_bound = Eigen::Vector3d(19.15, 19.75, 15.1);
+  parameters.map_resolution = 0.1;
+  parameters.min_bound = Eigen::Vector3d(1.4, 1.4, 3.9) ;
+  parameters.max_bound = Eigen::Vector3d(11.3, 11.3, 8.8);
   parameters.side = 5;
 
 
