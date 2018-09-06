@@ -206,7 +206,6 @@ struct NonlinearOptimizationParameters {
   bool is_coll_raise_first_iter;
   double add_coll_raise;
 
-  double use_esdf;
 };
 
 class OptimizationInfo {
@@ -498,6 +497,13 @@ class PolynomialOptimizationNonLinear {
           const Eigen::VectorXd& position, Eigen::VectorXd* gradient,
           void* opt_data, bool* is_collision);
 
+  static double getCostAndGradientPotentialDistanceOctree(
+                const Eigen::VectorXd& position, Eigen::VectorXd* gradient,
+                void* opt_data, bool* is_collision);
+
+  void getDistanceOctree(const Eigen::Vector3i& position, double& center, double& x_left, double& y_left, double& z_left,
+                          double& x_right, double& y_right, double& z_right);
+
   bool findOccupiedVoxels(se::Octree<OFusion>* octree, const Eigen::Vector3i& side, const Eigen::Vector3i& position,
           std::vector<Eigen::Vector3i>& occupied_voxels);
 
@@ -508,6 +514,7 @@ class PolynomialOptimizationNonLinear {
   bool checkIfOccupied(const Eigen::Vector3i& position);
 
   double getDistanceOctree(const Eigen::Vector3i& position, std::vector<Eigen::Vector3i>& occupied_voxels);
+  double getDistanceOctree(const Eigen::Vector3i& position);
 
           // Calculate the numerical gradients of the collision potential.
   static void getNumericalGradientsCollision(

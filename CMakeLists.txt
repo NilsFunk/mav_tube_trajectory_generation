@@ -2,15 +2,28 @@ cmake_minimum_required(VERSION 3.1)
 
 project(mav_tube_trajectory_generation)
 
-set(CMAKE_MODULE_PATH ${CMAKE_MODULE_PATH} ${CMAKE_SOURCE_DIR}/cmake)
+#add_compile_options(-std=c++14 -march=native)
+#NEW
+set(CMAKE_CXX_STANDARD 11)
+set(CMAKE_CXX_STANDARD_REQUIRED ON)
+add_compile_options(-Wall -Wextra -pedantic -Wno-unused-parameter -Wno-unused-private-field -Wno-unused-variable)
 
-add_compile_options(-std=c++14 -march=native)
+
 
 set (MAV_LIBRARY "${PROJECT_NAME}")
 set (MAV_MODULE_PATH "${PROJECT_SOURCE_DIR}")
 set (MAV_SRC_PATH  "${MAV_MODULE_PATH}/src" )
 set (MAV_INCLUDE_PATH  "${MAV_MODULE_PATH}/include")
 
+
+set(CMAKE_MODULE_PATH ${CMAKE_MODULE_PATH} ${CMAKE_SOURCE_DIR}/cmake)
+
+# ------------------------------------------------------------------------------
+# Platform Optimizations
+# ------------------------------------------------------------------------------
+include(OptimizeForArchitecture)
+OptimizeForArchitecture()
+add_definitions(${Vc_ARCHITECTURE_FLAGS})
 
 # Build se_denseslam lib
 find_package(Eigen3 REQUIRED)

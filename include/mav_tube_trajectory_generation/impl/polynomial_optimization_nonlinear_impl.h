@@ -278,9 +278,6 @@ int PolynomialOptimizationNonLinear<_N>::optimize() {
   std::vector<Eigen::VectorXd> free_constraints;
   poly_opt_.getFreeConstraints(&free_constraints);
 
-  for (Eigen::VectorXd dp : free_constraints)
-    std::cout << "Free constraints before: " << "\n" << dp << std::endl;
-
   int result = nlopt::FAILURE;
 
   const std::chrono::high_resolution_clock::time_point t_start =
@@ -316,9 +313,19 @@ int PolynomialOptimizationNonLinear<_N>::optimize() {
 
   optimization_info_.stopping_reason = result;
 
+  std::vector<double> segment_times;
+  poly_opt_.getSegmentTimes(&segment_times);
+
+  int idx = 1;
+  for (std::vector<double>::const_iterator i = segment_times.begin(); i != segment_times.end(); ++i) {
+    printf("T{%d} = ", idx);
+    idx++;
+    std::cout << *i << std::endl;
+  }
+
   poly_opt_.getFreeConstraints(&free_constraints);
 
-  std::cout << "Free constraints after: " << "\n" << std::endl;
+  //std::cout << "Free constraints after: " << "\n" << std::endl;
   std::cout << "d_p = [";
   for (Eigen::VectorXd dp : free_constraints){
     for (int i = 0; i < dp.rows(); i++){
@@ -451,7 +458,7 @@ int PolynomialOptimizationNonLinear<_N>::optimizeFreeConstraints() {
   initial_step.reserve(n_optmization_variables);
   for (double x : initial_solution) {
     const double abs_x = std::abs(x);
-    if (abs_x > 5)
+    if (abs_x > 1)
       initial_step.push_back(optimization_parameters_.initial_stepsize_position);
     else
       initial_step.push_back(optimization_parameters_.initial_stepsize_rel *
@@ -559,7 +566,7 @@ int PolynomialOptimizationNonLinear<_N>::optimizeFreeConstraintsAndCollision() {
   initial_step.reserve(n_optmization_variables);
   for (double x : initial_solution) {
     const double abs_x = std::abs(x);
-    if (abs_x > 5)
+    if (abs_x > 1)
       initial_step.push_back(optimization_parameters_.initial_stepsize_position);
     else
       initial_step.push_back(optimization_parameters_.initial_stepsize_rel *
@@ -800,8 +807,11 @@ int PolynomialOptimizationNonLinear<_N
   initial_step.reserve(n_optmization_variables);
   for (double x : initial_solution) {
     const double abs_x = std::abs(x);
-    initial_step.push_back(optimization_parameters_.initial_stepsize_rel *
-                           abs_x);
+    if (abs_x > 1)
+      initial_step.push_back(optimization_parameters_.initial_stepsize_position);
+    else
+      initial_step.push_back(optimization_parameters_.initial_stepsize_rel *
+                             abs_x);
   }
 
   if (optimization_parameters_.print_debug_info) {
@@ -1662,12 +1672,11 @@ double PolynomialOptimizationNonLinear<_N>::getCostAndGradientCollision(
   double dist_sum = 0.0;
   double t = 0.0;
   int pos_checks = 0;
-  clock_t tt;
-  tt = clock();
+
+  std::cout << "Start computing trajectory cost and gradient" << std::endl;
   for (int i = 0; i < n_segments; ++i) {
     for (t = 0.0; t < segment_times[i]; t += dt) {
 
-      //std::cout << "n segment: " << i << std::endl;
       // 2) Calculate the T vector (see paper equation (8)) for each segment
       Eigen::VectorXd T; // Is supposed to be a column-vector
       T.resize(N);
@@ -1713,10 +1722,10 @@ double PolynomialOptimizationNonLinear<_N>::getCostAndGradientCollision(
       Eigen::VectorXd grad_c_d_f(dim); // dc/dd_f
       double c = 0.0;
       if (gradients != NULL) {
-        c = getCostAndGradientPotentialOctree(pos, &grad_c_d_f, data,
+        c = getCostAndGradientPotentialDistanceOctree(pos, &grad_c_d_f, data,
                                             &is_pos_collision);
       } else {
-        c = getCostAndGradientPotentialOctree(pos, NULL, data, &is_pos_collision);
+        c = getCostAndGradientPotentialDistanceOctree(pos, NULL, data, &is_pos_collision);
       }
 
       if (is_pos_collision) {
@@ -1757,23 +1766,21 @@ double PolynomialOptimizationNonLinear<_N>::getCostAndGradientCollision(
     time_sum += -dt + (segment_times[i] - t);
 
   }
-  tt = clock()-tt;
-  printf ("It took (%f seconds) to run gCAGPO", ((float)tt)/CLOCKS_PER_SEC);
-  std::cout << std::endl;
 
+  std::cout << "End computing trajectory cost and gradient" << std::endl;
   if (gradients != NULL) {
     gradients->clear();
     gradients->resize(dim);
-
     for (int k = 0; k < dim; ++k) {
+      if (*is_collision == true) {
+        grad_c[k].setZero();
+      }
       (*gradients)[k] = grad_c[k];
     }
   }
 
   if (*is_collision == true) {
     J_c = 0;
-    for (Eigen::VectorXd gradients_k : *gradients)
-      gradients_k.setZero();
   }
 
   return J_c;
@@ -1898,24 +1905,124 @@ double PolynomialOptimizationNonLinear<_N>::getCostAndGradientPotentialOctree(
   }
 
   t_gCAGPO = clock() - t_gCAGPO_s;
-  /*
-  printf ("It took (%f seconds) to run gCAGPO", ((float)t_gCAGPO)/CLOCKS_PER_SEC);
-  std::cout << std::endl;
-  printf ("It took (%f seconds) to run fOV", ((float)t_fOV)/CLOCKS_PER_SEC);
-  std::cout << std::endl;
-  printf ("It took (%f seconds) to run gDO center", ((float)t_gDO1)/CLOCKS_PER_SEC);
-  std::cout << std::endl;
-  printf ("It took (%f seconds) to run gDO left + right", ((float)t_gDO2)/CLOCKS_PER_SEC);
-  std::cout << std::endl;
-  printf ("It took (%f seconds) to run gCP center", ((float)t_gCP1)/CLOCKS_PER_SEC);
-  std::cout << std::endl;
-  printf ("It took (%f seconds) to run gCP left + right", ((float)t_gCP2)/CLOCKS_PER_SEC);
-  std::cout << "\n" << std::endl;
-  */
+
   return J_c_esdf;
 
 }
 
+template <int _N>
+double PolynomialOptimizationNonLinear<_N>::getCostAndGradientPotentialDistanceOctree(
+        const Eigen::VectorXd& position, Eigen::VectorXd* gradient,
+        void* opt_data, bool* is_collision) {
+//  std::cout << "getCostAndGradientPotentialDistanceOctree" << std::endl;
+  PolynomialOptimizationNonLinear<N>* data =
+          static_cast<PolynomialOptimizationNonLinear<N>*>(opt_data);
+
+  //std::cout << "position [m] to check gradient: " << "\n" << position << "\n" << std::endl;
+
+  const Eigen::Vector3d min_bound = data->optimization_parameters_.min_bound; //TODO: set this bounds - in general set all optimization_parameters!
+  const Eigen::Vector3d max_bound = data->optimization_parameters_.max_bound;
+
+  // TODO: How to make sure trajectory stays within bounds?
+  bool is_valid_state = true;
+  double res = data->optimization_parameters_.map_resolution;
+  const double increment_dist = res; // TODO: set increment distance
+  if (position[0] < min_bound[0]+increment_dist ||
+      position[0] > max_bound[0]-increment_dist ||
+      position[1] < min_bound[1]+increment_dist ||
+      position[1] > max_bound[1]-increment_dist ||
+      position[2] < min_bound[2]+increment_dist ||
+      position[2] > max_bound[2]-increment_dist) {
+    is_valid_state = false;
+  }
+
+  const Eigen::Vector3i position_voxel = (position / res).cast<int>();
+
+  bool multi_lookup = true;
+
+  //if(multi_lookup) {
+  Eigen::Vector3d gradient_temp;
+  double center, x_left,  y_left, z_left, x_right,y_right, z_right;
+  if (is_valid_state) {
+    data->getDistanceOctree(position_voxel, center, x_left, y_left, z_left, x_right, y_right, z_right);
+  }
+  const double J_c_esdf = data->getCostPotential(center, is_collision);
+  if (*is_collision)
+    std::cout << "Trajectory is in collision" << std::endl;
+  if (!*is_collision && gradient !=NULL) {
+    double distance[6] = {x_left, y_left, z_left, x_right, y_right, z_right};
+    for (int k = 0; k < 3; k++) {
+      bool is_collison_left;
+      bool is_collison_right;
+      double distance_left = distance[k];
+      double distance_right = distance[k + 3];
+      double cost_left = data->getCostPotential(distance_left, &is_collison_left);
+      double cost_right = data->getCostPotential(distance_right, &is_collison_right);
+      gradient_temp(k) = (cost_right - cost_left) / (2.0 * increment_dist);
+    };
+    (*gradient) = gradient_temp;
+  }
+
+  return J_c_esdf;
+    /* } else {
+      double distance = 0.0;
+      if (is_valid_state) {
+          distance = data->getDistanceOctree(position_voxel);
+      }
+      const double J_c_esdf = data->getCostPotential(distance, is_collision);
+      if (*is_collision)
+        std::cout << "Trajectory is in collision" << std::endl;
+
+      if (!(*is_collision)) {
+        if (gradient != NULL) {
+          // Numerical gradients
+          Eigen::VectorXd grad_c_potential(data->dimension_);
+          grad_c_potential.setZero();
+          Eigen::VectorXi increment(data->dimension_);
+          for (int k = 0; k < data->dimension_; ++k) {
+            increment.setZero();
+            increment[k] = 1;
+
+            // Get distance and potential cost from collision at current position
+            double left_dist, right_dist;
+            if (is_valid_state) {
+              left_dist = data->getDistanceOctree(position_voxel - increment);
+              right_dist = data->getDistanceOctree(position_voxel + increment);
+            }
+
+            bool is_collision_left, is_collision_right;
+
+            const double left_cost = data->getCostPotential(left_dist,
+                                                            &is_collision_left);
+            const double right_cost = data->getCostPotential(right_dist,
+                                                             &is_collision_right);
+
+            grad_c_potential[k] = (right_cost - left_cost) / (2.0 * increment_dist);
+          }
+
+          (*gradient) = grad_c_potential;
+
+          // TODO: ONLY DEBUG
+          if (data->optimization_parameters_.print_debug_info) {
+            if (!is_valid_state) {
+              std::cout << "position: " << position[0] << " | "
+                        << position[1] << " | " << position[2]
+                        << " || distance: " << distance
+                        << " | J_c_esdf: " << J_c_esdf << std::endl;
+
+              std::cout << "grad_c_potential: ";
+              for (int i = 0; i < grad_c_potential.size(); ++i) {
+                std::cout << grad_c_potential[i] << " | ";
+              }
+              std::cout << std::endl;
+            }
+          }
+        }
+      }
+    return J_c_esdf;
+  }
+     */
+}
 
 template <int _N>
 bool PolynomialOptimizationNonLinear<_N>::findOccupiedVoxels(se::Octree<OFusion>* octree, const Eigen::Vector3i& side, const Eigen::Vector3i& position,
@@ -2042,267 +2149,62 @@ double PolynomialOptimizationNonLinear<_N>::getDistanceOctree(const Eigen::Vecto
   return min_dist * optimization_parameters_.map_resolution;
 }
 
-/*
+
+
 template <int _N>
-double PolynomialOptimizationNonLinear<_N>::getCostAndGradientPotentialESDF(
-        const Eigen::VectorXd& position, Eigen::VectorXd* gradient,
-        void* opt_data, bool* is_collision) {
-  CHECK_NOTNULL(opt_data);
+double PolynomialOptimizationNonLinear<_N>::getDistanceOctree(const Eigen::Vector3i& position) {
+  se::VoxelBlock<OFusion>* block = octree_->fetch(position(0), position(1), position(2));
+  return block->data(Eigen::Vector3i(position(0), position(1), position(2))).y;
+}
 
-  PolynomialOptimizationNonLinear<N>* data =
-          static_cast<PolynomialOptimizationNonLinear<N>*>(opt_data);
 
-  const Eigen::Vector3d min_bound = data->optimization_parameters_.min_bound;
-  const Eigen::Vector3d max_bound = data->optimization_parameters_.max_bound;
-
-  // TODO: How to make sure trajectory stays within bounds?
-  bool is_valid_state = true;
-  const double increment_dist = data->optimization_parameters_.map_resolution;
-  if (position[0] < min_bound[0]+increment_dist ||
-          position[0] > max_bound[0]-increment_dist ||
-          position[1] < min_bound[1]+increment_dist ||
-          position[1] > max_bound[1]-increment_dist ||
-          position[2] < min_bound[2]+increment_dist ||
-          position[2] > max_bound[2]-increment_dist) {
-    is_valid_state = false;
-  }
-
-  // Get distance from collision at current position
-  double distance = 0.0;
-  if (is_valid_state && data->optimization_parameters_.use_continous_distance) {
-    distance = data->getDistanceSDF(position);
-  } else {
-    if (data->optimization_parameters_.use_esdf) {
-      distance = data->esdf_->getDistanceInMetricUnits(position);
-    } else {
-      distance = data->sdf_->Get(position[0], position[1], position[2]);
-    }
-  }
-
-  // Get potential cost from distance to collision
-  const double J_c_esdf = data->getCostPotential(distance, is_collision);
-
-  if (gradient != NULL) {
-    // Numerical gradients
-    Eigen::VectorXd grad_c_potential(data->dimension_);
-    grad_c_potential.setZero();
-    Eigen::VectorXd increment(data->dimension_);
-    for (int k = 0; k < data->dimension_; ++k) {
+template <int _N>
+void PolynomialOptimizationNonLinear<_N>::getDistanceOctree(const Eigen::Vector3i& position, double& center,
+              double& x_left, double& y_left, double& z_left, double& x_right, double& y_right, double& z_right) {
+  double distance[7];
+  se::VoxelBlock<OFusion>* block = octree_->fetch(position(0), position(1), position(2));
+  distance[0] = block->data(Eigen::Vector3i(position(0), position(1), position(2))).y;
+  if (distance[0] > 0) {
+    Eigen::Vector3i blockCoord = block->coordinates();
+    Eigen::Vector3i position_temp;
+    Eigen::Vector3i increment;
+    for (int k = 0; k < 3 ; k++) { //position left loop
       increment.setZero();
-      increment[k] = increment_dist;
-
-      // Get distance and potential cost from collision at current position
-      double left_dist, right_dist;
-      if (is_valid_state &&
-              data->optimization_parameters_.use_continous_distance) {
-        left_dist = data->getDistanceSDF(position-increment);
-        right_dist = data->getDistanceSDF(position+increment);
-      } else { // Discretized uniform grid
-        if (data->optimization_parameters_.use_esdf) {
-          left_dist = data->esdf_->getDistanceInMetricUnits(position-increment);
-          right_dist =
-                  data->esdf_->getDistanceInMetricUnits(position+increment);
-        } else {
-          left_dist = data->sdf_->Get3d(position-increment);
-          right_dist = data->sdf_->Get3d(position+increment);
-        }
+      increment[k] = 1;
+      position_temp = position - increment;
+      if(blockCoord(0) <= position_temp(0) && position_temp(0) < (blockCoord(0) + 8) &&
+         blockCoord(1) <= position_temp(1) && position_temp(1) < (blockCoord(1) + 8) &&
+         blockCoord(2) <= position_temp(2) && position_temp(2) < (blockCoord(2) + 8)) {
+        distance[k+1] = block->data(position_temp).y;
+      } else {
+        se::VoxelBlock<OFusion>* block_temp = octree_->fetch(position_temp(0), position_temp(1), position_temp(2));
+        distance[k+1] = block_temp->data(position_temp).y;
       }
 
-      bool is_collision_left, is_collision_right;
-      const double left_cost = data->getCostPotential(left_dist,
-                                                      &is_collision_left);
-      const double right_cost = data->getCostPotential(right_dist,
-                                                       &is_collision_right);
-
-      grad_c_potential[k] = (right_cost - left_cost) / (2.0 * increment_dist);
     }
-
-    (*gradient) = grad_c_potential;
-
-    // TODO: ONLY DEBUG
-    if (data->optimization_parameters_.print_debug_info) {
-      if (!is_valid_state) {
-        std::cout << "position: " << position[0] << " | "
-                  << position[1] << " | " << position[2]
-                  << " || distance: " << distance
-                  << " | J_c_esdf: " << J_c_esdf << std::endl;
-
-        std::cout << "grad_c_potential: ";
-        for (int i = 0; i < grad_c_potential.size(); ++i) {
-          std::cout << grad_c_potential[i] << " | ";
-        }
-        std::cout << std::endl;
+    for (int k = 0; k < 3 ; k++) { //position right loop
+      increment.setZero();
+      increment[k] = 1;
+      position_temp = position + increment;
+      if(blockCoord(0) <= position_temp(0) && position_temp(0) < (blockCoord(0) + 8) &&
+         blockCoord(1) <= position_temp(1) && position_temp(1) < (blockCoord(1) + 8) &&
+         blockCoord(2) <= position_temp(2) && position_temp(2) < (blockCoord(2) + 8)) {
+        distance[k+4] = block->data(position_temp).y;
+      } else {
+        se::VoxelBlock<OFusion> *block_temp = octree_->fetch(position_temp(0), position_temp(1), position_temp(2));
+        distance[k + 4] = block_temp->data(position_temp).y;
       }
     }
   }
+  center = distance[0];
+  x_left = distance[1];
+  y_left = distance[2];
+  z_left = distance[3];
+  x_right = distance[4];
+  y_right = distance[5];
+  z_right = distance[6];
 
-  return J_c_esdf;
 }
-*/
-
-/*
-template <int _N>
-std::vector<std::pair<float, bool>> PolynomialOptimizationNonLinear<_N>::
-getNeighborsSDF(const std::vector<int64_t>& idx) {
-  std::vector<std::pair<float, bool>> q;
-
-  // Get distances of 8 corner neighbors
-  if (optimization_parameters_.use_esdf) {
-    q.push_back(std::make_pair(esdf_->getDistanceInMetricUnitsFromIndices(
-            Eigen::Vector3i(idx[0]-1, idx[1]-1, idx[2]-1)), true)); // q000
-    q.push_back(std::make_pair(esdf_->getDistanceInMetricUnitsFromIndices(
-            Eigen::Vector3i(idx[0]-1, idx[1]-1, idx[2]+1)), true)); // q001
-    q.push_back(std::make_pair(esdf_->getDistanceInMetricUnitsFromIndices(
-            Eigen::Vector3i(idx[0]-1, idx[1]+1, idx[2]-1)), true)); // q010
-    q.push_back(std::make_pair(esdf_->getDistanceInMetricUnitsFromIndices(
-            Eigen::Vector3i(idx[0]-1, idx[1]+1, idx[2]+1)), true)); // q011
-    q.push_back(std::make_pair(esdf_->getDistanceInMetricUnitsFromIndices(
-            Eigen::Vector3i(idx[0]+1, idx[1]-1, idx[2]-1)), true)); // q100
-    q.push_back(std::make_pair(esdf_->getDistanceInMetricUnitsFromIndices(
-            Eigen::Vector3i(idx[0]+1, idx[1]-1, idx[2]+1)), true)); // q101
-    q.push_back(std::make_pair(esdf_->getDistanceInMetricUnitsFromIndices(
-            Eigen::Vector3i(idx[0]+1, idx[1]+1, idx[2]-1)), true)); // q110
-    q.push_back(std::make_pair(esdf_->getDistanceInMetricUnitsFromIndices(
-            Eigen::Vector3i(idx[0]+1, idx[1]+1, idx[2]+1)), true)); // q111
-  } else{
-    q.push_back(sdf_->GetSafe(idx[0]-1, idx[1]-1, idx[2]-1)); // q000
-    q.push_back(sdf_->GetSafe(idx[0]-1, idx[1]-1, idx[2]+1)); // q001
-    q.push_back(sdf_->GetSafe(idx[0]-1, idx[1]+1, idx[2]-1)); // q010
-    q.push_back(sdf_->GetSafe(idx[0]-1, idx[1]+1, idx[2]+1)); // q011
-    q.push_back(sdf_->GetSafe(idx[0]+1, idx[1]-1, idx[2]-1)); // q100
-    q.push_back(sdf_->GetSafe(idx[0]+1, idx[1]-1, idx[2]+1)); // q101
-    q.push_back(sdf_->GetSafe(idx[0]+1, idx[1]+1, idx[2]-1)); // q110
-    q.push_back(sdf_->GetSafe(idx[0]+1, idx[1]+1, idx[2]+1)); // q111
-  }
-
-  return q;
-}
-*/
-
-/*
-template <int _N>
-double PolynomialOptimizationNonLinear<_N>::getDistanceSDF(
-        const Eigen::Vector3d& position) {
-
-  // Convert location to grid index
-  std::vector<int64_t> idx;
-  if (optimization_parameters_.use_esdf) {
-    const Eigen::Vector3i eigen_idx = esdf_->getPositionInCellUnits(position);
-    idx = {eigen_idx.x(), eigen_idx.y(), eigen_idx.z()};
-  } else {
-    idx = sdf_->LocationToGridIndex3d(position);
-  }
-
-  // Retrieve all neighbouring grid cells
-  const std::vector<std::pair<float, bool>> q_xyz = getNeighborsSDF(idx);
-
-  // Check if all neighbors are valid nodes (inside bounds)
-  bool is_valid = true;
-  for (const auto& q : q_xyz) {
-    if (!q.second){
-      is_valid = false;
-      break;
-    }
-  }
-
-  double distance = 0.0;
-  if (!is_valid) {
-    if (optimization_parameters_.use_esdf) {
-      distance = esdf_->getDistanceInMetricUnits(position);
-    } else {
-      distance = sdf_->Get(position[0], position[1], position[2]);
-    }
-
-    std::cout << "NOT VALID DIST: " << distance << std::endl;
-  } else {
-    // Get positions x0, x1, y0, y1, z0, z1
-    std::vector<double> x0y0z0, x1y1z1;
-    if (optimization_parameters_.use_esdf) {
-      Eigen::Vector3d eigen_x0y0z0 = esdf_->getPositionInMetricUnits(
-              Eigen::Vector3i(idx[0]-1, idx[1]-1, idx[2]-1));
-      // TODO: check if initilizable with {}
-     x0y0z0 = {eigen_x0y0z0.x(), eigen_x0y0z0.y(), eigen_x0y0z0.z()};
-      Eigen::Vector3d eigen_x1y1z1 = esdf_->getPositionInMetricUnits(
-              Eigen::Vector3i(idx[0]+1, idx[1]+1, idx[2]+1));
-      // TODO: check if initilizable with {}
-      x1y1z1 = {eigen_x1y1z1.x(), eigen_x1y1z1.y(), eigen_x1y1z1.z()};
-    } else {
-      x0y0z0 = sdf_->GridIndexToLocation(idx[0]-1, idx[1]-1, idx[2]-1);
-      x1y1z1 = sdf_->GridIndexToLocation(idx[0]+1, idx[1]+1, idx[2]+1);
-    }
-
-    distance = triLerp(
-            position[0], position[1], position[2],
-            q_xyz[0].first, q_xyz[1].first, q_xyz[2].first, q_xyz[3].first,
-            q_xyz[4].first, q_xyz[5].first, q_xyz[6].first, q_xyz[7].first,
-            x0y0z0[0], x1y1z1[0], x0y0z0[1], x1y1z1[1], x0y0z0[2], x1y1z1[2]);
-  }
-
-  return distance;
-}
-*/
-
-/*
-template <int _N>
-void PolynomialOptimizationNonLinear<_N>::getNumericalGradientsCollision(
-        std::vector<Eigen::VectorXd>* gradients_num, void* opt_data) {
-  CHECK_NOTNULL(opt_data);
-  CHECK_NOTNULL(gradients_num); // Num gradients only needed for grad-based opti
-
-  PolynomialOptimizationNonLinear<N>* data =
-          static_cast<PolynomialOptimizationNonLinear<N>*>(opt_data);
-
-  const size_t n_free_constraints =
-          data->poly_opt_.getNumberFreeConstraints();
-  const size_t dim = data->poly_opt_.getDimension();
-
-  // Get the current free constraints
-  std::vector<Eigen::VectorXd> free_constraints;
-  data->poly_opt_.getFreeConstraints(&free_constraints);
-
-  gradients_num->clear();
-  gradients_num->resize(dim, Eigen::VectorXd::Zero(n_free_constraints));
-
-  std::vector<Eigen::VectorXd> free_constraints_left, free_constraints_right;
-  free_constraints_left.resize(dim, Eigen::VectorXd::Zero(n_free_constraints));
-  free_constraints_right.resize(dim, Eigen::VectorXd::Zero(n_free_constraints));
-  const double increment_dist = data->optimization_parameters_.map_resolution;
-
-  std::vector<Eigen::VectorXd> increment(dim, Eigen::VectorXd::Zero
-          (n_free_constraints));
-  for (int k = 0; k < dim; ++k) {
-    increment.clear();
-    increment.resize(dim, Eigen::VectorXd::Zero(n_free_constraints));
-
-    for (int n = 0; n < n_free_constraints; ++n) {
-      increment[k].setZero();
-      increment[k][n] = increment_dist;
-
-      for (int k2 = 0; k2 < dim; ++k2) {
-        free_constraints_left[k2] = free_constraints[k2] - increment[k2];
-      }
-      data->poly_opt_.setFreeConstraints(free_constraints_left);
-      bool is_collision_left, is_collision_right;
-      const double cost_left = data->getCostAndGradientCollision(
-              NULL, data, &is_collision_left);
-
-      for (int k2 = 0; k2 < dim; ++k2) {
-        free_constraints_right[k2] = free_constraints[k2] + increment[k2];
-      }
-      data->poly_opt_.setFreeConstraints(free_constraints_right);
-      const double cost_right = data->getCostAndGradientCollision(
-              NULL, data, &is_collision_right);
-
-      const double grad_k_n = (cost_right - cost_left) / (2.0 * increment_dist);
-      gradients_num->at(k)[n] = grad_k_n;
-    }
-  }
-
-  // Set again the original constraints from before calculating the numerical
-  // constraints
-  data->poly_opt_.setFreeConstraints(free_constraints);
-}
-*/
 
 template <int _N>
 void PolynomialOptimizationNonLinear<_N>::getNumericalGradDerivatives(
@@ -2659,13 +2561,11 @@ double PolynomialOptimizationNonLinear<_N>::getCostAndGradientTimeSimple(
 template <int _N>
 double PolynomialOptimizationNonLinear<_N>::getCostPotential(
         double collision_distance, bool* is_collision) {
-
   // Get parameter
   const double epsilon = optimization_parameters_.epsilon;
   const double robot_radius = optimization_parameters_.robot_radius;
   const double collision_potential_multiplier =
           optimization_parameters_.coll_pot_multiplier;
-
   *is_collision = false;
   double cost = 0.0;
   collision_distance -= robot_radius;
@@ -2679,7 +2579,6 @@ double PolynomialOptimizationNonLinear<_N>::getCostPotential(
   } else { // TODO: WHAT IF DIST IS INF/not in map
     cost = 0.0;
   }
-
   return cost;
 }
 

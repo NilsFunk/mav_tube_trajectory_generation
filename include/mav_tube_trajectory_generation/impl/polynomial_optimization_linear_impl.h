@@ -284,12 +284,12 @@ void PolynomialOptimization<_N>::updateSegmentTimes(
 
   segment_times_ = segment_times;
 
-  int idx = 1;
-  for (std::vector<double>::const_iterator i = segment_times_.begin(); i != segment_times_.end(); ++i) {
-    printf("T{%d} = ", idx);
-    idx++;
-    std::cout << *i << std::endl;
-  }
+//  int idx = 1;
+//  for (std::vector<double>::const_iterator i = segment_times_.begin(); i != segment_times_.end(); ++i) {
+//    printf("T{%d} = ", idx);
+//    idx++;
+//    std::cout << *i << std::endl;
+//  }
 
   for (size_t i = 0; i < n_segments_; ++i) {
     const double segment_time = segment_times[i];
