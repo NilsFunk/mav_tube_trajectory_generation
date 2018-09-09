@@ -115,6 +115,11 @@ bool PolynomialOptimizationNonLinear<_N>::solveQCQP() {
 }
 
 template <int _N>
+bool PolynomialOptimizationNonLinear<_N>::solveSOCP() {
+  return poly_opt_.solveSOCP();
+}
+
+template <int _N>
 bool PolynomialOptimizationNonLinear<_N>::solveLinear() {
   return poly_opt_.solveLinear();
 }
@@ -200,7 +205,7 @@ template <int _N>
 bool PolynomialOptimizationNonLinear<_N
 >::computeInitialSolutionWithPositionConstraints() {
   // compute initial solution
-  poly_opt_.solveQCQP();
+  poly_opt_.solveSOCP();
 
   // Save the trajectory from the initial guess/solution
   trajectory_initial_.clear();
@@ -346,7 +351,7 @@ int PolynomialOptimizationNonLinear<_N>::optimizeTime() {
 
   // TODO: FIX PROPERLY
   // compute initial solution
-  poly_opt_.solveQCQP();
+  poly_opt_.solveSOCP();
   // Save the trajectory from the initial guess/solution
   trajectory_initial_.clear();
   getTrajectory(&trajectory_initial_);
@@ -410,7 +415,7 @@ int PolynomialOptimizationNonLinear<_N>::optimizeFreeConstraints() {
 
   // compute initial solution
   if (optimization_parameters_.solve_with_position_constraint) {
-    poly_opt_.solveQCQP(); //
+    poly_opt_.solveSOCP(); //
     // TODO: find better way of doing this
     // Save the trajectory from the initial guess/solution
     trajectory_initial_.clear();
@@ -503,7 +508,7 @@ template <int _N>
 int PolynomialOptimizationNonLinear<_N>::optimizeFreeConstraintsAndCollision() {
   // compute initial solution
   if (optimization_parameters_.solve_with_position_constraint) {
-    poly_opt_.solveQCQP(); //
+    poly_opt_.solveSOCP(); //
     // TODO: find better way of doing this
     // Save the trajectory from the initial guess/solution
     trajectory_initial_.clear();
@@ -623,7 +628,7 @@ int PolynomialOptimizationNonLinear<_N>::optimizeTimeAndFreeConstraints() {
   const size_t n_segments = segment_times.size();
 
   // compute initial solution
-  poly_opt_.solveQCQP();
+  poly_opt_.solveSOCP();
   std::vector<Eigen::VectorXd> free_constraints;
   poly_opt_.getFreeConstraints(&free_constraints);
   CHECK(free_constraints.size() > 0);
@@ -720,7 +725,7 @@ int PolynomialOptimizationNonLinear<_N
 
   // compute initial solution
   if (optimization_parameters_.solve_with_position_constraint) {
-    poly_opt_.solveQCQP(); //
+    poly_opt_.solveSOCP(); //
     // TODO: find better way of doing this
     // Save the trajectory from the initial guess/solution
     trajectory_initial_.clear();
@@ -899,7 +904,7 @@ double PolynomialOptimizationNonLinear<_N>::objectiveFunctionTime(
            optimization_data->poly_opt_.getNumberSegments());
 
   optimization_data->poly_opt_.updateSegmentTimes(segment_times);
-  optimization_data->poly_opt_.solveQCQP();
+  optimization_data->poly_opt_.solveSOCP();
 
   const double cost_trajectory = optimization_data->poly_opt_.computeCost();
   const double total_time = computeTotalTrajectoryTime(segment_times);
@@ -1673,7 +1678,7 @@ double PolynomialOptimizationNonLinear<_N>::getCostAndGradientCollision(
   double t = 0.0;
   int pos_checks = 0;
 
-  std::cout << "Start computing trajectory cost and gradient" << std::endl;
+  //std::cout << "Start computing trajectory cost and gradient" << std::endl;
   for (int i = 0; i < n_segments; ++i) {
     for (t = 0.0; t < segment_times[i]; t += dt) {
 
@@ -1767,7 +1772,7 @@ double PolynomialOptimizationNonLinear<_N>::getCostAndGradientCollision(
 
   }
 
-  std::cout << "End computing trajectory cost and gradient" << std::endl;
+  //std::cout << "End computing trajectory cost and gradient" << std::endl;
   if (gradients != NULL) {
     gradients->clear();
     gradients->resize(dim);
@@ -1947,8 +1952,8 @@ double PolynomialOptimizationNonLinear<_N>::getCostAndGradientPotentialDistanceO
     data->getDistanceOctree(position_voxel, center, x_left, y_left, z_left, x_right, y_right, z_right);
   }
   const double J_c_esdf = data->getCostPotential(center, is_collision);
-  if (*is_collision)
-    std::cout << "Trajectory is in collision" << std::endl;
+  //if (*is_collision)
+  //  std::cout << "Trajectory is in collision" << std::endl;
   if (!*is_collision && gradient !=NULL) {
     double distance[6] = {x_left, y_left, z_left, x_right, y_right, z_right};
     for (int k = 0; k < 3; k++) {

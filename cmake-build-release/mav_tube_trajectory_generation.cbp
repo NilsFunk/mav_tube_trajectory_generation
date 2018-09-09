@@ -73,6 +73,7 @@
 					<Add directory="/usr/include/Sophus"/>
 					<Add directory="/home/nilsiism/workspace/prob_trajectory_planning/src/ext/mav_trajectory_generation/include"/>
 					<Add directory="/opt/mosek/8/tools/platform/linux64x86"/>
+					<Add directory="/opt/mosek/8/tools/platform/linux64x86/h"/>
 					<Add directory="/home/nilsiism/workspace/prob_trajectory_planning/src/ext/mav_trajectory_generation/include/mav_tube_trajectory_generation"/>
 					<Add directory="/home/nilsiism/workspace/prob_trajectory_planning/src/ext/mav_trajectory_generation/glog"/>
 					<Add directory="/usr/include/c++/5"/>
@@ -106,6 +107,7 @@
 					<Add directory="/usr/include/Sophus"/>
 					<Add directory="/home/nilsiism/workspace/prob_trajectory_planning/src/ext/mav_trajectory_generation/include"/>
 					<Add directory="/opt/mosek/8/tools/platform/linux64x86"/>
+					<Add directory="/opt/mosek/8/tools/platform/linux64x86/h"/>
 					<Add directory="/home/nilsiism/workspace/prob_trajectory_planning/src/ext/mav_trajectory_generation/include/mav_tube_trajectory_generation"/>
 					<Add directory="/home/nilsiism/workspace/prob_trajectory_planning/src/ext/mav_trajectory_generation/glog"/>
 					<Add directory="/usr/include/c++/5"/>
@@ -139,6 +141,7 @@
 					<Add directory="/home/nilsiism/workspace/prob_trajectory_planning/src/ext/mav_trajectory_generation/../supereight/se_denseslam/include/se"/>
 					<Add directory="/usr/include/Sophus"/>
 					<Add directory="/opt/mosek/8/tools/platform/linux64x86"/>
+					<Add directory="/opt/mosek/8/tools/platform/linux64x86/h"/>
 					<Add directory="/home/nilsiism/workspace/prob_trajectory_planning/src/ext/mav_trajectory_generation/include/mav_tube_trajectory_generation"/>
 					<Add directory="/home/nilsiism/workspace/prob_trajectory_planning/src/ext/mav_trajectory_generation/glog"/>
 					<Add directory="/usr/include/c++/5"/>
@@ -172,6 +175,7 @@
 					<Add directory="/home/nilsiism/workspace/prob_trajectory_planning/src/ext/mav_trajectory_generation/../supereight/se_denseslam/include/se"/>
 					<Add directory="/usr/include/Sophus"/>
 					<Add directory="/opt/mosek/8/tools/platform/linux64x86"/>
+					<Add directory="/opt/mosek/8/tools/platform/linux64x86/h"/>
 					<Add directory="/home/nilsiism/workspace/prob_trajectory_planning/src/ext/mav_trajectory_generation/include/mav_tube_trajectory_generation"/>
 					<Add directory="/home/nilsiism/workspace/prob_trajectory_planning/src/ext/mav_trajectory_generation/glog"/>
 					<Add directory="/usr/include/c++/5"/>

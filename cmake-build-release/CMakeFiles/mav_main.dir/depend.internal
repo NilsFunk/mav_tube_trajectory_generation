@@ -31,7 +31,16 @@ CMakeFiles/mav_main.dir/src/main.cpp.o
  ../include/mav_tube_trajectory_generation/trajectory.h
  ../include/mav_tube_trajectory_generation/vertex.h
  /home/nilsiism/workspace/prob_trajectory_planning/src/ext/mav_trajectory_generation/src/main.cpp
+ /opt/mosek/8/tools/platform/linux64x86/h/fusion.h
+ /opt/mosek/8/tools/platform/linux64x86/h/fusion_fwd.h
+ /opt/mosek/8/tools/platform/linux64x86/h/monty.h
+ /opt/mosek/8/tools/platform/linux64x86/h/monty_base.h
+ /opt/mosek/8/tools/platform/linux64x86/h/monty_iterator.h
+ /opt/mosek/8/tools/platform/linux64x86/h/monty_ndarray.h
+ /opt/mosek/8/tools/platform/linux64x86/h/monty_rc.h
+ /opt/mosek/8/tools/platform/linux64x86/h/monty_shape.h
  /opt/mosek/8/tools/platform/linux64x86/h/mosek.h
+ /opt/mosek/8/tools/platform/linux64x86/h/mosektask.h
  /usr/include/Sophus/sophus/common.hpp
  /usr/include/Sophus/sophus/rotation_matrix.hpp
  /usr/include/Sophus/sophus/se3.hpp

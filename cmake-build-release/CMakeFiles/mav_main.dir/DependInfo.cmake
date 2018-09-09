@@ -19,6 +19,7 @@ set(CMAKE_CXX_TARGET_INCLUDE_PATH
   "../../supereight/se_denseslam/include/se"
   "/usr/include/Sophus"
   "/opt/mosek/8/tools/platform/linux64x86"
+  "/opt/mosek/8/tools/platform/linux64x86/h"
   "../include/mav_tube_trajectory_generation"
   "../glog"
   )

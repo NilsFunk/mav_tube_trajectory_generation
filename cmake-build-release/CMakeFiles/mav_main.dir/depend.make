@@ -30,7 +30,16 @@ CMakeFiles/mav_main.dir/src/main.cpp.o: ../include/mav_tube_trajectory_generatio
 CMakeFiles/mav_main.dir/src/main.cpp.o: ../include/mav_tube_trajectory_generation/trajectory.h
 CMakeFiles/mav_main.dir/src/main.cpp.o: ../include/mav_tube_trajectory_generation/vertex.h
 CMakeFiles/mav_main.dir/src/main.cpp.o: ../src/main.cpp
+CMakeFiles/mav_main.dir/src/main.cpp.o: /opt/mosek/8/tools/platform/linux64x86/h/fusion.h
+CMakeFiles/mav_main.dir/src/main.cpp.o: /opt/mosek/8/tools/platform/linux64x86/h/fusion_fwd.h
+CMakeFiles/mav_main.dir/src/main.cpp.o: /opt/mosek/8/tools/platform/linux64x86/h/monty.h
+CMakeFiles/mav_main.dir/src/main.cpp.o: /opt/mosek/8/tools/platform/linux64x86/h/monty_base.h
+CMakeFiles/mav_main.dir/src/main.cpp.o: /opt/mosek/8/tools/platform/linux64x86/h/monty_iterator.h
+CMakeFiles/mav_main.dir/src/main.cpp.o: /opt/mosek/8/tools/platform/linux64x86/h/monty_ndarray.h
+CMakeFiles/mav_main.dir/src/main.cpp.o: /opt/mosek/8/tools/platform/linux64x86/h/monty_rc.h
+CMakeFiles/mav_main.dir/src/main.cpp.o: /opt/mosek/8/tools/platform/linux64x86/h/monty_shape.h
 CMakeFiles/mav_main.dir/src/main.cpp.o: /opt/mosek/8/tools/platform/linux64x86/h/mosek.h
+CMakeFiles/mav_main.dir/src/main.cpp.o: /opt/mosek/8/tools/platform/linux64x86/h/mosektask.h
 CMakeFiles/mav_main.dir/src/main.cpp.o: /usr/include/Sophus/sophus/common.hpp
 CMakeFiles/mav_main.dir/src/main.cpp.o: /usr/include/Sophus/sophus/rotation_matrix.hpp
 CMakeFiles/mav_main.dir/src/main.cpp.o: /usr/include/Sophus/sophus/se3.hpp

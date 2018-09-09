@@ -25,6 +25,7 @@ set(CMAKE_CXX_TARGET_INCLUDE_PATH
   "/usr/include/Sophus"
   "../include"
   "/opt/mosek/8/tools/platform/linux64x86"
+  "/opt/mosek/8/tools/platform/linux64x86/h"
   "../include/mav_tube_trajectory_generation"
   "../glog"
   )

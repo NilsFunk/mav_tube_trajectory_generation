@@ -298,13 +298,16 @@ namespace mav_trajectory_generation {
 
     Eigen::Matrix<double, N / 2, N / 2> B_ul_inv = control_point_mapping_coefficients.inverse();
 
+    // Get ride of numerical errors
+
     for (int k = 0; k < N / 2; ++k) {
       for (int i = 0; i < N / 2; ++i) {
-        if (B_ul_inv(k,i) > -0.00001 && B_ul_inv(k,i) < 0.00001) {
+        if (B_ul_inv(k,i) > -0.000001 && B_ul_inv(k,i) < 0.000001) {
           B_ul_inv(k,i) = 0;
         }
       }
     }
+
 
     Eigen::VectorXd alternating_sign(N / 2,1);
     for (int i = 0; i < N / 2; i++) {
@@ -366,6 +369,7 @@ namespace mav_trajectory_generation {
 
 
 
+
   template <int _N>
   void PolynomialOptimizationConstrained<_N>::compute_tube_constraints(std::vector<Eigen::MatrixXd> &control_pt_extraction_matrices, int segment_idx) {
     Eigen::VectorXd segment_start;
@@ -385,37 +389,78 @@ namespace mav_trajectory_generation {
     double py = segment_start(1);
     double pz = segment_start(2);
 
-    Eigen::Matrix3d A;
-    Eigen::Vector3d b;
-    A  << 1 - pow(nx, 2), -nx * ny, -nx * nz,
-            -nx * ny, 1 - pow(ny, 2), -ny * nz,
-            -nx * nz, -ny * nz, 1 - pow(nz, 2);
 
+//    Eigen::Matrix3d A;
+//    Eigen::Vector3d b;
+//    A  << 1 - pow(nx, 2), -nx * ny, -nx * nz,
+//            -nx * ny, 1 - pow(ny, 2), -ny * nz,
+//            -nx * nz, -ny * nz, 1 - pow(nz, 2);
+
+//    Eigen::MatrixXd segment_vec_test = segment_vec;
+
+//    std::cout << "segment_vec_test: " << "\n" << segment_vec_test << std::endl;
+//    std::cout << "segment_vec_test transpose: " << "\n" << segment_vec_test.transpose() << std::endl;
+
+    Eigen::Matrix3d A = Eigen::MatrixXd::Identity(3, 3) -  segment_vec * segment_vec.transpose();
+
+//    std::cout << "A: " << "\n" << A << "\n" << "vs. A_test: " << "\n" << A_test << std::endl;
+
+    // Get ride of numerical errors
+    /*
     for (int i = 0; i < dimension_; ++i) {
       for (int j = 0; j < dimension_; ++j) {
-        if (A(i,j) > -0.000001 && A(i,j) < 0.000001) {
+        if (A(i,j) > -0.00001 && A(i,j) < 0.00001) {
           A(i,j) = 0;
         }
       }
     }
+    */
 
-    b <<  (pow(nx, 2) - 1) * px + nx * ny * py + nx * nz * pz,
-            nx * ny * px + (pow(ny, 2) - 1) * py + ny * nz * pz,
-            nx * nz * px + ny * nz * py + (pow(nz, 2) - 1) * pz;
+//    b <<  (pow(nx, 2) - 1) * px + nx * ny * py + nx * nz * pz,
+//            nx * ny * px + (pow(ny, 2) - 1) * py + ny * nz * pz,
+//            nx * nz * px + ny * nz * py + (pow(nz, 2) - 1) * pz;
 
+    Eigen::Vector3d b = - A * segment_start;
+
+//    std::cout << "b: " << "\n" << b << "\n" << "vs. b_test: " << "\n" << b_test << std::endl;
+
+    // Get ride of numerical errors
+    /*
     for (int j = 0; j < dimension_; ++j) {
-      if (b(j) > -0.000001 && b(j) < 0.000001) {
+      if (b(j) > -0.00001 && b(j) < 0.00001) {
         b(j) = 0;
       }
     }
+    */
+//    std::cout << "Number constraints before adding tube constraints: " << constr_quad_.size() << std::endl;
 
-    Eigen::Matrix3d LL = A.transpose()*A;
+//    Eigen::Matrix3d LL = A.transpose()*A;
+
+//    std::cout << "Quadratic part point line distance: " << "\n" << LL << std::endl;
+
     Eigen::Vector3d L  = 2*b.transpose()*A;
 
     double mu = b.transpose()*b-pow(segment_radii_[segment_idx].first,2);
 
     for (int i = 1; i < N - 1; ++i) {
-      Eigen::MatrixXd EE = (control_pt_extraction_matrices[i]).transpose() * LL * control_pt_extraction_matrices[i];
+//      std::cout << "Number constraints: " << constr_quad_.size() << std::endl;
+//      Eigen::MatrixXd EE = (control_pt_extraction_matrices[i]).transpose() * LL * control_pt_extraction_matrices[i];
+      Eigen::MatrixXd M_temp = A * control_pt_extraction_matrices[i];
+      Eigen::MatrixXd EE = M_temp.transpose() * M_temp;
+
+//      std::cout << "A: " << "\n" << A << "\n" << std::endl;
+//      std::cout << "control_pt_extraction_matrix: " << "\n" << control_pt_extraction_matrices[i] << "\n" << std::endl;
+//      std::cout << "M_temp: " << "\n" << M_temp << "\n" << std::endl;
+//      std::cout << "EE: " << "\n" << EE << "\n" << std::endl;
+//      std::cout << "EE corner: " << "\n"
+//                << 2 * EE.bottomRightCorner(n_free_constraints_kDim_, n_free_constraints_kDim_) << "\n" << std::endl;
+//      std::cout << "EE corner eigenvalues: " << "\n"
+//                << (2 * EE.bottomRightCorner(n_free_constraints_kDim_, n_free_constraints_kDim_)).eigenvalues() << "\n" << std::endl;
+
+
+
+//      std::cout << "EE: " << "\n" << EE << "\n" << "vs. EE_test: " << "\n" << EE_test << std::endl;
+
       Eigen::MatrixXd E  = L.transpose() * control_pt_extraction_matrices[i];
 
       constr_const_.push_back((fixed_constraints_compact_kDim_.transpose() * EE.topLeftCorner(n_fixed_constraints_kDim_, n_fixed_constraints_kDim_) *
@@ -426,6 +471,8 @@ namespace mav_trajectory_generation {
 
       constr_quad_.push_back(2 * EE.bottomRightCorner(n_free_constraints_kDim_, n_free_constraints_kDim_));
     }
+
+//    std::cout << "Number constraints after adding tube constraints: " << constr_quad_.size() << std::endl;
   }
 
   template <int _N>
@@ -434,6 +481,8 @@ namespace mav_trajectory_generation {
     int n_mid_control_pts = N-2;
 
     Eigen::MatrixXd blk_0 = Eigen::MatrixXd::Zero(n_free_constraints_kDim_, n_free_constraints_kDim_);
+
+//    std::cout << "Number constraints before adding tube end constraints: " << constr_quad_.size() << std::endl;
 
     for (int k = 0; k < n_mid_control_pts; ++k) {
       Eigen::VectorXd segment_start;
@@ -471,6 +520,8 @@ namespace mav_trajectory_generation {
         constr_quad_.push_back(blk_0);
       }
     }
+
+//    std::cout << "Number constraints after adding tube end constraints: " << constr_quad_.size() << std::endl;
   }
 
   template <int _N>
@@ -505,7 +556,11 @@ namespace mav_trajectory_generation {
     int NUMVAR = n_free_constraints_kDim_;
     int NUMQNZ = (R_kDim_pp.diagonal().nonZeros() + R_kDim_pp.nonZeros())/2;
 
+    //MSK_DPAR_CHECK_CONVEXITY_REL_TOL
+
     MSKrescodee  r;
+
+
 
     MSKboundkeye bkc  = MSK_BK_UP;
 
@@ -565,13 +620,15 @@ namespace mav_trajectory_generation {
     }
 
     MSKint32t   qsubi[NUMQNZ],
-            qsubj[NUMQNZ];
+                qsubj[NUMQNZ];
     double      qval[NUMQNZ];
 
     MSKint32t   j, i;
     double      xx[NUMVAR];
     MSKenv_t    env;
     MSKtask_t   task;
+
+
 
     /* Create the mosek environment. */
     r = MSK_makeenv(&env, NULL);
@@ -580,6 +637,7 @@ namespace mav_trajectory_generation {
     {
       /* Create the optimization task. */
       r = MSK_maketask(env, NUMCON, NUMVAR, &task);
+      r = MSK_putintparam(task, MSK_IPAR_CHECK_CONVEXITY, 2);
 
       if ( r == MSK_RES_OK )
       {
@@ -653,7 +711,7 @@ namespace mav_trajectory_generation {
 
                     qsubi[d * NUMQNZ / 3 + q_idx] = row + d * n_free_constraints_;
                     qsubj[d * NUMQNZ / 3 + q_idx] = col + d * n_free_constraints_;
-                    qval[d * NUMQNZ / 3 + q_idx] = 2*cost_value;
+                    qval[d * NUMQNZ / 3 + q_idx] = 2 * cost_value;
 
                   }
                   q_idx++;
@@ -670,7 +728,7 @@ namespace mav_trajectory_generation {
           for (int k = 0; k < NUMCON; ++k) {
 
             Eigen::MatrixXd constr_quad_temp = constr_quad_[k];
-
+            //std::cout << constr_quad_temp << "\n" << std::endl;
             int q_idx = 0;
             for (int row = 0; row < n_free_constraints_kDim_; ++row) {
               for (int col = 0; col < n_free_constraints_kDim_; ++col) {
@@ -787,6 +845,336 @@ namespace mav_trajectory_generation {
     return ( r );
   }
 
+  template <int _N>
+  int PolynomialOptimizationConstrained<_N>::solveSOCP() {
+    CHECK(derivative_to_optimize_ >= 0 &&
+          derivative_to_optimize_ <= kHighestDerivativeToOptimize);
+    // Catch the fully constrained case:
+    if (n_free_constraints_kDim_ == 0) {
+      LOG(WARNING)
+              << "No free constraints set in the vertices. Polynomial can "
+                 "not be optimized. Outputting fully constrained polynomial.";
+      this->updateSegmentsFromCompactConstraints();
+      return true;
+    }
+
+    // Compute cost matrix for the unconstrained optimization problem.
+    // Block-wise H = A^{-T}QA^{-1} according to [1]
+    Eigen::SparseMatrix<double> R_kDim;
+    constructRkDim(&R_kDim);
+
+    setupControlPointConstraints();
+
+    // Extract block matrices and prepare solver.
+    Eigen::SparseMatrix<double> R_kDim_fp = R_kDim.topRightCorner(
+            n_fixed_constraints_kDim_, n_free_constraints_kDim_);
+    Eigen::SparseMatrix<double> R_kDim_pp =
+            R_kDim.bottomRightCorner(n_free_constraints_kDim_, n_free_constraints_kDim_);
+
+    Eigen::MatrixXd R_Cholesky_llt_kDim_pp = Eigen::MatrixXd(Eigen::MatrixXd(R_kDim_pp).llt().matrixL()).transpose();
+    //std::cout << "R_kDim_pp " << R_kDim_pp << std::endl;
+    //std::cout << "R_Cholesky_llt_kDim_pp" << R_Cholesky_llt_kDim_pp << std::endl;
+
+    int array_size;
+    if (n_segments_ == 2)
+      array_size = dimension_ * ((n_segments_ - 1) * 15); // Upper triangle in a 5x5 matrix i.e. 5+4+3+2+1 = 15
+    else if (n_segments_ > 2)
+      array_size = dimension_ * ((n_segments_ - 1) * 15 + (n_segments_ - 2) * 25);
+    else {
+      std::cout << "Only one segment! Nothing to optimizie." << std::endl;
+      return 0;
+    }
+
+
+    std::shared_ptr<ndarray<int, 1>> arc_i = new_array_ptr<int, 1>(array_size);
+    std::shared_ptr<ndarray<int, 1>> arc_j = new_array_ptr<int, 1>(array_size);
+    std::shared_ptr<ndarray<double, 1>> arc_val = new_array_ptr<double, 1>(array_size);
+
+    int q_idx = 0;
+    for (int row = 0; row < n_free_constraints_kDim_; ++row) {
+      for (int col = 0; col < n_free_constraints_kDim_; ++col) {
+        if (col >= row) {
+          double cost_value = R_Cholesky_llt_kDim_pp(row, col);
+          if (cost_value != 0) {
+            (*arc_i)[q_idx] = row;
+            (*arc_j)[q_idx] = col;
+            (*arc_val)[q_idx] = cost_value;
+            q_idx++;
+          }
+        }
+      }
+    }
+
+    Matrix::t Q2 = Matrix::sparse(n_free_constraints_kDim_, n_free_constraints_kDim_, arc_i, arc_j, arc_val);
+
+    Eigen::VectorXd f = fixed_constraints_compact_kDim_.transpose() * R_kDim_fp;
+    auto Q1 = new_array_ptr<double, 1>(n_free_constraints_kDim_);
+    for (int i = 0; i < n_free_constraints_kDim_; i++) (*Q1)[i] = f(i);
+
+    int NUMCON = constr_const_.size();
+    int NUMVAR = n_free_constraints_kDim_;
+    int NUMQNZ = (R_kDim_pp.diagonal().nonZeros() + R_kDim_pp.nonZeros()) / 2;
+
+    Model::t M = new Model("socp");
+    auto _M = finally([&]() { M->dispose(); });
+
+    Variable::t t = M->variable("t", 1, Domain::greaterThan(0));
+    Variable::t x = M->variable("x", NUMVAR, Domain::unbounded());
+
+    mosek::fusion::Constraint::t qt = M->constraint("qt", Expr::vstack(1, t, Expr::mul(Q2, x)),
+                                                    Domain::inRotatedQCone());
+
+    Expression::t cost_lin = Expr::dot(Q1, x);
+    Expression::t cost = Expr::hstack(t, cost_lin);
+
+    M->objective("obj", ObjectiveSense::Minimize, Expr::sum(cost));
+
+    int free_constr_per_segment_end = 5;
+    for (int segment_idx = 0; segment_idx < n_segments_ - 1; segment_idx++) {
+      Eigen::VectorXd pos_vec;
+      vertices_[segment_idx + 1].getConstraint(0, &pos_vec);
+      Variable::t z = Var::vstack(x->index(segment_idx * free_constr_per_segment_end),
+                                  x->index((segment_idx + n_segments_ - 1) * free_constr_per_segment_end),
+                                  x->index((segment_idx + 2 * (n_segments_ - 1)) * free_constr_per_segment_end));
+      std::shared_ptr<ndarray<double, 1>> c = new_array_ptr<double, 1>({pos_vec(0), pos_vec(1), pos_vec(2)});
+      double constr_const = (- pos_vec.transpose() * pos_vec + pow(segment_radii_[segment_idx].second,2)) / 2 ;
+      Expression::t constr_lin = Expr::dot(c, z);
+      Expression::t constr = Expr::vstack(constr_const, constr_lin);
+      std::string sphere_constr = "sc" + std::to_string(segment_idx);
+      M->constraint(sphere_constr, Expr::vstack(1, Expr::sum(constr), z), Domain::inRotatedQCone());
+    }
+
+    for (int segment_idx = 0; segment_idx < n_segments_; segment_idx++) {
+      Eigen::VectorXd segment_start;
+      Eigen::VectorXd segment_end;
+      vertices_[segment_idx].getConstraint(0, &segment_start);
+      vertices_[segment_idx + 1].getConstraint(0, &segment_end);
+      //std::cout << "segment_start : " << "\n" << segment_start << std::endl;
+      //std::cout << "segment_end : " << "\n" << segment_end << std::endl;
+
+      Eigen::VectorXd segment_vec = segment_end - segment_start;
+      segment_vec.normalize();
+      //std::cout << "segment_vec : " << "\n" << segment_vec << std::endl;
+
+      Eigen::Matrix3d A = Eigen::MatrixXd::Identity(dimension_, dimension_) -  segment_vec * segment_vec.transpose();
+      Eigen::Vector3d b = - A * segment_start;
+      Eigen::Vector3d c = - b.transpose() * A;
+
+      //std::cout << "A : " << "\n" << A << std::endl;
+      //std::cout << "b : " << "\n" << b << std::endl;
+      //std::cout << "c : " << "\n" << c << std::endl;
+
+      double constr_const = - (b.transpose() * b - segment_radii_[segment_idx].first * segment_radii_[segment_idx].first) / 2;
+
+      //std::cout << "constr_const : " << "\n" << constr_const << std::endl;
+
+      for (int control_pt_idx = 1; control_pt_idx < N - 1; control_pt_idx++) {
+        if ((segment_idx == 0 && control_pt_idx < 5) || (segment_idx == n_segments_ - 1 && control_pt_idx > 4))
+          continue;
+
+        Eigen::MatrixXd inverse_control_pt_mapping_matrix;
+        Variable::t z;
+        int n_depend_deriv;
+        int N = 10;
+        if (control_pt_idx < 5) {
+          n_depend_deriv = control_pt_idx + 1;
+          inverse_control_pt_mapping_matrix = Eigen::MatrixXd::Zero(3, dimension_ * n_depend_deriv);
+          //std::cout << "inverse_control_pt_mapping_matrix : " << "\n" << inverse_control_pt_mapping_matrix << std::endl;
+          Eigen::MatrixXd inverse_control_pt_mapping_temp =
+                      inverse_control_pt_mapping_matrices_[segment_idx].block(control_pt_idx, 0, 1, n_depend_deriv);
+          //std::cout << "inverse_control_pt_mapping_temp : " << "\n" << inverse_control_pt_mapping_temp << std::endl;
+          inverse_control_pt_mapping_matrix.block(0, 0, 1, n_depend_deriv) =
+                      inverse_control_pt_mapping_temp;
+          inverse_control_pt_mapping_matrix.block(1, n_depend_deriv, 1, n_depend_deriv) =
+                      inverse_control_pt_mapping_temp;
+          inverse_control_pt_mapping_matrix.block(2, 2 * (n_depend_deriv), 1, n_depend_deriv) =
+                      inverse_control_pt_mapping_temp;
+          //std::cout << "inverse_control_pt_mapping_matrix : " << "\n" << inverse_control_pt_mapping_matrix << std::endl;
+          z = Var::vstack(x->slice((segment_idx - 1) * N / 2, (segment_idx - 1) * N / 2 + n_depend_deriv),
+                          x->slice(n_free_constraints_ + (segment_idx - 1) * N / 2, n_free_constraints_ + (segment_idx - 1) * N / 2 + n_depend_deriv),
+                          x->slice(2 * n_free_constraints_ + (segment_idx - 1) * N / 2, 2 * n_free_constraints_ + (segment_idx - 1) * N / 2  + n_depend_deriv));
+          //std::cout << "z : " << "\n" << (*z).toString() << std::endl;
+        } else {
+          n_depend_deriv = 9 - control_pt_idx + 1;
+          inverse_control_pt_mapping_matrix = Eigen::MatrixXd::Zero(3, dimension_ * n_depend_deriv);
+          //std::cout << "inverse_control_pt_mapping_matrix : " << "\n" << inverse_control_pt_mapping_matrix << std::endl;
+          Eigen::MatrixXd inverse_control_pt_mapping_temp =
+                  inverse_control_pt_mapping_matrices_[segment_idx].block(control_pt_idx, N / 2, 1, n_depend_deriv);
+          //std::cout << "inverse_control_pt_mapping_temp : " << "\n" << inverse_control_pt_mapping_temp << std::endl;
+          inverse_control_pt_mapping_matrix.block(0, 0, 1, n_depend_deriv) =
+                  inverse_control_pt_mapping_temp;
+          inverse_control_pt_mapping_matrix.block(1, n_depend_deriv, 1, n_depend_deriv) =
+                  inverse_control_pt_mapping_temp;
+          inverse_control_pt_mapping_matrix.block(2, 2 * (n_depend_deriv), 1, n_depend_deriv) =
+                  inverse_control_pt_mapping_temp;
+          //std::cout << "inverse_control_pt_mapping_matrix : " << "\n" << inverse_control_pt_mapping_matrix << std::endl;
+          //std::cout << "1-start: " << segment_idx * N << std::endl;
+          //std::cout << "1-end: " << segment_idx * N + n_depend_deriv << std::endl;
+          //std::cout << "2-start: " << n_free_constraints_ + segment_idx * N << std::endl;
+          //std::cout << "2-end: " << n_free_constraints_ + segment_idx * N + n_depend_deriv << std::endl;
+          //std::cout << "3-start: " << 2 * n_free_constraints_ + segment_idx * N << std::endl;
+          //std::cout << "3-end: " << 2 * n_free_constraints_ + segment_idx * N + n_depend_deriv << std::endl;
+          z = Var::vstack(x->slice(segment_idx * N / 2, segment_idx * N / 2 + n_depend_deriv),
+                          x->slice(n_free_constraints_ + segment_idx * N / 2, n_free_constraints_ + segment_idx * N / 2 + n_depend_deriv),
+                          x->slice(2 * n_free_constraints_ + segment_idx * N / 2, 2 * n_free_constraints_ + segment_idx * N / 2 + n_depend_deriv));
+          //std::cout << "z : " << "\n" << (*z).toString() << std::endl;
+        }
+
+        Eigen::MatrixXd Qc2_eig = A * inverse_control_pt_mapping_matrix;
+        //std::cout << "Qc2_eig : " << "\n" << Qc2_eig << std::endl;
+
+        int n_matrix_coef = dimension_ * dimension_ * n_depend_deriv;
+        //std::cout << "n_matrix_coef : " << "\n" << n_matrix_coef << std::endl;
+        std::shared_ptr<ndarray<int, 1>> tc_arc_i = new_array_ptr<int, 1>(n_matrix_coef);
+        std::shared_ptr<ndarray<int, 1>> tc_arc_j = new_array_ptr<int, 1>(n_matrix_coef);
+        std::shared_ptr<ndarray<double, 1>> tc_arc_val = new_array_ptr<double, 1>(n_matrix_coef);
+
+        int q_idx = 0;
+        for (int row = 0; row < 3; ++row) {
+          for (int col = 0; col < dimension_ * n_depend_deriv; ++col) {
+            double cost_value = Qc2_eig(row, col);
+              (*tc_arc_i)[q_idx] = row;
+              (*tc_arc_j)[q_idx] = col;
+              (*tc_arc_val)[q_idx] = cost_value;
+              q_idx++;
+          }
+        }
+
+        Matrix::t Qc2 = Matrix::sparse(dimension_, dimension_ * n_depend_deriv, tc_arc_i, tc_arc_j, tc_arc_val);
+        //std::cout << "Qc2 : " << "\n" << (*Qc2).toString() << std::endl;
+
+        Eigen::VectorXd qc1_eig = c.transpose() * inverse_control_pt_mapping_matrix;
+        //std::cout << "qc1_eig : " << "\n" << qc1_eig << std::endl;
+
+        auto qc1 = new_array_ptr<double, 1>(dimension_ * n_depend_deriv);
+        for (int i = 0; i < dimension_ * n_depend_deriv; i++) (*qc1)[i] = qc1_eig(i);
+        //std::cout << "qc1 : " << "\n" << (*qc1) << std::endl;
+        Expression::t constr_lin = Expr::dot(qc1, z);
+        //std::cout << "constr_lin : " << "\n" << (*constr_lin).toString() << std::endl;
+        Expression::t constr = Expr::hstack(constr_const, constr_lin);
+        //std::cout << "constr : " << "\n" << (*constr).toString() << std::endl;
+        std::string tube_constr = "tc" + std::to_string(int(segment_idx * N - 2 + control_pt_idx));
+        //std::cout << "tube_constr : " << "\n" << tube_constr << std::endl;
+        //std::cout << "Qc2 * z" << (*Expr::mul(Qc2,z)).toString() << std::endl;
+        //std::cout << "sum constr" << (*Expr::sum(constr)).toString() << std::endl;
+        mosek::fusion::Constraint::t constr_temp = M->constraint(tube_constr, Expr::vstack(1, Expr::sum(constr), Expr::mul(Qc2, z)), Domain::inRotatedQCone());
+        //std::cout << "constr_summary : " << "\n" << (*constr_temp).toString() << std::endl;
+
+        }
+    }
+
+    for (int segment_idx = 0; segment_idx < n_segments_; segment_idx++) {
+      Eigen::VectorXd segment_start;
+      Eigen::VectorXd segment_end;
+      vertices_[segment_idx].getConstraint(0, &segment_start);
+      vertices_[segment_idx + 1].getConstraint(0, &segment_end);
+      //std::cout << "segment_start : " << "\n" << segment_start << std::endl;
+      //std::cout << "segment_end : " << "\n" << segment_end << std::endl;
+
+      Eigen::VectorXd segment_vec = segment_end - segment_start;
+      segment_vec.normalize();
+      //std::cout << "segment_vec : " << "\n" << segment_vec << std::endl;
+
+      Eigen::Vector3d norm_vec_start = -segment_vec;
+      Eigen::Vector3d norm_vec_end   = segment_vec;
+
+      Eigen::Vector3d p_start;
+      if (segment_idx == 0)
+        p_start = segment_start + norm_vec_start * segment_radii_[0].first;
+      else
+        p_start = segment_start + norm_vec_start * segment_radii_[segment_idx-1].second;
+
+      Eigen::Vector3d p_end = segment_end + norm_vec_end * segment_radii_[segment_idx].second;
+
+      for (int control_pt_idx = 1; control_pt_idx < N - 1; ++control_pt_idx) {
+        if ((segment_idx == 0 && control_pt_idx < 5) || (segment_idx == n_segments_ - 1 && control_pt_idx > 4))
+          continue;
+        Eigen::MatrixXd inverse_control_pt_mapping_matrix;
+        Variable::t z;
+        int n_depend_deriv;
+        int N = 10;
+        if (control_pt_idx < 5) {
+          n_depend_deriv = control_pt_idx + 1;
+          inverse_control_pt_mapping_matrix = Eigen::MatrixXd::Zero(3, dimension_ * n_depend_deriv);
+          //std::cout << "inverse_control_pt_mapping_matrix : " << "\n" << inverse_control_pt_mapping_matrix << std::endl;
+          Eigen::MatrixXd inverse_control_pt_mapping_temp =
+                  inverse_control_pt_mapping_matrices_[segment_idx].block(control_pt_idx, 0, 1, n_depend_deriv);
+          //std::cout << "inverse_control_pt_mapping_temp : " << "\n" << inverse_control_pt_mapping_temp << std::endl;
+          inverse_control_pt_mapping_matrix.block(0, 0, 1, n_depend_deriv) =
+                  inverse_control_pt_mapping_temp;
+          inverse_control_pt_mapping_matrix.block(1, n_depend_deriv, 1, n_depend_deriv) =
+                  inverse_control_pt_mapping_temp;
+          inverse_control_pt_mapping_matrix.block(2, 2 * (n_depend_deriv), 1, n_depend_deriv) =
+                  inverse_control_pt_mapping_temp;
+          //std::cout << "inverse_control_pt_mapping_matrix : " << "\n" << inverse_control_pt_mapping_matrix << std::endl;
+          z = Var::vstack(x->slice((segment_idx - 1) * N / 2, (segment_idx - 1) * N / 2 + n_depend_deriv),
+                          x->slice(n_free_constraints_ + (segment_idx - 1) * N / 2, n_free_constraints_ + (segment_idx - 1) * N / 2 + n_depend_deriv),
+                          x->slice(2 * n_free_constraints_ + (segment_idx - 1) * N / 2, 2 * n_free_constraints_ + (segment_idx - 1) * N / 2  + n_depend_deriv));
+          //std::cout << "z : " << "\n" << (*z).toString() << std::endl;
+        } else {
+          n_depend_deriv = 9 - control_pt_idx + 1;
+          inverse_control_pt_mapping_matrix = Eigen::MatrixXd::Zero(3, dimension_ * n_depend_deriv);
+          //std::cout << "inverse_control_pt_mapping_matrix : " << "\n" << inverse_control_pt_mapping_matrix << std::endl;
+          Eigen::MatrixXd inverse_control_pt_mapping_temp =
+                  inverse_control_pt_mapping_matrices_[segment_idx].block(control_pt_idx, N / 2, 1, n_depend_deriv);
+          //std::cout << "inverse_control_pt_mapping_temp : " << "\n" << inverse_control_pt_mapping_temp << std::endl;
+          inverse_control_pt_mapping_matrix.block(0, 0, 1, n_depend_deriv) =
+                  inverse_control_pt_mapping_temp;
+          inverse_control_pt_mapping_matrix.block(1, n_depend_deriv, 1, n_depend_deriv) =
+                  inverse_control_pt_mapping_temp;
+          inverse_control_pt_mapping_matrix.block(2, 2 * (n_depend_deriv), 1, n_depend_deriv) =
+                  inverse_control_pt_mapping_temp;
+          //std::cout << "inverse_control_pt_mapping_matrix : " << "\n" << inverse_control_pt_mapping_matrix << std::endl;
+          //std::cout << "1-start: " << segment_idx * N << std::endl;
+          //std::cout << "1-end: " << segment_idx * N + n_depend_deriv << std::endl;
+          //std::cout << "2-start: " << n_free_constraints_ + segment_idx * N << std::endl;
+          //std::cout << "2-end: " << n_free_constraints_ + segment_idx * N + n_depend_deriv << std::endl;
+          //std::cout << "3-start: " << 2 * n_free_constraints_ + segment_idx * N << std::endl;
+          //std::cout << "3-end: " << 2 * n_free_constraints_ + segment_idx * N + n_depend_deriv << std::endl;
+          z = Var::vstack(x->slice(segment_idx * N / 2, segment_idx * N / 2 + n_depend_deriv),
+                          x->slice(n_free_constraints_ + segment_idx * N / 2, n_free_constraints_ + segment_idx * N / 2 + n_depend_deriv),
+                          x->slice(2 * n_free_constraints_ + segment_idx * N / 2, 2 * n_free_constraints_ + segment_idx * N / 2 + n_depend_deriv));
+          //std::cout << "z : " << "\n" << (*z).toString() << std::endl;
+        }
+
+        Eigen::VectorXd qc1_1_eig = norm_vec_start.transpose() * inverse_control_pt_mapping_matrix;
+        auto qc1_1 = new_array_ptr<double, 1>(dimension_ * n_depend_deriv);
+        for (int i = 0; i < dimension_ * n_depend_deriv; i++) (*qc1_1)[i] = qc1_1_eig(i);
+        //std::cout << "qc1_1 : " << "\n" << (*qc1_1) << std::endl;
+        double constr_const_1 = norm_vec_start.transpose() * p_start;
+
+        Eigen::VectorXd qc1_2_eig = norm_vec_end.transpose() * inverse_control_pt_mapping_matrix;
+        auto qc1_2 = new_array_ptr<double, 1>(dimension_ * n_depend_deriv);
+        for (int i = 0; i < dimension_ * n_depend_deriv; i++) (*qc1_2)[i] = qc1_2_eig(i);
+        //std::cout << "qc1_2 : " << "\n" << (*qc1_2) << std::endl;
+        double constr_const_2 = norm_vec_end.transpose() * p_end;
+
+        std::string tube_end_constr_1 = "tec" + std::to_string(int(segment_idx * 2 * (N - 2) + 2 * control_pt_idx));
+        std::string tube_end_constr_2 = "tec" + std::to_string(int(segment_idx * 2 * (N - 2) + 2 * control_pt_idx + 1));
+        M->constraint(tube_end_constr_1, Expr::dot(qc1_1, z), Domain::lessThan(constr_const_1));
+        M->constraint(tube_end_constr_2, Expr::dot(qc1_2, z), Domain::lessThan(constr_const_2));
+
+      }
+
+    }
+
+    M->solve();
+
+    ndarray<double, 1> xlvl   = *(x->level());
+    for (int i = 0; i < xlvl.size(); i++) {
+      free_constraints_compact_kDim_(i) = xlvl[i];
+    }
+
+    free_constraints_compact_[0] = free_constraints_compact_kDim_.topRows(n_free_constraints_);
+    free_constraints_compact_[1] = free_constraints_compact_kDim_.middleRows(n_free_constraints_,n_free_constraints_);
+    free_constraints_compact_[2] = free_constraints_compact_kDim_.bottomRows(n_free_constraints_);
+
+    this->updateSegmentsFromCompactConstraints();
+
+    std::cout << "d_p = " << xlvl  << "';" << std::endl;
+
+    return 1;
+  }
 
   template <int _N>
   int PolynomialOptimizationConstrained<_N>::factorial(int n) {

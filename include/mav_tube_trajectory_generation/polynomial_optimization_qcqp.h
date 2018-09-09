@@ -8,10 +8,15 @@
 #include <mav_tube_trajectory_generation/polynomial_optimization_linear.h>
 #include <iostream>
 #include <stdio.h>
+#include <h/fusion.h>
+#include <Eigen/Cholesky>
 
 extern "C"{
   #include "h/mosek.h"
 }
+
+using namespace mosek::fusion;
+using namespace monty;
 
 static void MSKAPI printstr(void *handle,
                             const char str[])
@@ -31,6 +36,7 @@ namespace mav_trajectory_generation {
 
     bool solveLinear();
     int solveQCQP();
+    int solveSOCP();
 
     void getSegmentRadii(std::vector<std::pair<double, double>>* segment_radii) const {
       CHECK(segment_radii != nullptr);

@@ -276,6 +276,8 @@ class PolynomialOptimizationNonLinear {
   // course differ.
   bool solveQCQP();
 
+  bool solveSOCP();
+
   bool solveLinear();
 
   // Runs the optimization until one of the stopping criteria in
