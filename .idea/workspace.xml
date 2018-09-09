@@ -14,14 +14,6 @@
   <component name="ChangeListManager">
     <list default="true" id="da1f7cda-3f00-473e-b8ab-5ce4a6f7d109" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/CMakeLists.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-release/mav_main" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-release/mav_main" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake/FindMosek.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/cmake/FindMosek.cmake" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/include/mav_tube_trajectory_generation/impl/polynomial_optimization_nonlinear_impl.h" beforeDir="false" afterPath="$PROJECT_DIR$/include/mav_tube_trajectory_generation/impl/polynomial_optimization_nonlinear_impl.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/include/mav_tube_trajectory_generation/impl/polynomial_optimization_qcqp_impl.h" beforeDir="false" afterPath="$PROJECT_DIR$/include/mav_tube_trajectory_generation/impl/polynomial_optimization_qcqp_impl.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/include/mav_tube_trajectory_generation/polynomial_optimization_nonlinear.h" beforeDir="false" afterPath="$PROJECT_DIR$/include/mav_tube_trajectory_generation/polynomial_optimization_nonlinear.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/include/mav_tube_trajectory_generation/polynomial_optimization_qcqp.h" beforeDir="false" afterPath="$PROJECT_DIR$/include/mav_tube_trajectory_generation/polynomial_optimization_qcqp.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main.cpp" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/cmake-build-debug/" />
     <ignored path="$PROJECT_DIR$/cmake-build-release/" />
@@ -32,23 +24,23 @@
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="ExecutionTargetManager" SELECTED_TARGET="CMakeBuildProfile:Debug" />
+  <component name="ExecutionTargetManager" SELECTED_TARGET="CMakeBuildProfile:Release" />
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file leaf-file-name="CMakeLists.txt" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/CMakeLists.txt">
           <provider selected="true" editor-type-id="text-editor">
-            <state>
+            <state relative-caret-position="232">
               <caret line="8" column="1" selection-start-line="8" selection-start-column="1" selection-end-line="8" selection-end-column="1" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="main.cpp" pinned="false" current-in-tab="false">
+      <file leaf-file-name="main.cpp" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main.cpp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="798">
-              <caret line="104" column="4" selection-start-line="104" selection-start-column="4" selection-end-line="104" selection-end-column="4" />
+            <state relative-caret-position="838">
+              <caret line="94" column="24" selection-start-line="94" selection-start-column="24" selection-end-line="94" selection-end-column="24" />
               <folding>
                 <element signature="e#42#61#0" expanded="true" />
               </folding>
@@ -56,10 +48,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="polynomial_optimization_nonlinear_impl.h" pinned="false" current-in-tab="true">
+      <file leaf-file-name="polynomial_optimization_nonlinear_impl.h" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/include/mav_tube_trajectory_generation/impl/polynomial_optimization_nonlinear_impl.h">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="64">
+            <state relative-caret-position="56695">
               <caret line="1955" column="4" selection-start-line="1955" selection-start-column="4" selection-end-line="1955" selection-end-column="4" />
               <folding>
                 <element signature="e#858#875#0" expanded="true" />
@@ -72,7 +64,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>use_esdf</find>
       <find>abs(x</find>
       <find>andTime</find>
       <find>getCostAndGradientCollis</find>
@@ -102,6 +93,7 @@
       <find>R_kDim_pp</find>
       <find>std::cout</find>
       <find>Start</find>
+      <find>end comp</find>
     </findStrings>
     <replaceStrings>
       <replace>n_fixed_constraints_kDim</replace>
@@ -159,7 +151,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -203,11 +194,12 @@
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../../../prototypes/mosek_test" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="settings.editor.selected.configurable" value="CMakeSettings" />
@@ -233,9 +225,9 @@
     </option>
   </component>
   <component name="RunManager" selected="Application.mav_main">
-    <configuration name="Build All" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="mav_tube_trajectory_generation" RUN_TARGET_NAME="mav_main" EXPLICIT_BUILD_TARGET_NAME="all" />
-    <configuration name="mav_main" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="mav_tube_trajectory_generation" TARGET_NAME="mav_main" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="mav_tube_trajectory_generation" RUN_TARGET_NAME="mav_main" />
-    <configuration name="mav_tube_trajectory_generation" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="mav_tube_trajectory_generation" TARGET_NAME="mav_tube_trajectory_generation" CONFIG_NAME="Debug" />
+    <configuration name="Build All" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" CONFIG_NAME="Release" RUN_TARGET_PROJECT_NAME="mav_tube_trajectory_generation" RUN_TARGET_NAME="mav_main" EXPLICIT_BUILD_TARGET_NAME="all" />
+    <configuration name="mav_main" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="mav_tube_trajectory_generation" TARGET_NAME="mav_main" CONFIG_NAME="Release" RUN_TARGET_PROJECT_NAME="mav_tube_trajectory_generation" RUN_TARGET_NAME="mav_main" />
+    <configuration name="mav_tube_trajectory_generation" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="mav_tube_trajectory_generation" TARGET_NAME="mav_tube_trajectory_generation" CONFIG_NAME="Release" />
     <list>
       <item itemvalue="Application.Build All" />
       <item itemvalue="Application.mav_main" />
@@ -288,31 +280,32 @@
       <workItem from="1536316932055" duration="12813000" />
       <workItem from="1536334485472" duration="9463000" />
       <workItem from="1536394615864" duration="20823000" />
-      <workItem from="1536443661191" duration="14142000" />
+      <workItem from="1536443661191" duration="14479000" />
+      <workItem from="1536458204318" duration="47000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="293183000" />
+    <option name="totallyTimeSpent" value="293567000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="114" y="-8" width="2766" height="1808" extended-state="6" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.2994122" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2994122" />
       <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="bottom" id="Messages" order="7" weight="0.3079897" />
       <window_info anchor="bottom" id="CMake" order="7" weight="0.32840466" />
       <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" />
       <window_info anchor="bottom" id="Version Control" order="7" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.36469072" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.36469072" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info anchor="bottom" id="Terminal" order="7" weight="0.23424125" />
+      <window_info anchor="bottom" id="Terminal" order="7" visible="true" weight="0.23389176" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.2648196" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="bottom" id="Messages" order="7" weight="0.3898196" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32944834" />
@@ -665,7 +658,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/CMakeLists.txt">
       <provider selected="true" editor-type-id="text-editor">
-        <state>
+        <state relative-caret-position="232">
           <caret line="8" column="1" selection-start-line="8" selection-start-column="1" selection-end-line="8" selection-end-column="1" />
         </state>
       </provider>
@@ -688,9 +681,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="29">
           <caret line="23" selection-start-line="23" selection-end-line="23" />
-          <folding>
-            <element signature="e#184#258#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -708,22 +698,22 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main.cpp">
+    <entry file="file://$PROJECT_DIR$/include/mav_tube_trajectory_generation/impl/polynomial_optimization_nonlinear_impl.h">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="798">
-          <caret line="104" column="4" selection-start-line="104" selection-start-column="4" selection-end-line="104" selection-end-column="4" />
+        <state relative-caret-position="56695">
+          <caret line="1955" column="4" selection-start-line="1955" selection-start-column="4" selection-end-line="1955" selection-end-column="4" />
           <folding>
-            <element signature="e#42#61#0" expanded="true" />
+            <element signature="e#858#875#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/include/mav_tube_trajectory_generation/impl/polynomial_optimization_nonlinear_impl.h">
+    <entry file="file://$PROJECT_DIR$/src/main.cpp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="64">
-          <caret line="1955" column="4" selection-start-line="1955" selection-start-column="4" selection-end-line="1955" selection-end-column="4" />
+        <state relative-caret-position="838">
+          <caret line="94" column="24" selection-start-line="94" selection-start-column="24" selection-end-line="94" selection-end-column="24" />
           <folding>
-            <element signature="e#858#875#0" expanded="true" />
+            <element signature="e#42#61#0" expanded="true" />
           </folding>
         </state>
       </provider>
