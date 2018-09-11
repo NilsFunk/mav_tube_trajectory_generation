@@ -25,16 +25,16 @@ int main () {
   start.makeStartOrEnd(Eigen::Vector3d(1.1, 8.2, 1.3), derivative_to_optimize);
   vertices.push_back(start);
 
-  middle1.addConstraint(mav_trajectory_generation::derivative_order::POSITION, Eigen::Vector3d(2.40294, 5.73791, 0.956552));
+  middle1.addConstraint(mav_trajectory_generation::derivative_order::POSITION, Eigen::Vector3d(2.18191, 6.07179, 1.11711));
   vertices.push_back(middle1);
 
-  middle2.addConstraint(mav_trajectory_generation::derivative_order::POSITION, Eigen::Vector3d(3.93047, 4.12321, 0.533216));
+  middle2.addConstraint(mav_trajectory_generation::derivative_order::POSITION, Eigen::Vector3d(3.36398, 4.95257, 0.786774));
   vertices.push_back(middle2);
 
-  middle3.addConstraint(mav_trajectory_generation::derivative_order::POSITION, Eigen::Vector3d(4.58455, 3.36812, 0.575615));
+  middle3.addConstraint(mav_trajectory_generation::derivative_order::POSITION, Eigen::Vector3d(4.26092, 3.96874, 0.574606));
   vertices.push_back(middle3);
 
-  middle4.addConstraint(mav_trajectory_generation::derivative_order::POSITION, Eigen::Vector3d(4.95848, 2.77623, 0.575904));
+  middle4.addConstraint(mav_trajectory_generation::derivative_order::POSITION, Eigen::Vector3d(4.95915, 2.81969, 0.531759));
   vertices.push_back(middle4);
 
   end.makeStartOrEnd(Eigen::Vector3d(5.6, 0.8, 1.3), derivative_to_optimize);
@@ -64,7 +64,7 @@ int main () {
 
   mav_trajectory_generation::NonlinearOptimizationParameters parameters;
   parameters.solve_with_position_constraint = true;
-  parameters.objective = mav_trajectory_generation::NonlinearOptimizationParameters::OptimizationObjective::kOptimizeFreeConstraintsAndCollision;
+  parameters.objective = mav_trajectory_generation::NonlinearOptimizationParameters::OptimizationObjective::kOptimizeFreeConstraintsAndCollisionAndTime;
   parameters.print_debug_info = false;
   parameters.max_iterations = 3000;
   parameters.max_time = -1;
@@ -90,7 +90,7 @@ int main () {
   parameters.is_simple_numgrad_constraints = true;
   parameters.coll_check_time_increment = 0.1;
   parameters.is_coll_raise_first_iter = true;
-  parameters.robot_radius = 0.1;
+  parameters.robot_radius = 0.3;
   parameters.add_coll_raise = 0.0000001;
   parameters.algorithm =
           static_cast<nlopt::algorithm>(11);
@@ -102,7 +102,7 @@ int main () {
 
 
   mav_trajectory_generation::PolynomialOptimizationNonLinear<N> opt_nonlin(3, parameters);
-  //mav_trajectory_generation::PolynomialOptimizationConstrained<N> opt_constr(dimension);
+  //mav_tube_trajectory_generation::PolynomialOptimizationConstrained<N> opt_constr(dimension);
 
   opt_nonlin.setOctree(octree_);
   opt_nonlin.setupFromVertices(vertices, segment_times, segment_radii, derivative_to_optimize);

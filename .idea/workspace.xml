@@ -14,6 +14,33 @@
   <component name="ChangeListManager">
     <list default="true" id="da1f7cda-3f00-473e-b8ab-5ce4a6f7d109" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-release/CMakeCache.txt" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-release/CMakeCache.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-release/CMakeFiles/CMakeDirectoryInformation.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-release/CMakeFiles/CMakeDirectoryInformation.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-release/CMakeFiles/CMakeOutput.log" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-release/CMakeFiles/CMakeOutput.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-release/CMakeFiles/Makefile2" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-release/CMakeFiles/Makefile2" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-release/CMakeFiles/TargetDirectories.txt" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-release/CMakeFiles/TargetDirectories.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-release/CMakeFiles/clion-log.txt" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-release/CMakeFiles/clion-log.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-release/CMakeFiles/mav_main.dir/CXX.includecache" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-release/CMakeFiles/mav_main.dir/CXX.includecache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-release/CMakeFiles/mav_main.dir/DependInfo.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-release/CMakeFiles/mav_main.dir/DependInfo.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-release/CMakeFiles/mav_main.dir/build.make" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-release/CMakeFiles/mav_main.dir/build.make" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-release/CMakeFiles/mav_main.dir/depend.internal" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-release/CMakeFiles/mav_main.dir/depend.internal" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-release/CMakeFiles/mav_main.dir/flags.make" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-release/CMakeFiles/mav_main.dir/flags.make" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-release/CMakeFiles/mav_main.dir/link.txt" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-release/CMakeFiles/mav_main.dir/link.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-release/CMakeFiles/mav_tube_trajectory_generation.dir/CXX.includecache" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-release/CMakeFiles/mav_tube_trajectory_generation.dir/CXX.includecache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-release/CMakeFiles/mav_tube_trajectory_generation.dir/DependInfo.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-release/CMakeFiles/mav_tube_trajectory_generation.dir/DependInfo.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-release/CMakeFiles/mav_tube_trajectory_generation.dir/build.make" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-release/CMakeFiles/mav_tube_trajectory_generation.dir/build.make" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-release/CMakeFiles/mav_tube_trajectory_generation.dir/depend.internal" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-release/CMakeFiles/mav_tube_trajectory_generation.dir/depend.internal" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-release/CMakeFiles/mav_tube_trajectory_generation.dir/flags.make" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-release/CMakeFiles/mav_tube_trajectory_generation.dir/flags.make" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-release/Makefile" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-release/Makefile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-release/cmake_install.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-release/cmake_install.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-release/mav_main" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-release/mav_main" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-release/mav_tube_trajectory_generation.cbp" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-release/mav_tube_trajectory_generation.cbp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake/mav_trajectory_generation_cmakeConfig.cmake.in" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake/mav_trajectory_generation_cmakeConfigVersion.cmake.in" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/include/mav_tube_trajectory_generation/impl/polynomial_optimization_nonlinear_impl.h" beforeDir="false" afterPath="$PROJECT_DIR$/include/mav_tube_trajectory_generation/impl/polynomial_optimization_nonlinear_impl.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/include/mav_tube_trajectory_generation/polynomial_optimization_nonlinear.h" beforeDir="false" afterPath="$PROJECT_DIR$/include/mav_tube_trajectory_generation/polynomial_optimization_nonlinear.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/include/mav_tube_trajectory_generation/polynomial_optimization_qcqp.h" beforeDir="false" afterPath="$PROJECT_DIR$/include/mav_tube_trajectory_generation/polynomial_optimization_qcqp.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main.cpp" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/cmake-build-debug/" />
     <ignored path="$PROJECT_DIR$/cmake-build-release/" />
@@ -27,35 +54,32 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="CMakeBuildProfile:Release" />
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="CMakeLists.txt" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/CMakeLists.txt">
+      <file leaf-file-name="polynomial_optimization_nonlinear.h" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/include/mav_tube_trajectory_generation/polynomial_optimization_nonlinear.h">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="232">
-              <caret line="8" column="1" selection-start-line="8" selection-start-column="1" selection-end-line="8" selection-end-column="1" />
+            <state relative-caret-position="8642">
+              <caret line="298" column="29" selection-start-line="298" selection-start-column="29" selection-end-line="298" selection-end-column="29" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="main.cpp" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main.cpp">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="838">
-              <caret line="94" column="24" selection-start-line="94" selection-start-column="24" selection-end-line="94" selection-end-column="24" />
-              <folding>
-                <element signature="e#42#61#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="polynomial_optimization_nonlinear_impl.h" pinned="false" current-in-tab="false">
+      <file leaf-file-name="polynomial_optimization_nonlinear_impl.h" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/include/mav_tube_trajectory_generation/impl/polynomial_optimization_nonlinear_impl.h">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="56695">
-              <caret line="1955" column="4" selection-start-line="1955" selection-start-column="4" selection-end-line="1955" selection-end-column="4" />
+            <state relative-caret-position="326">
+              <caret line="165" column="13" selection-start-line="165" selection-start-column="4" selection-end-line="165" selection-end-column="13" />
               <folding>
                 <element signature="e#858#875#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="main.cpp" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main.cpp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="906">
+              <caret line="94" selection-start-line="94" selection-end-line="95" selection-end-column="44" />
             </state>
           </provider>
         </entry>
@@ -64,17 +88,15 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>abs(x</find>
-      <find>andTime</find>
       <find>getCostAndGradientCollis</find>
       <find>x_left</find>
       <find>getDistance</find>
       <find>Octree</find>
       <find>getDistanceOctree</find>
       <find>min_bound</find>
-      <find>std::cout &lt;&lt; &quot;Tra</find>
+      <find />
       <find>check</find>
-      <find>trajectory is</find>
+      <find />
       <find>dp</find>
       <find>free_constraints</find>
       <find>magic</find>
@@ -93,7 +115,9 @@
       <find>R_kDim_pp</find>
       <find>std::cout</find>
       <find>Start</find>
-      <find>end comp</find>
+      <find />
+      <find>objectiveFunctionFreeConstraintsAndCollisionAndTime</find>
+      <find>02</find>
     </findStrings>
     <replaceStrings>
       <replace>n_fixed_constraints_kDim</replace>
@@ -122,11 +146,13 @@
         <option value="$PROJECT_DIR$/../supereight/se_core/include/se/octree.hpp" />
         <option value="$PROJECT_DIR$/include/mav_tube_trajectory_generation/impl/polynomial_optimization_linear_impl.h" />
         <option value="$PROJECT_DIR$/cmake/FindMosek.cmake" />
-        <option value="$PROJECT_DIR$/CMakeLists.txt" />
         <option value="$PROJECT_DIR$/include/mav_tube_trajectory_generation/polynomial_optimization_qcqp.h" />
         <option value="$PROJECT_DIR$/include/mav_tube_trajectory_generation/polynomial_optimization_nonlinear.h" />
         <option value="$PROJECT_DIR$/src/main.cpp" />
         <option value="$PROJECT_DIR$/include/mav_tube_trajectory_generation/impl/polynomial_optimization_qcqp_impl.h" />
+        <option value="$PROJECT_DIR$/cmake/mav_tube_trajectory_generation_Config.cmake.in" />
+        <option value="$PROJECT_DIR$/cmake/mav_tube_trajectory_generation_ConfigVersion.cmake.in" />
+        <option value="$PROJECT_DIR$/CMakeLists.txt" />
         <option value="$PROJECT_DIR$/include/mav_tube_trajectory_generation/impl/polynomial_optimization_nonlinear_impl.h" />
       </list>
     </option>
@@ -141,7 +167,7 @@
     <packageJsonPaths />
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="114" />
+    <option name="x" value="-2766" />
     <option name="y" value="-8" />
     <option name="width" value="2766" />
     <option name="height" value="1808" />
@@ -151,50 +177,46 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
             <path>
               <item name="mav_tube_trajectory_generation" type="b2602c69:ProjectViewProjectNode" />
-              <item name="mav_trajectory_generation" type="462c0819:PsiDirectoryNode" />
+              <item name="mav_tube_trajectory_generation" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="mav_tube_trajectory_generation" type="b2602c69:ProjectViewProjectNode" />
-              <item name="mav_trajectory_generation" type="462c0819:PsiDirectoryNode" />
+              <item name="mav_tube_trajectory_generation" type="462c0819:PsiDirectoryNode" />
               <item name="cmake" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="mav_tube_trajectory_generation" type="b2602c69:ProjectViewProjectNode" />
-              <item name="mav_trajectory_generation" type="462c0819:PsiDirectoryNode" />
+              <item name="mav_tube_trajectory_generation" type="462c0819:PsiDirectoryNode" />
               <item name="include" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="mav_tube_trajectory_generation" type="b2602c69:ProjectViewProjectNode" />
-              <item name="mav_trajectory_generation" type="462c0819:PsiDirectoryNode" />
+              <item name="mav_tube_trajectory_generation" type="462c0819:PsiDirectoryNode" />
               <item name="include" type="462c0819:PsiDirectoryNode" />
               <item name="mav_tube_trajectory_generation" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="mav_tube_trajectory_generation" type="b2602c69:ProjectViewProjectNode" />
-              <item name="mav_trajectory_generation" type="462c0819:PsiDirectoryNode" />
+              <item name="mav_tube_trajectory_generation" type="462c0819:PsiDirectoryNode" />
               <item name="include" type="462c0819:PsiDirectoryNode" />
               <item name="mav_tube_trajectory_generation" type="462c0819:PsiDirectoryNode" />
               <item name="impl" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="mav_tube_trajectory_generation" type="b2602c69:ProjectViewProjectNode" />
-              <item name="mav_trajectory_generation" type="462c0819:PsiDirectoryNode" />
+              <item name="mav_tube_trajectory_generation" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="mav_tube_trajectory_generation" type="b2602c69:ProjectViewProjectNode" />
-              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -205,11 +227,11 @@
     <property name="settings.editor.selected.configurable" value="CMakeSettings" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/cmake" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/include/mav_tube_trajectory_generation/impl" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/cmake" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -282,30 +304,34 @@
       <workItem from="1536394615864" duration="20823000" />
       <workItem from="1536443661191" duration="14479000" />
       <workItem from="1536458204318" duration="47000" />
+      <workItem from="1536521707428" duration="4313000" />
+      <workItem from="1536624295970" duration="270000" />
+      <workItem from="1536634221786" duration="1358000" />
+      <workItem from="1536635768568" duration="730000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="293567000" />
+    <option name="totallyTimeSpent" value="300238000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="114" y="-8" width="2766" height="1808" extended-state="6" />
+    <frame x="-2766" y="-8" width="2766" height="1808" extended-state="6" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2994122" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.27994123" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="CMake" order="7" weight="0.32840466" />
       <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.3640464" />
       <window_info anchor="bottom" id="Version Control" order="7" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.36469072" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info anchor="bottom" id="Terminal" order="7" visible="true" weight="0.23389176" />
-      <window_info id="Favorites" order="2" side_tool="true" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="7" visible="true" weight="0.2390464" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.2648196" />
+      <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
-      <window_info anchor="bottom" id="Messages" order="7" weight="0.3898196" />
+      <window_info anchor="bottom" id="Messages" order="7" weight="0.19652061" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32944834" />
@@ -327,12 +353,12 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
           <url>file://$PROJECT_DIR$/include/mav_tube_trajectory_generation/impl/polynomial_optimization_nonlinear_impl.h</url>
-          <line>256</line>
+          <line>257</line>
           <option name="timeStamp" value="174" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
           <url>file://$PROJECT_DIR$/include/mav_tube_trajectory_generation/impl/polynomial_optimization_nonlinear_impl.h</url>
-          <line>1108</line>
+          <line>1109</line>
           <option name="timeStamp" value="224" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
@@ -375,13 +401,6 @@
     </expressions>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file:///usr/include/c++/5/bits/stl_uninitialized.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="73" selection-start-line="73" selection-end-line="73" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file:///usr/include/c++/5/bits/stl_construct.h">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="248">
@@ -452,13 +471,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="2385">
           <caret line="159" column="11" selection-start-line="159" selection-start-column="6" selection-end-line="159" selection-end-column="11" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/cmake/FindNLOPT.cmake">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="345">
-          <caret line="23" column="28" selection-start-line="23" selection-start-column="10" selection-end-line="23" selection-end-column="28" />
         </state>
       </provider>
     </entry>
@@ -600,13 +612,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/cmake/mav_trajectory_generation_cmakeConfig.cmake.in">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="15">
-          <caret line="1" selection-start-line="1" selection-end-line="1" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/include/mav_tube_trajectory_generation/polynomial_optimization_linear.h">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="248">
@@ -649,20 +654,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/cmake/FindMosek.cmake">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="17" column="86" selection-start-line="17" selection-start-column="86" selection-end-line="17" selection-end-column="86" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/CMakeLists.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="232">
-          <caret line="8" column="1" selection-start-line="8" selection-start-column="1" selection-end-line="8" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file:///usr/include/eigen3/Eigen/src/Core/Product.h">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="259">
@@ -684,13 +675,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/include/mav_tube_trajectory_generation/polynomial_optimization_nonlinear.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="507">
-          <caret line="278" column="19" selection-start-line="278" selection-start-column="19" selection-end-line="278" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/include/mav_tube_trajectory_generation/impl/polynomial_optimization_qcqp_impl.h">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="326">
@@ -698,22 +682,49 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/include/mav_tube_trajectory_generation/impl/polynomial_optimization_nonlinear_impl.h">
+    <entry file="file://$PROJECT_DIR$/cmake/mav_tube_trajectory_generationConfig.cmake.in" />
+    <entry file="file://$PROJECT_DIR$/cmake/mav_tube_trajectory_generationConfigVersion.cmake.in" />
+    <entry file="file://$PROJECT_DIR$/cmake/FindMosek.cmake">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="56695">
-          <caret line="1955" column="4" selection-start-line="1955" selection-start-column="4" selection-end-line="1955" selection-end-column="4" />
-          <folding>
-            <element signature="e#858#875#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="493">
+          <caret line="17" column="86" selection-start-line="17" selection-start-column="86" selection-end-line="17" selection-end-column="86" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/cmake/FindNLOPT.cmake">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="667">
+          <caret line="23" column="28" selection-start-line="23" selection-start-column="10" selection-end-line="23" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CMakeLists.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="29">
+          <caret line="2" column="39" selection-start-line="2" selection-start-column="39" selection-end-line="2" selection-end-column="39" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/include/mav_tube_trajectory_generation/polynomial_optimization_nonlinear.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="8642">
+          <caret line="298" column="29" selection-start-line="298" selection-start-column="29" selection-end-line="298" selection-end-column="29" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main.cpp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="838">
-          <caret line="94" column="24" selection-start-line="94" selection-start-column="24" selection-end-line="94" selection-end-column="24" />
+        <state relative-caret-position="906">
+          <caret line="94" selection-start-line="94" selection-end-line="95" selection-end-column="44" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/include/mav_tube_trajectory_generation/impl/polynomial_optimization_nonlinear_impl.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="326">
+          <caret line="165" column="13" selection-start-line="165" selection-start-column="4" selection-end-line="165" selection-end-column="13" />
           <folding>
-            <element signature="e#42#61#0" expanded="true" />
+            <element signature="e#858#875#0" expanded="true" />
           </folding>
         </state>
       </provider>

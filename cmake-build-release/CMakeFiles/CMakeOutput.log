@@ -10,7 +10,7 @@ The output was:
 
 Compilation of the C compiler identification source "CMakeCCompilerId.c" produced "a.out"
 
-The C compiler identification is GNU, found in "/home/nilsiism/workspace/prob_trajectory_planning/src/ext/mav_trajectory_generation/cmake-build-release/CMakeFiles/3.10.3/CompilerIdC/a.out"
+The C compiler identification is GNU, found in "/home/nilsiism/catkin_ws_ptp/src/ptp_ros/ext/prob_trajectory_planning/src/ext/mav_tube_trajectory_generation/cmake-build-release/CMakeFiles/3.10.3/CompilerIdC/a.out"
 
 Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" succeeded.
 Compiler: /usr/bin/c++ 
@@ -23,33 +23,33 @@ The output was:
 
 Compilation of the CXX compiler identification source "CMakeCXXCompilerId.cpp" produced "a.out"
 
-The CXX compiler identification is GNU, found in "/home/nilsiism/workspace/prob_trajectory_planning/src/ext/mav_trajectory_generation/cmake-build-release/CMakeFiles/3.10.3/CompilerIdCXX/a.out"
+The CXX compiler identification is GNU, found in "/home/nilsiism/catkin_ws_ptp/src/ptp_ros/ext/prob_trajectory_planning/src/ext/mav_tube_trajectory_generation/cmake-build-release/CMakeFiles/3.10.3/CompilerIdCXX/a.out"
 
 Determining if the C compiler works passed with the following output:
-Change Dir: /home/nilsiism/workspace/prob_trajectory_planning/src/ext/mav_trajectory_generation/cmake-build-release/CMakeFiles/CMakeTmp
+Change Dir: /home/nilsiism/catkin_ws_ptp/src/ptp_ros/ext/prob_trajectory_planning/src/ext/mav_tube_trajectory_generation/cmake-build-release/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/make" "cmTC_5a7bd/fast"
-/usr/bin/make -f CMakeFiles/cmTC_5a7bd.dir/build.make CMakeFiles/cmTC_5a7bd.dir/build
-make[1]: Entering directory '/home/nilsiism/workspace/prob_trajectory_planning/src/ext/mav_trajectory_generation/cmake-build-release/CMakeFiles/CMakeTmp'
-Building C object CMakeFiles/cmTC_5a7bd.dir/testCCompiler.c.o
-/usr/bin/cc    -o CMakeFiles/cmTC_5a7bd.dir/testCCompiler.c.o   -c /home/nilsiism/workspace/prob_trajectory_planning/src/ext/mav_trajectory_generation/cmake-build-release/CMakeFiles/CMakeTmp/testCCompiler.c
-Linking C executable cmTC_5a7bd
-/opt/clion-2018.1.3/bin/cmake/bin/cmake -E cmake_link_script CMakeFiles/cmTC_5a7bd.dir/link.txt --verbose=1
-/usr/bin/cc      -rdynamic CMakeFiles/cmTC_5a7bd.dir/testCCompiler.c.o  -o cmTC_5a7bd 
-make[1]: Leaving directory '/home/nilsiism/workspace/prob_trajectory_planning/src/ext/mav_trajectory_generation/cmake-build-release/CMakeFiles/CMakeTmp'
+Run Build Command:"/usr/bin/make" "cmTC_e510f/fast"
+/usr/bin/make -f CMakeFiles/cmTC_e510f.dir/build.make CMakeFiles/cmTC_e510f.dir/build
+make[1]: Entering directory '/home/nilsiism/catkin_ws_ptp/src/ptp_ros/ext/prob_trajectory_planning/src/ext/mav_tube_trajectory_generation/cmake-build-release/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_e510f.dir/testCCompiler.c.o
+/usr/bin/cc    -o CMakeFiles/cmTC_e510f.dir/testCCompiler.c.o   -c /home/nilsiism/catkin_ws_ptp/src/ptp_ros/ext/prob_trajectory_planning/src/ext/mav_tube_trajectory_generation/cmake-build-release/CMakeFiles/CMakeTmp/testCCompiler.c
+Linking C executable cmTC_e510f
+/opt/clion-2018.1.3/bin/cmake/bin/cmake -E cmake_link_script CMakeFiles/cmTC_e510f.dir/link.txt --verbose=1
+/usr/bin/cc      -rdynamic CMakeFiles/cmTC_e510f.dir/testCCompiler.c.o  -o cmTC_e510f 
+make[1]: Leaving directory '/home/nilsiism/catkin_ws_ptp/src/ptp_ros/ext/prob_trajectory_planning/src/ext/mav_tube_trajectory_generation/cmake-build-release/CMakeFiles/CMakeTmp'
 
 
 Detecting C compiler ABI info compiled with the following output:
-Change Dir: /home/nilsiism/workspace/prob_trajectory_planning/src/ext/mav_trajectory_generation/cmake-build-release/CMakeFiles/CMakeTmp
+Change Dir: /home/nilsiism/catkin_ws_ptp/src/ptp_ros/ext/prob_trajectory_planning/src/ext/mav_tube_trajectory_generation/cmake-build-release/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/make" "cmTC_f03a4/fast"
-/usr/bin/make -f CMakeFiles/cmTC_f03a4.dir/build.make CMakeFiles/cmTC_f03a4.dir/build
-make[1]: Entering directory '/home/nilsiism/workspace/prob_trajectory_planning/src/ext/mav_trajectory_generation/cmake-build-release/CMakeFiles/CMakeTmp'
-Building C object CMakeFiles/cmTC_f03a4.dir/CMakeCCompilerABI.c.o
-/usr/bin/cc    -o CMakeFiles/cmTC_f03a4.dir/CMakeCCompilerABI.c.o   -c /opt/clion-2018.1.3/bin/cmake/share/cmake-3.10/Modules/CMakeCCompilerABI.c
-Linking C executable cmTC_f03a4
-/opt/clion-2018.1.3/bin/cmake/bin/cmake -E cmake_link_script CMakeFiles/cmTC_f03a4.dir/link.txt --verbose=1
-/usr/bin/cc     -v -rdynamic CMakeFiles/cmTC_f03a4.dir/CMakeCCompilerABI.c.o  -o cmTC_f03a4 
+Run Build Command:"/usr/bin/make" "cmTC_ccc58/fast"
+/usr/bin/make -f CMakeFiles/cmTC_ccc58.dir/build.make CMakeFiles/cmTC_ccc58.dir/build
+make[1]: Entering directory '/home/nilsiism/catkin_ws_ptp/src/ptp_ros/ext/prob_trajectory_planning/src/ext/mav_tube_trajectory_generation/cmake-build-release/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_ccc58.dir/CMakeCCompilerABI.c.o
+/usr/bin/cc    -o CMakeFiles/cmTC_ccc58.dir/CMakeCCompilerABI.c.o   -c /opt/clion-2018.1.3/bin/cmake/share/cmake-3.10/Modules/CMakeCCompilerABI.c
+Linking C executable cmTC_ccc58
+/opt/clion-2018.1.3/bin/cmake/bin/cmake -E cmake_link_script CMakeFiles/cmTC_ccc58.dir/link.txt --verbose=1
+/usr/bin/cc     -v -rdynamic CMakeFiles/cmTC_ccc58.dir/CMakeCCompilerABI.c.o  -o cmTC_ccc58 
 Using built-in specs.
 COLLECT_GCC=/usr/bin/cc
 COLLECT_LTO_WRAPPER=/usr/lib/gcc/x86_64-linux-gnu/5/lto-wrapper
@@ -59,23 +59,23 @@ Thread model: posix
 gcc version 5.4.0 20160609 (Ubuntu 5.4.0-6ubuntu1~16.04.10) 
 COMPILER_PATH=/usr/lib/gcc/x86_64-linux-gnu/5/:/usr/lib/gcc/x86_64-linux-gnu/5/:/usr/lib/gcc/x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/5/:/usr/lib/gcc/x86_64-linux-gnu/
 LIBRARY_PATH=/usr/lib/gcc/x86_64-linux-gnu/5/:/usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/5/../../../../lib/:/lib/x86_64-linux-gnu/:/lib/../lib/:/usr/lib/x86_64-linux-gnu/:/usr/lib/../lib/:/usr/lib/gcc/x86_64-linux-gnu/5/../../../:/lib/:/usr/lib/
-COLLECT_GCC_OPTIONS='-v' '-rdynamic' '-o' 'cmTC_f03a4' '-mtune=generic' '-march=x86-64'
- /usr/lib/gcc/x86_64-linux-gnu/5/collect2 -plugin /usr/lib/gcc/x86_64-linux-gnu/5/liblto_plugin.so -plugin-opt=/usr/lib/gcc/x86_64-linux-gnu/5/lto-wrapper -plugin-opt=-fresolution=/tmp/cc4yDHYM.res -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s --sysroot=/ --build-id --eh-frame-hdr -m elf_x86_64 --hash-style=gnu --as-needed -export-dynamic -dynamic-linker /lib64/ld-linux-x86-64.so.2 -z relro -o cmTC_f03a4 /usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu/crt1.o /usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu/crti.o /usr/lib/gcc/x86_64-linux-gnu/5/crtbegin.o -L/usr/lib/gcc/x86_64-linux-gnu/5 -L/usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu -L/usr/lib/gcc/x86_64-linux-gnu/5/../../../../lib -L/lib/x86_64-linux-gnu -L/lib/../lib -L/usr/lib/x86_64-linux-gnu -L/usr/lib/../lib -L/usr/lib/gcc/x86_64-linux-gnu/5/../../.. CMakeFiles/cmTC_f03a4.dir/CMakeCCompilerABI.c.o -lgcc --as-needed -lgcc_s --no-as-needed -lc -lgcc --as-needed -lgcc_s --no-as-needed /usr/lib/gcc/x86_64-linux-gnu/5/crtend.o /usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu/crtn.o
-make[1]: Leaving directory '/home/nilsiism/workspace/prob_trajectory_planning/src/ext/mav_trajectory_generation/cmake-build-release/CMakeFiles/CMakeTmp'
+COLLECT_GCC_OPTIONS='-v' '-rdynamic' '-o' 'cmTC_ccc58' '-mtune=generic' '-march=x86-64'
+ /usr/lib/gcc/x86_64-linux-gnu/5/collect2 -plugin /usr/lib/gcc/x86_64-linux-gnu/5/liblto_plugin.so -plugin-opt=/usr/lib/gcc/x86_64-linux-gnu/5/lto-wrapper -plugin-opt=-fresolution=/tmp/ccG3n5ip.res -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s --sysroot=/ --build-id --eh-frame-hdr -m elf_x86_64 --hash-style=gnu --as-needed -export-dynamic -dynamic-linker /lib64/ld-linux-x86-64.so.2 -z relro -o cmTC_ccc58 /usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu/crt1.o /usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu/crti.o /usr/lib/gcc/x86_64-linux-gnu/5/crtbegin.o -L/usr/lib/gcc/x86_64-linux-gnu/5 -L/usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu -L/usr/lib/gcc/x86_64-linux-gnu/5/../../../../lib -L/lib/x86_64-linux-gnu -L/lib/../lib -L/usr/lib/x86_64-linux-gnu -L/usr/lib/../lib -L/usr/lib/gcc/x86_64-linux-gnu/5/../../.. CMakeFiles/cmTC_ccc58.dir/CMakeCCompilerABI.c.o -lgcc --as-needed -lgcc_s --no-as-needed -lc -lgcc --as-needed -lgcc_s --no-as-needed /usr/lib/gcc/x86_64-linux-gnu/5/crtend.o /usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu/crtn.o
+make[1]: Leaving directory '/home/nilsiism/catkin_ws_ptp/src/ptp_ros/ext/prob_trajectory_planning/src/ext/mav_tube_trajectory_generation/cmake-build-release/CMakeFiles/CMakeTmp'
 
 
 Parsed C implicit link information from above output:
   link line regex: [^( *|.*[/\])(ld|CMAKE_LINK_STARTFILE-NOTFOUND|([^/\]+-)?ld|collect2)[^/\]*( |$)]
-  ignore line: [Change Dir: /home/nilsiism/workspace/prob_trajectory_planning/src/ext/mav_trajectory_generation/cmake-build-release/CMakeFiles/CMakeTmp]
+  ignore line: [Change Dir: /home/nilsiism/catkin_ws_ptp/src/ptp_ros/ext/prob_trajectory_planning/src/ext/mav_tube_trajectory_generation/cmake-build-release/CMakeFiles/CMakeTmp]
   ignore line: []
-  ignore line: [Run Build Command:"/usr/bin/make" "cmTC_f03a4/fast"]
-  ignore line: [/usr/bin/make -f CMakeFiles/cmTC_f03a4.dir/build.make CMakeFiles/cmTC_f03a4.dir/build]
-  ignore line: [make[1]: Entering directory '/home/nilsiism/workspace/prob_trajectory_planning/src/ext/mav_trajectory_generation/cmake-build-release/CMakeFiles/CMakeTmp']
-  ignore line: [Building C object CMakeFiles/cmTC_f03a4.dir/CMakeCCompilerABI.c.o]
-  ignore line: [/usr/bin/cc    -o CMakeFiles/cmTC_f03a4.dir/CMakeCCompilerABI.c.o   -c /opt/clion-2018.1.3/bin/cmake/share/cmake-3.10/Modules/CMakeCCompilerABI.c]
-  ignore line: [Linking C executable cmTC_f03a4]
-  ignore line: [/opt/clion-2018.1.3/bin/cmake/bin/cmake -E cmake_link_script CMakeFiles/cmTC_f03a4.dir/link.txt --verbose=1]
-  ignore line: [/usr/bin/cc     -v -rdynamic CMakeFiles/cmTC_f03a4.dir/CMakeCCompilerABI.c.o  -o cmTC_f03a4 ]
+  ignore line: [Run Build Command:"/usr/bin/make" "cmTC_ccc58/fast"]
+  ignore line: [/usr/bin/make -f CMakeFiles/cmTC_ccc58.dir/build.make CMakeFiles/cmTC_ccc58.dir/build]
+  ignore line: [make[1]: Entering directory '/home/nilsiism/catkin_ws_ptp/src/ptp_ros/ext/prob_trajectory_planning/src/ext/mav_tube_trajectory_generation/cmake-build-release/CMakeFiles/CMakeTmp']
+  ignore line: [Building C object CMakeFiles/cmTC_ccc58.dir/CMakeCCompilerABI.c.o]
+  ignore line: [/usr/bin/cc    -o CMakeFiles/cmTC_ccc58.dir/CMakeCCompilerABI.c.o   -c /opt/clion-2018.1.3/bin/cmake/share/cmake-3.10/Modules/CMakeCCompilerABI.c]
+  ignore line: [Linking C executable cmTC_ccc58]
+  ignore line: [/opt/clion-2018.1.3/bin/cmake/bin/cmake -E cmake_link_script CMakeFiles/cmTC_ccc58.dir/link.txt --verbose=1]
+  ignore line: [/usr/bin/cc     -v -rdynamic CMakeFiles/cmTC_ccc58.dir/CMakeCCompilerABI.c.o  -o cmTC_ccc58 ]
   ignore line: [Using built-in specs.]
   ignore line: [COLLECT_GCC=/usr/bin/cc]
   ignore line: [COLLECT_LTO_WRAPPER=/usr/lib/gcc/x86_64-linux-gnu/5/lto-wrapper]
@@ -85,13 +85,13 @@ Parsed C implicit link information from above output:
   ignore line: [gcc version 5.4.0 20160609 (Ubuntu 5.4.0-6ubuntu1~16.04.10) ]
   ignore line: [COMPILER_PATH=/usr/lib/gcc/x86_64-linux-gnu/5/:/usr/lib/gcc/x86_64-linux-gnu/5/:/usr/lib/gcc/x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/5/:/usr/lib/gcc/x86_64-linux-gnu/]
   ignore line: [LIBRARY_PATH=/usr/lib/gcc/x86_64-linux-gnu/5/:/usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/5/../../../../lib/:/lib/x86_64-linux-gnu/:/lib/../lib/:/usr/lib/x86_64-linux-gnu/:/usr/lib/../lib/:/usr/lib/gcc/x86_64-linux-gnu/5/../../../:/lib/:/usr/lib/]
-  ignore line: [COLLECT_GCC_OPTIONS='-v' '-rdynamic' '-o' 'cmTC_f03a4' '-mtune=generic' '-march=x86-64']
-  link line: [ /usr/lib/gcc/x86_64-linux-gnu/5/collect2 -plugin /usr/lib/gcc/x86_64-linux-gnu/5/liblto_plugin.so -plugin-opt=/usr/lib/gcc/x86_64-linux-gnu/5/lto-wrapper -plugin-opt=-fresolution=/tmp/cc4yDHYM.res -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s --sysroot=/ --build-id --eh-frame-hdr -m elf_x86_64 --hash-style=gnu --as-needed -export-dynamic -dynamic-linker /lib64/ld-linux-x86-64.so.2 -z relro -o cmTC_f03a4 /usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu/crt1.o /usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu/crti.o /usr/lib/gcc/x86_64-linux-gnu/5/crtbegin.o -L/usr/lib/gcc/x86_64-linux-gnu/5 -L/usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu -L/usr/lib/gcc/x86_64-linux-gnu/5/../../../../lib -L/lib/x86_64-linux-gnu -L/lib/../lib -L/usr/lib/x86_64-linux-gnu -L/usr/lib/../lib -L/usr/lib/gcc/x86_64-linux-gnu/5/../../.. CMakeFiles/cmTC_f03a4.dir/CMakeCCompilerABI.c.o -lgcc --as-needed -lgcc_s --no-as-needed -lc -lgcc --as-needed -lgcc_s --no-as-needed /usr/lib/gcc/x86_64-linux-gnu/5/crtend.o /usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu/crtn.o]
+  ignore line: [COLLECT_GCC_OPTIONS='-v' '-rdynamic' '-o' 'cmTC_ccc58' '-mtune=generic' '-march=x86-64']
+  link line: [ /usr/lib/gcc/x86_64-linux-gnu/5/collect2 -plugin /usr/lib/gcc/x86_64-linux-gnu/5/liblto_plugin.so -plugin-opt=/usr/lib/gcc/x86_64-linux-gnu/5/lto-wrapper -plugin-opt=-fresolution=/tmp/ccG3n5ip.res -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s --sysroot=/ --build-id --eh-frame-hdr -m elf_x86_64 --hash-style=gnu --as-needed -export-dynamic -dynamic-linker /lib64/ld-linux-x86-64.so.2 -z relro -o cmTC_ccc58 /usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu/crt1.o /usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu/crti.o /usr/lib/gcc/x86_64-linux-gnu/5/crtbegin.o -L/usr/lib/gcc/x86_64-linux-gnu/5 -L/usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu -L/usr/lib/gcc/x86_64-linux-gnu/5/../../../../lib -L/lib/x86_64-linux-gnu -L/lib/../lib -L/usr/lib/x86_64-linux-gnu -L/usr/lib/../lib -L/usr/lib/gcc/x86_64-linux-gnu/5/../../.. CMakeFiles/cmTC_ccc58.dir/CMakeCCompilerABI.c.o -lgcc --as-needed -lgcc_s --no-as-needed -lc -lgcc --as-needed -lgcc_s --no-as-needed /usr/lib/gcc/x86_64-linux-gnu/5/crtend.o /usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu/crtn.o]
     arg [/usr/lib/gcc/x86_64-linux-gnu/5/collect2] ==> ignore
     arg [-plugin] ==> ignore
     arg [/usr/lib/gcc/x86_64-linux-gnu/5/liblto_plugin.so] ==> ignore
     arg [-plugin-opt=/usr/lib/gcc/x86_64-linux-gnu/5/lto-wrapper] ==> ignore
-    arg [-plugin-opt=-fresolution=/tmp/cc4yDHYM.res] ==> ignore
+    arg [-plugin-opt=-fresolution=/tmp/ccG3n5ip.res] ==> ignore
     arg [-plugin-opt=-pass-through=-lgcc] ==> ignore
     arg [-plugin-opt=-pass-through=-lgcc_s] ==> ignore
     arg [-plugin-opt=-pass-through=-lc] ==> ignore
@@ -109,7 +109,7 @@ Parsed C implicit link information from above output:
     arg [/lib64/ld-linux-x86-64.so.2] ==> ignore
     arg [-zrelro] ==> ignore
     arg [-o] ==> ignore
-    arg [cmTC_f03a4] ==> ignore
+    arg [cmTC_ccc58] ==> ignore
     arg [/usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu/crt1.o] ==> ignore
     arg [/usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu/crti.o] ==> ignore
     arg [/usr/lib/gcc/x86_64-linux-gnu/5/crtbegin.o] ==> ignore
@@ -121,7 +121,7 @@ Parsed C implicit link information from above output:
     arg [-L/usr/lib/x86_64-linux-gnu] ==> dir [/usr/lib/x86_64-linux-gnu]
     arg [-L/usr/lib/../lib] ==> dir [/usr/lib/../lib]
     arg [-L/usr/lib/gcc/x86_64-linux-gnu/5/../../..] ==> dir [/usr/lib/gcc/x86_64-linux-gnu/5/../../..]
-    arg [CMakeFiles/cmTC_f03a4.dir/CMakeCCompilerABI.c.o] ==> ignore
+    arg [CMakeFiles/cmTC_ccc58.dir/CMakeCCompilerABI.c.o] ==> ignore
     arg [-lgcc] ==> lib [gcc]
     arg [--as-needed] ==> ignore
     arg [-lgcc_s] ==> lib [gcc_s]
@@ -149,17 +149,17 @@ Parsed C implicit link information from above output:
 
 
 Detecting C [-std=c11] compiler features compiled with the following output:
-Change Dir: /home/nilsiism/workspace/prob_trajectory_planning/src/ext/mav_trajectory_generation/cmake-build-release/CMakeFiles/CMakeTmp
+Change Dir: /home/nilsiism/catkin_ws_ptp/src/ptp_ros/ext/prob_trajectory_planning/src/ext/mav_tube_trajectory_generation/cmake-build-release/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/make" "cmTC_2057a/fast"
-/usr/bin/make -f CMakeFiles/cmTC_2057a.dir/build.make CMakeFiles/cmTC_2057a.dir/build
-make[1]: Entering directory '/home/nilsiism/workspace/prob_trajectory_planning/src/ext/mav_trajectory_generation/cmake-build-release/CMakeFiles/CMakeTmp'
-Building C object CMakeFiles/cmTC_2057a.dir/feature_tests.c.o
-/usr/bin/cc   -std=c11 -o CMakeFiles/cmTC_2057a.dir/feature_tests.c.o   -c /home/nilsiism/workspace/prob_trajectory_planning/src/ext/mav_trajectory_generation/cmake-build-release/CMakeFiles/feature_tests.c
-Linking C executable cmTC_2057a
-/opt/clion-2018.1.3/bin/cmake/bin/cmake -E cmake_link_script CMakeFiles/cmTC_2057a.dir/link.txt --verbose=1
-/usr/bin/cc      -rdynamic CMakeFiles/cmTC_2057a.dir/feature_tests.c.o  -o cmTC_2057a 
-make[1]: Leaving directory '/home/nilsiism/workspace/prob_trajectory_planning/src/ext/mav_trajectory_generation/cmake-build-release/CMakeFiles/CMakeTmp'
+Run Build Command:"/usr/bin/make" "cmTC_d1a58/fast"
+/usr/bin/make -f CMakeFiles/cmTC_d1a58.dir/build.make CMakeFiles/cmTC_d1a58.dir/build
+make[1]: Entering directory '/home/nilsiism/catkin_ws_ptp/src/ptp_ros/ext/prob_trajectory_planning/src/ext/mav_tube_trajectory_generation/cmake-build-release/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_d1a58.dir/feature_tests.c.o
+/usr/bin/cc   -std=c11 -o CMakeFiles/cmTC_d1a58.dir/feature_tests.c.o   -c /home/nilsiism/catkin_ws_ptp/src/ptp_ros/ext/prob_trajectory_planning/src/ext/mav_tube_trajectory_generation/cmake-build-release/CMakeFiles/feature_tests.c
+Linking C executable cmTC_d1a58
+/opt/clion-2018.1.3/bin/cmake/bin/cmake -E cmake_link_script CMakeFiles/cmTC_d1a58.dir/link.txt --verbose=1
+/usr/bin/cc      -rdynamic CMakeFiles/cmTC_d1a58.dir/feature_tests.c.o  -o cmTC_d1a58 
+make[1]: Leaving directory '/home/nilsiism/catkin_ws_ptp/src/ptp_ros/ext/prob_trajectory_planning/src/ext/mav_tube_trajectory_generation/cmake-build-release/CMakeFiles/CMakeTmp'
 
 
     Feature record: C_FEATURE:1c_function_prototypes
@@ -169,17 +169,17 @@ make[1]: Leaving directory '/home/nilsiism/workspace/prob_trajectory_planning/sr
 
 
 Detecting C [-std=c99] compiler features compiled with the following output:
-Change Dir: /home/nilsiism/workspace/prob_trajectory_planning/src/ext/mav_trajectory_generation/cmake-build-release/CMakeFiles/CMakeTmp
+Change Dir: /home/nilsiism/catkin_ws_ptp/src/ptp_ros/ext/prob_trajectory_planning/src/ext/mav_tube_trajectory_generation/cmake-build-release/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/make" "cmTC_3d35b/fast"
-/usr/bin/make -f CMakeFiles/cmTC_3d35b.dir/build.make CMakeFiles/cmTC_3d35b.dir/build
-make[1]: Entering directory '/home/nilsiism/workspace/prob_trajectory_planning/src/ext/mav_trajectory_generation/cmake-build-release/CMakeFiles/CMakeTmp'
-Building C object CMakeFiles/cmTC_3d35b.dir/feature_tests.c.o
-/usr/bin/cc   -std=c99 -o CMakeFiles/cmTC_3d35b.dir/feature_tests.c.o   -c /home/nilsiism/workspace/prob_trajectory_planning/src/ext/mav_trajectory_generation/cmake-build-release/CMakeFiles/feature_tests.c
-Linking C executable cmTC_3d35b
-/opt/clion-2018.1.3/bin/cmake/bin/cmake -E cmake_link_script CMakeFiles/cmTC_3d35b.dir/link.txt --verbose=1
-/usr/bin/cc      -rdynamic CMakeFiles/cmTC_3d35b.dir/feature_tests.c.o  -o cmTC_3d35b 
-make[1]: Leaving directory '/home/nilsiism/workspace/prob_trajectory_planning/src/ext/mav_trajectory_generation/cmake-build-release/CMakeFiles/CMakeTmp'
+Run Build Command:"/usr/bin/make" "cmTC_c981b/fast"
+/usr/bin/make -f CMakeFiles/cmTC_c981b.dir/build.make CMakeFiles/cmTC_c981b.dir/build
+make[1]: Entering directory '/home/nilsiism/catkin_ws_ptp/src/ptp_ros/ext/prob_trajectory_planning/src/ext/mav_tube_trajectory_generation/cmake-build-release/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_c981b.dir/feature_tests.c.o
+/usr/bin/cc   -std=c99 -o CMakeFiles/cmTC_c981b.dir/feature_tests.c.o   -c /home/nilsiism/catkin_ws_ptp/src/ptp_ros/ext/prob_trajectory_planning/src/ext/mav_tube_trajectory_generation/cmake-build-release/CMakeFiles/feature_tests.c
+Linking C executable cmTC_c981b
+/opt/clion-2018.1.3/bin/cmake/bin/cmake -E cmake_link_script CMakeFiles/cmTC_c981b.dir/link.txt --verbose=1
+/usr/bin/cc      -rdynamic CMakeFiles/cmTC_c981b.dir/feature_tests.c.o  -o cmTC_c981b 
+make[1]: Leaving directory '/home/nilsiism/catkin_ws_ptp/src/ptp_ros/ext/prob_trajectory_planning/src/ext/mav_tube_trajectory_generation/cmake-build-release/CMakeFiles/CMakeTmp'
 
 
     Feature record: C_FEATURE:1c_function_prototypes
@@ -189,17 +189,17 @@ make[1]: Leaving directory '/home/nilsiism/workspace/prob_trajectory_planning/sr
 
 
 Detecting C [-std=c90] compiler features compiled with the following output:
-Change Dir: /home/nilsiism/workspace/prob_trajectory_planning/src/ext/mav_trajectory_generation/cmake-build-release/CMakeFiles/CMakeTmp
+Change Dir: /home/nilsiism/catkin_ws_ptp/src/ptp_ros/ext/prob_trajectory_planning/src/ext/mav_tube_trajectory_generation/cmake-build-release/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/make" "cmTC_8ad72/fast"
-/usr/bin/make -f CMakeFiles/cmTC_8ad72.dir/build.make CMakeFiles/cmTC_8ad72.dir/build
-make[1]: Entering directory '/home/nilsiism/workspace/prob_trajectory_planning/src/ext/mav_trajectory_generation/cmake-build-release/CMakeFiles/CMakeTmp'
-Building C object CMakeFiles/cmTC_8ad72.dir/feature_tests.c.o
-/usr/bin/cc   -std=c90 -o CMakeFiles/cmTC_8ad72.dir/feature_tests.c.o   -c /home/nilsiism/workspace/prob_trajectory_planning/src/ext/mav_trajectory_generation/cmake-build-release/CMakeFiles/feature_tests.c
-Linking C executable cmTC_8ad72
-/opt/clion-2018.1.3/bin/cmake/bin/cmake -E cmake_link_script CMakeFiles/cmTC_8ad72.dir/link.txt --verbose=1
-/usr/bin/cc      -rdynamic CMakeFiles/cmTC_8ad72.dir/feature_tests.c.o  -o cmTC_8ad72 
-make[1]: Leaving directory '/home/nilsiism/workspace/prob_trajectory_planning/src/ext/mav_trajectory_generation/cmake-build-release/CMakeFiles/CMakeTmp'
+Run Build Command:"/usr/bin/make" "cmTC_3595f/fast"
+/usr/bin/make -f CMakeFiles/cmTC_3595f.dir/build.make CMakeFiles/cmTC_3595f.dir/build
+make[1]: Entering directory '/home/nilsiism/catkin_ws_ptp/src/ptp_ros/ext/prob_trajectory_planning/src/ext/mav_tube_trajectory_generation/cmake-build-release/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_3595f.dir/feature_tests.c.o
+/usr/bin/cc   -std=c90 -o CMakeFiles/cmTC_3595f.dir/feature_tests.c.o   -c /home/nilsiism/catkin_ws_ptp/src/ptp_ros/ext/prob_trajectory_planning/src/ext/mav_tube_trajectory_generation/cmake-build-release/CMakeFiles/feature_tests.c
+Linking C executable cmTC_3595f
+/opt/clion-2018.1.3/bin/cmake/bin/cmake -E cmake_link_script CMakeFiles/cmTC_3595f.dir/link.txt --verbose=1
+/usr/bin/cc      -rdynamic CMakeFiles/cmTC_3595f.dir/feature_tests.c.o  -o cmTC_3595f 
+make[1]: Leaving directory '/home/nilsiism/catkin_ws_ptp/src/ptp_ros/ext/prob_trajectory_planning/src/ext/mav_tube_trajectory_generation/cmake-build-release/CMakeFiles/CMakeTmp'
 
 
     Feature record: C_FEATURE:1c_function_prototypes
@@ -207,30 +207,30 @@ make[1]: Leaving directory '/home/nilsiism/workspace/prob_trajectory_planning/sr
     Feature record: C_FEATURE:0c_static_assert
     Feature record: C_FEATURE:0c_variadic_macros
 Determining if the CXX compiler works passed with the following output:
-Change Dir: /home/nilsiism/workspace/prob_trajectory_planning/src/ext/mav_trajectory_generation/cmake-build-release/CMakeFiles/CMakeTmp
+Change Dir: /home/nilsiism/catkin_ws_ptp/src/ptp_ros/ext/prob_trajectory_planning/src/ext/mav_tube_trajectory_generation/cmake-build-release/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/make" "cmTC_1a6d7/fast"
-/usr/bin/make -f CMakeFiles/cmTC_1a6d7.dir/build.make CMakeFiles/cmTC_1a6d7.dir/build
-make[1]: Entering directory '/home/nilsiism/workspace/prob_trajectory_planning/src/ext/mav_trajectory_generation/cmake-build-release/CMakeFiles/CMakeTmp'
-Building CXX object CMakeFiles/cmTC_1a6d7.dir/testCXXCompiler.cxx.o
-/usr/bin/c++     -o CMakeFiles/cmTC_1a6d7.dir/testCXXCompiler.cxx.o -c /home/nilsiism/workspace/prob_trajectory_planning/src/ext/mav_trajectory_generation/cmake-build-release/CMakeFiles/CMakeTmp/testCXXCompiler.cxx
-Linking CXX executable cmTC_1a6d7
-/opt/clion-2018.1.3/bin/cmake/bin/cmake -E cmake_link_script CMakeFiles/cmTC_1a6d7.dir/link.txt --verbose=1
-/usr/bin/c++       -rdynamic CMakeFiles/cmTC_1a6d7.dir/testCXXCompiler.cxx.o  -o cmTC_1a6d7 
-make[1]: Leaving directory '/home/nilsiism/workspace/prob_trajectory_planning/src/ext/mav_trajectory_generation/cmake-build-release/CMakeFiles/CMakeTmp'
+Run Build Command:"/usr/bin/make" "cmTC_0d228/fast"
+/usr/bin/make -f CMakeFiles/cmTC_0d228.dir/build.make CMakeFiles/cmTC_0d228.dir/build
+make[1]: Entering directory '/home/nilsiism/catkin_ws_ptp/src/ptp_ros/ext/prob_trajectory_planning/src/ext/mav_tube_trajectory_generation/cmake-build-release/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_0d228.dir/testCXXCompiler.cxx.o
+/usr/bin/c++     -o CMakeFiles/cmTC_0d228.dir/testCXXCompiler.cxx.o -c /home/nilsiism/catkin_ws_ptp/src/ptp_ros/ext/prob_trajectory_planning/src/ext/mav_tube_trajectory_generation/cmake-build-release/CMakeFiles/CMakeTmp/testCXXCompiler.cxx
+Linking CXX executable cmTC_0d228
+/opt/clion-2018.1.3/bin/cmake/bin/cmake -E cmake_link_script CMakeFiles/cmTC_0d228.dir/link.txt --verbose=1
+/usr/bin/c++       -rdynamic CMakeFiles/cmTC_0d228.dir/testCXXCompiler.cxx.o  -o cmTC_0d228 
+make[1]: Leaving directory '/home/nilsiism/catkin_ws_ptp/src/ptp_ros/ext/prob_trajectory_planning/src/ext/mav_tube_trajectory_generation/cmake-build-release/CMakeFiles/CMakeTmp'
 
 
 Detecting CXX compiler ABI info compiled with the following output:
-Change Dir: /home/nilsiism/workspace/prob_trajectory_planning/src/ext/mav_trajectory_generation/cmake-build-release/CMakeFiles/CMakeTmp
+Change Dir: /home/nilsiism/catkin_ws_ptp/src/ptp_ros/ext/prob_trajectory_planning/src/ext/mav_tube_trajectory_generation/cmake-build-release/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/make" "cmTC_0aa94/fast"
-/usr/bin/make -f CMakeFiles/cmTC_0aa94.dir/build.make CMakeFiles/cmTC_0aa94.dir/build
-make[1]: Entering directory '/home/nilsiism/workspace/prob_trajectory_planning/src/ext/mav_trajectory_generation/cmake-build-release/CMakeFiles/CMakeTmp'
-Building CXX object CMakeFiles/cmTC_0aa94.dir/CMakeCXXCompilerABI.cpp.o
-/usr/bin/c++     -o CMakeFiles/cmTC_0aa94.dir/CMakeCXXCompilerABI.cpp.o -c /opt/clion-2018.1.3/bin/cmake/share/cmake-3.10/Modules/CMakeCXXCompilerABI.cpp
-Linking CXX executable cmTC_0aa94
-/opt/clion-2018.1.3/bin/cmake/bin/cmake -E cmake_link_script CMakeFiles/cmTC_0aa94.dir/link.txt --verbose=1
-/usr/bin/c++      -v -rdynamic CMakeFiles/cmTC_0aa94.dir/CMakeCXXCompilerABI.cpp.o  -o cmTC_0aa94 
+Run Build Command:"/usr/bin/make" "cmTC_ff2eb/fast"
+/usr/bin/make -f CMakeFiles/cmTC_ff2eb.dir/build.make CMakeFiles/cmTC_ff2eb.dir/build
+make[1]: Entering directory '/home/nilsiism/catkin_ws_ptp/src/ptp_ros/ext/prob_trajectory_planning/src/ext/mav_tube_trajectory_generation/cmake-build-release/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_ff2eb.dir/CMakeCXXCompilerABI.cpp.o
+/usr/bin/c++     -o CMakeFiles/cmTC_ff2eb.dir/CMakeCXXCompilerABI.cpp.o -c /opt/clion-2018.1.3/bin/cmake/share/cmake-3.10/Modules/CMakeCXXCompilerABI.cpp
+Linking CXX executable cmTC_ff2eb
+/opt/clion-2018.1.3/bin/cmake/bin/cmake -E cmake_link_script CMakeFiles/cmTC_ff2eb.dir/link.txt --verbose=1
+/usr/bin/c++      -v -rdynamic CMakeFiles/cmTC_ff2eb.dir/CMakeCXXCompilerABI.cpp.o  -o cmTC_ff2eb 
 Using built-in specs.
 COLLECT_GCC=/usr/bin/c++
 COLLECT_LTO_WRAPPER=/usr/lib/gcc/x86_64-linux-gnu/5/lto-wrapper
@@ -240,23 +240,23 @@ Thread model: posix
 gcc version 5.4.0 20160609 (Ubuntu 5.4.0-6ubuntu1~16.04.10) 
 COMPILER_PATH=/usr/lib/gcc/x86_64-linux-gnu/5/:/usr/lib/gcc/x86_64-linux-gnu/5/:/usr/lib/gcc/x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/5/:/usr/lib/gcc/x86_64-linux-gnu/
 LIBRARY_PATH=/usr/lib/gcc/x86_64-linux-gnu/5/:/usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/5/../../../../lib/:/lib/x86_64-linux-gnu/:/lib/../lib/:/usr/lib/x86_64-linux-gnu/:/usr/lib/../lib/:/usr/lib/gcc/x86_64-linux-gnu/5/../../../:/lib/:/usr/lib/
-COLLECT_GCC_OPTIONS='-v' '-rdynamic' '-o' 'cmTC_0aa94' '-shared-libgcc' '-mtune=generic' '-march=x86-64'
- /usr/lib/gcc/x86_64-linux-gnu/5/collect2 -plugin /usr/lib/gcc/x86_64-linux-gnu/5/liblto_plugin.so -plugin-opt=/usr/lib/gcc/x86_64-linux-gnu/5/lto-wrapper -plugin-opt=-fresolution=/tmp/ccEilphy.res -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc --sysroot=/ --build-id --eh-frame-hdr -m elf_x86_64 --hash-style=gnu --as-needed -export-dynamic -dynamic-linker /lib64/ld-linux-x86-64.so.2 -z relro -o cmTC_0aa94 /usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu/crt1.o /usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu/crti.o /usr/lib/gcc/x86_64-linux-gnu/5/crtbegin.o -L/usr/lib/gcc/x86_64-linux-gnu/5 -L/usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu -L/usr/lib/gcc/x86_64-linux-gnu/5/../../../../lib -L/lib/x86_64-linux-gnu -L/lib/../lib -L/usr/lib/x86_64-linux-gnu -L/usr/lib/../lib -L/usr/lib/gcc/x86_64-linux-gnu/5/../../.. CMakeFiles/cmTC_0aa94.dir/CMakeCXXCompilerABI.cpp.o -lstdc++ -lm -lgcc_s -lgcc -lc -lgcc_s -lgcc /usr/lib/gcc/x86_64-linux-gnu/5/crtend.o /usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu/crtn.o
-make[1]: Leaving directory '/home/nilsiism/workspace/prob_trajectory_planning/src/ext/mav_trajectory_generation/cmake-build-release/CMakeFiles/CMakeTmp'
+COLLECT_GCC_OPTIONS='-v' '-rdynamic' '-o' 'cmTC_ff2eb' '-shared-libgcc' '-mtune=generic' '-march=x86-64'
+ /usr/lib/gcc/x86_64-linux-gnu/5/collect2 -plugin /usr/lib/gcc/x86_64-linux-gnu/5/liblto_plugin.so -plugin-opt=/usr/lib/gcc/x86_64-linux-gnu/5/lto-wrapper -plugin-opt=-fresolution=/tmp/cc2B8zAH.res -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc --sysroot=/ --build-id --eh-frame-hdr -m elf_x86_64 --hash-style=gnu --as-needed -export-dynamic -dynamic-linker /lib64/ld-linux-x86-64.so.2 -z relro -o cmTC_ff2eb /usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu/crt1.o /usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu/crti.o /usr/lib/gcc/x86_64-linux-gnu/5/crtbegin.o -L/usr/lib/gcc/x86_64-linux-gnu/5 -L/usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu -L/usr/lib/gcc/x86_64-linux-gnu/5/../../../../lib -L/lib/x86_64-linux-gnu -L/lib/../lib -L/usr/lib/x86_64-linux-gnu -L/usr/lib/../lib -L/usr/lib/gcc/x86_64-linux-gnu/5/../../.. CMakeFiles/cmTC_ff2eb.dir/CMakeCXXCompilerABI.cpp.o -lstdc++ -lm -lgcc_s -lgcc -lc -lgcc_s -lgcc /usr/lib/gcc/x86_64-linux-gnu/5/crtend.o /usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu/crtn.o
+make[1]: Leaving directory '/home/nilsiism/catkin_ws_ptp/src/ptp_ros/ext/prob_trajectory_planning/src/ext/mav_tube_trajectory_generation/cmake-build-release/CMakeFiles/CMakeTmp'
 
 
 Parsed CXX implicit link information from above output:
   link line regex: [^( *|.*[/\])(ld|CMAKE_LINK_STARTFILE-NOTFOUND|([^/\]+-)?ld|collect2)[^/\]*( |$)]
-  ignore line: [Change Dir: /home/nilsiism/workspace/prob_trajectory_planning/src/ext/mav_trajectory_generation/cmake-build-release/CMakeFiles/CMakeTmp]
+  ignore line: [Change Dir: /home/nilsiism/catkin_ws_ptp/src/ptp_ros/ext/prob_trajectory_planning/src/ext/mav_tube_trajectory_generation/cmake-build-release/CMakeFiles/CMakeTmp]
   ignore line: []
-  ignore line: [Run Build Command:"/usr/bin/make" "cmTC_0aa94/fast"]
-  ignore line: [/usr/bin/make -f CMakeFiles/cmTC_0aa94.dir/build.make CMakeFiles/cmTC_0aa94.dir/build]
-  ignore line: [make[1]: Entering directory '/home/nilsiism/workspace/prob_trajectory_planning/src/ext/mav_trajectory_generation/cmake-build-release/CMakeFiles/CMakeTmp']
-  ignore line: [Building CXX object CMakeFiles/cmTC_0aa94.dir/CMakeCXXCompilerABI.cpp.o]
-  ignore line: [/usr/bin/c++     -o CMakeFiles/cmTC_0aa94.dir/CMakeCXXCompilerABI.cpp.o -c /opt/clion-2018.1.3/bin/cmake/share/cmake-3.10/Modules/CMakeCXXCompilerABI.cpp]
-  ignore line: [Linking CXX executable cmTC_0aa94]
-  ignore line: [/opt/clion-2018.1.3/bin/cmake/bin/cmake -E cmake_link_script CMakeFiles/cmTC_0aa94.dir/link.txt --verbose=1]
-  ignore line: [/usr/bin/c++      -v -rdynamic CMakeFiles/cmTC_0aa94.dir/CMakeCXXCompilerABI.cpp.o  -o cmTC_0aa94 ]
+  ignore line: [Run Build Command:"/usr/bin/make" "cmTC_ff2eb/fast"]
+  ignore line: [/usr/bin/make -f CMakeFiles/cmTC_ff2eb.dir/build.make CMakeFiles/cmTC_ff2eb.dir/build]
+  ignore line: [make[1]: Entering directory '/home/nilsiism/catkin_ws_ptp/src/ptp_ros/ext/prob_trajectory_planning/src/ext/mav_tube_trajectory_generation/cmake-build-release/CMakeFiles/CMakeTmp']
+  ignore line: [Building CXX object CMakeFiles/cmTC_ff2eb.dir/CMakeCXXCompilerABI.cpp.o]
+  ignore line: [/usr/bin/c++     -o CMakeFiles/cmTC_ff2eb.dir/CMakeCXXCompilerABI.cpp.o -c /opt/clion-2018.1.3/bin/cmake/share/cmake-3.10/Modules/CMakeCXXCompilerABI.cpp]
+  ignore line: [Linking CXX executable cmTC_ff2eb]
+  ignore line: [/opt/clion-2018.1.3/bin/cmake/bin/cmake -E cmake_link_script CMakeFiles/cmTC_ff2eb.dir/link.txt --verbose=1]
+  ignore line: [/usr/bin/c++      -v -rdynamic CMakeFiles/cmTC_ff2eb.dir/CMakeCXXCompilerABI.cpp.o  -o cmTC_ff2eb ]
   ignore line: [Using built-in specs.]
   ignore line: [COLLECT_GCC=/usr/bin/c++]
   ignore line: [COLLECT_LTO_WRAPPER=/usr/lib/gcc/x86_64-linux-gnu/5/lto-wrapper]
@@ -266,13 +266,13 @@ Parsed CXX implicit link information from above output:
   ignore line: [gcc version 5.4.0 20160609 (Ubuntu 5.4.0-6ubuntu1~16.04.10) ]
   ignore line: [COMPILER_PATH=/usr/lib/gcc/x86_64-linux-gnu/5/:/usr/lib/gcc/x86_64-linux-gnu/5/:/usr/lib/gcc/x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/5/:/usr/lib/gcc/x86_64-linux-gnu/]
   ignore line: [LIBRARY_PATH=/usr/lib/gcc/x86_64-linux-gnu/5/:/usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/5/../../../../lib/:/lib/x86_64-linux-gnu/:/lib/../lib/:/usr/lib/x86_64-linux-gnu/:/usr/lib/../lib/:/usr/lib/gcc/x86_64-linux-gnu/5/../../../:/lib/:/usr/lib/]
-  ignore line: [COLLECT_GCC_OPTIONS='-v' '-rdynamic' '-o' 'cmTC_0aa94' '-shared-libgcc' '-mtune=generic' '-march=x86-64']
-  link line: [ /usr/lib/gcc/x86_64-linux-gnu/5/collect2 -plugin /usr/lib/gcc/x86_64-linux-gnu/5/liblto_plugin.so -plugin-opt=/usr/lib/gcc/x86_64-linux-gnu/5/lto-wrapper -plugin-opt=-fresolution=/tmp/ccEilphy.res -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc --sysroot=/ --build-id --eh-frame-hdr -m elf_x86_64 --hash-style=gnu --as-needed -export-dynamic -dynamic-linker /lib64/ld-linux-x86-64.so.2 -z relro -o cmTC_0aa94 /usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu/crt1.o /usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu/crti.o /usr/lib/gcc/x86_64-linux-gnu/5/crtbegin.o -L/usr/lib/gcc/x86_64-linux-gnu/5 -L/usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu -L/usr/lib/gcc/x86_64-linux-gnu/5/../../../../lib -L/lib/x86_64-linux-gnu -L/lib/../lib -L/usr/lib/x86_64-linux-gnu -L/usr/lib/../lib -L/usr/lib/gcc/x86_64-linux-gnu/5/../../.. CMakeFiles/cmTC_0aa94.dir/CMakeCXXCompilerABI.cpp.o -lstdc++ -lm -lgcc_s -lgcc -lc -lgcc_s -lgcc /usr/lib/gcc/x86_64-linux-gnu/5/crtend.o /usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu/crtn.o]
+  ignore line: [COLLECT_GCC_OPTIONS='-v' '-rdynamic' '-o' 'cmTC_ff2eb' '-shared-libgcc' '-mtune=generic' '-march=x86-64']
+  link line: [ /usr/lib/gcc/x86_64-linux-gnu/5/collect2 -plugin /usr/lib/gcc/x86_64-linux-gnu/5/liblto_plugin.so -plugin-opt=/usr/lib/gcc/x86_64-linux-gnu/5/lto-wrapper -plugin-opt=-fresolution=/tmp/cc2B8zAH.res -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc --sysroot=/ --build-id --eh-frame-hdr -m elf_x86_64 --hash-style=gnu --as-needed -export-dynamic -dynamic-linker /lib64/ld-linux-x86-64.so.2 -z relro -o cmTC_ff2eb /usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu/crt1.o /usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu/crti.o /usr/lib/gcc/x86_64-linux-gnu/5/crtbegin.o -L/usr/lib/gcc/x86_64-linux-gnu/5 -L/usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu -L/usr/lib/gcc/x86_64-linux-gnu/5/../../../../lib -L/lib/x86_64-linux-gnu -L/lib/../lib -L/usr/lib/x86_64-linux-gnu -L/usr/lib/../lib -L/usr/lib/gcc/x86_64-linux-gnu/5/../../.. CMakeFiles/cmTC_ff2eb.dir/CMakeCXXCompilerABI.cpp.o -lstdc++ -lm -lgcc_s -lgcc -lc -lgcc_s -lgcc /usr/lib/gcc/x86_64-linux-gnu/5/crtend.o /usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu/crtn.o]
     arg [/usr/lib/gcc/x86_64-linux-gnu/5/collect2] ==> ignore
     arg [-plugin] ==> ignore
     arg [/usr/lib/gcc/x86_64-linux-gnu/5/liblto_plugin.so] ==> ignore
     arg [-plugin-opt=/usr/lib/gcc/x86_64-linux-gnu/5/lto-wrapper] ==> ignore
-    arg [-plugin-opt=-fresolution=/tmp/ccEilphy.res] ==> ignore
+    arg [-plugin-opt=-fresolution=/tmp/cc2B8zAH.res] ==> ignore
     arg [-plugin-opt=-pass-through=-lgcc_s] ==> ignore
     arg [-plugin-opt=-pass-through=-lgcc] ==> ignore
     arg [-plugin-opt=-pass-through=-lc] ==> ignore
@@ -290,7 +290,7 @@ Parsed CXX implicit link information from above output:
     arg [/lib64/ld-linux-x86-64.so.2] ==> ignore
     arg [-zrelro] ==> ignore
     arg [-o] ==> ignore
-    arg [cmTC_0aa94] ==> ignore
+    arg [cmTC_ff2eb] ==> ignore
     arg [/usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu/crt1.o] ==> ignore
     arg [/usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu/crti.o] ==> ignore
     arg [/usr/lib/gcc/x86_64-linux-gnu/5/crtbegin.o] ==> ignore
@@ -302,7 +302,7 @@ Parsed CXX implicit link information from above output:
     arg [-L/usr/lib/x86_64-linux-gnu] ==> dir [/usr/lib/x86_64-linux-gnu]
     arg [-L/usr/lib/../lib] ==> dir [/usr/lib/../lib]
     arg [-L/usr/lib/gcc/x86_64-linux-gnu/5/../../..] ==> dir [/usr/lib/gcc/x86_64-linux-gnu/5/../../..]
-    arg [CMakeFiles/cmTC_0aa94.dir/CMakeCXXCompilerABI.cpp.o] ==> ignore
+    arg [CMakeFiles/cmTC_ff2eb.dir/CMakeCXXCompilerABI.cpp.o] ==> ignore
     arg [-lstdc++] ==> lib [stdc++]
     arg [-lm] ==> lib [m]
     arg [-lgcc_s] ==> lib [gcc_s]
@@ -328,17 +328,17 @@ Parsed CXX implicit link information from above output:
 
 
 Detecting CXX [-std=c++1z] compiler features compiled with the following output:
-Change Dir: /home/nilsiism/workspace/prob_trajectory_planning/src/ext/mav_trajectory_generation/cmake-build-release/CMakeFiles/CMakeTmp
+Change Dir: /home/nilsiism/catkin_ws_ptp/src/ptp_ros/ext/prob_trajectory_planning/src/ext/mav_tube_trajectory_generation/cmake-build-release/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/make" "cmTC_79247/fast"
-/usr/bin/make -f CMakeFiles/cmTC_79247.dir/build.make CMakeFiles/cmTC_79247.dir/build
-make[1]: Entering directory '/home/nilsiism/workspace/prob_trajectory_planning/src/ext/mav_trajectory_generation/cmake-build-release/CMakeFiles/CMakeTmp'
-Building CXX object CMakeFiles/cmTC_79247.dir/feature_tests.cxx.o
-/usr/bin/c++    -std=c++1z -o CMakeFiles/cmTC_79247.dir/feature_tests.cxx.o -c /home/nilsiism/workspace/prob_trajectory_planning/src/ext/mav_trajectory_generation/cmake-build-release/CMakeFiles/feature_tests.cxx
-Linking CXX executable cmTC_79247
-/opt/clion-2018.1.3/bin/cmake/bin/cmake -E cmake_link_script CMakeFiles/cmTC_79247.dir/link.txt --verbose=1
-/usr/bin/c++       -rdynamic CMakeFiles/cmTC_79247.dir/feature_tests.cxx.o  -o cmTC_79247 
-make[1]: Leaving directory '/home/nilsiism/workspace/prob_trajectory_planning/src/ext/mav_trajectory_generation/cmake-build-release/CMakeFiles/CMakeTmp'
+Run Build Command:"/usr/bin/make" "cmTC_c1806/fast"
+/usr/bin/make -f CMakeFiles/cmTC_c1806.dir/build.make CMakeFiles/cmTC_c1806.dir/build
+make[1]: Entering directory '/home/nilsiism/catkin_ws_ptp/src/ptp_ros/ext/prob_trajectory_planning/src/ext/mav_tube_trajectory_generation/cmake-build-release/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_c1806.dir/feature_tests.cxx.o
+/usr/bin/c++    -std=c++1z -o CMakeFiles/cmTC_c1806.dir/feature_tests.cxx.o -c /home/nilsiism/catkin_ws_ptp/src/ptp_ros/ext/prob_trajectory_planning/src/ext/mav_tube_trajectory_generation/cmake-build-release/CMakeFiles/feature_tests.cxx
+Linking CXX executable cmTC_c1806
+/opt/clion-2018.1.3/bin/cmake/bin/cmake -E cmake_link_script CMakeFiles/cmTC_c1806.dir/link.txt --verbose=1
+/usr/bin/c++       -rdynamic CMakeFiles/cmTC_c1806.dir/feature_tests.cxx.o  -o cmTC_c1806 
+make[1]: Leaving directory '/home/nilsiism/catkin_ws_ptp/src/ptp_ros/ext/prob_trajectory_planning/src/ext/mav_tube_trajectory_generation/cmake-build-release/CMakeFiles/CMakeTmp'
 
 
     Feature record: CXX_FEATURE:1cxx_aggregate_default_initializers
@@ -401,17 +401,17 @@ make[1]: Leaving directory '/home/nilsiism/workspace/prob_trajectory_planning/sr
 
 
 Detecting CXX [-std=c++14] compiler features compiled with the following output:
-Change Dir: /home/nilsiism/workspace/prob_trajectory_planning/src/ext/mav_trajectory_generation/cmake-build-release/CMakeFiles/CMakeTmp
+Change Dir: /home/nilsiism/catkin_ws_ptp/src/ptp_ros/ext/prob_trajectory_planning/src/ext/mav_tube_trajectory_generation/cmake-build-release/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/make" "cmTC_06e30/fast"
-/usr/bin/make -f CMakeFiles/cmTC_06e30.dir/build.make CMakeFiles/cmTC_06e30.dir/build
-make[1]: Entering directory '/home/nilsiism/workspace/prob_trajectory_planning/src/ext/mav_trajectory_generation/cmake-build-release/CMakeFiles/CMakeTmp'
-Building CXX object CMakeFiles/cmTC_06e30.dir/feature_tests.cxx.o
-/usr/bin/c++    -std=c++14 -o CMakeFiles/cmTC_06e30.dir/feature_tests.cxx.o -c /home/nilsiism/workspace/prob_trajectory_planning/src/ext/mav_trajectory_generation/cmake-build-release/CMakeFiles/feature_tests.cxx
-Linking CXX executable cmTC_06e30
-/opt/clion-2018.1.3/bin/cmake/bin/cmake -E cmake_link_script CMakeFiles/cmTC_06e30.dir/link.txt --verbose=1
-/usr/bin/c++       -rdynamic CMakeFiles/cmTC_06e30.dir/feature_tests.cxx.o  -o cmTC_06e30 
-make[1]: Leaving directory '/home/nilsiism/workspace/prob_trajectory_planning/src/ext/mav_trajectory_generation/cmake-build-release/CMakeFiles/CMakeTmp'
+Run Build Command:"/usr/bin/make" "cmTC_5204f/fast"
+/usr/bin/make -f CMakeFiles/cmTC_5204f.dir/build.make CMakeFiles/cmTC_5204f.dir/build
+make[1]: Entering directory '/home/nilsiism/catkin_ws_ptp/src/ptp_ros/ext/prob_trajectory_planning/src/ext/mav_tube_trajectory_generation/cmake-build-release/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_5204f.dir/feature_tests.cxx.o
+/usr/bin/c++    -std=c++14 -o CMakeFiles/cmTC_5204f.dir/feature_tests.cxx.o -c /home/nilsiism/catkin_ws_ptp/src/ptp_ros/ext/prob_trajectory_planning/src/ext/mav_tube_trajectory_generation/cmake-build-release/CMakeFiles/feature_tests.cxx
+Linking CXX executable cmTC_5204f
+/opt/clion-2018.1.3/bin/cmake/bin/cmake -E cmake_link_script CMakeFiles/cmTC_5204f.dir/link.txt --verbose=1
+/usr/bin/c++       -rdynamic CMakeFiles/cmTC_5204f.dir/feature_tests.cxx.o  -o cmTC_5204f 
+make[1]: Leaving directory '/home/nilsiism/catkin_ws_ptp/src/ptp_ros/ext/prob_trajectory_planning/src/ext/mav_tube_trajectory_generation/cmake-build-release/CMakeFiles/CMakeTmp'
 
 
     Feature record: CXX_FEATURE:1cxx_aggregate_default_initializers
@@ -474,17 +474,17 @@ make[1]: Leaving directory '/home/nilsiism/workspace/prob_trajectory_planning/sr
 
 
 Detecting CXX [-std=c++11] compiler features compiled with the following output:
-Change Dir: /home/nilsiism/workspace/prob_trajectory_planning/src/ext/mav_trajectory_generation/cmake-build-release/CMakeFiles/CMakeTmp
+Change Dir: /home/nilsiism/catkin_ws_ptp/src/ptp_ros/ext/prob_trajectory_planning/src/ext/mav_tube_trajectory_generation/cmake-build-release/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/make" "cmTC_276b7/fast"
-/usr/bin/make -f CMakeFiles/cmTC_276b7.dir/build.make CMakeFiles/cmTC_276b7.dir/build
-make[1]: Entering directory '/home/nilsiism/workspace/prob_trajectory_planning/src/ext/mav_trajectory_generation/cmake-build-release/CMakeFiles/CMakeTmp'
-Building CXX object CMakeFiles/cmTC_276b7.dir/feature_tests.cxx.o
-/usr/bin/c++    -std=c++11 -o CMakeFiles/cmTC_276b7.dir/feature_tests.cxx.o -c /home/nilsiism/workspace/prob_trajectory_planning/src/ext/mav_trajectory_generation/cmake-build-release/CMakeFiles/feature_tests.cxx
-Linking CXX executable cmTC_276b7
-/opt/clion-2018.1.3/bin/cmake/bin/cmake -E cmake_link_script CMakeFiles/cmTC_276b7.dir/link.txt --verbose=1
-/usr/bin/c++       -rdynamic CMakeFiles/cmTC_276b7.dir/feature_tests.cxx.o  -o cmTC_276b7 
-make[1]: Leaving directory '/home/nilsiism/workspace/prob_trajectory_planning/src/ext/mav_trajectory_generation/cmake-build-release/CMakeFiles/CMakeTmp'
+Run Build Command:"/usr/bin/make" "cmTC_ab0ad/fast"
+/usr/bin/make -f CMakeFiles/cmTC_ab0ad.dir/build.make CMakeFiles/cmTC_ab0ad.dir/build
+make[1]: Entering directory '/home/nilsiism/catkin_ws_ptp/src/ptp_ros/ext/prob_trajectory_planning/src/ext/mav_tube_trajectory_generation/cmake-build-release/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_ab0ad.dir/feature_tests.cxx.o
+/usr/bin/c++    -std=c++11 -o CMakeFiles/cmTC_ab0ad.dir/feature_tests.cxx.o -c /home/nilsiism/catkin_ws_ptp/src/ptp_ros/ext/prob_trajectory_planning/src/ext/mav_tube_trajectory_generation/cmake-build-release/CMakeFiles/feature_tests.cxx
+Linking CXX executable cmTC_ab0ad
+/opt/clion-2018.1.3/bin/cmake/bin/cmake -E cmake_link_script CMakeFiles/cmTC_ab0ad.dir/link.txt --verbose=1
+/usr/bin/c++       -rdynamic CMakeFiles/cmTC_ab0ad.dir/feature_tests.cxx.o  -o cmTC_ab0ad 
+make[1]: Leaving directory '/home/nilsiism/catkin_ws_ptp/src/ptp_ros/ext/prob_trajectory_planning/src/ext/mav_tube_trajectory_generation/cmake-build-release/CMakeFiles/CMakeTmp'
 
 
     Feature record: CXX_FEATURE:0cxx_aggregate_default_initializers
@@ -547,17 +547,17 @@ make[1]: Leaving directory '/home/nilsiism/workspace/prob_trajectory_planning/sr
 
 
 Detecting CXX [-std=c++98] compiler features compiled with the following output:
-Change Dir: /home/nilsiism/workspace/prob_trajectory_planning/src/ext/mav_trajectory_generation/cmake-build-release/CMakeFiles/CMakeTmp
+Change Dir: /home/nilsiism/catkin_ws_ptp/src/ptp_ros/ext/prob_trajectory_planning/src/ext/mav_tube_trajectory_generation/cmake-build-release/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/make" "cmTC_566b6/fast"
-/usr/bin/make -f CMakeFiles/cmTC_566b6.dir/build.make CMakeFiles/cmTC_566b6.dir/build
-make[1]: Entering directory '/home/nilsiism/workspace/prob_trajectory_planning/src/ext/mav_trajectory_generation/cmake-build-release/CMakeFiles/CMakeTmp'
-Building CXX object CMakeFiles/cmTC_566b6.dir/feature_tests.cxx.o
-/usr/bin/c++    -std=c++98 -o CMakeFiles/cmTC_566b6.dir/feature_tests.cxx.o -c /home/nilsiism/workspace/prob_trajectory_planning/src/ext/mav_trajectory_generation/cmake-build-release/CMakeFiles/feature_tests.cxx
-Linking CXX executable cmTC_566b6
-/opt/clion-2018.1.3/bin/cmake/bin/cmake -E cmake_link_script CMakeFiles/cmTC_566b6.dir/link.txt --verbose=1
-/usr/bin/c++       -rdynamic CMakeFiles/cmTC_566b6.dir/feature_tests.cxx.o  -o cmTC_566b6 
-make[1]: Leaving directory '/home/nilsiism/workspace/prob_trajectory_planning/src/ext/mav_trajectory_generation/cmake-build-release/CMakeFiles/CMakeTmp'
+Run Build Command:"/usr/bin/make" "cmTC_c88be/fast"
+/usr/bin/make -f CMakeFiles/cmTC_c88be.dir/build.make CMakeFiles/cmTC_c88be.dir/build
+make[1]: Entering directory '/home/nilsiism/catkin_ws_ptp/src/ptp_ros/ext/prob_trajectory_planning/src/ext/mav_tube_trajectory_generation/cmake-build-release/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_c88be.dir/feature_tests.cxx.o
+/usr/bin/c++    -std=c++98 -o CMakeFiles/cmTC_c88be.dir/feature_tests.cxx.o -c /home/nilsiism/catkin_ws_ptp/src/ptp_ros/ext/prob_trajectory_planning/src/ext/mav_tube_trajectory_generation/cmake-build-release/CMakeFiles/feature_tests.cxx
+Linking CXX executable cmTC_c88be
+/opt/clion-2018.1.3/bin/cmake/bin/cmake -E cmake_link_script CMakeFiles/cmTC_c88be.dir/link.txt --verbose=1
+/usr/bin/c++       -rdynamic CMakeFiles/cmTC_c88be.dir/feature_tests.cxx.o  -o cmTC_c88be 
+make[1]: Leaving directory '/home/nilsiism/catkin_ws_ptp/src/ptp_ros/ext/prob_trajectory_planning/src/ext/mav_tube_trajectory_generation/cmake-build-release/CMakeFiles/CMakeTmp'
 
 
     Feature record: CXX_FEATURE:0cxx_aggregate_default_initializers
@@ -618,440 +618,388 @@ make[1]: Leaving directory '/home/nilsiism/workspace/prob_trajectory_planning/sr
     Feature record: CXX_FEATURE:0cxx_variadic_macros
     Feature record: CXX_FEATURE:0cxx_variadic_templates
 Performing C++ SOURCE FILE Test check_cxx_compiler_flag__march_haswell succeeded with the following output:
-Change Dir: /home/nilsiism/workspace/prob_trajectory_planning/src/ext/mav_trajectory_generation/cmake-build-release/CMakeFiles/CMakeTmp
+Change Dir: /home/nilsiism/catkin_ws_ptp/src/ptp_ros/ext/prob_trajectory_planning/src/ext/mav_tube_trajectory_generation/cmake-build-release/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/make" "cmTC_822d2/fast"
-make[1]: Entering directory '/home/nilsiism/workspace/prob_trajectory_planning/src/ext/mav_trajectory_generation/cmake-build-release/CMakeFiles/CMakeTmp'
-/usr/bin/make -f CMakeFiles/cmTC_822d2.dir/build.make CMakeFiles/cmTC_822d2.dir/build
-make[2]: Entering directory '/home/nilsiism/workspace/prob_trajectory_planning/src/ext/mav_trajectory_generation/cmake-build-release/CMakeFiles/CMakeTmp'
-Building CXX object CMakeFiles/cmTC_822d2.dir/src.cxx.o
-/usr/bin/c++    -Dcheck_cxx_compiler_flag__march_haswell   -march=haswell -o CMakeFiles/cmTC_822d2.dir/src.cxx.o -c /home/nilsiism/workspace/prob_trajectory_planning/src/ext/mav_trajectory_generation/cmake-build-release/CMakeFiles/CMakeTmp/src.cxx
-Linking CXX executable cmTC_822d2
-/opt/clion-2018.1.3/bin/cmake/bin/cmake -E cmake_link_script CMakeFiles/cmTC_822d2.dir/link.txt --verbose=1
-/usr/bin/c++   -Dcheck_cxx_compiler_flag__march_haswell    -rdynamic CMakeFiles/cmTC_822d2.dir/src.cxx.o  -o cmTC_822d2 
-make[2]: Leaving directory '/home/nilsiism/workspace/prob_trajectory_planning/src/ext/mav_trajectory_generation/cmake-build-release/CMakeFiles/CMakeTmp'
-make[1]: Leaving directory '/home/nilsiism/workspace/prob_trajectory_planning/src/ext/mav_trajectory_generation/cmake-build-release/CMakeFiles/CMakeTmp'
+Run Build Command:"/usr/bin/make" "cmTC_95d8e/fast"
+/usr/bin/make -f CMakeFiles/cmTC_95d8e.dir/build.make CMakeFiles/cmTC_95d8e.dir/build
+make[1]: Entering directory '/home/nilsiism/catkin_ws_ptp/src/ptp_ros/ext/prob_trajectory_planning/src/ext/mav_tube_trajectory_generation/cmake-build-release/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_95d8e.dir/src.cxx.o
+/usr/bin/c++    -Dcheck_cxx_compiler_flag__march_haswell   -march=haswell -o CMakeFiles/cmTC_95d8e.dir/src.cxx.o -c /home/nilsiism/catkin_ws_ptp/src/ptp_ros/ext/prob_trajectory_planning/src/ext/mav_tube_trajectory_generation/cmake-build-release/CMakeFiles/CMakeTmp/src.cxx
+Linking CXX executable cmTC_95d8e
+/opt/clion-2018.1.3/bin/cmake/bin/cmake -E cmake_link_script CMakeFiles/cmTC_95d8e.dir/link.txt --verbose=1
+/usr/bin/c++   -Dcheck_cxx_compiler_flag__march_haswell    -rdynamic CMakeFiles/cmTC_95d8e.dir/src.cxx.o  -o cmTC_95d8e 
+make[1]: Leaving directory '/home/nilsiism/catkin_ws_ptp/src/ptp_ros/ext/prob_trajectory_planning/src/ext/mav_tube_trajectory_generation/cmake-build-release/CMakeFiles/CMakeTmp'
 
 Source file was:
 int main() { return 0; }
 Performing C++ SOURCE FILE Test check_cxx_compiler_flag__msse2 succeeded with the following output:
-Change Dir: /home/nilsiism/workspace/prob_trajectory_planning/src/ext/mav_trajectory_generation/cmake-build-release/CMakeFiles/CMakeTmp
+Change Dir: /home/nilsiism/catkin_ws_ptp/src/ptp_ros/ext/prob_trajectory_planning/src/ext/mav_tube_trajectory_generation/cmake-build-release/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/make" "cmTC_d436f/fast"
-make[1]: Entering directory '/home/nilsiism/workspace/prob_trajectory_planning/src/ext/mav_trajectory_generation/cmake-build-release/CMakeFiles/CMakeTmp'
-/usr/bin/make -f CMakeFiles/cmTC_d436f.dir/build.make CMakeFiles/cmTC_d436f.dir/build
-make[2]: Entering directory '/home/nilsiism/workspace/prob_trajectory_planning/src/ext/mav_trajectory_generation/cmake-build-release/CMakeFiles/CMakeTmp'
-Building CXX object CMakeFiles/cmTC_d436f.dir/src.cxx.o
-/usr/bin/c++    -Dcheck_cxx_compiler_flag__msse2   -msse2 -o CMakeFiles/cmTC_d436f.dir/src.cxx.o -c /home/nilsiism/workspace/prob_trajectory_planning/src/ext/mav_trajectory_generation/cmake-build-release/CMakeFiles/CMakeTmp/src.cxx
-Linking CXX executable cmTC_d436f
-/opt/clion-2018.1.3/bin/cmake/bin/cmake -E cmake_link_script CMakeFiles/cmTC_d436f.dir/link.txt --verbose=1
-/usr/bin/c++   -Dcheck_cxx_compiler_flag__msse2    -rdynamic CMakeFiles/cmTC_d436f.dir/src.cxx.o  -o cmTC_d436f 
-make[2]: Leaving directory '/home/nilsiism/workspace/prob_trajectory_planning/src/ext/mav_trajectory_generation/cmake-build-release/CMakeFiles/CMakeTmp'
-make[1]: Leaving directory '/home/nilsiism/workspace/prob_trajectory_planning/src/ext/mav_trajectory_generation/cmake-build-release/CMakeFiles/CMakeTmp'
+Run Build Command:"/usr/bin/make" "cmTC_86b68/fast"
+/usr/bin/make -f CMakeFiles/cmTC_86b68.dir/build.make CMakeFiles/cmTC_86b68.dir/build
+make[1]: Entering directory '/home/nilsiism/catkin_ws_ptp/src/ptp_ros/ext/prob_trajectory_planning/src/ext/mav_tube_trajectory_generation/cmake-build-release/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_86b68.dir/src.cxx.o
+/usr/bin/c++    -Dcheck_cxx_compiler_flag__msse2   -msse2 -o CMakeFiles/cmTC_86b68.dir/src.cxx.o -c /home/nilsiism/catkin_ws_ptp/src/ptp_ros/ext/prob_trajectory_planning/src/ext/mav_tube_trajectory_generation/cmake-build-release/CMakeFiles/CMakeTmp/src.cxx
+Linking CXX executable cmTC_86b68
+/opt/clion-2018.1.3/bin/cmake/bin/cmake -E cmake_link_script CMakeFiles/cmTC_86b68.dir/link.txt --verbose=1
+/usr/bin/c++   -Dcheck_cxx_compiler_flag__msse2    -rdynamic CMakeFiles/cmTC_86b68.dir/src.cxx.o  -o cmTC_86b68 
+make[1]: Leaving directory '/home/nilsiism/catkin_ws_ptp/src/ptp_ros/ext/prob_trajectory_planning/src/ext/mav_tube_trajectory_generation/cmake-build-release/CMakeFiles/CMakeTmp'
 
 Source file was:
 int main() { return 0; }
 Performing C++ SOURCE FILE Test check_cxx_compiler_flag__msse3 succeeded with the following output:
-Change Dir: /home/nilsiism/workspace/prob_trajectory_planning/src/ext/mav_trajectory_generation/cmake-build-release/CMakeFiles/CMakeTmp
+Change Dir: /home/nilsiism/catkin_ws_ptp/src/ptp_ros/ext/prob_trajectory_planning/src/ext/mav_tube_trajectory_generation/cmake-build-release/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/make" "cmTC_f03d6/fast"
-make[1]: Entering directory '/home/nilsiism/workspace/prob_trajectory_planning/src/ext/mav_trajectory_generation/cmake-build-release/CMakeFiles/CMakeTmp'
-/usr/bin/make -f CMakeFiles/cmTC_f03d6.dir/build.make CMakeFiles/cmTC_f03d6.dir/build
-make[2]: Entering directory '/home/nilsiism/workspace/prob_trajectory_planning/src/ext/mav_trajectory_generation/cmake-build-release/CMakeFiles/CMakeTmp'
-Building CXX object CMakeFiles/cmTC_f03d6.dir/src.cxx.o
-/usr/bin/c++    -Dcheck_cxx_compiler_flag__msse3   -msse3 -o CMakeFiles/cmTC_f03d6.dir/src.cxx.o -c /home/nilsiism/workspace/prob_trajectory_planning/src/ext/mav_trajectory_generation/cmake-build-release/CMakeFiles/CMakeTmp/src.cxx
-Linking CXX executable cmTC_f03d6
-/opt/clion-2018.1.3/bin/cmake/bin/cmake -E cmake_link_script CMakeFiles/cmTC_f03d6.dir/link.txt --verbose=1
-/usr/bin/c++   -Dcheck_cxx_compiler_flag__msse3    -rdynamic CMakeFiles/cmTC_f03d6.dir/src.cxx.o  -o cmTC_f03d6 
-make[2]: Leaving directory '/home/nilsiism/workspace/prob_trajectory_planning/src/ext/mav_trajectory_generation/cmake-build-release/CMakeFiles/CMakeTmp'
-make[1]: Leaving directory '/home/nilsiism/workspace/prob_trajectory_planning/src/ext/mav_trajectory_generation/cmake-build-release/CMakeFiles/CMakeTmp'
+Run Build Command:"/usr/bin/make" "cmTC_d6880/fast"
+/usr/bin/make -f CMakeFiles/cmTC_d6880.dir/build.make CMakeFiles/cmTC_d6880.dir/build
+make[1]: Entering directory '/home/nilsiism/catkin_ws_ptp/src/ptp_ros/ext/prob_trajectory_planning/src/ext/mav_tube_trajectory_generation/cmake-build-release/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_d6880.dir/src.cxx.o
+/usr/bin/c++    -Dcheck_cxx_compiler_flag__msse3   -msse3 -o CMakeFiles/cmTC_d6880.dir/src.cxx.o -c /home/nilsiism/catkin_ws_ptp/src/ptp_ros/ext/prob_trajectory_planning/src/ext/mav_tube_trajectory_generation/cmake-build-release/CMakeFiles/CMakeTmp/src.cxx
+Linking CXX executable cmTC_d6880
+/opt/clion-2018.1.3/bin/cmake/bin/cmake -E cmake_link_script CMakeFiles/cmTC_d6880.dir/link.txt --verbose=1
+/usr/bin/c++   -Dcheck_cxx_compiler_flag__msse3    -rdynamic CMakeFiles/cmTC_d6880.dir/src.cxx.o  -o cmTC_d6880 
+make[1]: Leaving directory '/home/nilsiism/catkin_ws_ptp/src/ptp_ros/ext/prob_trajectory_planning/src/ext/mav_tube_trajectory_generation/cmake-build-release/CMakeFiles/CMakeTmp'
 
 Source file was:
 int main() { return 0; }
 Determining if the include file pmmintrin.h exists passed with the following output:
-Change Dir: /home/nilsiism/workspace/prob_trajectory_planning/src/ext/mav_trajectory_generation/cmake-build-release/CMakeFiles/CMakeTmp
+Change Dir: /home/nilsiism/catkin_ws_ptp/src/ptp_ros/ext/prob_trajectory_planning/src/ext/mav_tube_trajectory_generation/cmake-build-release/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/make" "cmTC_d11cb/fast"
-make[1]: Entering directory '/home/nilsiism/workspace/prob_trajectory_planning/src/ext/mav_trajectory_generation/cmake-build-release/CMakeFiles/CMakeTmp'
-/usr/bin/make -f CMakeFiles/cmTC_d11cb.dir/build.make CMakeFiles/cmTC_d11cb.dir/build
-make[2]: Entering directory '/home/nilsiism/workspace/prob_trajectory_planning/src/ext/mav_trajectory_generation/cmake-build-release/CMakeFiles/CMakeTmp'
-Building C object CMakeFiles/cmTC_d11cb.dir/CheckIncludeFile.c.o
-/usr/bin/cc   -msse3    -o CMakeFiles/cmTC_d11cb.dir/CheckIncludeFile.c.o   -c /home/nilsiism/workspace/prob_trajectory_planning/src/ext/mav_trajectory_generation/cmake-build-release/CMakeFiles/CMakeTmp/CheckIncludeFile.c
-Linking C executable cmTC_d11cb
-/opt/clion-2018.1.3/bin/cmake/bin/cmake -E cmake_link_script CMakeFiles/cmTC_d11cb.dir/link.txt --verbose=1
-/usr/bin/cc  -msse3     -rdynamic CMakeFiles/cmTC_d11cb.dir/CheckIncludeFile.c.o  -o cmTC_d11cb 
-make[2]: Leaving directory '/home/nilsiism/workspace/prob_trajectory_planning/src/ext/mav_trajectory_generation/cmake-build-release/CMakeFiles/CMakeTmp'
-make[1]: Leaving directory '/home/nilsiism/workspace/prob_trajectory_planning/src/ext/mav_trajectory_generation/cmake-build-release/CMakeFiles/CMakeTmp'
+Run Build Command:"/usr/bin/make" "cmTC_2113b/fast"
+/usr/bin/make -f CMakeFiles/cmTC_2113b.dir/build.make CMakeFiles/cmTC_2113b.dir/build
+make[1]: Entering directory '/home/nilsiism/catkin_ws_ptp/src/ptp_ros/ext/prob_trajectory_planning/src/ext/mav_tube_trajectory_generation/cmake-build-release/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_2113b.dir/CheckIncludeFile.c.o
+/usr/bin/cc   -msse3    -o CMakeFiles/cmTC_2113b.dir/CheckIncludeFile.c.o   -c /home/nilsiism/catkin_ws_ptp/src/ptp_ros/ext/prob_trajectory_planning/src/ext/mav_tube_trajectory_generation/cmake-build-release/CMakeFiles/CMakeTmp/CheckIncludeFile.c
+Linking C executable cmTC_2113b
+/opt/clion-2018.1.3/bin/cmake/bin/cmake -E cmake_link_script CMakeFiles/cmTC_2113b.dir/link.txt --verbose=1
+/usr/bin/cc  -msse3     -rdynamic CMakeFiles/cmTC_2113b.dir/CheckIncludeFile.c.o  -o cmTC_2113b 
+make[1]: Leaving directory '/home/nilsiism/catkin_ws_ptp/src/ptp_ros/ext/prob_trajectory_planning/src/ext/mav_tube_trajectory_generation/cmake-build-release/CMakeFiles/CMakeTmp'
 
 
 Performing C++ SOURCE FILE Test check_cxx_compiler_flag__mssse3 succeeded with the following output:
-Change Dir: /home/nilsiism/workspace/prob_trajectory_planning/src/ext/mav_trajectory_generation/cmake-build-release/CMakeFiles/CMakeTmp
+Change Dir: /home/nilsiism/catkin_ws_ptp/src/ptp_ros/ext/prob_trajectory_planning/src/ext/mav_tube_trajectory_generation/cmake-build-release/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/make" "cmTC_69e19/fast"
-make[1]: Entering directory '/home/nilsiism/workspace/prob_trajectory_planning/src/ext/mav_trajectory_generation/cmake-build-release/CMakeFiles/CMakeTmp'
-/usr/bin/make -f CMakeFiles/cmTC_69e19.dir/build.make CMakeFiles/cmTC_69e19.dir/build
-make[2]: Entering directory '/home/nilsiism/workspace/prob_trajectory_planning/src/ext/mav_trajectory_generation/cmake-build-release/CMakeFiles/CMakeTmp'
-Building CXX object CMakeFiles/cmTC_69e19.dir/src.cxx.o
-/usr/bin/c++    -Dcheck_cxx_compiler_flag__mssse3   -mssse3 -o CMakeFiles/cmTC_69e19.dir/src.cxx.o -c /home/nilsiism/workspace/prob_trajectory_planning/src/ext/mav_trajectory_generation/cmake-build-release/CMakeFiles/CMakeTmp/src.cxx
-Linking CXX executable cmTC_69e19
-/opt/clion-2018.1.3/bin/cmake/bin/cmake -E cmake_link_script CMakeFiles/cmTC_69e19.dir/link.txt --verbose=1
-/usr/bin/c++   -Dcheck_cxx_compiler_flag__mssse3    -rdynamic CMakeFiles/cmTC_69e19.dir/src.cxx.o  -o cmTC_69e19 
-make[2]: Leaving directory '/home/nilsiism/workspace/prob_trajectory_planning/src/ext/mav_trajectory_generation/cmake-build-release/CMakeFiles/CMakeTmp'
-make[1]: Leaving directory '/home/nilsiism/workspace/prob_trajectory_planning/src/ext/mav_trajectory_generation/cmake-build-release/CMakeFiles/CMakeTmp'
+Run Build Command:"/usr/bin/make" "cmTC_50b36/fast"
+/usr/bin/make -f CMakeFiles/cmTC_50b36.dir/build.make CMakeFiles/cmTC_50b36.dir/build
+make[1]: Entering directory '/home/nilsiism/catkin_ws_ptp/src/ptp_ros/ext/prob_trajectory_planning/src/ext/mav_tube_trajectory_generation/cmake-build-release/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_50b36.dir/src.cxx.o
+/usr/bin/c++    -Dcheck_cxx_compiler_flag__mssse3   -mssse3 -o CMakeFiles/cmTC_50b36.dir/src.cxx.o -c /home/nilsiism/catkin_ws_ptp/src/ptp_ros/ext/prob_trajectory_planning/src/ext/mav_tube_trajectory_generation/cmake-build-release/CMakeFiles/CMakeTmp/src.cxx
+Linking CXX executable cmTC_50b36
+/opt/clion-2018.1.3/bin/cmake/bin/cmake -E cmake_link_script CMakeFiles/cmTC_50b36.dir/link.txt --verbose=1
+/usr/bin/c++   -Dcheck_cxx_compiler_flag__mssse3    -rdynamic CMakeFiles/cmTC_50b36.dir/src.cxx.o  -o cmTC_50b36 
+make[1]: Leaving directory '/home/nilsiism/catkin_ws_ptp/src/ptp_ros/ext/prob_trajectory_planning/src/ext/mav_tube_trajectory_generation/cmake-build-release/CMakeFiles/CMakeTmp'
 
 Source file was:
 int main() { return 0; }
 Determining if the include file tmmintrin.h exists passed with the following output:
-Change Dir: /home/nilsiism/workspace/prob_trajectory_planning/src/ext/mav_trajectory_generation/cmake-build-release/CMakeFiles/CMakeTmp
+Change Dir: /home/nilsiism/catkin_ws_ptp/src/ptp_ros/ext/prob_trajectory_planning/src/ext/mav_tube_trajectory_generation/cmake-build-release/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/make" "cmTC_4d777/fast"
-make[1]: Entering directory '/home/nilsiism/workspace/prob_trajectory_planning/src/ext/mav_trajectory_generation/cmake-build-release/CMakeFiles/CMakeTmp'
-/usr/bin/make -f CMakeFiles/cmTC_4d777.dir/build.make CMakeFiles/cmTC_4d777.dir/build
-make[2]: Entering directory '/home/nilsiism/workspace/prob_trajectory_planning/src/ext/mav_trajectory_generation/cmake-build-release/CMakeFiles/CMakeTmp'
-Building C object CMakeFiles/cmTC_4d777.dir/CheckIncludeFile.c.o
-/usr/bin/cc   -mssse3    -o CMakeFiles/cmTC_4d777.dir/CheckIncludeFile.c.o   -c /home/nilsiism/workspace/prob_trajectory_planning/src/ext/mav_trajectory_generation/cmake-build-release/CMakeFiles/CMakeTmp/CheckIncludeFile.c
-Linking C executable cmTC_4d777
-/opt/clion-2018.1.3/bin/cmake/bin/cmake -E cmake_link_script CMakeFiles/cmTC_4d777.dir/link.txt --verbose=1
-/usr/bin/cc  -mssse3     -rdynamic CMakeFiles/cmTC_4d777.dir/CheckIncludeFile.c.o  -o cmTC_4d777 
-make[2]: Leaving directory '/home/nilsiism/workspace/prob_trajectory_planning/src/ext/mav_trajectory_generation/cmake-build-release/CMakeFiles/CMakeTmp'
-make[1]: Leaving directory '/home/nilsiism/workspace/prob_trajectory_planning/src/ext/mav_trajectory_generation/cmake-build-release/CMakeFiles/CMakeTmp'
+Run Build Command:"/usr/bin/make" "cmTC_6c500/fast"
+/usr/bin/make -f CMakeFiles/cmTC_6c500.dir/build.make CMakeFiles/cmTC_6c500.dir/build
+make[1]: Entering directory '/home/nilsiism/catkin_ws_ptp/src/ptp_ros/ext/prob_trajectory_planning/src/ext/mav_tube_trajectory_generation/cmake-build-release/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_6c500.dir/CheckIncludeFile.c.o
+/usr/bin/cc   -mssse3    -o CMakeFiles/cmTC_6c500.dir/CheckIncludeFile.c.o   -c /home/nilsiism/catkin_ws_ptp/src/ptp_ros/ext/prob_trajectory_planning/src/ext/mav_tube_trajectory_generation/cmake-build-release/CMakeFiles/CMakeTmp/CheckIncludeFile.c
+Linking C executable cmTC_6c500
+/opt/clion-2018.1.3/bin/cmake/bin/cmake -E cmake_link_script CMakeFiles/cmTC_6c500.dir/link.txt --verbose=1
+/usr/bin/cc  -mssse3     -rdynamic CMakeFiles/cmTC_6c500.dir/CheckIncludeFile.c.o  -o cmTC_6c500 
+make[1]: Leaving directory '/home/nilsiism/catkin_ws_ptp/src/ptp_ros/ext/prob_trajectory_planning/src/ext/mav_tube_trajectory_generation/cmake-build-release/CMakeFiles/CMakeTmp'
 
 
 Performing C++ SOURCE FILE Test check_cxx_compiler_flag__msse4_1 succeeded with the following output:
-Change Dir: /home/nilsiism/workspace/prob_trajectory_planning/src/ext/mav_trajectory_generation/cmake-build-release/CMakeFiles/CMakeTmp
+Change Dir: /home/nilsiism/catkin_ws_ptp/src/ptp_ros/ext/prob_trajectory_planning/src/ext/mav_tube_trajectory_generation/cmake-build-release/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/make" "cmTC_d9351/fast"
-make[1]: Entering directory '/home/nilsiism/workspace/prob_trajectory_planning/src/ext/mav_trajectory_generation/cmake-build-release/CMakeFiles/CMakeTmp'
-/usr/bin/make -f CMakeFiles/cmTC_d9351.dir/build.make CMakeFiles/cmTC_d9351.dir/build
-make[2]: Entering directory '/home/nilsiism/workspace/prob_trajectory_planning/src/ext/mav_trajectory_generation/cmake-build-release/CMakeFiles/CMakeTmp'
-Building CXX object CMakeFiles/cmTC_d9351.dir/src.cxx.o
-/usr/bin/c++    -Dcheck_cxx_compiler_flag__msse4_1   -msse4.1 -o CMakeFiles/cmTC_d9351.dir/src.cxx.o -c /home/nilsiism/workspace/prob_trajectory_planning/src/ext/mav_trajectory_generation/cmake-build-release/CMakeFiles/CMakeTmp/src.cxx
-Linking CXX executable cmTC_d9351
-/opt/clion-2018.1.3/bin/cmake/bin/cmake -E cmake_link_script CMakeFiles/cmTC_d9351.dir/link.txt --verbose=1
-/usr/bin/c++   -Dcheck_cxx_compiler_flag__msse4_1    -rdynamic CMakeFiles/cmTC_d9351.dir/src.cxx.o  -o cmTC_d9351 
-make[2]: Leaving directory '/home/nilsiism/workspace/prob_trajectory_planning/src/ext/mav_trajectory_generation/cmake-build-release/CMakeFiles/CMakeTmp'
-make[1]: Leaving directory '/home/nilsiism/workspace/prob_trajectory_planning/src/ext/mav_trajectory_generation/cmake-build-release/CMakeFiles/CMakeTmp'
+Run Build Command:"/usr/bin/make" "cmTC_a20e8/fast"
+/usr/bin/make -f CMakeFiles/cmTC_a20e8.dir/build.make CMakeFiles/cmTC_a20e8.dir/build
+make[1]: Entering directory '/home/nilsiism/catkin_ws_ptp/src/ptp_ros/ext/prob_trajectory_planning/src/ext/mav_tube_trajectory_generation/cmake-build-release/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_a20e8.dir/src.cxx.o
+/usr/bin/c++    -Dcheck_cxx_compiler_flag__msse4_1   -msse4.1 -o CMakeFiles/cmTC_a20e8.dir/src.cxx.o -c /home/nilsiism/catkin_ws_ptp/src/ptp_ros/ext/prob_trajectory_planning/src/ext/mav_tube_trajectory_generation/cmake-build-release/CMakeFiles/CMakeTmp/src.cxx
+Linking CXX executable cmTC_a20e8
+/opt/clion-2018.1.3/bin/cmake/bin/cmake -E cmake_link_script CMakeFiles/cmTC_a20e8.dir/link.txt --verbose=1
+/usr/bin/c++   -Dcheck_cxx_compiler_flag__msse4_1    -rdynamic CMakeFiles/cmTC_a20e8.dir/src.cxx.o  -o cmTC_a20e8 
+make[1]: Leaving directory '/home/nilsiism/catkin_ws_ptp/src/ptp_ros/ext/prob_trajectory_planning/src/ext/mav_tube_trajectory_generation/cmake-build-release/CMakeFiles/CMakeTmp'
 
 Source file was:
 int main() { return 0; }
 Determining if the include file smmintrin.h exists passed with the following output:
-Change Dir: /home/nilsiism/workspace/prob_trajectory_planning/src/ext/mav_trajectory_generation/cmake-build-release/CMakeFiles/CMakeTmp
+Change Dir: /home/nilsiism/catkin_ws_ptp/src/ptp_ros/ext/prob_trajectory_planning/src/ext/mav_tube_trajectory_generation/cmake-build-release/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/make" "cmTC_d7a06/fast"
-make[1]: Entering directory '/home/nilsiism/workspace/prob_trajectory_planning/src/ext/mav_trajectory_generation/cmake-build-release/CMakeFiles/CMakeTmp'
-/usr/bin/make -f CMakeFiles/cmTC_d7a06.dir/build.make CMakeFiles/cmTC_d7a06.dir/build
-make[2]: Entering directory '/home/nilsiism/workspace/prob_trajectory_planning/src/ext/mav_trajectory_generation/cmake-build-release/CMakeFiles/CMakeTmp'
-Building C object CMakeFiles/cmTC_d7a06.dir/CheckIncludeFile.c.o
-/usr/bin/cc   -msse4.1    -o CMakeFiles/cmTC_d7a06.dir/CheckIncludeFile.c.o   -c /home/nilsiism/workspace/prob_trajectory_planning/src/ext/mav_trajectory_generation/cmake-build-release/CMakeFiles/CMakeTmp/CheckIncludeFile.c
-Linking C executable cmTC_d7a06
-/opt/clion-2018.1.3/bin/cmake/bin/cmake -E cmake_link_script CMakeFiles/cmTC_d7a06.dir/link.txt --verbose=1
-/usr/bin/cc  -msse4.1     -rdynamic CMakeFiles/cmTC_d7a06.dir/CheckIncludeFile.c.o  -o cmTC_d7a06 
-make[2]: Leaving directory '/home/nilsiism/workspace/prob_trajectory_planning/src/ext/mav_trajectory_generation/cmake-build-release/CMakeFiles/CMakeTmp'
-make[1]: Leaving directory '/home/nilsiism/workspace/prob_trajectory_planning/src/ext/mav_trajectory_generation/cmake-build-release/CMakeFiles/CMakeTmp'
+Run Build Command:"/usr/bin/make" "cmTC_a6084/fast"
+/usr/bin/make -f CMakeFiles/cmTC_a6084.dir/build.make CMakeFiles/cmTC_a6084.dir/build
+make[1]: Entering directory '/home/nilsiism/catkin_ws_ptp/src/ptp_ros/ext/prob_trajectory_planning/src/ext/mav_tube_trajectory_generation/cmake-build-release/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_a6084.dir/CheckIncludeFile.c.o
+/usr/bin/cc   -msse4.1    -o CMakeFiles/cmTC_a6084.dir/CheckIncludeFile.c.o   -c /home/nilsiism/catkin_ws_ptp/src/ptp_ros/ext/prob_trajectory_planning/src/ext/mav_tube_trajectory_generation/cmake-build-release/CMakeFiles/CMakeTmp/CheckIncludeFile.c
+Linking C executable cmTC_a6084
+/opt/clion-2018.1.3/bin/cmake/bin/cmake -E cmake_link_script CMakeFiles/cmTC_a6084.dir/link.txt --verbose=1
+/usr/bin/cc  -msse4.1     -rdynamic CMakeFiles/cmTC_a6084.dir/CheckIncludeFile.c.o  -o cmTC_a6084 
+make[1]: Leaving directory '/home/nilsiism/catkin_ws_ptp/src/ptp_ros/ext/prob_trajectory_planning/src/ext/mav_tube_trajectory_generation/cmake-build-release/CMakeFiles/CMakeTmp'
 
 
 Performing C++ SOURCE FILE Test check_cxx_compiler_flag__msse4_2 succeeded with the following output:
-Change Dir: /home/nilsiism/workspace/prob_trajectory_planning/src/ext/mav_trajectory_generation/cmake-build-release/CMakeFiles/CMakeTmp
+Change Dir: /home/nilsiism/catkin_ws_ptp/src/ptp_ros/ext/prob_trajectory_planning/src/ext/mav_tube_trajectory_generation/cmake-build-release/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/make" "cmTC_9ff31/fast"
-make[1]: Entering directory '/home/nilsiism/workspace/prob_trajectory_planning/src/ext/mav_trajectory_generation/cmake-build-release/CMakeFiles/CMakeTmp'
-/usr/bin/make -f CMakeFiles/cmTC_9ff31.dir/build.make CMakeFiles/cmTC_9ff31.dir/build
-make[2]: Entering directory '/home/nilsiism/workspace/prob_trajectory_planning/src/ext/mav_trajectory_generation/cmake-build-release/CMakeFiles/CMakeTmp'
-Building CXX object CMakeFiles/cmTC_9ff31.dir/src.cxx.o
-/usr/bin/c++    -Dcheck_cxx_compiler_flag__msse4_2   -msse4.2 -o CMakeFiles/cmTC_9ff31.dir/src.cxx.o -c /home/nilsiism/workspace/prob_trajectory_planning/src/ext/mav_trajectory_generation/cmake-build-release/CMakeFiles/CMakeTmp/src.cxx
-Linking CXX executable cmTC_9ff31
-/opt/clion-2018.1.3/bin/cmake/bin/cmake -E cmake_link_script CMakeFiles/cmTC_9ff31.dir/link.txt --verbose=1
-/usr/bin/c++   -Dcheck_cxx_compiler_flag__msse4_2    -rdynamic CMakeFiles/cmTC_9ff31.dir/src.cxx.o  -o cmTC_9ff31 
-make[2]: Leaving directory '/home/nilsiism/workspace/prob_trajectory_planning/src/ext/mav_trajectory_generation/cmake-build-release/CMakeFiles/CMakeTmp'
-make[1]: Leaving directory '/home/nilsiism/workspace/prob_trajectory_planning/src/ext/mav_trajectory_generation/cmake-build-release/CMakeFiles/CMakeTmp'
+Run Build Command:"/usr/bin/make" "cmTC_148b8/fast"
+/usr/bin/make -f CMakeFiles/cmTC_148b8.dir/build.make CMakeFiles/cmTC_148b8.dir/build
+make[1]: Entering directory '/home/nilsiism/catkin_ws_ptp/src/ptp_ros/ext/prob_trajectory_planning/src/ext/mav_tube_trajectory_generation/cmake-build-release/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_148b8.dir/src.cxx.o
+/usr/bin/c++    -Dcheck_cxx_compiler_flag__msse4_2   -msse4.2 -o CMakeFiles/cmTC_148b8.dir/src.cxx.o -c /home/nilsiism/catkin_ws_ptp/src/ptp_ros/ext/prob_trajectory_planning/src/ext/mav_tube_trajectory_generation/cmake-build-release/CMakeFiles/CMakeTmp/src.cxx
+Linking CXX executable cmTC_148b8
+/opt/clion-2018.1.3/bin/cmake/bin/cmake -E cmake_link_script CMakeFiles/cmTC_148b8.dir/link.txt --verbose=1
+/usr/bin/c++   -Dcheck_cxx_compiler_flag__msse4_2    -rdynamic CMakeFiles/cmTC_148b8.dir/src.cxx.o  -o cmTC_148b8 
+make[1]: Leaving directory '/home/nilsiism/catkin_ws_ptp/src/ptp_ros/ext/prob_trajectory_planning/src/ext/mav_tube_trajectory_generation/cmake-build-release/CMakeFiles/CMakeTmp'
 
 Source file was:
 int main() { return 0; }
 Performing C++ SOURCE FILE Test check_cxx_compiler_flag__mavx succeeded with the following output:
-Change Dir: /home/nilsiism/workspace/prob_trajectory_planning/src/ext/mav_trajectory_generation/cmake-build-release/CMakeFiles/CMakeTmp
+Change Dir: /home/nilsiism/catkin_ws_ptp/src/ptp_ros/ext/prob_trajectory_planning/src/ext/mav_tube_trajectory_generation/cmake-build-release/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/make" "cmTC_1fc2a/fast"
-make[1]: Entering directory '/home/nilsiism/workspace/prob_trajectory_planning/src/ext/mav_trajectory_generation/cmake-build-release/CMakeFiles/CMakeTmp'
-/usr/bin/make -f CMakeFiles/cmTC_1fc2a.dir/build.make CMakeFiles/cmTC_1fc2a.dir/build
-make[2]: Entering directory '/home/nilsiism/workspace/prob_trajectory_planning/src/ext/mav_trajectory_generation/cmake-build-release/CMakeFiles/CMakeTmp'
-Building CXX object CMakeFiles/cmTC_1fc2a.dir/src.cxx.o
-/usr/bin/c++    -Dcheck_cxx_compiler_flag__mavx   -mavx -o CMakeFiles/cmTC_1fc2a.dir/src.cxx.o -c /home/nilsiism/workspace/prob_trajectory_planning/src/ext/mav_trajectory_generation/cmake-build-release/CMakeFiles/CMakeTmp/src.cxx
-Linking CXX executable cmTC_1fc2a
-/opt/clion-2018.1.3/bin/cmake/bin/cmake -E cmake_link_script CMakeFiles/cmTC_1fc2a.dir/link.txt --verbose=1
-/usr/bin/c++   -Dcheck_cxx_compiler_flag__mavx    -rdynamic CMakeFiles/cmTC_1fc2a.dir/src.cxx.o  -o cmTC_1fc2a 
-make[2]: Leaving directory '/home/nilsiism/workspace/prob_trajectory_planning/src/ext/mav_trajectory_generation/cmake-build-release/CMakeFiles/CMakeTmp'
-make[1]: Leaving directory '/home/nilsiism/workspace/prob_trajectory_planning/src/ext/mav_trajectory_generation/cmake-build-release/CMakeFiles/CMakeTmp'
+Run Build Command:"/usr/bin/make" "cmTC_138ac/fast"
+/usr/bin/make -f CMakeFiles/cmTC_138ac.dir/build.make CMakeFiles/cmTC_138ac.dir/build
+make[1]: Entering directory '/home/nilsiism/catkin_ws_ptp/src/ptp_ros/ext/prob_trajectory_planning/src/ext/mav_tube_trajectory_generation/cmake-build-release/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_138ac.dir/src.cxx.o
+/usr/bin/c++    -Dcheck_cxx_compiler_flag__mavx   -mavx -o CMakeFiles/cmTC_138ac.dir/src.cxx.o -c /home/nilsiism/catkin_ws_ptp/src/ptp_ros/ext/prob_trajectory_planning/src/ext/mav_tube_trajectory_generation/cmake-build-release/CMakeFiles/CMakeTmp/src.cxx
+Linking CXX executable cmTC_138ac
+/opt/clion-2018.1.3/bin/cmake/bin/cmake -E cmake_link_script CMakeFiles/cmTC_138ac.dir/link.txt --verbose=1
+/usr/bin/c++   -Dcheck_cxx_compiler_flag__mavx    -rdynamic CMakeFiles/cmTC_138ac.dir/src.cxx.o  -o cmTC_138ac 
+make[1]: Leaving directory '/home/nilsiism/catkin_ws_ptp/src/ptp_ros/ext/prob_trajectory_planning/src/ext/mav_tube_trajectory_generation/cmake-build-release/CMakeFiles/CMakeTmp'
 
 Source file was:
 int main() { return 0; }
 Determining if the include file immintrin.h exists passed with the following output:
-Change Dir: /home/nilsiism/workspace/prob_trajectory_planning/src/ext/mav_trajectory_generation/cmake-build-release/CMakeFiles/CMakeTmp
+Change Dir: /home/nilsiism/catkin_ws_ptp/src/ptp_ros/ext/prob_trajectory_planning/src/ext/mav_tube_trajectory_generation/cmake-build-release/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/make" "cmTC_9fb6a/fast"
-make[1]: Entering directory '/home/nilsiism/workspace/prob_trajectory_planning/src/ext/mav_trajectory_generation/cmake-build-release/CMakeFiles/CMakeTmp'
-/usr/bin/make -f CMakeFiles/cmTC_9fb6a.dir/build.make CMakeFiles/cmTC_9fb6a.dir/build
-make[2]: Entering directory '/home/nilsiism/workspace/prob_trajectory_planning/src/ext/mav_trajectory_generation/cmake-build-release/CMakeFiles/CMakeTmp'
-Building C object CMakeFiles/cmTC_9fb6a.dir/CheckIncludeFile.c.o
-/usr/bin/cc   -mavx    -o CMakeFiles/cmTC_9fb6a.dir/CheckIncludeFile.c.o   -c /home/nilsiism/workspace/prob_trajectory_planning/src/ext/mav_trajectory_generation/cmake-build-release/CMakeFiles/CMakeTmp/CheckIncludeFile.c
-Linking C executable cmTC_9fb6a
-/opt/clion-2018.1.3/bin/cmake/bin/cmake -E cmake_link_script CMakeFiles/cmTC_9fb6a.dir/link.txt --verbose=1
-/usr/bin/cc  -mavx     -rdynamic CMakeFiles/cmTC_9fb6a.dir/CheckIncludeFile.c.o  -o cmTC_9fb6a 
-make[2]: Leaving directory '/home/nilsiism/workspace/prob_trajectory_planning/src/ext/mav_trajectory_generation/cmake-build-release/CMakeFiles/CMakeTmp'
-make[1]: Leaving directory '/home/nilsiism/workspace/prob_trajectory_planning/src/ext/mav_trajectory_generation/cmake-build-release/CMakeFiles/CMakeTmp'
+Run Build Command:"/usr/bin/make" "cmTC_ed473/fast"
+/usr/bin/make -f CMakeFiles/cmTC_ed473.dir/build.make CMakeFiles/cmTC_ed473.dir/build
+make[1]: Entering directory '/home/nilsiism/catkin_ws_ptp/src/ptp_ros/ext/prob_trajectory_planning/src/ext/mav_tube_trajectory_generation/cmake-build-release/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_ed473.dir/CheckIncludeFile.c.o
+/usr/bin/cc   -mavx    -o CMakeFiles/cmTC_ed473.dir/CheckIncludeFile.c.o   -c /home/nilsiism/catkin_ws_ptp/src/ptp_ros/ext/prob_trajectory_planning/src/ext/mav_tube_trajectory_generation/cmake-build-release/CMakeFiles/CMakeTmp/CheckIncludeFile.c
+Linking C executable cmTC_ed473
+/opt/clion-2018.1.3/bin/cmake/bin/cmake -E cmake_link_script CMakeFiles/cmTC_ed473.dir/link.txt --verbose=1
+/usr/bin/cc  -mavx     -rdynamic CMakeFiles/cmTC_ed473.dir/CheckIncludeFile.c.o  -o cmTC_ed473 
+make[1]: Leaving directory '/home/nilsiism/catkin_ws_ptp/src/ptp_ros/ext/prob_trajectory_planning/src/ext/mav_tube_trajectory_generation/cmake-build-release/CMakeFiles/CMakeTmp'
 
 
 Performing C++ SOURCE FILE Test check_cxx_compiler_flag__mfma succeeded with the following output:
-Change Dir: /home/nilsiism/workspace/prob_trajectory_planning/src/ext/mav_trajectory_generation/cmake-build-release/CMakeFiles/CMakeTmp
+Change Dir: /home/nilsiism/catkin_ws_ptp/src/ptp_ros/ext/prob_trajectory_planning/src/ext/mav_tube_trajectory_generation/cmake-build-release/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/make" "cmTC_7b44f/fast"
-make[1]: Entering directory '/home/nilsiism/workspace/prob_trajectory_planning/src/ext/mav_trajectory_generation/cmake-build-release/CMakeFiles/CMakeTmp'
-/usr/bin/make -f CMakeFiles/cmTC_7b44f.dir/build.make CMakeFiles/cmTC_7b44f.dir/build
-make[2]: Entering directory '/home/nilsiism/workspace/prob_trajectory_planning/src/ext/mav_trajectory_generation/cmake-build-release/CMakeFiles/CMakeTmp'
-Building CXX object CMakeFiles/cmTC_7b44f.dir/src.cxx.o
-/usr/bin/c++    -Dcheck_cxx_compiler_flag__mfma   -mfma -o CMakeFiles/cmTC_7b44f.dir/src.cxx.o -c /home/nilsiism/workspace/prob_trajectory_planning/src/ext/mav_trajectory_generation/cmake-build-release/CMakeFiles/CMakeTmp/src.cxx
-Linking CXX executable cmTC_7b44f
-/opt/clion-2018.1.3/bin/cmake/bin/cmake -E cmake_link_script CMakeFiles/cmTC_7b44f.dir/link.txt --verbose=1
-/usr/bin/c++   -Dcheck_cxx_compiler_flag__mfma    -rdynamic CMakeFiles/cmTC_7b44f.dir/src.cxx.o  -o cmTC_7b44f 
-make[2]: Leaving directory '/home/nilsiism/workspace/prob_trajectory_planning/src/ext/mav_trajectory_generation/cmake-build-release/CMakeFiles/CMakeTmp'
-make[1]: Leaving directory '/home/nilsiism/workspace/prob_trajectory_planning/src/ext/mav_trajectory_generation/cmake-build-release/CMakeFiles/CMakeTmp'
+Run Build Command:"/usr/bin/make" "cmTC_0ae92/fast"
+/usr/bin/make -f CMakeFiles/cmTC_0ae92.dir/build.make CMakeFiles/cmTC_0ae92.dir/build
+make[1]: Entering directory '/home/nilsiism/catkin_ws_ptp/src/ptp_ros/ext/prob_trajectory_planning/src/ext/mav_tube_trajectory_generation/cmake-build-release/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_0ae92.dir/src.cxx.o
+/usr/bin/c++    -Dcheck_cxx_compiler_flag__mfma   -mfma -o CMakeFiles/cmTC_0ae92.dir/src.cxx.o -c /home/nilsiism/catkin_ws_ptp/src/ptp_ros/ext/prob_trajectory_planning/src/ext/mav_tube_trajectory_generation/cmake-build-release/CMakeFiles/CMakeTmp/src.cxx
+Linking CXX executable cmTC_0ae92
+/opt/clion-2018.1.3/bin/cmake/bin/cmake -E cmake_link_script CMakeFiles/cmTC_0ae92.dir/link.txt --verbose=1
+/usr/bin/c++   -Dcheck_cxx_compiler_flag__mfma    -rdynamic CMakeFiles/cmTC_0ae92.dir/src.cxx.o  -o cmTC_0ae92 
+make[1]: Leaving directory '/home/nilsiism/catkin_ws_ptp/src/ptp_ros/ext/prob_trajectory_planning/src/ext/mav_tube_trajectory_generation/cmake-build-release/CMakeFiles/CMakeTmp'
 
 Source file was:
 int main() { return 0; }
 Performing C++ SOURCE FILE Test check_cxx_compiler_flag__mbmi2 succeeded with the following output:
-Change Dir: /home/nilsiism/workspace/prob_trajectory_planning/src/ext/mav_trajectory_generation/cmake-build-release/CMakeFiles/CMakeTmp
+Change Dir: /home/nilsiism/catkin_ws_ptp/src/ptp_ros/ext/prob_trajectory_planning/src/ext/mav_tube_trajectory_generation/cmake-build-release/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/make" "cmTC_48cdc/fast"
-make[1]: Entering directory '/home/nilsiism/workspace/prob_trajectory_planning/src/ext/mav_trajectory_generation/cmake-build-release/CMakeFiles/CMakeTmp'
-/usr/bin/make -f CMakeFiles/cmTC_48cdc.dir/build.make CMakeFiles/cmTC_48cdc.dir/build
-make[2]: Entering directory '/home/nilsiism/workspace/prob_trajectory_planning/src/ext/mav_trajectory_generation/cmake-build-release/CMakeFiles/CMakeTmp'
-Building CXX object CMakeFiles/cmTC_48cdc.dir/src.cxx.o
-/usr/bin/c++    -Dcheck_cxx_compiler_flag__mbmi2   -mbmi2 -o CMakeFiles/cmTC_48cdc.dir/src.cxx.o -c /home/nilsiism/workspace/prob_trajectory_planning/src/ext/mav_trajectory_generation/cmake-build-release/CMakeFiles/CMakeTmp/src.cxx
-Linking CXX executable cmTC_48cdc
-/opt/clion-2018.1.3/bin/cmake/bin/cmake -E cmake_link_script CMakeFiles/cmTC_48cdc.dir/link.txt --verbose=1
-/usr/bin/c++   -Dcheck_cxx_compiler_flag__mbmi2    -rdynamic CMakeFiles/cmTC_48cdc.dir/src.cxx.o  -o cmTC_48cdc 
-make[2]: Leaving directory '/home/nilsiism/workspace/prob_trajectory_planning/src/ext/mav_trajectory_generation/cmake-build-release/CMakeFiles/CMakeTmp'
-make[1]: Leaving directory '/home/nilsiism/workspace/prob_trajectory_planning/src/ext/mav_trajectory_generation/cmake-build-release/CMakeFiles/CMakeTmp'
+Run Build Command:"/usr/bin/make" "cmTC_a00ce/fast"
+/usr/bin/make -f CMakeFiles/cmTC_a00ce.dir/build.make CMakeFiles/cmTC_a00ce.dir/build
+make[1]: Entering directory '/home/nilsiism/catkin_ws_ptp/src/ptp_ros/ext/prob_trajectory_planning/src/ext/mav_tube_trajectory_generation/cmake-build-release/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_a00ce.dir/src.cxx.o
+/usr/bin/c++    -Dcheck_cxx_compiler_flag__mbmi2   -mbmi2 -o CMakeFiles/cmTC_a00ce.dir/src.cxx.o -c /home/nilsiism/catkin_ws_ptp/src/ptp_ros/ext/prob_trajectory_planning/src/ext/mav_tube_trajectory_generation/cmake-build-release/CMakeFiles/CMakeTmp/src.cxx
+Linking CXX executable cmTC_a00ce
+/opt/clion-2018.1.3/bin/cmake/bin/cmake -E cmake_link_script CMakeFiles/cmTC_a00ce.dir/link.txt --verbose=1
+/usr/bin/c++   -Dcheck_cxx_compiler_flag__mbmi2    -rdynamic CMakeFiles/cmTC_a00ce.dir/src.cxx.o  -o cmTC_a00ce 
+make[1]: Leaving directory '/home/nilsiism/catkin_ws_ptp/src/ptp_ros/ext/prob_trajectory_planning/src/ext/mav_tube_trajectory_generation/cmake-build-release/CMakeFiles/CMakeTmp'
 
 Source file was:
 int main() { return 0; }
 Performing C++ SOURCE FILE Test check_cxx_compiler_flag__mavx2 succeeded with the following output:
-Change Dir: /home/nilsiism/workspace/prob_trajectory_planning/src/ext/mav_trajectory_generation/cmake-build-release/CMakeFiles/CMakeTmp
+Change Dir: /home/nilsiism/catkin_ws_ptp/src/ptp_ros/ext/prob_trajectory_planning/src/ext/mav_tube_trajectory_generation/cmake-build-release/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/make" "cmTC_833e3/fast"
-make[1]: Entering directory '/home/nilsiism/workspace/prob_trajectory_planning/src/ext/mav_trajectory_generation/cmake-build-release/CMakeFiles/CMakeTmp'
-/usr/bin/make -f CMakeFiles/cmTC_833e3.dir/build.make CMakeFiles/cmTC_833e3.dir/build
-make[2]: Entering directory '/home/nilsiism/workspace/prob_trajectory_planning/src/ext/mav_trajectory_generation/cmake-build-release/CMakeFiles/CMakeTmp'
-Building CXX object CMakeFiles/cmTC_833e3.dir/src.cxx.o
-/usr/bin/c++    -Dcheck_cxx_compiler_flag__mavx2   -mavx2 -o CMakeFiles/cmTC_833e3.dir/src.cxx.o -c /home/nilsiism/workspace/prob_trajectory_planning/src/ext/mav_trajectory_generation/cmake-build-release/CMakeFiles/CMakeTmp/src.cxx
-Linking CXX executable cmTC_833e3
-/opt/clion-2018.1.3/bin/cmake/bin/cmake -E cmake_link_script CMakeFiles/cmTC_833e3.dir/link.txt --verbose=1
-/usr/bin/c++   -Dcheck_cxx_compiler_flag__mavx2    -rdynamic CMakeFiles/cmTC_833e3.dir/src.cxx.o  -o cmTC_833e3 
-make[2]: Leaving directory '/home/nilsiism/workspace/prob_trajectory_planning/src/ext/mav_trajectory_generation/cmake-build-release/CMakeFiles/CMakeTmp'
-make[1]: Leaving directory '/home/nilsiism/workspace/prob_trajectory_planning/src/ext/mav_trajectory_generation/cmake-build-release/CMakeFiles/CMakeTmp'
+Run Build Command:"/usr/bin/make" "cmTC_e5fc8/fast"
+/usr/bin/make -f CMakeFiles/cmTC_e5fc8.dir/build.make CMakeFiles/cmTC_e5fc8.dir/build
+make[1]: Entering directory '/home/nilsiism/catkin_ws_ptp/src/ptp_ros/ext/prob_trajectory_planning/src/ext/mav_tube_trajectory_generation/cmake-build-release/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_e5fc8.dir/src.cxx.o
+/usr/bin/c++    -Dcheck_cxx_compiler_flag__mavx2   -mavx2 -o CMakeFiles/cmTC_e5fc8.dir/src.cxx.o -c /home/nilsiism/catkin_ws_ptp/src/ptp_ros/ext/prob_trajectory_planning/src/ext/mav_tube_trajectory_generation/cmake-build-release/CMakeFiles/CMakeTmp/src.cxx
+Linking CXX executable cmTC_e5fc8
+/opt/clion-2018.1.3/bin/cmake/bin/cmake -E cmake_link_script CMakeFiles/cmTC_e5fc8.dir/link.txt --verbose=1
+/usr/bin/c++   -Dcheck_cxx_compiler_flag__mavx2    -rdynamic CMakeFiles/cmTC_e5fc8.dir/src.cxx.o  -o cmTC_e5fc8 
+make[1]: Leaving directory '/home/nilsiism/catkin_ws_ptp/src/ptp_ros/ext/prob_trajectory_planning/src/ext/mav_tube_trajectory_generation/cmake-build-release/CMakeFiles/CMakeTmp'
 
 Source file was:
 int main() { return 0; }
 Performing C++ SOURCE FILE Test check_cxx_compiler_flag__mno_sse4a succeeded with the following output:
-Change Dir: /home/nilsiism/workspace/prob_trajectory_planning/src/ext/mav_trajectory_generation/cmake-build-release/CMakeFiles/CMakeTmp
+Change Dir: /home/nilsiism/catkin_ws_ptp/src/ptp_ros/ext/prob_trajectory_planning/src/ext/mav_tube_trajectory_generation/cmake-build-release/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/make" "cmTC_bf204/fast"
-make[1]: Entering directory '/home/nilsiism/workspace/prob_trajectory_planning/src/ext/mav_trajectory_generation/cmake-build-release/CMakeFiles/CMakeTmp'
-/usr/bin/make -f CMakeFiles/cmTC_bf204.dir/build.make CMakeFiles/cmTC_bf204.dir/build
-make[2]: Entering directory '/home/nilsiism/workspace/prob_trajectory_planning/src/ext/mav_trajectory_generation/cmake-build-release/CMakeFiles/CMakeTmp'
-Building CXX object CMakeFiles/cmTC_bf204.dir/src.cxx.o
-/usr/bin/c++    -Dcheck_cxx_compiler_flag__mno_sse4a   -mno-sse4a -o CMakeFiles/cmTC_bf204.dir/src.cxx.o -c /home/nilsiism/workspace/prob_trajectory_planning/src/ext/mav_trajectory_generation/cmake-build-release/CMakeFiles/CMakeTmp/src.cxx
-Linking CXX executable cmTC_bf204
-/opt/clion-2018.1.3/bin/cmake/bin/cmake -E cmake_link_script CMakeFiles/cmTC_bf204.dir/link.txt --verbose=1
-/usr/bin/c++   -Dcheck_cxx_compiler_flag__mno_sse4a    -rdynamic CMakeFiles/cmTC_bf204.dir/src.cxx.o  -o cmTC_bf204 
-make[2]: Leaving directory '/home/nilsiism/workspace/prob_trajectory_planning/src/ext/mav_trajectory_generation/cmake-build-release/CMakeFiles/CMakeTmp'
-make[1]: Leaving directory '/home/nilsiism/workspace/prob_trajectory_planning/src/ext/mav_trajectory_generation/cmake-build-release/CMakeFiles/CMakeTmp'
+Run Build Command:"/usr/bin/make" "cmTC_0a7bb/fast"
+/usr/bin/make -f CMakeFiles/cmTC_0a7bb.dir/build.make CMakeFiles/cmTC_0a7bb.dir/build
+make[1]: Entering directory '/home/nilsiism/catkin_ws_ptp/src/ptp_ros/ext/prob_trajectory_planning/src/ext/mav_tube_trajectory_generation/cmake-build-release/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_0a7bb.dir/src.cxx.o
+/usr/bin/c++    -Dcheck_cxx_compiler_flag__mno_sse4a   -mno-sse4a -o CMakeFiles/cmTC_0a7bb.dir/src.cxx.o -c /home/nilsiism/catkin_ws_ptp/src/ptp_ros/ext/prob_trajectory_planning/src/ext/mav_tube_trajectory_generation/cmake-build-release/CMakeFiles/CMakeTmp/src.cxx
+Linking CXX executable cmTC_0a7bb
+/opt/clion-2018.1.3/bin/cmake/bin/cmake -E cmake_link_script CMakeFiles/cmTC_0a7bb.dir/link.txt --verbose=1
+/usr/bin/c++   -Dcheck_cxx_compiler_flag__mno_sse4a    -rdynamic CMakeFiles/cmTC_0a7bb.dir/src.cxx.o  -o cmTC_0a7bb 
+make[1]: Leaving directory '/home/nilsiism/catkin_ws_ptp/src/ptp_ros/ext/prob_trajectory_planning/src/ext/mav_tube_trajectory_generation/cmake-build-release/CMakeFiles/CMakeTmp'
 
 Source file was:
 int main() { return 0; }
 Performing C++ SOURCE FILE Test check_cxx_compiler_flag__mno_xop succeeded with the following output:
-Change Dir: /home/nilsiism/workspace/prob_trajectory_planning/src/ext/mav_trajectory_generation/cmake-build-release/CMakeFiles/CMakeTmp
+Change Dir: /home/nilsiism/catkin_ws_ptp/src/ptp_ros/ext/prob_trajectory_planning/src/ext/mav_tube_trajectory_generation/cmake-build-release/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/make" "cmTC_e5ce1/fast"
-make[1]: Entering directory '/home/nilsiism/workspace/prob_trajectory_planning/src/ext/mav_trajectory_generation/cmake-build-release/CMakeFiles/CMakeTmp'
-/usr/bin/make -f CMakeFiles/cmTC_e5ce1.dir/build.make CMakeFiles/cmTC_e5ce1.dir/build
-make[2]: Entering directory '/home/nilsiism/workspace/prob_trajectory_planning/src/ext/mav_trajectory_generation/cmake-build-release/CMakeFiles/CMakeTmp'
-Building CXX object CMakeFiles/cmTC_e5ce1.dir/src.cxx.o
-/usr/bin/c++    -Dcheck_cxx_compiler_flag__mno_xop   -mno-xop -o CMakeFiles/cmTC_e5ce1.dir/src.cxx.o -c /home/nilsiism/workspace/prob_trajectory_planning/src/ext/mav_trajectory_generation/cmake-build-release/CMakeFiles/CMakeTmp/src.cxx
-Linking CXX executable cmTC_e5ce1
-/opt/clion-2018.1.3/bin/cmake/bin/cmake -E cmake_link_script CMakeFiles/cmTC_e5ce1.dir/link.txt --verbose=1
-/usr/bin/c++   -Dcheck_cxx_compiler_flag__mno_xop    -rdynamic CMakeFiles/cmTC_e5ce1.dir/src.cxx.o  -o cmTC_e5ce1 
-make[2]: Leaving directory '/home/nilsiism/workspace/prob_trajectory_planning/src/ext/mav_trajectory_generation/cmake-build-release/CMakeFiles/CMakeTmp'
-make[1]: Leaving directory '/home/nilsiism/workspace/prob_trajectory_planning/src/ext/mav_trajectory_generation/cmake-build-release/CMakeFiles/CMakeTmp'
+Run Build Command:"/usr/bin/make" "cmTC_f918f/fast"
+/usr/bin/make -f CMakeFiles/cmTC_f918f.dir/build.make CMakeFiles/cmTC_f918f.dir/build
+make[1]: Entering directory '/home/nilsiism/catkin_ws_ptp/src/ptp_ros/ext/prob_trajectory_planning/src/ext/mav_tube_trajectory_generation/cmake-build-release/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_f918f.dir/src.cxx.o
+/usr/bin/c++    -Dcheck_cxx_compiler_flag__mno_xop   -mno-xop -o CMakeFiles/cmTC_f918f.dir/src.cxx.o -c /home/nilsiism/catkin_ws_ptp/src/ptp_ros/ext/prob_trajectory_planning/src/ext/mav_tube_trajectory_generation/cmake-build-release/CMakeFiles/CMakeTmp/src.cxx
+Linking CXX executable cmTC_f918f
+/opt/clion-2018.1.3/bin/cmake/bin/cmake -E cmake_link_script CMakeFiles/cmTC_f918f.dir/link.txt --verbose=1
+/usr/bin/c++   -Dcheck_cxx_compiler_flag__mno_xop    -rdynamic CMakeFiles/cmTC_f918f.dir/src.cxx.o  -o cmTC_f918f 
+make[1]: Leaving directory '/home/nilsiism/catkin_ws_ptp/src/ptp_ros/ext/prob_trajectory_planning/src/ext/mav_tube_trajectory_generation/cmake-build-release/CMakeFiles/CMakeTmp'
 
 Source file was:
 int main() { return 0; }
 Performing C++ SOURCE FILE Test check_cxx_compiler_flag__mno_fma4 succeeded with the following output:
-Change Dir: /home/nilsiism/workspace/prob_trajectory_planning/src/ext/mav_trajectory_generation/cmake-build-release/CMakeFiles/CMakeTmp
+Change Dir: /home/nilsiism/catkin_ws_ptp/src/ptp_ros/ext/prob_trajectory_planning/src/ext/mav_tube_trajectory_generation/cmake-build-release/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/make" "cmTC_86753/fast"
-make[1]: Entering directory '/home/nilsiism/workspace/prob_trajectory_planning/src/ext/mav_trajectory_generation/cmake-build-release/CMakeFiles/CMakeTmp'
-/usr/bin/make -f CMakeFiles/cmTC_86753.dir/build.make CMakeFiles/cmTC_86753.dir/build
-make[2]: Entering directory '/home/nilsiism/workspace/prob_trajectory_planning/src/ext/mav_trajectory_generation/cmake-build-release/CMakeFiles/CMakeTmp'
-Building CXX object CMakeFiles/cmTC_86753.dir/src.cxx.o
-/usr/bin/c++    -Dcheck_cxx_compiler_flag__mno_fma4   -mno-fma4 -o CMakeFiles/cmTC_86753.dir/src.cxx.o -c /home/nilsiism/workspace/prob_trajectory_planning/src/ext/mav_trajectory_generation/cmake-build-release/CMakeFiles/CMakeTmp/src.cxx
-Linking CXX executable cmTC_86753
-/opt/clion-2018.1.3/bin/cmake/bin/cmake -E cmake_link_script CMakeFiles/cmTC_86753.dir/link.txt --verbose=1
-/usr/bin/c++   -Dcheck_cxx_compiler_flag__mno_fma4    -rdynamic CMakeFiles/cmTC_86753.dir/src.cxx.o  -o cmTC_86753 
-make[2]: Leaving directory '/home/nilsiism/workspace/prob_trajectory_planning/src/ext/mav_trajectory_generation/cmake-build-release/CMakeFiles/CMakeTmp'
-make[1]: Leaving directory '/home/nilsiism/workspace/prob_trajectory_planning/src/ext/mav_trajectory_generation/cmake-build-release/CMakeFiles/CMakeTmp'
+Run Build Command:"/usr/bin/make" "cmTC_33377/fast"
+/usr/bin/make -f CMakeFiles/cmTC_33377.dir/build.make CMakeFiles/cmTC_33377.dir/build
+make[1]: Entering directory '/home/nilsiism/catkin_ws_ptp/src/ptp_ros/ext/prob_trajectory_planning/src/ext/mav_tube_trajectory_generation/cmake-build-release/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_33377.dir/src.cxx.o
+/usr/bin/c++    -Dcheck_cxx_compiler_flag__mno_fma4   -mno-fma4 -o CMakeFiles/cmTC_33377.dir/src.cxx.o -c /home/nilsiism/catkin_ws_ptp/src/ptp_ros/ext/prob_trajectory_planning/src/ext/mav_tube_trajectory_generation/cmake-build-release/CMakeFiles/CMakeTmp/src.cxx
+Linking CXX executable cmTC_33377
+/opt/clion-2018.1.3/bin/cmake/bin/cmake -E cmake_link_script CMakeFiles/cmTC_33377.dir/link.txt --verbose=1
+/usr/bin/c++   -Dcheck_cxx_compiler_flag__mno_fma4    -rdynamic CMakeFiles/cmTC_33377.dir/src.cxx.o  -o cmTC_33377 
+make[1]: Leaving directory '/home/nilsiism/catkin_ws_ptp/src/ptp_ros/ext/prob_trajectory_planning/src/ext/mav_tube_trajectory_generation/cmake-build-release/CMakeFiles/CMakeTmp'
 
 Source file was:
 int main() { return 0; }
 Performing C++ SOURCE FILE Test check_cxx_compiler_flag__mno_avx512f succeeded with the following output:
-Change Dir: /home/nilsiism/workspace/prob_trajectory_planning/src/ext/mav_trajectory_generation/cmake-build-release/CMakeFiles/CMakeTmp
+Change Dir: /home/nilsiism/catkin_ws_ptp/src/ptp_ros/ext/prob_trajectory_planning/src/ext/mav_tube_trajectory_generation/cmake-build-release/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/make" "cmTC_86d20/fast"
-make[1]: Entering directory '/home/nilsiism/workspace/prob_trajectory_planning/src/ext/mav_trajectory_generation/cmake-build-release/CMakeFiles/CMakeTmp'
-/usr/bin/make -f CMakeFiles/cmTC_86d20.dir/build.make CMakeFiles/cmTC_86d20.dir/build
-make[2]: Entering directory '/home/nilsiism/workspace/prob_trajectory_planning/src/ext/mav_trajectory_generation/cmake-build-release/CMakeFiles/CMakeTmp'
-Building CXX object CMakeFiles/cmTC_86d20.dir/src.cxx.o
-/usr/bin/c++    -Dcheck_cxx_compiler_flag__mno_avx512f   -mno-avx512f -o CMakeFiles/cmTC_86d20.dir/src.cxx.o -c /home/nilsiism/workspace/prob_trajectory_planning/src/ext/mav_trajectory_generation/cmake-build-release/CMakeFiles/CMakeTmp/src.cxx
-Linking CXX executable cmTC_86d20
-/opt/clion-2018.1.3/bin/cmake/bin/cmake -E cmake_link_script CMakeFiles/cmTC_86d20.dir/link.txt --verbose=1
-/usr/bin/c++   -Dcheck_cxx_compiler_flag__mno_avx512f    -rdynamic CMakeFiles/cmTC_86d20.dir/src.cxx.o  -o cmTC_86d20 
-make[2]: Leaving directory '/home/nilsiism/workspace/prob_trajectory_planning/src/ext/mav_trajectory_generation/cmake-build-release/CMakeFiles/CMakeTmp'
-make[1]: Leaving directory '/home/nilsiism/workspace/prob_trajectory_planning/src/ext/mav_trajectory_generation/cmake-build-release/CMakeFiles/CMakeTmp'
+Run Build Command:"/usr/bin/make" "cmTC_b39cf/fast"
+/usr/bin/make -f CMakeFiles/cmTC_b39cf.dir/build.make CMakeFiles/cmTC_b39cf.dir/build
+make[1]: Entering directory '/home/nilsiism/catkin_ws_ptp/src/ptp_ros/ext/prob_trajectory_planning/src/ext/mav_tube_trajectory_generation/cmake-build-release/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_b39cf.dir/src.cxx.o
+/usr/bin/c++    -Dcheck_cxx_compiler_flag__mno_avx512f   -mno-avx512f -o CMakeFiles/cmTC_b39cf.dir/src.cxx.o -c /home/nilsiism/catkin_ws_ptp/src/ptp_ros/ext/prob_trajectory_planning/src/ext/mav_tube_trajectory_generation/cmake-build-release/CMakeFiles/CMakeTmp/src.cxx
+Linking CXX executable cmTC_b39cf
+/opt/clion-2018.1.3/bin/cmake/bin/cmake -E cmake_link_script CMakeFiles/cmTC_b39cf.dir/link.txt --verbose=1
+/usr/bin/c++   -Dcheck_cxx_compiler_flag__mno_avx512f    -rdynamic CMakeFiles/cmTC_b39cf.dir/src.cxx.o  -o cmTC_b39cf 
+make[1]: Leaving directory '/home/nilsiism/catkin_ws_ptp/src/ptp_ros/ext/prob_trajectory_planning/src/ext/mav_tube_trajectory_generation/cmake-build-release/CMakeFiles/CMakeTmp'
 
 Source file was:
 int main() { return 0; }
 Performing C++ SOURCE FILE Test check_cxx_compiler_flag__mno_avx512vl succeeded with the following output:
-Change Dir: /home/nilsiism/workspace/prob_trajectory_planning/src/ext/mav_trajectory_generation/cmake-build-release/CMakeFiles/CMakeTmp
+Change Dir: /home/nilsiism/catkin_ws_ptp/src/ptp_ros/ext/prob_trajectory_planning/src/ext/mav_tube_trajectory_generation/cmake-build-release/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/make" "cmTC_06457/fast"
-make[1]: Entering directory '/home/nilsiism/workspace/prob_trajectory_planning/src/ext/mav_trajectory_generation/cmake-build-release/CMakeFiles/CMakeTmp'
-/usr/bin/make -f CMakeFiles/cmTC_06457.dir/build.make CMakeFiles/cmTC_06457.dir/build
-make[2]: Entering directory '/home/nilsiism/workspace/prob_trajectory_planning/src/ext/mav_trajectory_generation/cmake-build-release/CMakeFiles/CMakeTmp'
-Building CXX object CMakeFiles/cmTC_06457.dir/src.cxx.o
-/usr/bin/c++    -Dcheck_cxx_compiler_flag__mno_avx512vl   -mno-avx512vl -o CMakeFiles/cmTC_06457.dir/src.cxx.o -c /home/nilsiism/workspace/prob_trajectory_planning/src/ext/mav_trajectory_generation/cmake-build-release/CMakeFiles/CMakeTmp/src.cxx
-Linking CXX executable cmTC_06457
-/opt/clion-2018.1.3/bin/cmake/bin/cmake -E cmake_link_script CMakeFiles/cmTC_06457.dir/link.txt --verbose=1
-/usr/bin/c++   -Dcheck_cxx_compiler_flag__mno_avx512vl    -rdynamic CMakeFiles/cmTC_06457.dir/src.cxx.o  -o cmTC_06457 
-make[2]: Leaving directory '/home/nilsiism/workspace/prob_trajectory_planning/src/ext/mav_trajectory_generation/cmake-build-release/CMakeFiles/CMakeTmp'
-make[1]: Leaving directory '/home/nilsiism/workspace/prob_trajectory_planning/src/ext/mav_trajectory_generation/cmake-build-release/CMakeFiles/CMakeTmp'
+Run Build Command:"/usr/bin/make" "cmTC_b9925/fast"
+/usr/bin/make -f CMakeFiles/cmTC_b9925.dir/build.make CMakeFiles/cmTC_b9925.dir/build
+make[1]: Entering directory '/home/nilsiism/catkin_ws_ptp/src/ptp_ros/ext/prob_trajectory_planning/src/ext/mav_tube_trajectory_generation/cmake-build-release/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_b9925.dir/src.cxx.o
+/usr/bin/c++    -Dcheck_cxx_compiler_flag__mno_avx512vl   -mno-avx512vl -o CMakeFiles/cmTC_b9925.dir/src.cxx.o -c /home/nilsiism/catkin_ws_ptp/src/ptp_ros/ext/prob_trajectory_planning/src/ext/mav_tube_trajectory_generation/cmake-build-release/CMakeFiles/CMakeTmp/src.cxx
+Linking CXX executable cmTC_b9925
+/opt/clion-2018.1.3/bin/cmake/bin/cmake -E cmake_link_script CMakeFiles/cmTC_b9925.dir/link.txt --verbose=1
+/usr/bin/c++   -Dcheck_cxx_compiler_flag__mno_avx512vl    -rdynamic CMakeFiles/cmTC_b9925.dir/src.cxx.o  -o cmTC_b9925 
+make[1]: Leaving directory '/home/nilsiism/catkin_ws_ptp/src/ptp_ros/ext/prob_trajectory_planning/src/ext/mav_tube_trajectory_generation/cmake-build-release/CMakeFiles/CMakeTmp'
 
 Source file was:
 int main() { return 0; }
 Performing C++ SOURCE FILE Test check_cxx_compiler_flag__mno_avx512pf succeeded with the following output:
-Change Dir: /home/nilsiism/workspace/prob_trajectory_planning/src/ext/mav_trajectory_generation/cmake-build-release/CMakeFiles/CMakeTmp
+Change Dir: /home/nilsiism/catkin_ws_ptp/src/ptp_ros/ext/prob_trajectory_planning/src/ext/mav_tube_trajectory_generation/cmake-build-release/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/make" "cmTC_f252a/fast"
-make[1]: Entering directory '/home/nilsiism/workspace/prob_trajectory_planning/src/ext/mav_trajectory_generation/cmake-build-release/CMakeFiles/CMakeTmp'
-/usr/bin/make -f CMakeFiles/cmTC_f252a.dir/build.make CMakeFiles/cmTC_f252a.dir/build
-make[2]: Entering directory '/home/nilsiism/workspace/prob_trajectory_planning/src/ext/mav_trajectory_generation/cmake-build-release/CMakeFiles/CMakeTmp'
-Building CXX object CMakeFiles/cmTC_f252a.dir/src.cxx.o
-/usr/bin/c++    -Dcheck_cxx_compiler_flag__mno_avx512pf   -mno-avx512pf -o CMakeFiles/cmTC_f252a.dir/src.cxx.o -c /home/nilsiism/workspace/prob_trajectory_planning/src/ext/mav_trajectory_generation/cmake-build-release/CMakeFiles/CMakeTmp/src.cxx
-Linking CXX executable cmTC_f252a
-/opt/clion-2018.1.3/bin/cmake/bin/cmake -E cmake_link_script CMakeFiles/cmTC_f252a.dir/link.txt --verbose=1
-/usr/bin/c++   -Dcheck_cxx_compiler_flag__mno_avx512pf    -rdynamic CMakeFiles/cmTC_f252a.dir/src.cxx.o  -o cmTC_f252a 
-make[2]: Leaving directory '/home/nilsiism/workspace/prob_trajectory_planning/src/ext/mav_trajectory_generation/cmake-build-release/CMakeFiles/CMakeTmp'
-make[1]: Leaving directory '/home/nilsiism/workspace/prob_trajectory_planning/src/ext/mav_trajectory_generation/cmake-build-release/CMakeFiles/CMakeTmp'
+Run Build Command:"/usr/bin/make" "cmTC_eaed6/fast"
+/usr/bin/make -f CMakeFiles/cmTC_eaed6.dir/build.make CMakeFiles/cmTC_eaed6.dir/build
+make[1]: Entering directory '/home/nilsiism/catkin_ws_ptp/src/ptp_ros/ext/prob_trajectory_planning/src/ext/mav_tube_trajectory_generation/cmake-build-release/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_eaed6.dir/src.cxx.o
+/usr/bin/c++    -Dcheck_cxx_compiler_flag__mno_avx512pf   -mno-avx512pf -o CMakeFiles/cmTC_eaed6.dir/src.cxx.o -c /home/nilsiism/catkin_ws_ptp/src/ptp_ros/ext/prob_trajectory_planning/src/ext/mav_tube_trajectory_generation/cmake-build-release/CMakeFiles/CMakeTmp/src.cxx
+Linking CXX executable cmTC_eaed6
+/opt/clion-2018.1.3/bin/cmake/bin/cmake -E cmake_link_script CMakeFiles/cmTC_eaed6.dir/link.txt --verbose=1
+/usr/bin/c++   -Dcheck_cxx_compiler_flag__mno_avx512pf    -rdynamic CMakeFiles/cmTC_eaed6.dir/src.cxx.o  -o cmTC_eaed6 
+make[1]: Leaving directory '/home/nilsiism/catkin_ws_ptp/src/ptp_ros/ext/prob_trajectory_planning/src/ext/mav_tube_trajectory_generation/cmake-build-release/CMakeFiles/CMakeTmp'
 
 Source file was:
 int main() { return 0; }
 Performing C++ SOURCE FILE Test check_cxx_compiler_flag__mno_avx512er succeeded with the following output:
-Change Dir: /home/nilsiism/workspace/prob_trajectory_planning/src/ext/mav_trajectory_generation/cmake-build-release/CMakeFiles/CMakeTmp
+Change Dir: /home/nilsiism/catkin_ws_ptp/src/ptp_ros/ext/prob_trajectory_planning/src/ext/mav_tube_trajectory_generation/cmake-build-release/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/make" "cmTC_07439/fast"
-make[1]: Entering directory '/home/nilsiism/workspace/prob_trajectory_planning/src/ext/mav_trajectory_generation/cmake-build-release/CMakeFiles/CMakeTmp'
-/usr/bin/make -f CMakeFiles/cmTC_07439.dir/build.make CMakeFiles/cmTC_07439.dir/build
-make[2]: Entering directory '/home/nilsiism/workspace/prob_trajectory_planning/src/ext/mav_trajectory_generation/cmake-build-release/CMakeFiles/CMakeTmp'
-Building CXX object CMakeFiles/cmTC_07439.dir/src.cxx.o
-/usr/bin/c++    -Dcheck_cxx_compiler_flag__mno_avx512er   -mno-avx512er -o CMakeFiles/cmTC_07439.dir/src.cxx.o -c /home/nilsiism/workspace/prob_trajectory_planning/src/ext/mav_trajectory_generation/cmake-build-release/CMakeFiles/CMakeTmp/src.cxx
-Linking CXX executable cmTC_07439
-/opt/clion-2018.1.3/bin/cmake/bin/cmake -E cmake_link_script CMakeFiles/cmTC_07439.dir/link.txt --verbose=1
-/usr/bin/c++   -Dcheck_cxx_compiler_flag__mno_avx512er    -rdynamic CMakeFiles/cmTC_07439.dir/src.cxx.o  -o cmTC_07439 
-make[2]: Leaving directory '/home/nilsiism/workspace/prob_trajectory_planning/src/ext/mav_trajectory_generation/cmake-build-release/CMakeFiles/CMakeTmp'
-make[1]: Leaving directory '/home/nilsiism/workspace/prob_trajectory_planning/src/ext/mav_trajectory_generation/cmake-build-release/CMakeFiles/CMakeTmp'
+Run Build Command:"/usr/bin/make" "cmTC_5baac/fast"
+/usr/bin/make -f CMakeFiles/cmTC_5baac.dir/build.make CMakeFiles/cmTC_5baac.dir/build
+make[1]: Entering directory '/home/nilsiism/catkin_ws_ptp/src/ptp_ros/ext/prob_trajectory_planning/src/ext/mav_tube_trajectory_generation/cmake-build-release/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_5baac.dir/src.cxx.o
+/usr/bin/c++    -Dcheck_cxx_compiler_flag__mno_avx512er   -mno-avx512er -o CMakeFiles/cmTC_5baac.dir/src.cxx.o -c /home/nilsiism/catkin_ws_ptp/src/ptp_ros/ext/prob_trajectory_planning/src/ext/mav_tube_trajectory_generation/cmake-build-release/CMakeFiles/CMakeTmp/src.cxx
+Linking CXX executable cmTC_5baac
+/opt/clion-2018.1.3/bin/cmake/bin/cmake -E cmake_link_script CMakeFiles/cmTC_5baac.dir/link.txt --verbose=1
+/usr/bin/c++   -Dcheck_cxx_compiler_flag__mno_avx512er    -rdynamic CMakeFiles/cmTC_5baac.dir/src.cxx.o  -o cmTC_5baac 
+make[1]: Leaving directory '/home/nilsiism/catkin_ws_ptp/src/ptp_ros/ext/prob_trajectory_planning/src/ext/mav_tube_trajectory_generation/cmake-build-release/CMakeFiles/CMakeTmp'
 
 Source file was:
 int main() { return 0; }
 Performing C++ SOURCE FILE Test check_cxx_compiler_flag__mno_avx512cd succeeded with the following output:
-Change Dir: /home/nilsiism/workspace/prob_trajectory_planning/src/ext/mav_trajectory_generation/cmake-build-release/CMakeFiles/CMakeTmp
+Change Dir: /home/nilsiism/catkin_ws_ptp/src/ptp_ros/ext/prob_trajectory_planning/src/ext/mav_tube_trajectory_generation/cmake-build-release/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/make" "cmTC_88ee8/fast"
-make[1]: Entering directory '/home/nilsiism/workspace/prob_trajectory_planning/src/ext/mav_trajectory_generation/cmake-build-release/CMakeFiles/CMakeTmp'
-/usr/bin/make -f CMakeFiles/cmTC_88ee8.dir/build.make CMakeFiles/cmTC_88ee8.dir/build
-make[2]: Entering directory '/home/nilsiism/workspace/prob_trajectory_planning/src/ext/mav_trajectory_generation/cmake-build-release/CMakeFiles/CMakeTmp'
-Building CXX object CMakeFiles/cmTC_88ee8.dir/src.cxx.o
-/usr/bin/c++    -Dcheck_cxx_compiler_flag__mno_avx512cd   -mno-avx512cd -o CMakeFiles/cmTC_88ee8.dir/src.cxx.o -c /home/nilsiism/workspace/prob_trajectory_planning/src/ext/mav_trajectory_generation/cmake-build-release/CMakeFiles/CMakeTmp/src.cxx
-Linking CXX executable cmTC_88ee8
-/opt/clion-2018.1.3/bin/cmake/bin/cmake -E cmake_link_script CMakeFiles/cmTC_88ee8.dir/link.txt --verbose=1
-/usr/bin/c++   -Dcheck_cxx_compiler_flag__mno_avx512cd    -rdynamic CMakeFiles/cmTC_88ee8.dir/src.cxx.o  -o cmTC_88ee8 
-make[2]: Leaving directory '/home/nilsiism/workspace/prob_trajectory_planning/src/ext/mav_trajectory_generation/cmake-build-release/CMakeFiles/CMakeTmp'
-make[1]: Leaving directory '/home/nilsiism/workspace/prob_trajectory_planning/src/ext/mav_trajectory_generation/cmake-build-release/CMakeFiles/CMakeTmp'
+Run Build Command:"/usr/bin/make" "cmTC_54645/fast"
+/usr/bin/make -f CMakeFiles/cmTC_54645.dir/build.make CMakeFiles/cmTC_54645.dir/build
+make[1]: Entering directory '/home/nilsiism/catkin_ws_ptp/src/ptp_ros/ext/prob_trajectory_planning/src/ext/mav_tube_trajectory_generation/cmake-build-release/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_54645.dir/src.cxx.o
+/usr/bin/c++    -Dcheck_cxx_compiler_flag__mno_avx512cd   -mno-avx512cd -o CMakeFiles/cmTC_54645.dir/src.cxx.o -c /home/nilsiism/catkin_ws_ptp/src/ptp_ros/ext/prob_trajectory_planning/src/ext/mav_tube_trajectory_generation/cmake-build-release/CMakeFiles/CMakeTmp/src.cxx
+Linking CXX executable cmTC_54645
+/opt/clion-2018.1.3/bin/cmake/bin/cmake -E cmake_link_script CMakeFiles/cmTC_54645.dir/link.txt --verbose=1
+/usr/bin/c++   -Dcheck_cxx_compiler_flag__mno_avx512cd    -rdynamic CMakeFiles/cmTC_54645.dir/src.cxx.o  -o cmTC_54645 
+make[1]: Leaving directory '/home/nilsiism/catkin_ws_ptp/src/ptp_ros/ext/prob_trajectory_planning/src/ext/mav_tube_trajectory_generation/cmake-build-release/CMakeFiles/CMakeTmp'
 
 Source file was:
 int main() { return 0; }
 Performing C++ SOURCE FILE Test check_cxx_compiler_flag__mno_avx512dq succeeded with the following output:
-Change Dir: /home/nilsiism/workspace/prob_trajectory_planning/src/ext/mav_trajectory_generation/cmake-build-release/CMakeFiles/CMakeTmp
+Change Dir: /home/nilsiism/catkin_ws_ptp/src/ptp_ros/ext/prob_trajectory_planning/src/ext/mav_tube_trajectory_generation/cmake-build-release/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/make" "cmTC_94ccd/fast"
-make[1]: Entering directory '/home/nilsiism/workspace/prob_trajectory_planning/src/ext/mav_trajectory_generation/cmake-build-release/CMakeFiles/CMakeTmp'
-/usr/bin/make -f CMakeFiles/cmTC_94ccd.dir/build.make CMakeFiles/cmTC_94ccd.dir/build
-make[2]: Entering directory '/home/nilsiism/workspace/prob_trajectory_planning/src/ext/mav_trajectory_generation/cmake-build-release/CMakeFiles/CMakeTmp'
-Building CXX object CMakeFiles/cmTC_94ccd.dir/src.cxx.o
-/usr/bin/c++    -Dcheck_cxx_compiler_flag__mno_avx512dq   -mno-avx512dq -o CMakeFiles/cmTC_94ccd.dir/src.cxx.o -c /home/nilsiism/workspace/prob_trajectory_planning/src/ext/mav_trajectory_generation/cmake-build-release/CMakeFiles/CMakeTmp/src.cxx
-Linking CXX executable cmTC_94ccd
-/opt/clion-2018.1.3/bin/cmake/bin/cmake -E cmake_link_script CMakeFiles/cmTC_94ccd.dir/link.txt --verbose=1
-/usr/bin/c++   -Dcheck_cxx_compiler_flag__mno_avx512dq    -rdynamic CMakeFiles/cmTC_94ccd.dir/src.cxx.o  -o cmTC_94ccd 
-make[2]: Leaving directory '/home/nilsiism/workspace/prob_trajectory_planning/src/ext/mav_trajectory_generation/cmake-build-release/CMakeFiles/CMakeTmp'
-make[1]: Leaving directory '/home/nilsiism/workspace/prob_trajectory_planning/src/ext/mav_trajectory_generation/cmake-build-release/CMakeFiles/CMakeTmp'
+Run Build Command:"/usr/bin/make" "cmTC_93f1f/fast"
+/usr/bin/make -f CMakeFiles/cmTC_93f1f.dir/build.make CMakeFiles/cmTC_93f1f.dir/build
+make[1]: Entering directory '/home/nilsiism/catkin_ws_ptp/src/ptp_ros/ext/prob_trajectory_planning/src/ext/mav_tube_trajectory_generation/cmake-build-release/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_93f1f.dir/src.cxx.o
+/usr/bin/c++    -Dcheck_cxx_compiler_flag__mno_avx512dq   -mno-avx512dq -o CMakeFiles/cmTC_93f1f.dir/src.cxx.o -c /home/nilsiism/catkin_ws_ptp/src/ptp_ros/ext/prob_trajectory_planning/src/ext/mav_tube_trajectory_generation/cmake-build-release/CMakeFiles/CMakeTmp/src.cxx
+Linking CXX executable cmTC_93f1f
+/opt/clion-2018.1.3/bin/cmake/bin/cmake -E cmake_link_script CMakeFiles/cmTC_93f1f.dir/link.txt --verbose=1
+/usr/bin/c++   -Dcheck_cxx_compiler_flag__mno_avx512dq    -rdynamic CMakeFiles/cmTC_93f1f.dir/src.cxx.o  -o cmTC_93f1f 
+make[1]: Leaving directory '/home/nilsiism/catkin_ws_ptp/src/ptp_ros/ext/prob_trajectory_planning/src/ext/mav_tube_trajectory_generation/cmake-build-release/CMakeFiles/CMakeTmp'
 
 Source file was:
 int main() { return 0; }
 Performing C++ SOURCE FILE Test check_cxx_compiler_flag__mno_avx512bw succeeded with the following output:
-Change Dir: /home/nilsiism/workspace/prob_trajectory_planning/src/ext/mav_trajectory_generation/cmake-build-release/CMakeFiles/CMakeTmp
+Change Dir: /home/nilsiism/catkin_ws_ptp/src/ptp_ros/ext/prob_trajectory_planning/src/ext/mav_tube_trajectory_generation/cmake-build-release/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/make" "cmTC_0d3cb/fast"
-make[1]: Entering directory '/home/nilsiism/workspace/prob_trajectory_planning/src/ext/mav_trajectory_generation/cmake-build-release/CMakeFiles/CMakeTmp'
-/usr/bin/make -f CMakeFiles/cmTC_0d3cb.dir/build.make CMakeFiles/cmTC_0d3cb.dir/build
-make[2]: Entering directory '/home/nilsiism/workspace/prob_trajectory_planning/src/ext/mav_trajectory_generation/cmake-build-release/CMakeFiles/CMakeTmp'
-Building CXX object CMakeFiles/cmTC_0d3cb.dir/src.cxx.o
-/usr/bin/c++    -Dcheck_cxx_compiler_flag__mno_avx512bw   -mno-avx512bw -o CMakeFiles/cmTC_0d3cb.dir/src.cxx.o -c /home/nilsiism/workspace/prob_trajectory_planning/src/ext/mav_trajectory_generation/cmake-build-release/CMakeFiles/CMakeTmp/src.cxx
-Linking CXX executable cmTC_0d3cb
-/opt/clion-2018.1.3/bin/cmake/bin/cmake -E cmake_link_script CMakeFiles/cmTC_0d3cb.dir/link.txt --verbose=1
-/usr/bin/c++   -Dcheck_cxx_compiler_flag__mno_avx512bw    -rdynamic CMakeFiles/cmTC_0d3cb.dir/src.cxx.o  -o cmTC_0d3cb 
-make[2]: Leaving directory '/home/nilsiism/workspace/prob_trajectory_planning/src/ext/mav_trajectory_generation/cmake-build-release/CMakeFiles/CMakeTmp'
-make[1]: Leaving directory '/home/nilsiism/workspace/prob_trajectory_planning/src/ext/mav_trajectory_generation/cmake-build-release/CMakeFiles/CMakeTmp'
+Run Build Command:"/usr/bin/make" "cmTC_57f35/fast"
+/usr/bin/make -f CMakeFiles/cmTC_57f35.dir/build.make CMakeFiles/cmTC_57f35.dir/build
+make[1]: Entering directory '/home/nilsiism/catkin_ws_ptp/src/ptp_ros/ext/prob_trajectory_planning/src/ext/mav_tube_trajectory_generation/cmake-build-release/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_57f35.dir/src.cxx.o
+/usr/bin/c++    -Dcheck_cxx_compiler_flag__mno_avx512bw   -mno-avx512bw -o CMakeFiles/cmTC_57f35.dir/src.cxx.o -c /home/nilsiism/catkin_ws_ptp/src/ptp_ros/ext/prob_trajectory_planning/src/ext/mav_tube_trajectory_generation/cmake-build-release/CMakeFiles/CMakeTmp/src.cxx
+Linking CXX executable cmTC_57f35
+/opt/clion-2018.1.3/bin/cmake/bin/cmake -E cmake_link_script CMakeFiles/cmTC_57f35.dir/link.txt --verbose=1
+/usr/bin/c++   -Dcheck_cxx_compiler_flag__mno_avx512bw    -rdynamic CMakeFiles/cmTC_57f35.dir/src.cxx.o  -o cmTC_57f35 
+make[1]: Leaving directory '/home/nilsiism/catkin_ws_ptp/src/ptp_ros/ext/prob_trajectory_planning/src/ext/mav_tube_trajectory_generation/cmake-build-release/CMakeFiles/CMakeTmp'
 
 Source file was:
 int main() { return 0; }
 Performing C++ SOURCE FILE Test check_cxx_compiler_flag__mno_avx512ifma succeeded with the following output:
-Change Dir: /home/nilsiism/workspace/prob_trajectory_planning/src/ext/mav_trajectory_generation/cmake-build-release/CMakeFiles/CMakeTmp
+Change Dir: /home/nilsiism/catkin_ws_ptp/src/ptp_ros/ext/prob_trajectory_planning/src/ext/mav_tube_trajectory_generation/cmake-build-release/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/make" "cmTC_cfe41/fast"
-make[1]: Entering directory '/home/nilsiism/workspace/prob_trajectory_planning/src/ext/mav_trajectory_generation/cmake-build-release/CMakeFiles/CMakeTmp'
-/usr/bin/make -f CMakeFiles/cmTC_cfe41.dir/build.make CMakeFiles/cmTC_cfe41.dir/build
-make[2]: Entering directory '/home/nilsiism/workspace/prob_trajectory_planning/src/ext/mav_trajectory_generation/cmake-build-release/CMakeFiles/CMakeTmp'
-Building CXX object CMakeFiles/cmTC_cfe41.dir/src.cxx.o
-/usr/bin/c++    -Dcheck_cxx_compiler_flag__mno_avx512ifma   -mno-avx512ifma -o CMakeFiles/cmTC_cfe41.dir/src.cxx.o -c /home/nilsiism/workspace/prob_trajectory_planning/src/ext/mav_trajectory_generation/cmake-build-release/CMakeFiles/CMakeTmp/src.cxx
-Linking CXX executable cmTC_cfe41
-/opt/clion-2018.1.3/bin/cmake/bin/cmake -E cmake_link_script CMakeFiles/cmTC_cfe41.dir/link.txt --verbose=1
-/usr/bin/c++   -Dcheck_cxx_compiler_flag__mno_avx512ifma    -rdynamic CMakeFiles/cmTC_cfe41.dir/src.cxx.o  -o cmTC_cfe41 
-make[2]: Leaving directory '/home/nilsiism/workspace/prob_trajectory_planning/src/ext/mav_trajectory_generation/cmake-build-release/CMakeFiles/CMakeTmp'
-make[1]: Leaving directory '/home/nilsiism/workspace/prob_trajectory_planning/src/ext/mav_trajectory_generation/cmake-build-release/CMakeFiles/CMakeTmp'
+Run Build Command:"/usr/bin/make" "cmTC_d4665/fast"
+/usr/bin/make -f CMakeFiles/cmTC_d4665.dir/build.make CMakeFiles/cmTC_d4665.dir/build
+make[1]: Entering directory '/home/nilsiism/catkin_ws_ptp/src/ptp_ros/ext/prob_trajectory_planning/src/ext/mav_tube_trajectory_generation/cmake-build-release/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_d4665.dir/src.cxx.o
+/usr/bin/c++    -Dcheck_cxx_compiler_flag__mno_avx512ifma   -mno-avx512ifma -o CMakeFiles/cmTC_d4665.dir/src.cxx.o -c /home/nilsiism/catkin_ws_ptp/src/ptp_ros/ext/prob_trajectory_planning/src/ext/mav_tube_trajectory_generation/cmake-build-release/CMakeFiles/CMakeTmp/src.cxx
+Linking CXX executable cmTC_d4665
+/opt/clion-2018.1.3/bin/cmake/bin/cmake -E cmake_link_script CMakeFiles/cmTC_d4665.dir/link.txt --verbose=1
+/usr/bin/c++   -Dcheck_cxx_compiler_flag__mno_avx512ifma    -rdynamic CMakeFiles/cmTC_d4665.dir/src.cxx.o  -o cmTC_d4665 
+make[1]: Leaving directory '/home/nilsiism/catkin_ws_ptp/src/ptp_ros/ext/prob_trajectory_planning/src/ext/mav_tube_trajectory_generation/cmake-build-release/CMakeFiles/CMakeTmp'
 
 Source file was:
 int main() { return 0; }
 Performing C++ SOURCE FILE Test check_cxx_compiler_flag__mno_avx512vbmi succeeded with the following output:
-Change Dir: /home/nilsiism/workspace/prob_trajectory_planning/src/ext/mav_trajectory_generation/cmake-build-release/CMakeFiles/CMakeTmp
+Change Dir: /home/nilsiism/catkin_ws_ptp/src/ptp_ros/ext/prob_trajectory_planning/src/ext/mav_tube_trajectory_generation/cmake-build-release/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/make" "cmTC_df333/fast"
-make[1]: Entering directory '/home/nilsiism/workspace/prob_trajectory_planning/src/ext/mav_trajectory_generation/cmake-build-release/CMakeFiles/CMakeTmp'
-/usr/bin/make -f CMakeFiles/cmTC_df333.dir/build.make CMakeFiles/cmTC_df333.dir/build
-make[2]: Entering directory '/home/nilsiism/workspace/prob_trajectory_planning/src/ext/mav_trajectory_generation/cmake-build-release/CMakeFiles/CMakeTmp'
-Building CXX object CMakeFiles/cmTC_df333.dir/src.cxx.o
-/usr/bin/c++    -Dcheck_cxx_compiler_flag__mno_avx512vbmi   -mno-avx512vbmi -o CMakeFiles/cmTC_df333.dir/src.cxx.o -c /home/nilsiism/workspace/prob_trajectory_planning/src/ext/mav_trajectory_generation/cmake-build-release/CMakeFiles/CMakeTmp/src.cxx
-Linking CXX executable cmTC_df333
-/opt/clion-2018.1.3/bin/cmake/bin/cmake -E cmake_link_script CMakeFiles/cmTC_df333.dir/link.txt --verbose=1
-/usr/bin/c++   -Dcheck_cxx_compiler_flag__mno_avx512vbmi    -rdynamic CMakeFiles/cmTC_df333.dir/src.cxx.o  -o cmTC_df333 
-make[2]: Leaving directory '/home/nilsiism/workspace/prob_trajectory_planning/src/ext/mav_trajectory_generation/cmake-build-release/CMakeFiles/CMakeTmp'
-make[1]: Leaving directory '/home/nilsiism/workspace/prob_trajectory_planning/src/ext/mav_trajectory_generation/cmake-build-release/CMakeFiles/CMakeTmp'
+Run Build Command:"/usr/bin/make" "cmTC_27b21/fast"
+/usr/bin/make -f CMakeFiles/cmTC_27b21.dir/build.make CMakeFiles/cmTC_27b21.dir/build
+make[1]: Entering directory '/home/nilsiism/catkin_ws_ptp/src/ptp_ros/ext/prob_trajectory_planning/src/ext/mav_tube_trajectory_generation/cmake-build-release/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_27b21.dir/src.cxx.o
+/usr/bin/c++    -Dcheck_cxx_compiler_flag__mno_avx512vbmi   -mno-avx512vbmi -o CMakeFiles/cmTC_27b21.dir/src.cxx.o -c /home/nilsiism/catkin_ws_ptp/src/ptp_ros/ext/prob_trajectory_planning/src/ext/mav_tube_trajectory_generation/cmake-build-release/CMakeFiles/CMakeTmp/src.cxx
+Linking CXX executable cmTC_27b21
+/opt/clion-2018.1.3/bin/cmake/bin/cmake -E cmake_link_script CMakeFiles/cmTC_27b21.dir/link.txt --verbose=1
+/usr/bin/c++   -Dcheck_cxx_compiler_flag__mno_avx512vbmi    -rdynamic CMakeFiles/cmTC_27b21.dir/src.cxx.o  -o cmTC_27b21 
+make[1]: Leaving directory '/home/nilsiism/catkin_ws_ptp/src/ptp_ros/ext/prob_trajectory_planning/src/ext/mav_tube_trajectory_generation/cmake-build-release/CMakeFiles/CMakeTmp'
 
 Source file was:
 int main() { return 0; }

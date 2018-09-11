@@ -300,9 +300,9 @@ mav_tube_trajectory_generation/motion_defines.h
 mav_tube_trajectory_generation/polynomial.h
 ../include/mav_tube_trajectory_generation/mav_tube_trajectory_generation/polynomial.h
 
-/home/nilsiism/workspace/prob_trajectory_planning/src/ext/mav_trajectory_generation/src/main.cpp
+/home/nilsiism/catkin_ws_ptp/src/ptp_ros/ext/prob_trajectory_planning/src/ext/mav_tube_trajectory_generation/src/main.cpp
 iostream
-/home/nilsiism/workspace/prob_trajectory_planning/src/ext/mav_trajectory_generation/src/iostream
+/home/nilsiism/catkin_ws_ptp/src/ptp_ros/ext/prob_trajectory_planning/src/ext/mav_tube_trajectory_generation/src/iostream
 mav_tube_trajectory_generation/polynomial_optimization_linear.h
 -
 time.h

@@ -51,7 +51,7 @@ PolynomialOptimizationNonLinear<_N>::PolynomialOptimizationNonLinear(
     size_t dimension, const NonlinearOptimizationParameters& parameters)
     : poly_opt_(dimension),
       dimension_(dimension),
-      derivative_to_optimize_(derivative_order::kINVALID),
+      derivative_to_optimize_(derivative_order::INVALID),
       optimization_parameters_(parameters) {}
 
 template <int _N>
@@ -92,6 +92,7 @@ bool PolynomialOptimizationNonLinear<_N>::setupFromVertices(
       break;
   }
 
+  std::cout << "Algorithm: " << optimization_parameters_.algorithm << std::endl;
   nlopt_.reset(new nlopt::opt(optimization_parameters_.algorithm,
                               n_optimization_parameters));
   nlopt_->set_ftol_rel(optimization_parameters_.f_rel);
@@ -100,6 +101,11 @@ bool PolynomialOptimizationNonLinear<_N>::setupFromVertices(
   nlopt_->set_xtol_abs(optimization_parameters_.x_abs);
   nlopt_->set_maxeval(optimization_parameters_.max_iterations);
   nlopt_->set_maxtime(optimization_parameters_.max_time);
+
+  std::cout << "Random seed: " << optimization_parameters_.random_seed << std::endl;
+  std::cout << "Initial step size rel: " << optimization_parameters_.initial_stepsize_rel << std::endl;
+  std::cout << "Initial step size pos: " << optimization_parameters_.initial_stepsize_position << std::endl;
+  std::cout << "Epsilon: " << optimization_parameters_.epsilon << std::endl;
 
   if (optimization_parameters_.random_seed < 0)
     nlopt_srand_time();
@@ -139,7 +145,7 @@ bool PolynomialOptimizationNonLinear<_N
   const size_t dim = poly_opt_.getDimension();
 
   // 2) Get the coefficients from the segments
-  mav_trajectory_generation::Segment::Vector segments;
+  mav_tube_trajectory_generation::Segment::Vector segments;
   poly_opt_.getSegments(&segments);
   std::vector<Eigen::VectorXd> p(dim, Eigen::VectorXd(N * segments.size()));
 
@@ -153,7 +159,7 @@ bool PolynomialOptimizationNonLinear<_N
   Vertex::Vector vertices = vertices_;
   for (int k = 1; k < vertices.size() - 1 ; ++k) {
     vertices_[k].removeConstraint(
-            mav_trajectory_generation::derivative_order::POSITION);
+            mav_tube_trajectory_generation::derivative_order::POSITION);
   }
 
   if (optimization_parameters_.print_debug_info) {
@@ -205,6 +211,7 @@ template <int _N>
 bool PolynomialOptimizationNonLinear<_N
 >::computeInitialSolutionWithPositionConstraints() {
   // compute initial solution
+  std::cout << "Compute wrong solution with position constraints" << std::endl;
   poly_opt_.solveSOCP();
 
   // Save the trajectory from the initial guess/solution
@@ -416,6 +423,7 @@ int PolynomialOptimizationNonLinear<_N>::optimizeFreeConstraints() {
   // compute initial solution
   if (optimization_parameters_.solve_with_position_constraint) {
     poly_opt_.solveSOCP(); //
+    std::cout << "Solve initial solution with position constraints in free constraints" << std::endl;
     // TODO: find better way of doing this
     // Save the trajectory from the initial guess/solution
     trajectory_initial_.clear();
@@ -509,6 +517,7 @@ int PolynomialOptimizationNonLinear<_N>::optimizeFreeConstraintsAndCollision() {
   // compute initial solution
   if (optimization_parameters_.solve_with_position_constraint) {
     poly_opt_.solveSOCP(); //
+    std::cout << "Solve initial solution with position constraints in free constraints and collision" << std::endl;
     // TODO: find better way of doing this
     // Save the trajectory from the initial guess/solution
     trajectory_initial_.clear();
@@ -726,6 +735,7 @@ int PolynomialOptimizationNonLinear<_N
   // compute initial solution
   if (optimization_parameters_.solve_with_position_constraint) {
     poly_opt_.solveSOCP(); //
+
     // TODO: find better way of doing this
     // Save the trajectory from the initial guess/solution
     trajectory_initial_.clear();
@@ -1292,6 +1302,7 @@ double PolynomialOptimizationNonLinear<_N
         const std::vector<double>& x, std::vector<double>& gradient, void* data) {
   CHECK_NOTNULL(data);
 
+
   PolynomialOptimizationNonLinear<N>* optimization_data =
           static_cast<PolynomialOptimizationNonLinear<N>*>(data);  // wheee ...
 
@@ -1625,7 +1636,6 @@ double PolynomialOptimizationNonLinear<_N>::getCostAndGradientCollision(
         std::vector<Eigen::VectorXd>* gradients, void* opt_data,
         bool* is_collision) {
 
-
   CHECK_NOTNULL(opt_data);
 
   PolynomialOptimizationNonLinear<N>* data =
@@ -1851,8 +1861,8 @@ double PolynomialOptimizationNonLinear<_N>::getCostAndGradientPotentialOctree(
     t_gCP1_s = clock();
   }
   const double J_c_esdf = data->getCostPotential(distance, is_collision);
-  if (*is_collision)
-    std::cout << "Trajectory is in collision" << std::endl;
+  //if (*is_collision)
+  //  std::cout << "Trajectory is in collision" << std::endl;
   t_gCP1 = t_gCP1_s - clock();
 
   if (!(*is_collision)) {
@@ -1919,7 +1929,7 @@ template <int _N>
 double PolynomialOptimizationNonLinear<_N>::getCostAndGradientPotentialDistanceOctree(
         const Eigen::VectorXd& position, Eigen::VectorXd* gradient,
         void* opt_data, bool* is_collision) {
-//  std::cout << "getCostAndGradientPotentialDistanceOctree" << std::endl;
+
   PolynomialOptimizationNonLinear<N>* data =
           static_cast<PolynomialOptimizationNonLinear<N>*>(opt_data);
 
@@ -2906,7 +2916,7 @@ void PolynomialOptimizationNonLinear<_N>::printMatlabSampledTrajectory(
   fs.close();
 }
 
-}  // namespace mav_trajectory_generation
+}  // namespace mav_tube_trajectory_generation
 
 namespace nlopt {
 

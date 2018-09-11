@@ -87,7 +87,7 @@ namespace mav_trajectory_generation {
     using PolynomialOptimization<_N>::kHighestDerivativeToOptimize;
   };
 
-} //namespace mav_trajectory_generation
+} //namespace mav_tube_trajectory_generation
 
 #include <mav_tube_trajectory_generation/impl/polynomial_optimization_qcqp_impl.h>
 

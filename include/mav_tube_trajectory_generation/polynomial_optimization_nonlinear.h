@@ -59,7 +59,7 @@ struct NonlinearOptimizationParameters {
         max_time(-1),
         time_penalty(500.0),
         algorithm(nlopt::LN_SBPLX),
-        random_seed(0),
+        random_seed(12345678),
         use_soft_constraints(true),
         soft_constraint_weight(100.0),
         print_debug_info(false),
@@ -682,7 +682,7 @@ class PolynomialOptimizationNonLinear {
   bool is_iter0_ = true;
 };
 
-}  // namespace mav_trajectory_generation
+}  // namespace mav_tube_trajectory_generation
 
 namespace nlopt {
 // Convenience function that turns nlopt's return values into something
