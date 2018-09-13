@@ -63,6 +63,7 @@ struct NonlinearOptimizationParameters {
         use_soft_constraints(true),
         soft_constraint_weight(100.0),
         print_debug_info(false),
+        print_trajectory_info(false),
         objective(kOptimizeFreeConstraintsAndTime),
         weights(),
         map_resolution(0.0),
@@ -138,6 +139,10 @@ struct NonlinearOptimizationParameters {
 
   bool print_debug_info;
 
+  bool print_trajectory_info;
+
+  Eigen::Vector3d position_in_collision;
+
   // Specifies which optimization should be run.
   // kOptimizeTime: Run optimization over segment times only. Only the segment
   // times are optimization parameters, and the remaining free parameters are
@@ -205,6 +210,9 @@ struct NonlinearOptimizationParameters {
 
   bool is_coll_raise_first_iter;
   double add_coll_raise;
+
+  bool is_init_solution = true;
+  bool init_solution_in_collison = false;
 
 };
 
@@ -327,6 +335,14 @@ class PolynomialOptimizationNonLinear {
       trajectories->push_back(traj_i);
     }
   }
+
+  void init_solution_in_collision(bool* init_solution_in_collision) {
+    *init_solution_in_collision = optimization_parameters_.init_solution_in_collison;
+  };
+
+  void position_in_collision(Eigen::Vector3d* position_in_collision) {
+    * position_in_collision = optimization_parameters_.position_in_collision;
+  };
 
   // Returns a const reference to the underlying linear optimization
   // object.

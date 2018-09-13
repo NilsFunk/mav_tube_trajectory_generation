@@ -92,7 +92,6 @@ bool PolynomialOptimizationNonLinear<_N>::setupFromVertices(
       break;
   }
 
-  std::cout << "Algorithm: " << optimization_parameters_.algorithm << std::endl;
   nlopt_.reset(new nlopt::opt(optimization_parameters_.algorithm,
                               n_optimization_parameters));
   nlopt_->set_ftol_rel(optimization_parameters_.f_rel);
@@ -101,11 +100,6 @@ bool PolynomialOptimizationNonLinear<_N>::setupFromVertices(
   nlopt_->set_xtol_abs(optimization_parameters_.x_abs);
   nlopt_->set_maxeval(optimization_parameters_.max_iterations);
   nlopt_->set_maxtime(optimization_parameters_.max_time);
-
-  std::cout << "Random seed: " << optimization_parameters_.random_seed << std::endl;
-  std::cout << "Initial step size rel: " << optimization_parameters_.initial_stepsize_rel << std::endl;
-  std::cout << "Initial step size pos: " << optimization_parameters_.initial_stepsize_position << std::endl;
-  std::cout << "Epsilon: " << optimization_parameters_.epsilon << std::endl;
 
   if (optimization_parameters_.random_seed < 0)
     nlopt_srand_time();
@@ -214,6 +208,29 @@ bool PolynomialOptimizationNonLinear<_N
   std::cout << "Compute wrong solution with position constraints" << std::endl;
   poly_opt_.solveSOCP();
 
+  if (optimization_parameters_.print_trajectory_info) {
+    std::vector<double> segment_times;
+    poly_opt_.getSegmentTimes(&segment_times);
+
+    int idx = 1;
+    for (std::vector<double>::const_iterator i = segment_times.begin(); i != segment_times.end(); ++i) {
+      printf("T{%d} = ", idx);
+      idx++;
+      std::cout << *i << std::endl;
+    }
+
+    std::vector<Eigen::VectorXd> free_constraints;
+    poly_opt_.getFreeConstraints(&free_constraints);
+
+    std::cout << "d_p = [";
+    for (Eigen::VectorXd dp : free_constraints){
+      for (int i = 0; i < dp.rows(); i++){
+        std::cout << dp(i) << "; ";
+      }
+    }
+    std::cout << "];" << std::endl;
+  }
+
   // Save the trajectory from the initial guess/solution
   trajectory_initial_.clear();
   getTrajectory(&trajectory_initial_);
@@ -287,9 +304,6 @@ template <int _N>
 int PolynomialOptimizationNonLinear<_N>::optimize() {
   optimization_info_ = OptimizationInfo();
 
-  std::vector<Eigen::VectorXd> free_constraints;
-  poly_opt_.getFreeConstraints(&free_constraints);
-
   int result = nlopt::FAILURE;
 
   const std::chrono::high_resolution_clock::time_point t_start =
@@ -325,26 +339,29 @@ int PolynomialOptimizationNonLinear<_N>::optimize() {
 
   optimization_info_.stopping_reason = result;
 
-  std::vector<double> segment_times;
-  poly_opt_.getSegmentTimes(&segment_times);
+  if (optimization_parameters_.print_trajectory_info) {
+    std::vector<double> segment_times;
+    poly_opt_.getSegmentTimes(&segment_times);
 
-  int idx = 1;
-  for (std::vector<double>::const_iterator i = segment_times.begin(); i != segment_times.end(); ++i) {
-    printf("T{%d} = ", idx);
-    idx++;
-    std::cout << *i << std::endl;
-  }
-
-  poly_opt_.getFreeConstraints(&free_constraints);
-
-  //std::cout << "Free constraints after: " << "\n" << std::endl;
-  std::cout << "d_p = [";
-  for (Eigen::VectorXd dp : free_constraints){
-    for (int i = 0; i < dp.rows(); i++){
-      std::cout << dp(i) << "; ";
+    int idx = 1;
+    for (std::vector<double>::const_iterator i = segment_times.begin(); i != segment_times.end(); ++i) {
+      printf("T{%d} = ", idx);
+      idx++;
+      std::cout << *i << std::endl;
     }
+
+    std::vector<Eigen::VectorXd> free_constraints;
+    poly_opt_.getFreeConstraints(&free_constraints);
+
+    std::cout << "d_p = [";
+    for (Eigen::VectorXd dp : free_constraints){
+      for (int i = 0; i < dp.rows(); i++){
+        std::cout << dp(i) << "; ";
+      }
+    }
+    std::cout << "];" << std::endl;
   }
-  std::cout << "];" << std::endl;
+
   return result;
 }
 
@@ -359,6 +376,30 @@ int PolynomialOptimizationNonLinear<_N>::optimizeTime() {
   // TODO: FIX PROPERLY
   // compute initial solution
   poly_opt_.solveSOCP();
+
+  if (optimization_parameters_.print_trajectory_info) {
+    std::vector<double> segment_times;
+    poly_opt_.getSegmentTimes(&segment_times);
+
+    int idx = 1;
+    for (std::vector<double>::const_iterator i = segment_times.begin(); i != segment_times.end(); ++i) {
+      printf("T{%d} = ", idx);
+      idx++;
+      std::cout << *i << std::endl;
+    }
+
+    std::vector<Eigen::VectorXd> free_constraints;
+    poly_opt_.getFreeConstraints(&free_constraints);
+
+    std::cout << "d_p = [";
+    for (Eigen::VectorXd dp : free_constraints){
+      for (int i = 0; i < dp.rows(); i++){
+        std::cout << dp(i) << "; ";
+      }
+    }
+    std::cout << "];" << std::endl;
+  }
+
   // Save the trajectory from the initial guess/solution
   trajectory_initial_.clear();
   getTrajectory(&trajectory_initial_);
@@ -423,7 +464,30 @@ int PolynomialOptimizationNonLinear<_N>::optimizeFreeConstraints() {
   // compute initial solution
   if (optimization_parameters_.solve_with_position_constraint) {
     poly_opt_.solveSOCP(); //
-    std::cout << "Solve initial solution with position constraints in free constraints" << std::endl;
+
+    if (optimization_parameters_.print_trajectory_info) {
+      std::vector<double> segment_times;
+      poly_opt_.getSegmentTimes(&segment_times);
+
+      int idx = 1;
+      for (std::vector<double>::const_iterator i = segment_times.begin(); i != segment_times.end(); ++i) {
+        printf("T{%d} = ", idx);
+        idx++;
+        std::cout << *i << std::endl;
+      }
+
+      std::vector<Eigen::VectorXd> free_constraints;
+      poly_opt_.getFreeConstraints(&free_constraints);
+
+      std::cout << "d_p = [";
+      for (Eigen::VectorXd dp : free_constraints){
+        for (int i = 0; i < dp.rows(); i++){
+          std::cout << dp(i) << "; ";
+        }
+      }
+      std::cout << "];" << std::endl;
+    }
+
     // TODO: find better way of doing this
     // Save the trajectory from the initial guess/solution
     trajectory_initial_.clear();
@@ -517,7 +581,30 @@ int PolynomialOptimizationNonLinear<_N>::optimizeFreeConstraintsAndCollision() {
   // compute initial solution
   if (optimization_parameters_.solve_with_position_constraint) {
     poly_opt_.solveSOCP(); //
-    std::cout << "Solve initial solution with position constraints in free constraints and collision" << std::endl;
+
+    if (optimization_parameters_.print_trajectory_info) {
+      std::vector<double> segment_times;
+      poly_opt_.getSegmentTimes(&segment_times);
+
+      int idx = 1;
+      for (std::vector<double>::const_iterator i = segment_times.begin(); i != segment_times.end(); ++i) {
+        printf("T{%d} = ", idx);
+        idx++;
+        std::cout << *i << std::endl;
+      }
+
+      std::vector<Eigen::VectorXd> free_constraints;
+      poly_opt_.getFreeConstraints(&free_constraints);
+
+      std::cout << "d_p = [";
+      for (Eigen::VectorXd dp : free_constraints){
+        for (int i = 0; i < dp.rows(); i++){
+          std::cout << dp(i) << "; ";
+        }
+      }
+      std::cout << "];" << std::endl;
+    }
+
     // TODO: find better way of doing this
     // Save the trajectory from the initial guess/solution
     trajectory_initial_.clear();
@@ -638,6 +725,30 @@ int PolynomialOptimizationNonLinear<_N>::optimizeTimeAndFreeConstraints() {
 
   // compute initial solution
   poly_opt_.solveSOCP();
+
+  if (optimization_parameters_.print_trajectory_info) {
+    std::vector<double> segment_times;
+    poly_opt_.getSegmentTimes(&segment_times);
+
+    int idx = 1;
+    for (std::vector<double>::const_iterator i = segment_times.begin(); i != segment_times.end(); ++i) {
+      printf("T{%d} = ", idx);
+      idx++;
+      std::cout << *i << std::endl;
+    }
+
+    std::vector<Eigen::VectorXd> free_constraints;
+    poly_opt_.getFreeConstraints(&free_constraints);
+
+    std::cout << "d_p = [";
+    for (Eigen::VectorXd dp : free_constraints){
+      for (int i = 0; i < dp.rows(); i++){
+        std::cout << dp(i) << "; ";
+      }
+    }
+    std::cout << "];" << std::endl;
+  }
+
   std::vector<Eigen::VectorXd> free_constraints;
   poly_opt_.getFreeConstraints(&free_constraints);
   CHECK(free_constraints.size() > 0);
@@ -735,6 +846,29 @@ int PolynomialOptimizationNonLinear<_N
   // compute initial solution
   if (optimization_parameters_.solve_with_position_constraint) {
     poly_opt_.solveSOCP(); //
+
+    if (optimization_parameters_.print_trajectory_info) {
+      std::vector<double> segment_times;
+      poly_opt_.getSegmentTimes(&segment_times);
+
+      int idx = 1;
+      for (std::vector<double>::const_iterator i = segment_times.begin(); i != segment_times.end(); ++i) {
+        printf("T{%d} = ", idx);
+        idx++;
+        std::cout << *i << std::endl;
+      }
+
+      std::vector<Eigen::VectorXd> free_constraints;
+      poly_opt_.getFreeConstraints(&free_constraints);
+
+      std::cout << "d_p = [";
+      for (Eigen::VectorXd dp : free_constraints){
+        for (int i = 0; i < dp.rows(); i++){
+          std::cout << dp(i) << "; ";
+        }
+      }
+      std::cout << "];" << std::endl;
+    }
 
     // TODO: find better way of doing this
     // Save the trajectory from the initial guess/solution
@@ -1439,6 +1573,17 @@ double PolynomialOptimizationNonLinear<_N
     }
   }
 
+  if (optimization_data->optimization_parameters_.is_init_solution && is_collision) {
+    std::cout << "\033[1;31m INITIAL SOLUTION IS IN COLLISION\033[0m\n";
+    optimization_data->optimization_parameters_.init_solution_in_collison = true;
+
+  }
+
+
+  if (optimization_data->optimization_parameters_.is_init_solution) {
+    optimization_data->optimization_parameters_.is_init_solution = false;
+  }
+
   // Weighting terms for different costs
   const double w_d = optimization_data->optimization_parameters_.weights.w_d;
   const double w_c = optimization_data->optimization_parameters_.weights.w_c;
@@ -1745,6 +1890,7 @@ double PolynomialOptimizationNonLinear<_N>::getCostAndGradientCollision(
 
       if (is_pos_collision) {
         *is_collision = true;
+        data->optimization_parameters_.position_in_collision = pos;
         break;
       }
 
@@ -2777,7 +2923,8 @@ setFreeEndpointDerivativeHardConstraints(
 
   const size_t n_free_constraints = poly_opt_.getNumberFreeConstraints();
 
-  LOG(INFO) << "USE HARD CONSTRAINTS FOR ENDPOINT DERIVATIVE BOUNDARIES";
+  if (optimization_parameters_.print_trajectory_info)
+    LOG(INFO) << "USE HARD CONSTRAINTS FOR ENDPOINT DERIVATIVE BOUNDARIES";
 
   // Set all values to -inf/inf and reset only bounded opti param with values
   for (double x : initial_solution) {

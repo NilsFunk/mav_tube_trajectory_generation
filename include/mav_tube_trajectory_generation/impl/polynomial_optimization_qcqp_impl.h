@@ -1171,7 +1171,7 @@ namespace mav_trajectory_generation {
 
     this->updateSegmentsFromCompactConstraints();
 
-    std::cout << "d_p = " << xlvl  << "';" << std::endl;
+    //std::cout << "d_p = " << xlvl  << "';" << std::endl;
 
     return 1;
   }

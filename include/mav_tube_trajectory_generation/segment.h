@@ -31,6 +31,7 @@
 #include "mav_tube_trajectory_generation/motion_defines.h"
 #include "mav_tube_trajectory_generation/polynomial.h"
 
+
 namespace mav_trajectory_generation {
 
 constexpr double kNumNSecPerSec = 1.0e9;

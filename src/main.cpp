@@ -66,6 +66,7 @@ int main () {
   parameters.solve_with_position_constraint = true;
   parameters.objective = mav_trajectory_generation::NonlinearOptimizationParameters::OptimizationObjective::kOptimizeFreeConstraintsAndCollisionAndTime;
   parameters.print_debug_info = false;
+  parameters.print_trajectory_info = true;
   parameters.max_iterations = 3000;
   parameters.max_time = -1;
   parameters.f_rel = 0.000001;
