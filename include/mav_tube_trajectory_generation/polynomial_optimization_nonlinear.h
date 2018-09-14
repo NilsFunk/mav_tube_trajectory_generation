@@ -82,7 +82,8 @@ struct NonlinearOptimizationParameters {
         coll_check_time_increment(0.1),
         is_coll_raise_first_iter(true),
         add_coll_raise(0.0),
-        side(5){}
+        side(5),
+        use_distance_field(true) {}
 
   // Stopping criteria, if objective function changes less than absolute value.
   // Disabled if negative.
@@ -178,6 +179,8 @@ struct NonlinearOptimizationParameters {
 
   // Size of bounding box
   int side;
+
+  bool use_distance_field;
 
   // Upper and Lower boundaries of the map/environment
   Eigen::Vector3d min_bound;

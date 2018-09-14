@@ -100,6 +100,7 @@ int main () {
   parameters.min_bound = Eigen::Vector3d(0, 0, 0) ;
   parameters.max_bound = Eigen::Vector3d(9.9, 9.9, 4.9);
   parameters.side = 5;
+  parameters.use_distance_field = false;
 
 
   mav_trajectory_generation::PolynomialOptimizationNonLinear<N> opt_nonlin(3, parameters);

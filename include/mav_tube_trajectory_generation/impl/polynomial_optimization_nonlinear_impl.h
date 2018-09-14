@@ -1882,10 +1882,17 @@ double PolynomialOptimizationNonLinear<_N>::getCostAndGradientCollision(
       Eigen::VectorXd grad_c_d_f(dim); // dc/dd_f
       double c = 0.0;
       if (gradients != NULL) {
-        c = getCostAndGradientPotentialDistanceOctree(pos, &grad_c_d_f, data,
-                                            &is_pos_collision);
+        if (data->optimization_parameters_.use_distance_field) {
+          c = getCostAndGradientPotentialDistanceOctree(pos, &grad_c_d_f, data, &is_pos_collision);
+        } else {
+          c = getCostAndGradientPotentialOctree(pos, &grad_c_d_f, data, &is_pos_collision);
+        }
       } else {
-        c = getCostAndGradientPotentialDistanceOctree(pos, NULL, data, &is_pos_collision);
+        if (data->optimization_parameters_.use_distance_field) {
+          c = getCostAndGradientPotentialDistanceOctree(pos, NULL, data, &is_pos_collision);
+        } else {
+          c = getCostAndGradientPotentialOctree(pos, &grad_c_d_f, data, &is_pos_collision);
+        }
       }
 
       if (is_pos_collision) {
@@ -1951,7 +1958,6 @@ template <int _N>
 double PolynomialOptimizationNonLinear<_N>::getCostAndGradientPotentialOctree(
         const Eigen::VectorXd& position, Eigen::VectorXd* gradient,
         void* opt_data, bool* is_collision) {
-
   clock_t t_gCAGPO_s, t_gCAGPO, t_fOV_s, t_fOV, t_gDO1_s, t_gDO1, t_gDO2_s, t_gDO2, t_gCP1_s, t_gCP1, t_gCP2_s, t_gCP2;
   t_gCAGPO_s = clock();
 
@@ -2075,7 +2081,6 @@ template <int _N>
 double PolynomialOptimizationNonLinear<_N>::getCostAndGradientPotentialDistanceOctree(
         const Eigen::VectorXd& position, Eigen::VectorXd* gradient,
         void* opt_data, bool* is_collision) {
-
   PolynomialOptimizationNonLinear<N>* data =
           static_cast<PolynomialOptimizationNonLinear<N>*>(opt_data);
 
