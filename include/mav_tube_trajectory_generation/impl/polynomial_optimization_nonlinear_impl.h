@@ -1961,7 +1961,6 @@ double PolynomialOptimizationNonLinear<_N>::getCostAndGradientPotentialOctree(
   clock_t t_gCAGPO_s, t_gCAGPO, t_fOV_s, t_fOV, t_gDO1_s, t_gDO1, t_gDO2_s, t_gDO2, t_gCP1_s, t_gCP1, t_gCP2_s, t_gCP2;
   t_gCAGPO_s = clock();
 
-
   PolynomialOptimizationNonLinear<N>* data =
           static_cast<PolynomialOptimizationNonLinear<N>*>(opt_data);
 
@@ -1969,7 +1968,11 @@ double PolynomialOptimizationNonLinear<_N>::getCostAndGradientPotentialOctree(
 
   const Eigen::Vector3d min_bound = data->optimization_parameters_.min_bound; //TODO: set this bounds - in general set all optimization_parameters!
   const Eigen::Vector3d max_bound = data->optimization_parameters_.max_bound;
-  const Eigen::Vector3i side = Eigen::Vector3i(20, 20, 20);
+
+  int environment_side_length = data->optimization_parameters_.side / data->optimization_parameters_.map_resolution;
+  //double environment_side_length = data->optimization_parameters_.side;
+  const Eigen::Vector3i environment_size = Eigen::Vector3i(environment_side_length, environment_side_length, environment_side_length);
+  //const Eigen::Vector3d environment_size = Eigen::Vector3d(environment_side_length, environment_side_length, environment_side_length);
 
   // TODO: How to make sure trajectory stays within bounds?
   bool is_valid_state = true;
@@ -1985,23 +1988,8 @@ double PolynomialOptimizationNonLinear<_N>::getCostAndGradientPotentialOctree(
   }
 
   std::vector<Eigen::Vector3i> occupied_voxels;
-
   const Eigen::Vector3i position_voxel = (position / res).cast<int>();
-  //std::cout << "position voxel: " << "\n" << position_voxel << "\n" << std::endl;
-  //std::cout << "position: " << "\n" << position << "\n" << std::endl;
-  //std::cout << "position [voxel] to check gradient: " << "\n" << position_voxel << "\n" << std::endl;
-
-  t_fOV_s = clock();
-  data->findOccupiedVoxels(data->getOctree(), side, position_voxel, occupied_voxels);
-  t_fOV = t_fOV_s - clock();
-
-  //std::cout << "occupied positions [voxel]: " << occupied_voxels.size() << std::endl;
-  //for (Eigen::Vector3i occupied_voxel : occupied_voxels)
-  //  std::cout << occupied_voxel << "\n" << std::endl;
-
-  //std::cout << "free positions [voxel]: " << free_voxels.size() << std::endl;
-  //for (Eigen::Vector3i free_voxel : free_voxels)
-  //  std::cout << free_voxel << "\n" << std::endl;
+  data->findOccupiedVoxels(data->getOctree(), environment_size, position_voxel, occupied_voxels);
 
   // Get distance from collision at current position
   double distance = 0.0;
@@ -2083,7 +2071,6 @@ double PolynomialOptimizationNonLinear<_N>::getCostAndGradientPotentialDistanceO
         void* opt_data, bool* is_collision) {
   PolynomialOptimizationNonLinear<N>* data =
           static_cast<PolynomialOptimizationNonLinear<N>*>(opt_data);
-
   //std::cout << "position [m] to check gradient: " << "\n" << position << "\n" << std::endl;
 
   const Eigen::Vector3d min_bound = data->optimization_parameters_.min_bound; //TODO: set this bounds - in general set all optimization_parameters!
@@ -2195,9 +2182,6 @@ bool PolynomialOptimizationNonLinear<_N>::findOccupiedVoxels(se::Octree<OFusion>
            std::vector<Eigen::Vector3i>& occupied_voxels) {
 
   Eigen::Vector3i bbox = position - side / 2;
-
-  //std::cout << "box corner [voxel]: " << "\n" << bbox << "\n" << std::endl;
-  //std::cout << "side length [voxel]: " << "\n" << side << "\n" << std::endl;
 
   typedef struct stack_entry {
       se::Node<OFusion> *node_ptr;

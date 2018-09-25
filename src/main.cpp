@@ -99,7 +99,7 @@ int main () {
   parameters.map_resolution = 0.1;
   parameters.min_bound = Eigen::Vector3d(0, 0, 0) ;
   parameters.max_bound = Eigen::Vector3d(9.9, 9.9, 4.9);
-  parameters.side = 5;
+  parameters.side = 2;
   parameters.use_distance_field = false;
 
 

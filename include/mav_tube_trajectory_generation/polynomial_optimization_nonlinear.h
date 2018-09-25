@@ -82,7 +82,7 @@ struct NonlinearOptimizationParameters {
         coll_check_time_increment(0.1),
         is_coll_raise_first_iter(true),
         add_coll_raise(0.0),
-        side(5),
+        side(2),
         use_distance_field(true) {}
 
   // Stopping criteria, if objective function changes less than absolute value.
