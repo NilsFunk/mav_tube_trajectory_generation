@@ -57,7 +57,8 @@ add_library(${MAV_LIBRARY} SHARED
   src/polynomial.cpp
   src/segment.cpp
   src/timing.cpp
-  src/trajectory.cpp
+  src/trajectory.cpp  
+  src/trajectory_sampling.cpp 
   src/vertex.cpp
   src/rpoly/rpoly_ak1.cpp
 )
