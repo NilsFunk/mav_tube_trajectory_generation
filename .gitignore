@@ -38,6 +38,6 @@
 *.m~
 
 # Build folder
-build/
+#build/
 cmake-build-release/
 cmake-build-debug/
